@@ -11,7 +11,12 @@
 *******************************************************************************/
 
 chdir('../../');
-include_once("./include/global.php");
+
+if (file_exists("./include/global.php")) {
+	include_once("./include/global.php");
+}else{
+	include_once("./include/config.php");
+}
 
 $_SESSION['custom'] = false;
 
