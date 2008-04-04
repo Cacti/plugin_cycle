@@ -5,13 +5,14 @@
     Contact ........ matt@emericklaw.co.uk
     Home Site ...... http://emericklaw.co.uk
     Program ........ Cycle Graphs
-    Version ........ 0.4
+    Version ........ 0.5
     Purpose ........ Automatically cycle through cacti graphs
 
 *******************************************************************************/
 
 function plugin_init_cycle() {
 	global $plugin_hooks;
+
 	$plugin_hooks['top_header_tabs']['cycle'] = 'cycle_show_tab';
 	$plugin_hooks['top_graph_header_tabs']['cycle'] = 'cycle_show_tab';
 	$plugin_hooks['config_arrays']['cycle'] = 'cycle_config_arrays';
@@ -22,18 +23,20 @@ function plugin_init_cycle() {
 }
 
 function cycle_version () {
-	return array( 'name'     => 'Cycle Graphs',
-		'version'     => '0.4',
-		'longname'    => 'Cycle Graphs',
-		'author'    => 'Matt Emerick-Law',
-		'homepage'    => 'http://emericklaw.co.uk',
+	return array(
+		'name'     => 'Cycle Graphs',
+		'version'  => '0.5',
+		'longname' => 'Cycle Graphs',
+		'author'   => 'Matt Emerick-Law',
+		'homepage' => 'http://emericklaw.co.uk',
 		'email'    => 'matt@emericklaw.co.uk',
-		'url'        => 'http://cactiusers.org/cacti/versions.php'
+		'url'      => 'http://cactiusers.org/cacti/versions.php'
 	);
 }
 
 function cycle_config_settings () {
 	global $tabs, $settings;
+
 	$tabs["cycle"] = "Cycle";
 
 	$temp = array(
@@ -99,6 +102,7 @@ function cycle_config_settings () {
 
 function cycle_show_tab () {
 	global $config, $user_auth_realms, $user_auth_realm_filenames;
+
 	$realm_id2 = 0;
 
 	if (isset($user_auth_realm_filenames{basename('cycle.php')})) {
@@ -227,6 +231,7 @@ function cycle_show_tab () {
 
 function cycle_config_arrays () {
 	global $user_auth_realms, $user_auth_realm_filenames;
+
 	$user_auth_realms[42] = 'View Cycle Graphs';
 	$user_auth_realm_filenames['cycle.php'] = 42;
 }
