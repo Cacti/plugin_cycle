@@ -5,7 +5,7 @@
     Contact ........ matt@emericklaw.co.uk
     Home Site ...... http://emericklaw.co.uk
     Program ........ Cycle Graphs
-    Version ........ 0.5
+    Version ........ 0.6
     Purpose ........ Automatically cycle through cacti graphs
 
 *******************************************************************************/
@@ -38,7 +38,8 @@ function cycle_config_settings () {
 	global $tabs, $settings;
 
 	$tabs["cycle"] = "Cycle";
-
+	
+	$treeList = array_rekey(get_graph_tree_array(null, true), 'id', 'name');
 	$temp = array(
 		"cycle_header" => array(
 			"friendly_name" => "Cycle Graphs",
@@ -50,6 +51,13 @@ function cycle_config_settings () {
 			"method" => "textbox",
 			"max_length" => 3,
 			),
+		"cycle_columns" => array(
+			"friendly_name" => "Column Count",
+			"description" => "In Tree Mode this is the number of columns that will be used.",
+			"method" => "drop_array",
+			"default" => 2,
+			"array" => array( 1=>1, 2=>2, 3=>3, 4=>4, 5=>5),			
+		),
 		"cycle_height" => array(
 			"friendly_name" => "Graph Height",
 			"description" => "This sets the graph height for the displayed graphs.",
@@ -85,12 +93,26 @@ function cycle_config_settings () {
 			"description" => "Check this to use the graphs listed below.",
 			"method" => "checkbox",
 			),
+		"cycle_custom_graphs_type" => array(
+			"friendly_name" => "Custom Graph Type",
+			"description" => "Select which method to use for custom graph rotation.",
+			"method" => "drop_array",
+			"default" => "Specific List",
+			"array" => array( 1 => "Specific List", 2 => "Tree Mode"),
+		),
 		"cycle_custom_graphs_list" => array(
 			"friendly_name" => "Custom Graph List",
 			"description" => "This is a list of the graph IDs that you want to include in thr rotation.",
 			"method" => "textbox",
 			"max_length" => 255,
 			),
+		"cycle_custom_graphs_tree" => array(
+			"friendly_name" => "Custom Graph Tree",
+			"description" => "Select the graph tree to cycle if Tree Mode is selected",
+			"method" => "drop_array",
+			"default" => "None",
+			"array" => $treeList,
+		)
 	);
 
 	if (isset($settings["cycle"])) {

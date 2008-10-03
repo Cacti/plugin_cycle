@@ -89,10 +89,18 @@ function stateChanged() {
 	if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") {
 		reply = xmlHttp.responseText
 		reply = reply.split("!!!");
-		image = reply[0]
-		title = reply[1]
-		next  = reply[2]
-		prev  = reply[3]
+		image = "";
+		for (i in reply) {
+			if (i == 0) {
+				title = reply[0]
+			} else if (i == 1) {
+				next  = reply[1]
+			} else if (i == 2) {
+				prev  = reply[2]
+			} else {
+				image += reply[i]
+			}
+		}
 		document.getElementById("image").innerHTML=image
 		document.getElementById("title").innerHTML=title
 	}
