@@ -1,14 +1,26 @@
 <?php
-/*******************************************************************************
-
-    Author ......... Matt Emerick-Law
-    Contact ........ matt@emericklaw.co.uk
-    Home Site ...... http://emericklaw.co.uk
-    Program ........ Cycle Graphs
-    Version ........ 0.6
-    Purpose ........ Automatically cycle through cacti graphs
-
-*******************************************************************************/
+/*
+ +-------------------------------------------------------------------------+
+ | Copyright (C) 2004-2008 The Cacti Group                                 |
+ |                                                                         |
+ | This program is free software; you can redistribute it and/or           |
+ | modify it under the terms of the GNU General Public License             |
+ | as published by the Free Software Foundation; either version 2          |
+ | of the License, or (at your option) any later version.                  |
+ |                                                                         |
+ | This program is distributed in the hope that it will be useful,         |
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of          |
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the           |
+ | GNU General Public License for more details.                            |
+ +-------------------------------------------------------------------------+
+ | Cacti: The Complete RRDTool-based Graphing Solution                     |
+ +-------------------------------------------------------------------------+
+ | This code is designed, written, and maintained by the Cacti Group. See  |
+ | about.php and/or the AUTHORS file for specific developer information.   |
+ +-------------------------------------------------------------------------+
+ | http://www.cacti.net/                                                   |
+ +-------------------------------------------------------------------------+
+*/
 
 chdir('../../');
 
@@ -21,7 +33,7 @@ if (file_exists("./include/global.php")) {
 $_SESSION['custom'] = false;
 
 if (read_config_option("cycle_custom_graphs") == "on") {
-	if (read_config_option("cycle_custom_graphs_type") === 1) {
+	if (read_config_option("cycle_custom_graphs_type") == "1") {
 		$graphs   = explode(",", read_config_option("cycle_custom_graphs_list"));
 		$graph_id = $_REQUEST["id"];
 
@@ -73,7 +85,7 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 		$leaf_found  = 0; // 0 = Cur Leaf Not found -> 1 = Cur Leaf Found
 		$first_leaf  = null;
 
-		foreach ( $graphs as $leaf_id => $leaf_data ) {
+		foreach ($graphs as $leaf_id => $leaf_data) {
 			if (is_null($first_leaf)) {
 				$first_leaf = $leaf_id;
 			}
@@ -81,10 +93,10 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 			if ($cur_leaf_id == -1 ) {
 				$cur_leaf_id = $leaf_id;
 				$prevgraphid = $leaf_id;
-				$leaf_found = 1;
-			} elseif ( $cur_leaf_id == $leaf_id ) {
-				$leaf_found = 1;
-			} elseif ( $leaf_found == 1 ) {
+				$leaf_found  = 1;
+			} elseif ($cur_leaf_id == $leaf_id) {
+				$leaf_found  = 1;
+			} elseif ($leaf_found == 1) {
 				$nextgraphid = $leaf_id;
 				break;
 			} else {
@@ -92,13 +104,13 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 				continue;
 			}
 
-			$title = $leaf_data['title'];
+			$title   = $leaf_data['title'];
 			$graphid = $leaf_data['graph_data'];
 		}
 
-		if (is_null($nextgraphid))
+		if (is_null($nextgraphid)) {
 			$nextgraphid = $first_leaf;
-		
+		}
 	}
 } else {
 	if (isset($_REQUEST["id"])) {
@@ -157,8 +169,6 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 	}
 }
 
-echo $title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
-
 if (is_array($graphid)) {
 	$out       = null;
 	$out       = '<table cellpadding="0" cellspacing="0" border="0">';
@@ -168,17 +178,17 @@ if (is_array($graphid)) {
 	for ($x=0; $x < count($graphid); $x++) {
 		if ($col_count == 1)
 			$out .= '<tr>';
-			
+
 		$out .= '<td align="center" class="graphholder">'
 			.'<img src="../../graph_image.php?local_graph_id='.$graphid[$x]['graph_id'].'&rra_id=0&graph_start='.(time() - 86400)
 			.'&graph_end='.time().'&graph_width='.read_config_option('cycle_width').'&graph_height='.read_config_option('cycle_height').'&graph_nolegend=true">'
 			.'</td>';
-			
+
 		if ($col_count == $max_cols) {
 			$out .= '</tr>';
 			$col_count=1;
 		} else {
-			$col_count++;	
+			$col_count++;
 		}
 	}
 
@@ -197,32 +207,33 @@ if (is_array($graphid)) {
 
 	print $out;
 } else {
-?>
-<img src="../../graph_image.php?local_graph_id=<?php echo $graphid; ?>&rra_id=0&graph_start=<?php echo time() - 86400; ?>&graph_end=<?php echo time(); ?>&graph_width=<?php echo read_config_option('cycle_width'); ?>&graph_height=<?php echo read_config_option('cycle_height'); ?>&graph_nolegend=true">
-<?php	
+	echo $title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
+	?>
+	<img src="../../graph_image.php?local_graph_id=<?php echo $graphid; ?>&rra_id=0&graph_start=<?php echo time() - 86400; ?>&graph_end=<?php echo time(); ?>&graph_width=<?php echo read_config_option('cycle_width'); ?>&graph_height=<?php echo read_config_option('cycle_height'); ?>&graph_nolegend=true">
+	<?php
 }
 
 function get_tree_graphs($treeid) {
-	$sql      = "SELECT
-				graph_tree_items.id as id,
-				graph_tree_items.title as title,
-				graph_tree_items.order_key as order_key,
-				graph_tree_items.host_id as host_id,
-				graph_tree_items.local_graph_id as local_graph_id
-				FROM graph_tree_items
-				WHERE graph_tree_items.graph_tree_id=$treeid 
-				ORDER BY graph_tree_items.order_key";
+	$sql = "SELECT
+		graph_tree_items.id as id,
+		graph_tree_items.title as title,
+		graph_tree_items.host_id as host_id,
+		graph_tree_items.local_graph_id as local_graph_id
+		FROM graph_tree_items
+		WHERE graph_tree_items.graph_tree_id=$treeid
+		ORDER BY graph_tree_items.order_key";
 
 	$rows     = db_fetch_assoc($sql);
 	$outArray = array();
 
-	if (count($rows)) {
+	if (sizeof($rows)) {
 		$title_id = null;
-		foreach ( $rows as $row ) {
-			if ( !empty($row['title']) && $row['host_id'] == 0 && $row['local_graph_id'] == 0 ) {
+		foreach ($rows as $row) {
+//print_r($row);
+			if (!empty($row['title']) && $row['host_id'] == 0 && $row['local_graph_id'] == 0) {
 				$outArray[$row['id']]['title'] = $row['title'];
 				$title_id = $row['id'];
-			} elseif ( empty($row['title']) && $row['local_graph_id'] > 0 ) {
+			} elseif (empty($row['title']) && $row['local_graph_id'] > 0) {
 				$outArray[$title_id]['graph_data'][] = array( 'graph_id' => $row['local_graph_id'], 'graph_title' => get_graph_title($row['local_graph_id']));
 			}
 		}

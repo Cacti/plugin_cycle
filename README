@@ -1,20 +1,19 @@
 /*******************************************************************************
 
-    Author ......... Matt Emerick-Law
-    Contact ........ matt@emericklaw.co.uk
-    Home Site ...... http://emericklaw.co.uk
+    Author ......... The Cacti Group
+    Contact ........ cacti-user@lists.sourceforge.net
+    Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
     Version ........ 0.6
-    Purpose ........ Automatically cycle through cacti graphs 
+    Purpose ........ Automatically cycle through cacti graphs
+    Original Work .. Matt Emerick-Law
 
 *******************************************************************************/
-
 
 ----[ Purpose
 
     This plugin allows you to automatically view the Cacti graphs one by one
     after a specified time delay.
-
 
 ----[ Features
 
@@ -23,11 +22,10 @@
     Graph height and width can be specified.
     Graphs are not displayed if the user does not have access to them.
     Title of graph is displayed, font face, size and color can be changed.
-	You can use the Prev/Next buttons to change graph.
-	You can stop the rotation with the Stop button.
-	The time until the next graph change is displayed under the title.
-	It can use a custom graph list and only cycle through those.
-
+    You can use the Prev/Next buttons to change graph.
+    You can stop the rotation with the Stop button.
+    The time until the next graph change is displayed under the title.
+    It can use a custom graph list and only cycle through those.
 
 ----[ Installation
 
@@ -37,31 +35,30 @@
 
     You can find the plugin settings under the Misc tab.
 
-
 ----[ Possible Bugs?
    
     The custom graph rotation is very simple and does not check for permissions.
-	I am waiting for cigamit to add support for adding items to the edit graph pages so I can get it working fully.
-
+    I am waiting for cigamit to add support for adding items to the edit graph pages so I can get it working fully.
 
 ----[ Future Changes
     
-	Improve the way custom graphs are setup
-	Cycle through Weathermaps (I need to look into how Weathermap works)
+    Improve the way custom graphs are setup
+    Cycle through Weathermaps (I need to look into how Weathermap works)
 
     Got any ideas then please let me know.
 
-
 ----[ Changelog
-     --- 0.6 ---	ed@edmclain.com - Added ability for cycle to use a Tree and cycle through the Leaf's instead of just graphs. 
-			The leafs header is displayed at top of screen while the graphs are layed out in columns as specified by the Column Number setting.
-			This is a great feature for data centers or for people who want to put lots of graphs up on tv displays.
-     --- 0.3 ---
-			Converted the rotation code to use AJAX so the page does not fully refresh every time.
-			Added custom graph rotation
+    --- 0.6 ---	
+    Added ability for cycle to use a Tree and cycle through the Leaf's instead of just graphs. 
+    The leafs header is displayed at top of screen while the graphs are layed out in columns as specified by the Column Number setting.
+    This is a great feature for data centers or for people who want to put lots of graphs up on tv displays.
+
+    --- 0.3 ---
+    Converted the rotation code to use AJAX so the page does not fully refresh every time.
+    Added custom graph rotation
 			
-     --- 0.2 ---
-			Added Previous/Next/Stop Buttons
+    --- 0.2 ---
+    Added Previous/Next/Stop Buttons
 			
-     --- 0.1 ---
-           Initial release
+    --- 0.1 ---
+    Initial release
