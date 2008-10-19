@@ -169,6 +169,10 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 	}
 }
 
+$graphnow      = time();
+$graphduration = (int) read_config_option('cycle_graph_duration');
+$graphstart    = $graphnow - $graphduration;
+
 if (is_array($graphid)) {
 	$out       = null;
 	$out       = '<table cellpadding="0" cellspacing="0" border="0">';

@@ -87,7 +87,7 @@ function cycle_version () {
 		'author'   => 'Matt Emerick-Law',
 		'homepage' => 'http://emericklaw.co.uk',
 		'email'    => 'matt@emericklaw.co.uk',
-		'url'      => 'http://cactiusers.org/cacti/versions.php'
+		'url'      => 'http://versions.cactiusers.org/'
 	);
 }
 
@@ -145,6 +145,12 @@ function cycle_config_settings () {
 			"method" => "textbox",
 			"max_length" => 10,
 			),
+		"cycle_graph_duration" => array(
+			"friendly_name" => "Duration of Graph",
+			"description" => "This is the duration for the graph (86400 = 1 day)",
+			"method" => "textbox",
+			"max_length" => 10,
+			),
 		"cycle_custom_graphs" => array(
 			"friendly_name" => "Use Custom Graph Rotation",
 			"description" => "Check this to use the graphs listed below.",
@@ -159,7 +165,7 @@ function cycle_config_settings () {
 		),
 		"cycle_custom_graphs_list" => array(
 			"friendly_name" => "Custom Graph List",
-			"description" => "This is a list of the graph IDs that you want to include in thr rotation.",
+			"description" => "This is a list of the graph IDs that you want to include in the rotation. (1,2)",
 			"method" => "textbox",
 			"max_length" => 255,
 			),
@@ -282,6 +288,24 @@ function cycle_show_tab () {
 			$sql = "insert into settings values ('cycle_width','500')";
 		}else {
 			$sql = "update settings set value = '500' where name = 'cycle_width'";
+		}
+	}
+
+	$result = mysql_query($sql) or die (mysql_error());
+
+	kill_session_var("sess_config_array");
+
+	$r      = read_config_option("cycle_graph_duration");
+	$sql    = "select * from settings where name='cycle_graph_duration'";
+	$result = db_fetch_assoc($sql);
+
+	if (!isset($result[0]['name'])) {
+		if ($r == '') {
+			$sql = "replace into settings values ('cycle_graph_duration','86400')";
+		}else if ($r == NULL) {
+			$sql = "insert into settings values ('cycle_grqaph_duration','86400')";
+		}else {
+			$sql = "update settings set value = '86400' where name = 'cycle_graph_duration'";
 		}
 	}
 
