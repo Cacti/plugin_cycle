@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2008 The Cacti Group                                 |
+ | Copyright (C) 2004-2009 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -67,8 +67,39 @@ function plugin_cycle_version () {
 }
 
 function cycle_check_upgrade () {
-	/* Let's only run this check if we are on a page
-	   that actually needs the data */
+	global $config;
+
+	$files = array('index.php', 'plugins.php', 'cycle.php');
+	if (isset($_SERVER['PHP_SELF']) && !in_array(basename($_SERVER['PHP_SELF']), $files)) {
+		return;
+	}
+
+	$current = plugin_cycle_version();
+	$current = $current['version'];
+	$old     = db_fetch_row("SELECT * FROM plugin_config WHERE directory='cycle'");
+	if (sizeof($old) && $current != $old["version"]) {
+		/* if the plugin is installed and/or active */
+		if ($old["status"] == 1 || $old["status"] == 4) {
+			/* re-register the hooks */
+			plugin_cycle_install();
+
+			/* perform a database upgrade */
+			cycle_database_upgrade();
+		}
+
+		/* update the plugin information */
+		$info = plugin_cycle_version();
+		$id   = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
+		db_execute("UPDATE plugin_config
+			SET name='" . $info["longname"] . "',
+			author='"   . $info["author"]   . "',
+			webpage='"  . $info["homepage"] . "',
+			version='"  . $info["version"]  . "'
+			WHERE id='$id'");
+	}
+}
+
+function cycle_database_upgrade () {
 }
 
 function cycle_check_dependencies() {
@@ -83,9 +114,9 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '0.6',
+		'version'  => '0.7',
 		'longname' => 'Cycle Graphs',
-		'author'   => 'Larry Adams',
+		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
 		'email'    => 'larryjadams@comcast.net',
 		'url'      => 'http://versions.cactiusers.org/'
@@ -93,7 +124,10 @@ function cycle_version () {
 }
 
 function cycle_config_settings () {
-	global $tabs, $settings;
+	global $tabs, $settings, $page_refresh_interval, $graph_timespans;
+
+	/* check for an upgrade */
+	plugin_cycle_check_config();
 
 	if (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
 		return;
@@ -108,9 +142,17 @@ function cycle_config_settings () {
 			),
 		"cycle_delay" => array(
 			"friendly_name" => "Delay Interval",
-			"description" => "This is the time in seconds before the next graph is displayed.  (1 - 300)",
-			"method" => "textbox",
-			"max_length" => 3,
+			"description" => "This is the time in seconds before the next graph is displayed.",
+			"method" => "drop_array",
+			"default" => 5,
+			"array" => $page_refresh_interval
+			),
+		"cycle_timespan" => array(
+			"friendly_name" => "Graph Timespan",
+			"description" => "This is the default timespan that will be displayed on the page.",
+			"method" => "drop_array",
+			"default" => 5,
+			"array" => $graph_timespans
 			),
 		"cycle_columns" => array(
 			"friendly_name" => "Column Count",
@@ -146,13 +188,7 @@ function cycle_config_settings () {
 		"cycle_font_color" => array(
 			"friendly_name" => "Title Font Color",
 			"description" => "This is the font color for the title.",
-			"method" => "textbox",
-			"max_length" => 10,
-			),
-		"cycle_graph_duration" => array(
-			"friendly_name" => "Duration of Graph",
-			"description" => "This is the duration for the graph (86400 = 1 day)",
-			"method" => "textbox",
+			"method" => "drop_color",
 			"max_length" => 10,
 			),
 		"cycle_custom_graphs" => array(
@@ -202,138 +238,12 @@ function cycle_show_tab () {
 		from user_auth_realm where user_auth_realm.user_id='" . $_SESSION["sess_user_id"] . "'
 		and user_auth_realm.realm_id='$realm_id2'")) || (empty($realm_id2))) {
 
-		print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="cycle" align="absmiddle" border="0"></a>';
-	}
-
-	$r      = read_config_option("cycle_delay");
-	$sql    = "select * from settings where name='cycle_delay'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '' or $r < 1 or $r > 300) {
-			if ($r == '') {
-				$sql = "replace into settings values ('cycle_delay','300')";
-			}else if ($r == NULL) {
-				$sql = "insert into settings values ('cycle_delay','300')";
-			}else {
-				$sql = "update settings set value = '300' where name = 'cycle_delay'";
-			}
-
-			$result = mysql_query($sql) or die (mysql_error());
-
-			kill_session_var("sess_config_array");
+		if (substr_count($_SERVER["REQUEST_URI"], "cycle.php")) {
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="cycle" align="absmiddle" border="0"></a>';
+		}else{
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="cycle" align="absmiddle" border="0"></a>';
 		}
 	}
-
-	$r      = read_config_option("cycle_font_size");
-	$sql    = "select * from settings where name='cycle_font_size'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '' or $r < 1 or $r > 100) {
-			if ($r == '') {
-				$sql = "replace into settings values ('cycle_font_size','36')";
-			}else if ($r == NULL) {
-				$sql = "insert into settings values ('cycle_font_size','36')";
-			}else {
-				$sql = "update settings set value = '36' where name = 'cycle_font_size'";
-			}
-
-			$result = mysql_query($sql) or die (mysql_error());
-
-			kill_session_var("sess_config_array");
-		}
-	}
-
-	$r      = read_config_option("cycle_font_face");
-	$sql    = "select * from settings where name='cycle_font_face'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '') {
-			$sql = "replace into settings values ('cycle_font_face','Verdana')";
-		}else if ($r == NULL) {
-			$sql = "insert into settings values ('cycle_font_face','Verdana')";
-		}else {
-			$sql = "update settings set value = 'Verdana' where name = 'cycle_font_face'";
-		}
-	}
-
-	$result = mysql_query($sql) or die (mysql_error());
-
-	kill_session_var("sess_config_array");
-
-	$r      = read_config_option("cycle_font_color");
-	$sql    = "select * from settings where name='cycle_font_color'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '') {
-			$sql = "replace into settings values ('cycle_font_color','#000000')";
-		}else if ($r == NULL) {
-			$sql = "insert into settings values ('cycle_font_color','#000000')";
-		}else {
-			$sql = "update settings set value = 'Verdana' where name = 'cycle_font_color'";
-		}
-	}
-
-	$result = mysql_query($sql) or die (mysql_error());
-
-	kill_session_var("sess_config_array");
-
-	$r      = read_config_option("cycle_width");
-	$sql    = "select * from settings where name='cycle_width'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '') {
-			$sql = "replace into settings values ('cycle_width','500')";
-		}else if ($r == NULL) {
-			$sql = "insert into settings values ('cycle_width','500')";
-		}else {
-			$sql = "update settings set value = '500' where name = 'cycle_width'";
-		}
-	}
-
-	$result = mysql_query($sql) or die (mysql_error());
-
-	kill_session_var("sess_config_array");
-
-	$r      = read_config_option("cycle_graph_duration");
-	$sql    = "select * from settings where name='cycle_graph_duration'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '') {
-			$sql = "replace into settings values ('cycle_graph_duration','86400')";
-		}else if ($r == NULL) {
-			$sql = "insert into settings values ('cycle_grqaph_duration','86400')";
-		}else {
-			$sql = "update settings set value = '86400' where name = 'cycle_graph_duration'";
-		}
-	}
-
-	$result = mysql_query($sql) or die (mysql_error());
-
-	kill_session_var("sess_config_array");
-
-	$r      = read_config_option("cycle_height");
-	$sql    = "select * from settings where name='cycle_height'";
-	$result = db_fetch_assoc($sql);
-
-	if (!isset($result[0]['name'])) {
-		if ($r == '') {
-			$sql = "replace into settings values ('cycle_height','120')";
-		}else if ($r == NULL) {
-			$sql = "insert into settings values ('cycle_height','120')";
-		}else {
-			$sql = "update settings set value = '120' where name = 'cycle_height'";
-		}
-	}
-
-	$result = mysql_query($sql) or die (mysql_error());
-
-	kill_session_var("sess_config_array");
 }
 
 function cycle_config_arrays () {

@@ -24,8 +24,6 @@
 
 chdir('../../');
 include_once("./include/auth.php");
-
-$_SESSION['custom'] = false;
 include_once("./include/top_graph_header.php");
 
 ?>
@@ -34,7 +32,7 @@ include_once("./include/top_graph_header.php");
 #title {
 	font-size:<?php echo read_config_option("cycle_font_size"); ?>px;
 	font-family:<?php echo read_config_option("cycle_font_face"); ?>;
-	font-weight:bold;color:<?php echo read_config_option("cycle_font_color"); ?>;
+	font-weight:bold;color:#<?php echo db_fetch_cell("SELECT hex FROM colors WHERE id='" . read_config_option("cycle_font_color") . "'"); ?>;
 }
 
 .graphholder {
@@ -44,13 +42,31 @@ include_once("./include/top_graph_header.php");
 <body onload="rtime=<?php echo read_config_option("cycle_delay")*1000; ?>;startTime();refreshTime();getnext();">
 <p>
 <center>
-<span id="title"></span><br>
-<!-- Prev - Stop - Next links -->
-| <a href="#" onclick="getprev();">&lt; Prev</a> |
-<a id="cstop" href="#" onclick="stopTime()">Stop</a>
-<a id="cstart" style="display:none;" href="#" onclick="startTime()">Start</a>
- | <a href="#" onclick="getnext();"> Next &gt;</a> |
+<!-- Timespan - Refresh - Prev - Stop - Next links -->
+<select id='timespan' name='timespan' onChange="newTimespan()">
+	<?php
+	if (sizeof($graph_timespans)) {
+	foreach($graph_timespans as $key=>$value) {
+			print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+	}
+	}
+	?>
+</select>
+<select id='refresh' name='refresh' onChange="newRefresh()">
+	<?php
+	if (sizeof($page_refresh_interval)) {
+	foreach($page_refresh_interval as $key=>$value) {
+			print "<option value='$key'"; if (read_config_option("cycle_delay") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+	}
+	}
+	?>
+</select>
+<input type='button' id='prev' value='Prev' name='prev' onClick='getprev()'>
+<input type='button' id='cstop' value='Stop' name='cstop' onClick='stopTime()'>
+<input type='button' id='cstart' value='Start' name='cstart' onClick='startTime()' style='display:none;'>
+<input type='button' id='next' value='Next' name='next' onClick='getnext()'>
 <br>
+<span id="title"></span><br>
 <!-- Ticker -->
 Next Update In <span id="countdown"></span><br><br>
 <!-- Image -->

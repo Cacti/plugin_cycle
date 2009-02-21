@@ -24,11 +24,8 @@
 
 chdir('../../');
 
-if (file_exists("./include/global.php")) {
-	include_once("./include/global.php");
-}else{
-	include_once("./include/config.php");
-}
+include_once("./include/global.php");
+include_once("./lib/time.php");
 
 $_SESSION['custom'] = false;
 
@@ -169,9 +166,10 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 	}
 }
 
-$graphnow      = time();
-$graphduration = (int) read_config_option('cycle_graph_duration');
-$graphstart    = $graphnow - $graphduration;
+/* get the start and end times  for the graph */
+$timespan        = array();
+$first_weekdayid = read_graph_config_option("first_weekdayid");
+get_timespan($timespan, time(), $_REQUEST["timespan"] , $first_weekdayid);
 
 if (isset($graphid) && is_array($graphid)) {
 	$out       = '<table cellpadding="0" cellspacing="0" border="0">';
@@ -183,7 +181,7 @@ if (isset($graphid) && is_array($graphid)) {
 			$out .= '<tr>';
 
 		$out .= '<td align="center" class="graphholder">'
-			.'<img src="../../graph_image.php?local_graph_id='.$graphid[$x]['graph_id'].'&rra_id=0&graph_start='.(time() - 86400)
+			.'<img src="../../graph_image.php?local_graph_id='.$graphid[$x]['graph_id'].'&rra_id=0&graph_start='.$timespan["begin_now"]
 			.'&graph_end='.time().'&graph_width='.read_config_option('cycle_width').'&graph_height='.read_config_option('cycle_height').'&graph_nolegend=true">'
 			.'</td>';
 
@@ -208,10 +206,10 @@ if (isset($graphid) && is_array($graphid)) {
 
 	$out .= '</table>';
 
-	print "Leaf Title: ".$title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
+	print "Leaf Title: ".$title."!!!".$nextgraphid."!!!".$prevgraphid."!!!".$cur_leaf_id."!!!";
 	print $out;
 } else {
-	echo $title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
+	echo $title."!!!".$nextgraphid."!!!".$prevgraphid."!!!".$graphid."!!!";
 	?>
 	<img src="../../graph_image.php?local_graph_id=<?php echo $graphid; ?>&rra_id=0&graph_start=<?php echo time() - 86400; ?>&graph_end=<?php echo time(); ?>&graph_width=<?php echo read_config_option('cycle_width'); ?>&graph_height=<?php echo read_config_option('cycle_height'); ?>&graph_nolegend=true">
 	<?php

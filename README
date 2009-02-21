@@ -4,7 +4,7 @@
     Contact ........ cacti-user@lists.sourceforge.net
     Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
-    Version ........ 0.6
+    Version ........ 0.7
     Purpose ........ Automatically cycle through cacti graphs
     Original Work .. Matt Emerick-Law
 
@@ -48,17 +48,23 @@
     Got any ideas then please let me know.
 
 ----[ Changelog
+    --- SVN ---
+
+    --- 0.7 ---
+    -feature: Add timespan selector and graph window
+    -feature: Implement buttons and not links for next/pref/stop/start
+    -feature: Make PIA2.x compatible
+    -feature: Auto Upgrade
+
     --- 0.6 ---	
-    Added ability for cycle to use a Tree and cycle through the Leaf's instead of just graphs. 
-    The leafs header is displayed at top of screen while the graphs are layed out in columns as specified by the Column Number setting.
-    This is a great feature for data centers or for people who want to put lots of graphs up on tv displays.
+    -feature: Ability for cycle to use a Tree and cycle through the Leaf's instead of just graphs. 
 
     --- 0.3 ---
-    Converted the rotation code to use AJAX so the page does not fully refresh every time.
-    Added custom graph rotation
+    -feature: Converted the rotation code to use AJAX so the page does not fully refresh every time.
+    -feature: Added custom graph rotation
 			
     --- 0.2 ---
-    Added Previous/Next/Stop Buttons
+    -feature; Added Previous/Next/Stop Buttons
 			
     --- 0.1 ---
     Initial release

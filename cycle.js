@@ -77,7 +77,7 @@ function refreshTime() {
 	document.getElementById("countdown").innerHTML=formattime(time)
 	if (time == 0) {
 		time=rtime/1000+1
-		url="?id="+next
+		url="?id="+next+"&timespan="+document.getElementById("timespan").value
 		getfromserver()
 	}
 	time=time-1
@@ -96,15 +96,28 @@ function getfromserver() {
 	xmlHttp.send(null)
 }
 
+function newRefresh() {
+	rtime=document.getElementById("refresh").value*1000
+	time=rtime/1000
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value
+	getfromserver()
+}
+
+function newTimespan() {
+	time=rtime/1000
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value
+	getfromserver()
+}
+
 function getnext() {
 	time=rtime/1000
-	url="?id="+next
+	url="?id="+next+"&timespan="+document.getElementById("timespan").value
 	getfromserver()
 }
 
 function getprev() {
 	time=rtime/1000
-	url="?id="+prev
+	url="?id="+prev+"&timespan="+document.getElementById("timespan").value
 	getfromserver()
 }
 
@@ -120,8 +133,10 @@ function stateChanged() {
 				next  = reply[1]
 			} else if (i == 2) {
 				prev  = reply[2]
-			} else {
+			} else if (i == 4) {
 				image += reply[i]
+			} else if (i == 3) {
+				current = reply[3]
 			}
 		}
 		document.getElementById("image").innerHTML=image
