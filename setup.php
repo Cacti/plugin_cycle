@@ -73,6 +73,7 @@ function cycle_check_upgrade () {
 
 function cycle_check_dependencies() {
 	global $plugins, $config;
+
 	return true;
 }
 
@@ -84,15 +85,18 @@ function cycle_version () {
 		'name'     => 'Cycle Graphs',
 		'version'  => '0.6',
 		'longname' => 'Cycle Graphs',
-		'author'   => 'Matt Emerick-Law',
-		'homepage' => 'http://emericklaw.co.uk',
-		'email'    => 'matt@emericklaw.co.uk',
+		'author'   => 'Larry Adams',
+		'homepage' => 'http://www.cacti.net',
+		'email'    => 'larryjadams@comcast.net',
 		'url'      => 'http://versions.cactiusers.org/'
 	);
 }
 
 function cycle_config_settings () {
 	global $tabs, $settings;
+
+	if (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
+		return;
 
 	$tabs["cycle"] = "Cycle";
 

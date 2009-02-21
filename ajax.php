@@ -82,21 +82,22 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 		$cur_leaf_id = $_REQUEST["id"];
 		$prevgraphid = null;
 		$nextgraphid = null;
-		$leaf_found  = 0; // 0 = Cur Leaf Not found -> 1 = Cur Leaf Found
+		$leaf_found  = false;
 		$first_leaf  = null;
+		$leaf_name   = "";
 
 		foreach ($graphs as $leaf_id => $leaf_data) {
 			if (is_null($first_leaf)) {
 				$first_leaf = $leaf_id;
 			}
 
-			if ($cur_leaf_id == -1 ) {
+			if ($cur_leaf_id == -1) {
 				$cur_leaf_id = $leaf_id;
 				$prevgraphid = $leaf_id;
-				$leaf_found  = 1;
+				$leaf_found  = true;
 			} elseif ($cur_leaf_id == $leaf_id) {
-				$leaf_found  = 1;
-			} elseif ($leaf_found == 1) {
+				$leaf_found  = true;
+			} elseif ($leaf_found == true) {
 				$nextgraphid = $leaf_id;
 				break;
 			} else {
@@ -104,8 +105,8 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 				continue;
 			}
 
-			$title   = $leaf_data['title'];
 			$graphid = $leaf_data['graph_data'];
+			$title   = $leaf_data['title'];
 		}
 
 		if (is_null($nextgraphid)) {
@@ -136,7 +137,6 @@ if (read_config_option("cycle_custom_graphs") == "on") {
 	$title       = "";
 	$curr_found  = false;
 	$next_found  = false;
-
 
 	if (sizeof($rows)) {
 	foreach($rows as $row) {
@@ -173,8 +173,7 @@ $graphnow      = time();
 $graphduration = (int) read_config_option('cycle_graph_duration');
 $graphstart    = $graphnow - $graphduration;
 
-if (is_array($graphid)) {
-	$out       = null;
+if (isset($graphid) && is_array($graphid)) {
 	$out       = '<table cellpadding="0" cellspacing="0" border="0">';
 	$max_cols  = read_config_option('cycle_columns');
 	$col_count = 1;
@@ -209,6 +208,7 @@ if (is_array($graphid)) {
 
 	$out .= '</table>';
 
+	print "Leaf Title: ".$title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
 	print $out;
 } else {
 	echo $title."!!!".$nextgraphid."!!!".$prevgraphid."!!!";
@@ -218,11 +218,7 @@ if (is_array($graphid)) {
 }
 
 function get_tree_graphs($treeid) {
-	$sql = "SELECT
-		graph_tree_items.id as id,
-		graph_tree_items.title as title,
-		graph_tree_items.host_id as host_id,
-		graph_tree_items.local_graph_id as local_graph_id
+	$sql = "SELECT *
 		FROM graph_tree_items
 		WHERE graph_tree_items.graph_tree_id=$treeid
 		ORDER BY graph_tree_items.order_key";
@@ -231,16 +227,21 @@ function get_tree_graphs($treeid) {
 	$outArray = array();
 
 	if (sizeof($rows)) {
-		$title_id = null;
-		foreach ($rows as $row) {
-//print_r($row);
-			if (!empty($row['title']) && $row['host_id'] == 0 && $row['local_graph_id'] == 0) {
-				$outArray[$row['id']]['title'] = $row['title'];
-				$title_id = $row['id'];
-			} elseif (empty($row['title']) && $row['local_graph_id'] > 0) {
-				$outArray[$title_id]['graph_data'][] = array( 'graph_id' => $row['local_graph_id'], 'graph_title' => get_graph_title($row['local_graph_id']));
+	foreach ($rows as $row) {
+		if ($row['title'] != "" && $row['host_id'] == 0) {
+			$leaf_title = $row['title'];
+			$leaf_id    = $row['id'];
+		} elseif (empty($row['title']) && $row['local_graph_id'] > 0) {
+			if ($row['host_grouping_type'] == 0) {
+				$outArray[$leaf_id]['title'] = "Main Tree";
+			}else{
+				$outArray[$leaf_id]['title'] = $leaf_title;
 			}
+
+			$outArray[$leaf_id]['id']         = $leaf_id;
+			$outArray[$leaf_id]['graph_data'][] = array('title' => $leaf_title, 'graph_id' => $row['local_graph_id'], 'graph_title' => get_graph_title($row['local_graph_id']));
 		}
+	}
 	}
 
 	return($outArray);
