@@ -27,8 +27,8 @@ include_once("./include/auth.php");
 include_once("./include/top_graph_header.php");
 
 ?>
-<script src="cycle.js"></script>
-<style type="text/css">
+<script type='text/css' src='<?php echo $config["url_path"];?>plugins/cycle/cycle.js'></script>
+<style type='text/css'>
 #title {
 	font-size:<?php echo read_config_option("cycle_font_size"); ?>px;
 	font-family:<?php echo read_config_option("cycle_font_face"); ?>;
@@ -43,7 +43,7 @@ include_once("./include/top_graph_header.php");
 <p>
 <center>
 <!-- Timespan - Refresh - Prev - Stop - Next links -->
-<select id='timespan' name='timespan' onChange="newTimespan()">
+<select id='timespan' name='timespan' onChange='newTimespan()'>
 	<?php
 	if (sizeof($graph_timespans)) {
 	foreach($graph_timespans as $key=>$value) {
@@ -52,7 +52,7 @@ include_once("./include/top_graph_header.php");
 	}
 	?>
 </select>
-<select id='refresh' name='refresh' onChange="newRefresh()">
+<select id='refresh' name='refresh' onChange='newRefresh()'>
 	<?php
 	if (sizeof($page_refresh_interval)) {
 	foreach($page_refresh_interval as $key=>$value) {
@@ -66,10 +66,10 @@ include_once("./include/top_graph_header.php");
 <input type='button' id='cstart' value='Start' name='cstart' onClick='startTime()' style='display:none;'>
 <input type='button' id='next' value='Next' name='next' onClick='getnext()'>
 <br>
-<span id="title"></span><br>
+<span id='title'></span><br>
 <!-- Ticker -->
-Next Update In <span id="countdown"></span><br><br>
+Next Update In <span id='countdown'></span><br><br>
 <!-- Image -->
-<span id="image"></span><br>
+<span id='image'></span><br>
 </center>
 </body></html>

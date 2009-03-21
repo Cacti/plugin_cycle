@@ -134,7 +134,8 @@ function cycle_config_settings () {
 
 	$tabs["cycle"] = "Cycle";
 
-	$treeList = array_rekey(get_graph_tree_array(null, true), 'id', 'name');
+	$treeList = array_rekey(db_fetch_assoc("SELECT id, name FROM graph_tree ORDER BY name"), 'id', 'name');
+
 	$temp = array(
 		"cycle_header" => array(
 			"friendly_name" => "Cycle Graphs",
@@ -221,7 +222,7 @@ function cycle_config_settings () {
 	if (isset($settings["cycle"])) {
 		$settings["cycle"] = array_merge($settings["cycle"], $temp);
 	}else {
-		$settings["cycle"]=$temp;
+		$settings["cycle"] = $temp;
 	}
 }
 
@@ -239,9 +240,9 @@ function cycle_show_tab () {
 		and user_auth_realm.realm_id='$realm_id2'")) || (empty($realm_id2))) {
 
 		if (substr_count($_SERVER["REQUEST_URI"], "cycle.php")) {
-			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="cycle" align="absmiddle" border="0"></a>';
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="Cycle" align="absmiddle" border="0"></a>';
 		}else{
-			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="cycle" align="absmiddle" border="0"></a>';
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="Cycle" align="absmiddle" border="0"></a>';
 		}
 	}
 }
