@@ -4,7 +4,7 @@
     Contact ........ cacti-user@lists.sourceforge.net
     Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
-    Version ........ 0.7
+    Version ........ 0.8
     Purpose ........ Automatically cycle through cacti graphs
     Original Work .. Matt Emerick-Law
 
@@ -49,6 +49,16 @@
 
 ----[ Changelog
     --- SVN ---
+
+    --- 0.8 ---
+    -feature: Fixed custom tree mod view
+    -feature: Fixed timespan function in defalt view
+    -feature: Fixed guest access permission
+    -feature: Improved control panel
+    -feature: Added tree selector(Custom graph rotation only)
+    -feature: Added graph selector
+    -feature: Added legend display control
+    -feature: Added graph control buttons
 
     --- 0.7 ---
     -feature: Add timespan selector and graph window

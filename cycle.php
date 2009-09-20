@@ -23,12 +23,18 @@
 */
 
 chdir('../../');
+$guest_account = true;
 include_once("./include/auth.php");
 include_once("./include/top_graph_header.php");
 
+if (!isset($_SESSION["sess_cycle_legend"])) {
+	$_SESSION["sess_cycle_legend"] = read_config_option("cycle_legend");
+}
+
+$legend = $_SESSION["sess_cycle_legend"];
 ?>
-<script type='text/css' src='<?php echo $config["url_path"];?>plugins/cycle/cycle.js'></script>
-<style type='text/css'>
+<script src="cycle.js"></script>
+<style type="text/css">
 #title {
 	font-size:<?php echo read_config_option("cycle_font_size"); ?>px;
 	font-family:<?php echo read_config_option("cycle_font_face"); ?>;
@@ -38,38 +44,57 @@ include_once("./include/top_graph_header.php");
 .graphholder {
 
 }
+
+#outter {background-color: #f5f5f5; border: 1px solid #bbbbbb;}
+#inner {background-color: #ddd; border: 2px solid #f5f5f5;}
+
 </style>
 <body onload="rtime=<?php echo read_config_option("cycle_delay")*1000; ?>;startTime();refreshTime();getnext();">
-<p>
-<center>
-<!-- Timespan - Refresh - Prev - Stop - Next links -->
-<select id='timespan' name='timespan' onChange='newTimespan()'>
-	<?php
-	if (sizeof($graph_timespans)) {
-	foreach($graph_timespans as $key=>$value) {
-			print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-	}
-	}
-	?>
-</select>
-<select id='refresh' name='refresh' onChange='newRefresh()'>
-	<?php
-	if (sizeof($page_refresh_interval)) {
-	foreach($page_refresh_interval as $key=>$value) {
-			print "<option value='$key'"; if (read_config_option("cycle_delay") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-	}
-	}
-	?>
-</select>
-<input type='button' id='prev' value='Prev' name='prev' onClick='getprev()'>
-<input type='button' id='cstop' value='Stop' name='cstop' onClick='stopTime()'>
-<input type='button' id='cstart' value='Start' name='cstart' onClick='startTime()' style='display:none;'>
-<input type='button' id='next' value='Next' name='next' onClick='getnext()'>
-<br>
-<span id='title'></span><br>
-<!-- Ticker -->
-Next Update In <span id='countdown'></span><br><br>
-<!-- Image -->
-<span id='image'></span><br>
-</center>
-</body></html>
+	<center><!-- Timespan - Refresh - Prev - Stop - Next links -->
+		<table>
+			<tr>
+				<td>
+					<div id="outter">
+						<div id="inner">
+							<div style="margin:5px;">
+								<select id='timespan' name='timespan' onChange="newTimespan()">
+									<?php
+									if (sizeof($graph_timespans)) {
+									foreach($graph_timespans as $key=>$value) {
+											print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+									}
+									}
+									?>
+								</select>
+								<select id='refresh' name='refresh' onChange="newRefresh()">
+									<?php
+									if (sizeof($page_refresh_interval)) {
+									foreach($page_refresh_interval as $key=>$value) {
+											print "<option value='$key'"; if (read_config_option("cycle_delay") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+									}
+									}
+									?>
+								</select>
+								<input type='button' id='prev' value='Prev' name='prev' onClick='getprev()'>
+								<input type='button' id='cstop' value='Stop' name='cstop' onClick='stopTime()'>
+								<input type='button' id='cstart' value='Start' name='cstart' onClick='startTime()' style='display:none;'>
+								<input type='button' id='next' value='Next' name='next' onClick='getnext()'>
+								<input type="checkbox" id='legend' name='legend' onClick='newRefresh()' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?> >Display Legend
+								<input type='button' id='' value='Refresh' name='refreshing' onClick='newRefresh()'>
+								<br>
+							</div>
+							<div style="margin:4px;">
+								<span id="title"></span>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<!-- Ticker -->
+		Next Update In <span id="countdown"></span><br>
+		<!-- Image -->
+		<span id="image"></span><br>
+	</center>
+</body>
+</html>

@@ -77,7 +77,7 @@ function refreshTime() {
 	document.getElementById("countdown").innerHTML=formattime(time)
 	if (time == 0) {
 		time=rtime/1000+1
-		url="?id="+next+"&timespan="+document.getElementById("timespan").value
+		url="?id="+next+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
 		getfromserver()
 	}
 	time=time-1
@@ -99,25 +99,37 @@ function getfromserver() {
 function newRefresh() {
 	rtime=document.getElementById("refresh").value*1000
 	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
 	getfromserver()
 }
 
 function newTimespan() {
 	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
+	getfromserver()
+}
+
+function newGraph() {
+	time=rtime/1000
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&tree_id="+"&rrdid="+document.getElementById("graph").value+"&legend="+document.getElementById("legend").checked
+	getfromserver()
+}
+
+function newTree() {
+	time=rtime/1000
+	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid=-1"+"&tree_id="+"&legend="+document.getElementById("legend").checked+"&tree_id="+document.getElementById("tree").value
 	getfromserver()
 }
 
 function getnext() {
 	time=rtime/1000
-	url="?id="+next+"&timespan="+document.getElementById("timespan").value
+	url="?id="+next+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
 	getfromserver()
 }
 
 function getprev() {
 	time=rtime/1000
-	url="?id="+prev+"&timespan="+document.getElementById("timespan").value
+	url="?id="+prev+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked	 
 	getfromserver()
 }
 

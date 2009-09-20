@@ -114,7 +114,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '0.7',
+		'version'  => '0.8',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
@@ -134,8 +134,7 @@ function cycle_config_settings () {
 
 	$tabs["cycle"] = "Cycle";
 
-	$treeList = array_rekey(db_fetch_assoc("SELECT id, name FROM graph_tree ORDER BY name"), 'id', 'name');
-
+	$treeList = array_rekey(get_graph_tree_array(null, true), 'id', 'name');
 	$temp = array(
 		"cycle_header" => array(
 			"friendly_name" => "Cycle Graphs",
@@ -191,6 +190,15 @@ function cycle_config_settings () {
 			"description" => "This is the font color for the title.",
 			"method" => "drop_color",
 			"max_length" => 10,
+			),
+		"cycle_legend" => array(
+			"friendly_name" => "Display Legend",
+			"description" => "Check this to display legend.",
+			"method" => "checkbox",
+			),
+		"cycle_cheader" => array(
+			"friendly_name" => "Custom Rotation",
+			"method" => "spacer",
 			),
 		"cycle_custom_graphs" => array(
 			"friendly_name" => "Use Custom Graph Rotation",
@@ -250,7 +258,7 @@ function cycle_show_tab () {
 function cycle_config_arrays () {
 	global $user_auth_realms, $user_auth_realm_filenames;
 
-	$user_auth_realms[42] = 'View Cycle Graphs';
+	$user_auth_realms[42] = 'Plugin -> View Cycle Graphs';
 	$user_auth_realm_filenames['cycle.php'] = 42;
 }
 
