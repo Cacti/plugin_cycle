@@ -4,7 +4,7 @@
     Contact ........ cacti-user@lists.sourceforge.net
     Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
-    Version ........ 0.8
+    Version ........ 1.0
     Purpose ........ Automatically cycle through cacti graphs
     Original Work .. Matt Emerick-Law
 
@@ -48,7 +48,9 @@
     Got any ideas then please let me know.
 
 ----[ Changelog
-    --- SVN ---
+    --- 1.0 ---
+    feature: Adding support for 0.8.7f
+    compat: Dropping support for PIA 1.x
 
     --- 0.8 ---
     -feature: Fixed custom tree mod view

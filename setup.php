@@ -22,18 +22,6 @@
  +-------------------------------------------------------------------------+
 */
 
-function plugin_init_cycle() {
-	global $plugin_hooks;
-
-	$plugin_hooks['top_header_tabs']['cycle']       = 'cycle_show_tab';
-	$plugin_hooks['top_graph_header_tabs']['cycle'] = 'cycle_show_tab';
-	$plugin_hooks['config_arrays']['cycle']         = 'cycle_config_arrays';
-	$plugin_hooks['draw_navigation_text']['cycle']  = 'cycle_draw_navigation_text';
-	$plugin_hooks['config_form']['cycle']           = 'cycle_config_form';
-	$plugin_hooks['config_settings']['cycle']       = 'cycle_config_settings';
-	$plugin_hooks['api_graph_save']['cycle']        = 'cycle_api_graph_save';
-}
-
 function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'top_header_tabs',       'cycle_show_tab',             "setup.php");
 	api_plugin_register_hook('cycle', 'top_graph_header_tabs', 'cycle_show_tab',             "setup.php");
@@ -42,6 +30,8 @@ function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'config_form',           'cycle_config_form',          "setup.php");
 	api_plugin_register_hook('cycle', 'config_settings',       'cycle_config_settings',      "setup.php");
 	api_plugin_register_hook('cycle', 'api_graph_save',        'cycle_api_graph_save',       "setup.php");
+
+	api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
 
 	cycle_setup_table_new ();
 }
@@ -87,6 +77,26 @@ function cycle_check_upgrade () {
 			cycle_database_upgrade();
 		}
 
+		if ($old < "1.0") {
+			api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
+
+			/* get the realm id's and change from old to new */
+			$user  = db_fetch_cell("SELECT id FROM plugin_realms WHERE file='cycle.php'");
+			if ($user >  0) {
+				$users = db_fetch_assoc("SELECT user_id FROM user_auth_realm WHERE realm_id=42");
+				if (sizeof($users)) {
+				foreach($users as $u) {
+					db_execute("INSERT INTO user_auth_realm
+						(realm_id, user_id) VALUES ($user, " . $u["user_id"] . ")
+						ON DUPLICATE KEY UPDATE realm_id=VALUES(realm_id)");
+					db_execute("DELETE FROM user_auth_realm
+						WHERE user_id=" . $u["user_id"] . "
+						AND realm_id=$user");
+				}
+				}
+			}
+		}
+
 		/* update the plugin information */
 		$info = plugin_cycle_version();
 		$id   = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
@@ -114,7 +124,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '0.8',
+		'version'  => '1.0',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
@@ -235,18 +245,9 @@ function cycle_config_settings () {
 }
 
 function cycle_show_tab () {
-	global $config, $user_auth_realms, $user_auth_realm_filenames;
+	global $config;
 
-	$realm_id2 = 0;
-
-	if (isset($user_auth_realm_filenames{basename('cycle.php')})) {
-		$realm_id2 = $user_auth_realm_filenames{basename('cycle.php')};
-	}
-
-	if ((db_fetch_assoc("select user_auth_realm.realm_id
-		from user_auth_realm where user_auth_realm.user_id='" . $_SESSION["sess_user_id"] . "'
-		and user_auth_realm.realm_id='$realm_id2'")) || (empty($realm_id2))) {
-
+	if (api_user_realm_auth('cycle.php')) {
 		if (substr_count($_SERVER["REQUEST_URI"], "cycle.php")) {
 			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="Cycle" align="absmiddle" border="0"></a>';
 		}else{
@@ -256,10 +257,7 @@ function cycle_show_tab () {
 }
 
 function cycle_config_arrays () {
-	global $user_auth_realms, $user_auth_realm_filenames;
-
-	$user_auth_realms[42] = 'Plugin -> View Cycle Graphs';
-	$user_auth_realm_filenames['cycle.php'] = 42;
+	return true;
 }
 
 function cycle_draw_navigation_text ($nav) {

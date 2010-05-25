@@ -29,6 +29,7 @@ var next    = -1
 var prev    = 1
 var time    = 5
 var ltime   = 0
+var current = 0
 var timed
 var newtime
 var stime
@@ -90,7 +91,7 @@ function getfromserver() {
 		return
 	}
 
-	url="ajax.php"+url
+	url="cycle_ajax.php"+url
 	xmlHttp.onreadystatechange=stateChanged
 	xmlHttp.open("GET",url,true)
 	xmlHttp.send(null)
@@ -129,7 +130,7 @@ function getnext() {
 
 function getprev() {
 	time=rtime/1000
-	url="?id="+prev+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked	 
+	url="?id="+prev+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
 	getfromserver()
 }
 

@@ -25,12 +25,14 @@
 chdir('../../');
 $guest_account = true;
 include_once("./include/auth.php");
-include_once("./include/top_graph_header.php");
+include_once("./plugins/cycle/general_header.php");
 
 if (!isset($_SESSION["sess_cycle_legend"])) {
 	$_SESSION["sess_cycle_legend"] = read_config_option("cycle_legend");
 }
-
+if (!isset($_SESSION["sess_cycle_delay"])) {
+	$_SESSION["sess_cycle_delay"] = read_config_option("cycle_delay");
+}
 $legend = $_SESSION["sess_cycle_legend"];
 ?>
 <script src="cycle.js"></script>
@@ -70,7 +72,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 									<?php
 									if (sizeof($page_refresh_interval)) {
 									foreach($page_refresh_interval as $key=>$value) {
-											print "<option value='$key'"; if (read_config_option("cycle_delay") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+											print "<option value='$key'"; if ($_SESSION["sess_cycle_delay"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
 									}
 									}
 									?>
