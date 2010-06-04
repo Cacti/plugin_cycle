@@ -33,6 +33,11 @@ if (!isset($_SESSION["sess_cycle_legend"])) {
 if (!isset($_SESSION["sess_cycle_delay"])) {
 	$_SESSION["sess_cycle_delay"] = read_config_option("cycle_delay");
 }
+
+if (empty($_SESSION["sess_cycle_delay"])) {
+	db_execute("REPLACE INTO settings SET name='cycle_delay', value='5'");
+}
+
 $legend = $_SESSION["sess_cycle_legend"];
 ?>
 <script src="cycle.js"></script>
