@@ -81,10 +81,9 @@ function cycle_check_upgrade () {
 			api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
 
 			/* get the realm id's and change from old to new */
-			$user  = db_fetch_cell("SELECT id FROM plugin_realms WHERE file='cycle.php'");
-			if ($user >  0) {
-				$users = db_fetch_assoc("SELECT user_id FROM user_auth_realm WHERE realm_id=42");
-				if (sizeof($users)) {
+			$user  = db_fetch_cell("SELECT id FROM plugin_realms WHERE file='cycle.php'")+100;
+			$users = db_fetch_assoc("SELECT user_id FROM user_auth_realm WHERE realm_id=42");
+			if (sizeof($users)) {
 				foreach($users as $u) {
 					db_execute("INSERT INTO user_auth_realm
 						(realm_id, user_id) VALUES ($user, " . $u["user_id"] . ")
@@ -92,7 +91,6 @@ function cycle_check_upgrade () {
 					db_execute("DELETE FROM user_auth_realm
 						WHERE user_id=" . $u["user_id"] . "
 						AND realm_id=$user");
-				}
 				}
 			}
 		}
@@ -124,7 +122,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '1.1',
+		'version'  => '1.2',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
