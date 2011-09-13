@@ -122,7 +122,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '1.2',
+		'version'  => '1.4',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
@@ -133,6 +133,7 @@ function cycle_version () {
 
 function cycle_config_settings () {
 	global $tabs, $settings, $page_refresh_interval, $graph_timespans;
+	global $cycle_width, $cycle_height, $cycle_cols, $cycle_graphs;
 
 	/* check for an upgrade */
 	plugin_cycle_check_config();
@@ -167,25 +168,36 @@ function cycle_config_settings () {
 			"description" => "In Tree Mode this is the number of columns that will be used.",
 			"method" => "drop_array",
 			"default" => 2,
-			"array" => array( 1=>1, 2=>2, 3=>3, 4=>4, 5=>5),
-		),
+			"array" => $cycle_cols
+			),
+		"cycle_graphs" => array(
+			"friendly_name" => "Number of Graphs per Page",
+			"description" => "Select the number of graphs to display per page",
+			"method" => "drop_array",
+			"default" => "4",
+			"array" => $cycle_graphs,
+			),
 		"cycle_height" => array(
 			"friendly_name" => "Graph Height",
 			"description" => "This sets the graph height for the displayed graphs.",
-			"method" => "textbox",
-			"max_length" => 5,
+			"method" => "drop_array",
+			"default" => "100",
+			"array" => $cycle_height
 			),
 		"cycle_width" => array(
 			"friendly_name" => "Graph Width",
 			"description" => "This sets the graph width for the displayed graphs.",
-			"method" => "textbox",
-			"max_length" => 5,
+			"method" => "drop_array",
+			"default" => "400",
+			"array" => $cycle_width
 			),
 		"cycle_font_size" => array(
 			"friendly_name" => "Title Font Size",
 			"description" => "This is the font size in pixels for the title. (1 - 100)",
 			"method" => "textbox",
+			"default" => "8",
 			"max_length" => 3,
+			"size" => 4
 			),
 		"cycle_font_face" => array(
 			"friendly_name" => "Title Font Face",
@@ -205,29 +217,24 @@ function cycle_config_settings () {
 			"method" => "checkbox",
 			),
 		"cycle_cheader" => array(
-			"friendly_name" => "Custom Rotation",
+			"friendly_name" => "Predefined Rotations",
 			"method" => "spacer",
 			),
-		"cycle_custom_graphs" => array(
-			"friendly_name" => "Use Custom Graph Rotation",
-			"description" => "Check this to use the graphs listed below.",
-			"method" => "checkbox",
-			),
 		"cycle_custom_graphs_type" => array(
-			"friendly_name" => "Custom Graph Type",
-			"description" => "Select which method to use for custom graph rotation.",
+			"friendly_name" => "Rotation Type",
+			"description" => "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of graph id's",
 			"method" => "drop_array",
 			"default" => "1",
-			"array" => array( 1 => "Specific List", 2 => "Tree Mode"),
-		),
+			"array" => array(0 => "Legacy (All)", 1 => "Specific List", 2 => "Tree Mode"),
+			),
 		"cycle_custom_graphs_list" => array(
 			"friendly_name" => "Custom Graph List",
-			"description" => "This is a list of the graph IDs that you want to include in the rotation. (1,2)",
+			"description" => "This must be a comma delimited list of graph id's to cycle through. For example '1,2,3,4'",
 			"method" => "textbox",
 			"max_length" => 255,
 			),
 		"cycle_custom_graphs_tree" => array(
-			"friendly_name" => "Custom Graph Tree",
+			"friendly_name" => "Default Graph Tree",
 			"description" => "Select the graph tree to cycle if Tree Mode is selected",
 			"method" => "drop_array",
 			"default" => "None",
@@ -255,6 +262,54 @@ function cycle_show_tab () {
 }
 
 function cycle_config_arrays () {
+	global $cycle_graphs, $cycle_cols, $cycle_width, $cycle_height;
+	
+	$cycle_graphs = array(
+		1 => "1 Graph", 
+		2 => "2 Graphs", 
+		4 => "4 Graphs", 
+		6 => "6 Graphs", 
+		8 => "8 Graphs", 
+		10 => "10 Graphs"
+	);
+
+	$cycle_cols   = array(
+		1 => "1 Column", 
+		2 => "2 Columns", 
+		3 => "3 Columns", 
+		4 => "4 Columns", 
+		5 => "5 Columns"
+	);
+
+	$cycle_height = array(
+		75  => "75 Pixels", 
+		100 => "100 Pixels", 
+		125 => "125 Pixels", 
+		150 => "150 Pixels", 
+		175 => "175 Pixels", 
+		200 => "200 Pixels", 
+		250 => "250 Pixels", 
+		300 => "300 Pixels", 
+		350 => "350 Pixels", 
+		400 => "400 Pixels", 
+		500 => "500 Pixels"
+	);
+
+	$cycle_width  = array(
+		100 => "100 Pixels", 
+		125 => "125 Pixels", 
+		150 => "150 Pixels", 
+		175 => "175 Pixels", 
+		200 => "200 Pixels", 
+		250 => "250 Pixels", 
+		300 => "300 Pixels", 
+		350 => "350 Pixels", 
+		400 => "400 Pixels", 
+		500 => "500 Pixels", 
+		600 => "600 Pixels", 
+		700 => "700 Pixels"
+	);
+
 	return true;
 }
 

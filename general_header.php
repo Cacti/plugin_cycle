@@ -26,7 +26,9 @@ $using_guest_account = false;
 $show_console_tab = true;
 
 $oper_mode = api_plugin_hook_function('general_header', OPER_MODE_NATIVE);
-if ($oper_mode != OPER_MODE_RESKIN) {
+if ($oper_mode == OPER_MODE_RESKIN) {
+	return;
+}
 
 if (read_config_option("auth_method") != 0) {
 	/* at this point this user is good to go... so get some setting about this
@@ -51,16 +53,12 @@ $page_title = api_plugin_hook_function('page_title', 'Cacti');
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php echo $page_title; ?></title>
-	<?php
-	if (isset($_SESSION["custom"]) && ($_SESSION["custom"])) {
-		print "<meta http-equiv=refresh content='99999'>\r\n";
-	}else{
-		$refresh = api_plugin_hook_function('top_graph_refresh', read_graph_config_option('page_refresh'));
-		print "<meta http-equiv=refresh content='" . $refresh . "'>\r\n";
-	}
-	?>
 	<link href="<?php echo $config['url_path']; ?>include/main.css" rel="stylesheet">
 	<link href="<?php echo $config['url_path']; ?>images/favicon.ico" rel="shortcut icon"/>
+	<link rel="stylesheet" type="text/css" href="cycle.css">
+	<script type="text/javascript" src="cycle.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.autocomplete.js"></script>
 	<?php api_plugin_hook('page_head'); ?>
 </head>
 <?php if ($oper_mode == OPER_MODE_NATIVE) {?>
@@ -117,4 +115,3 @@ $page_title = api_plugin_hook_function('page_title', 'Cacti');
 <?php } ?>
 	<tr>
 		<td valign="top" style="padding: 5px; border-right: #aaaaaa 1px solid;">
-<?php } ?>

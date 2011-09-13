@@ -1,0 +1,24 @@
+#title {
+	font-size:<?php echo read_config_option("cycle_font_size"); ?>px;
+	font-family:<?php echo read_config_option("cycle_font_face"); ?>;
+	font-weight:bold;color:#<?php echo db_fetch_cell("SELECT hex FROM colors WHERE id='" . read_config_option("cycle_font_color") . "'"); ?>;
+}
+
+.graphholder {
+
+}
+
+#outter {
+	background-color: #F5F5F5; 
+	margin-top: -13px;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	border-bottom: 1px solid #BBBBBB;
+}
+
+#inner {
+	background-color: #EFEFEF; 
+	border-left: 2px solid #F5F5F5;
+	border-right: 2px solid #F5F5F5;
+	border-bottom: 2px solid #F5F5F5;
+}

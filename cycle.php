@@ -30,78 +30,125 @@ include_once("./plugins/cycle/general_header.php");
 if (!isset($_SESSION["sess_cycle_legend"])) {
 	$_SESSION["sess_cycle_legend"] = read_config_option("cycle_legend");
 }
+
 if (!isset($_SESSION["sess_cycle_delay"])) {
 	$_SESSION["sess_cycle_delay"] = read_config_option("cycle_delay");
+}
+
+if (!isset($_SESSION["sess_cycle_graphs_pp"])) {
+	$_SESSION["sess_cycle_graphs_pp"] = read_config_option("cycle_graphs");
+}
+
+if (!isset($_SESSION["sess_cycle_graph_cols"])) {
+	$_SESSION["sess_cycle_graph_cols"] = read_config_option("cycle_columns");
 }
 
 if (empty($_SESSION["sess_cycle_delay"])) {
 	db_execute("REPLACE INTO settings SET name='cycle_delay', value='5'");
 }
 
+if (empty($_SESSION["sess_cycle_graphs_pp"])) {
+	db_execute("REPLACE INTO settings SET name='cycle_graphs', value='4'");
+}
+
+$graphs_array = array(
+    1  => "1 Graphs",
+    2  => "2 Graphs",
+    4  => "4 Graphs",
+    6  => "6 Graphs",
+    8  => "8 Graphs",
+    10 => "10 Graphs"
+);
+
+$graph_cols = array(
+	1  => "1 Column",
+	2  => "2 Columns",
+	3  => "3 Columns",
+	4  => "4 Columns",
+	5  => "5 Columns"
+);
+
 $legend = $_SESSION["sess_cycle_legend"];
 ?>
-<script src="cycle.js"></script>
-<style type="text/css">
-#title {
-	font-size:<?php echo read_config_option("cycle_font_size"); ?>px;
-	font-family:<?php echo read_config_option("cycle_font_face"); ?>;
-	font-weight:bold;color:#<?php echo db_fetch_cell("SELECT hex FROM colors WHERE id='" . read_config_option("cycle_font_color") . "'"); ?>;
-}
-
-.graphholder {
-
-}
-
-#outter {background-color: #f5f5f5; border: 1px solid #bbbbbb;}
-#inner {background-color: #ddd; border: 2px solid #f5f5f5;}
-
-</style>
-<body onload="rtime=<?php echo read_config_option("cycle_delay")*1000; ?>;startTime();refreshTime();getnext();">
-	<center><!-- Timespan - Refresh - Prev - Stop - Next links -->
-		<table>
-			<tr>
-				<td>
-					<div id="outter">
-						<div id="inner">
-							<div style="margin:5px;">
-								<select id='timespan' name='timespan' onChange="newTimespan()">
-									<?php
-									if (sizeof($graph_timespans)) {
-									foreach($graph_timespans as $key=>$value) {
-											print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-									}
-									}
-									?>
-								</select>
-								<select id='refresh' name='refresh' onChange="newRefresh()">
-									<?php
-									if (sizeof($page_refresh_interval)) {
-									foreach($page_refresh_interval as $key=>$value) {
-											print "<option value='$key'"; if ($_SESSION["sess_cycle_delay"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-									}
-									}
-									?>
-								</select>
-								<input type='button' id='prev' value='Prev' name='prev' onClick='getprev()'>
-								<input type='button' id='cstop' value='Stop' name='cstop' onClick='stopTime()'>
-								<input type='button' id='cstart' value='Start' name='cstart' onClick='startTime()' style='display:none;'>
-								<input type='button' id='next' value='Next' name='next' onClick='getnext()'>
-								<input type="checkbox" id='legend' name='legend' onClick='newRefresh()' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?> >Display Legend
-								<input type='button' id='' value='Refresh' name='refreshing' onClick='newRefresh()'>
-								<br>
-							</div>
-							<div style="margin:4px;">
-								<span id="title"></span>
-							</div>
+<center><!-- Timespan - Refresh - Prev - Stop - Next links -->
+	<table>
+		<tr>
+			<td>
+				<div id="outter">
+					<div id="inner">
+						<div style="margin:5px;">
+							<select id='timespan' name='timespan'>
+								<?php
+								if (sizeof($graph_timespans)) {
+								foreach($graph_timespans as $key=>$value) {
+										print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+								}
+								}
+								?>
+							</select>
+							<select id='refresh' name='refresh'>
+								<?php
+								if (sizeof($page_refresh_interval)) {
+								foreach($page_refresh_interval as $key=>$value) {
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_delay"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+								}
+								}
+								?>
+							</select>
+							<select id='graphs' name='graphs'>
+								<?php
+								foreach($graphs_array as $key=>$value) {
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_graphs_pp"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
+								}
+								?>
+							</select>
+							<select id='cols' name='cols'>
+								<?php
+								foreach($graph_cols as $key=>$value) {
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_graph_cols"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
+								}
+								?>
+							</select>
+							<input type='button' id='prev' value='Prev' name='prev'>
+							<input type='button' id='cstop' value='Stop' name='cstop'>
+							<input type='button' id='cstart' value='Start' name='cstart' style='display:none;'>
+							<input type='button' id='next' value='Next' name='next'>
+							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?>>
+							<label for='legend' style='vertical-align:25%'>Display Legend</label>
+							<input type='button' id='refreshb' value='Refresh' name='refreshb'>
+							<br>
+						</div>
+						<div style="margin:4px;">
+							<span id="html"></span>
 						</div>
 					</div>
-				</td>
-			</tr>
-		</table>
-		<!-- Ticker -->
-		Next Update In <span id="countdown"></span><br>
-		<!-- Image -->
-		<span id="image"></span><br>
-	</center>
-</body>
-</html>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<!-- Ticker -->
+	Next Update In <span id="countdown"></span><br>
+	<!-- Image -->
+	<span id="image"></span><br>
+</center>
+<script type="text/javascript">
+	rtime=<?php echo read_config_option("cycle_delay")*1000;?>;
+	$().ready(function() {
+		startTime();
+		refreshTime();
+		getnext();
+	});
+	$('#timespan').change(function(){newTimespan()});
+	$('#refresh').change(function(){newRefresh()});
+	$('#graphs').change(function(){newRefresh()});
+	$('#cols').change(function(){newRefresh()});
+	$('#prev').click(function(){getprev()});
+	$('#next').click(function(){getnext()});
+	$('#cstop').click(function(){stopTime()});
+	$('#cstart').click(function(){startTime()});
+	$('#legend').change(function(){newRefresh()});
+	$('#refreshb').click(function(){newRefresh()});
+</script>
+<?php
+include("./include/bottom_footer.php");
+

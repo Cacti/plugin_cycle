@@ -21,10 +21,9 @@
  +-------------------------------------------------------------------------+
 */
 
-var xmlHttp
 var timerID = null
 var image   = ""
-var title   = ""
+var html    = ""
 var next    = -1
 var prev    = 1
 var time    = 5
@@ -63,107 +62,219 @@ function formattime(secs) {
 
 function startTime() {
 	timerID = self.setInterval('refreshTime()', 1000)
-	document.getElementById("cstop").style.display="inline"
-	document.getElementById("cstart").style.display="none"
+	$('#cstop').css("display", "inline");
+	$('#cstart').css("display", "none");
 }
 
 function stopTime() {
 	self.clearInterval(timerID)
-	document.getElementById("cstart").style.display="inline"
-	document.getElementById("cstop").style.display="none"
+	$('#cstop').css("display", "none");
+	$('#cstart').css("display", "inline");
+}
+
+function processAjax(url) {
+		$.get("cycle_ajax.php"+url, function(data) {
+			data = $.parseJSON(data);
+			if (data.html)         html=data.html;	
+			if (data.image)        image=base64_decode(data.image);	
+			if (data.graphid)      current=data.graphid;
+			if (data.nextgraphid)  next=data.nextgraphid;
+			if (data.prevgraphid)  prev=data.prevgraphid;
+			if (data.cur_leaf_id)  cur_leaf_id=data.cur_leaf_id;
+			//alert("Cur Graph ID:"+current+", Next Graph ID:"+next+", Prev Graph ID:"+prev);
+			$('#html').html(html);
+			$('#image').html(image);
+		});
 }
 
 function refreshTime() {
 	ltime++
-	document.getElementById("countdown").innerHTML=formattime(time)
+	$('#countdown').html(formattime(time));
 	if (time == 0) {
-		time=rtime/1000+1
-		url="?id="+next+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
-		getfromserver()
+		time=rtime/1000+1;
+		if ($('#filter').val()) {
+			filter=$('#filter').val();
+		}else{
+			filter="";
+		}
+		url="?id="+next+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
+		processAjax(url);
 	}
 	time=time-1
 }
 
-function getfromserver() {
-	xmlHttp=GetXmlHttpObject()
-	if (xmlHttp==null) {
-		alert ("Get Firefox!")
-		return
-	}
-
-	url="cycle_ajax.php"+url
-	xmlHttp.onreadystatechange=stateChanged
-	xmlHttp.open("GET",url,true)
-	xmlHttp.send(null)
-}
-
 function newRefresh() {
-	rtime=document.getElementById("refresh").value*1000
-	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
-	getfromserver()
+	rtime=$('#refresh').val() * 1000;
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
 function newTimespan() {
-	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
-	getfromserver()
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
 function newGraph() {
-	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&tree_id="+"&rrdid="+document.getElementById("graph").value+"&legend="+document.getElementById("legend").checked
-	getfromserver()
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+$('#graph').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
 function newTree() {
-	time=rtime/1000
-	url="?id="+current+"&timespan="+document.getElementById("timespan").value+"&rrdid=-1"+"&tree_id="+"&legend="+document.getElementById("legend").checked+"&tree_id="+document.getElementById("tree").value
-	getfromserver()
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+$('#tree').val()+"&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
 function getnext() {
-	time=rtime/1000
-	url="?id="+next+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
-	getfromserver()
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+next+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id=&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
 function getprev() {
-	time=rtime/1000
-	url="?id="+prev+"&timespan="+document.getElementById("timespan").value+"&rrdid="+"&tree_id="+"&legend="+document.getElementById("legend").checked
-	getfromserver()
+	time=rtime/1000;
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	url="?id="+prev+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id=&legend="+$('#legend:checked').length;
+	processAjax(url);
 }
 
-function stateChanged() {
-	if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") {
-		reply = xmlHttp.responseText
-		reply = reply.split("!!!");
-		image = "";
-		for (i in reply) {
-			if (i == 0) {
-				title = reply[0]
-			} else if (i == 1) {
-				next  = reply[1]
-			} else if (i == 2) {
-				prev  = reply[2]
-			} else if (i == 4) {
-				image += reply[i]
-			} else if (i == 3) {
-				current = reply[3]
-			}
+function processReturn(event) {
+	if (event.which == 13) {
+		if ($('#tree').val()) {
+			newTree();
+		}else{
+			newRefresh();
 		}
-		document.getElementById("image").innerHTML=image
-		document.getElementById("title").innerHTML=title
 	}
 }
 
-function GetXmlHttpObject() {
-	var objXMLHttp=null
-	if (window.XMLHttpRequest) {
-		objXMLHttp=new XMLHttpRequest()
+function base64_decode(data) {
+	// http://kevin.vanzonneveld.net
+	// +   original by: Tyler Akins (http://rumkin.com)
+	// +   improved by: Thunder.m
+	// +      input by: Aman Gupta
+	// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+	// +   bugfixed by: Onno Marsman
+	// +   bugfixed by: Pellentesque Malesuada
+	// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+	// +      input by: Brett Zamir (http://brett-zamir.me)
+	// +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+	// -    depends on: utf8_decode
+	// *     example 1: base64_decode('S2V2aW4gdmFuIFpvbm5ldmVsZA==');
+	// *     returns 1: 'Kevin van Zonneveld'
+	// mozilla has this native
+	// - but breaks in 2.0.0.12!
+	//if (typeof this.window['btoa'] == 'function') {
+	//    return btoa(data);
+	//}
+	var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+	var o1, o2, o3, h1, h2, h3, h4, bits, i = 0,
+		ac = 0,
+		dec = "",
+		tmp_arr = [];
+
+	if (!data) {
+		return data;
 	}
-	else if (window.ActiveXObject) {
-		objXMLHttp=new ActiveXObject("Microsoft.XMLHTTP")
+
+	data += '';
+
+	do { // unpack four hexets into three octets using index points in b64
+		h1 = b64.indexOf(data.charAt(i++));
+		h2 = b64.indexOf(data.charAt(i++));
+		h3 = b64.indexOf(data.charAt(i++));
+		h4 = b64.indexOf(data.charAt(i++));
+
+		bits = h1 << 18 | h2 << 12 | h3 << 6 | h4;
+
+		o1 = bits >> 16 & 0xff;
+		o2 = bits >> 8 & 0xff;
+		o3 = bits & 0xff;
+
+		if (h3 == 64) {
+			tmp_arr[ac++] = String.fromCharCode(o1);
+		} else if (h4 == 64) {
+			tmp_arr[ac++] = String.fromCharCode(o1, o2);
+		} else {
+			tmp_arr[ac++] = String.fromCharCode(o1, o2, o3);
+		}
+	} while (i < data.length);
+
+	dec = tmp_arr.join('');
+	dec = this.utf8_decode(dec);
+
+	return dec;
+}
+
+function utf8_decode (str_data) {
+    // http://kevin.vanzonneveld.net
+    // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)
+    // +      input by: Aman Gupta
+    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +   improved by: Norman "zEh" Fuchs
+    // +   bugfixed by: hitwork
+    // +   bugfixed by: Onno Marsman
+    // +      input by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // *     example 1: utf8_decode('Kevin van Zonneveld');
+    // *     returns 1: 'Kevin van Zonneveld'
+	var tmp_arr = [],
+		i = 0,
+		ac = 0,
+		c1 = 0,
+		c2 = 0,
+		c3 = 0;
+
+	str_data += '';
+
+	while (i < str_data.length) {
+		c1 = str_data.charCodeAt(i);
+		if (c1 < 128) {
+            tmp_arr[ac++] = String.fromCharCode(c1);
+            i++;
+		} else if (c1 > 191 && c1 < 224) {
+			c2 = str_data.charCodeAt(i + 1);
+			tmp_arr[ac++] = String.fromCharCode(((c1 & 31) << 6) | (c2 & 63));
+			i += 2;
+		} else {
+			c2 = str_data.charCodeAt(i + 1);
+			c3 = str_data.charCodeAt(i + 2);
+			tmp_arr[ac++] = String.fromCharCode(((c1 & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+			i += 3;
+		}
 	}
-	return objXMLHttp
+
+	return tmp_arr.join('');
 }
