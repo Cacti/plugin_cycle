@@ -27,6 +27,8 @@ $guest_account = true;
 include_once("./include/auth.php");
 include_once("./plugins/cycle/general_header.php");
 
+cycle_set_defaults();
+
 if (!isset($_SESSION["sess_cycle_legend"])) {
 	$_SESSION["sess_cycle_legend"] = read_config_option("cycle_legend");
 }
@@ -41,6 +43,14 @@ if (!isset($_SESSION["sess_cycle_graphs_pp"])) {
 
 if (!isset($_SESSION["sess_cycle_graph_cols"])) {
 	$_SESSION["sess_cycle_graph_cols"] = read_config_option("cycle_columns");
+}
+
+if (!isset($_SESSION["sess_cycle_width"])) {
+	$_SESSION["sess_cycle_width"] = read_config_option("cycle_width");
+}
+
+if (!isset($_SESSION["sess_cycle_height"])) {
+	$_SESSION["sess_cycle_height"] = read_config_option("cycle_height");
 }
 
 if (empty($_SESSION["sess_cycle_delay"])) {
@@ -77,7 +87,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 				<div id="outter">
 					<div id="inner">
 						<div style="margin:5px;">
-							<select id='timespan' name='timespan'>
+							<select id='timespan' name='timespan' title='Graph Display Timespan'>
 								<?php
 								if (sizeof($graph_timespans)) {
 								foreach($graph_timespans as $key=>$value) {
@@ -86,7 +96,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 								}
 								?>
 							</select>
-							<select id='refresh' name='refresh'>
+							<select id='refresh' name='refresh' title='Cycle Rotation Refresh Frequency'>
 								<?php
 								if (sizeof($page_refresh_interval)) {
 								foreach($page_refresh_interval as $key=>$value) {
@@ -95,26 +105,41 @@ $legend = $_SESSION["sess_cycle_legend"];
 								}
 								?>
 							</select>
-							<select id='graphs' name='graphs'>
+							<select id='graphs' name='graphs' title='Number of Graphs per Page'>
 								<?php
 								foreach($graphs_array as $key=>$value) {
 										print "<option value='$key'"; if ($_SESSION["sess_cycle_graphs_pp"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
 								}
 								?>
 							</select>
-							<select id='cols' name='cols'>
+							<select id='cols' name='cols' title='Number of Graph Columns'>
 								<?php
 								foreach($graph_cols as $key=>$value) {
 										print "<option value='$key'"; if ($_SESSION["sess_cycle_graph_cols"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
 								}
 								?>
 							</select>
-							<input type='button' id='prev' value='Prev' name='prev'>
-							<input type='button' id='cstop' value='Stop' name='cstop'>
-							<input type='button' id='cstart' value='Start' name='cstart' style='display:none;'>
-							<input type='button' id='next' value='Next' name='next'>
-							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?>>
-							<label for='legend' style='vertical-align:25%'>Display Legend</label>
+							<select id='height' name='height' title='Graph Height'>
+								<?php
+								foreach($cycle_height as $key=>$value) {
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_height"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
+								}
+								?>
+							</select>
+							<span style='vertical-align:center;'>X</span>
+							<select id='width' name='width' title='Graph Width'>
+								<?php
+								foreach($cycle_width as $key=>$value) {
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_width"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
+								}
+								?>
+							</select>
+							<input type='button' id='prev' value='Prev' name='prev' title='Cycle to Previous Graphs'>
+							<input type='button' id='cstop' value='Stop' name='cstop' title='Stop Cycling'>
+							<input type='button' id='cstart' value='Start' name='cstart' style='display:none;' title='Resume Cycling'>
+							<input type='button' id='next' value='Next' name='next' title='Cycle to Next Graphs'>
+							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?> title='Display Graph Legend'>
+							<label for='legend' style='vertical-align:25%' title='Display Graph Legend'>Display Legend</label>
 							<input type='button' id='refreshb' value='Refresh' name='refreshb'>
 							<br>
 						</div>
@@ -142,6 +167,8 @@ $legend = $_SESSION["sess_cycle_legend"];
 	$('#refresh').change(function(){newRefresh()});
 	$('#graphs').change(function(){newRefresh()});
 	$('#cols').change(function(){newRefresh()});
+	$('#width').change(function(){newRefresh()});
+	$('#height').change(function(){newRefresh()});
 	$('#prev').click(function(){getprev()});
 	$('#next').click(function(){getnext()});
 	$('#cstop').click(function(){stopTime()});
@@ -152,3 +179,30 @@ $legend = $_SESSION["sess_cycle_legend"];
 <?php
 include("./include/bottom_footer.php");
 
+function cycle_set_defaults() {
+	if (!isset($_SESSION["sess_cycle_defaults"])) {
+		$defaults = array(
+			"cycle_delay"      => "60",
+			"cycle_timespan"   => "5",
+			"cycle_columns"    => "2",
+			"cycle_graphs"     => "4",
+			"cycle_height"     => "100",
+			"cycle_width"      => "400",
+			"cycle_font_size"  => "8",
+			"cycle_font_face"  => "",
+			"max_length"       => "100",
+			"cycle_font_color" => "1",
+			"cycle_legend"     => "",
+			"cycle_custom_graphs_type" => "2"
+		);
+
+		foreach($defaults as $name => $value) {
+			$current = db_fetch_cell("SELECT value FROM settings WHERE name='$name'");
+			if ($current !== false) {
+				db_execute("REPLACE INTO settings (name,value) VALUES ('$name', '$value')");
+			}
+		}
+
+		$_SESSION["sess_cycle_defaults"] = true;
+	}
+}

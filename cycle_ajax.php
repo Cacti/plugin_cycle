@@ -56,6 +56,8 @@ input_validate_input_number(get_request_var_request("graphs"));
 input_validate_input_number(get_request_var_request("graph"));
 input_validate_input_number(get_request_var_request("cols"));
 input_validate_input_number(get_request_var_request("id"));
+input_validate_input_number(get_request_var_request("width"));
+input_validate_input_number(get_request_var_request("height"));
 /* ==================================================== */
 
 /* clean up search string */
@@ -86,6 +88,8 @@ load_current_session_value("graphs",   "sess_cycle_graphpp",  read_config_option
 load_current_session_value("cols",     "sess_cycle_cols",     read_config_option("cycle_cols"));
 load_current_session_value("legend",   "sess_cycle_legend",   read_config_option("cycle_legend"));
 load_current_session_value("action",   "sess_cycle_action",   "view");
+load_current_session_value("width",    "sess_cycle_width",    read_config_option("cycle_width"));
+load_current_session_value("height",   "sess_cycle_height",   read_config_option("cycle_height"));
 
 $legend  = get_request_var_request("legend");
 $tree_id = get_request_var_request("tree_id");
@@ -94,6 +98,8 @@ $graphpp = get_request_var_request("graphs");
 $cols    = get_request_var_request("cols");
 $filter  = get_request_var_request("filter");
 $id      = get_request_var_request("id");
+$width   = get_request_var_request("width");
+$height  = get_request_var_request("height");
 
 if (empty($tree_id)) $tree_id = read_config_option("cycle_custom_graphs_tree");
 if (empty($id))      $id      = -1;
@@ -119,7 +125,7 @@ case "1":
 case "2":
 	$tree_list = get_graph_tree_array();
 	if (sizeof($tree_list) > 1) {
-		$html ="<select id='tree_id' name='tree_id' onChange='newTree()'>\n";
+		$html ="<select id='tree_id' name='tree_id' onChange='newTree()' title='Select Graph Tree to View'>\n";
 
 		foreach ($tree_list as $tree) {
 			$html .= "<option value='".$tree["id"]."'".($graph_tree == $tree["id"] ? " selected" : "").">".title_trim($tree["name"], 30)."</option>\n";
@@ -130,7 +136,7 @@ case "2":
 		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' ORDER BY order_key");
 
 		if (sizeof($leaves)) {
-			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()'>\n";
+			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()' title='Select Tree Leaf to Display'>\n";
 
 			$html .= "<option value='-1'" . ($leaf_id == -1 ? " selected" : "") . ">All Levels</option>\n";
 			$html .= "<option value='-2'" . ($leaf_id == -2 ? " selected" : "") . ">Top Level</option>\n";
@@ -160,7 +166,7 @@ if (sizeof($graphs)) {
 		$out .= '<td align="center" class="graphholder" style="width:' . (read_config_option('cycle_width')) . 'px;">'
 			.'<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
 			."<img border='0' src='../../graph_image.php?local_graph_id=".$graph['graph_id']."&rra_id=0&graph_start=".$timespan["begin_now"]
-			.'&graph_end='.time().'&graph_width='.read_config_option('cycle_width').'&graph_height='.read_config_option('cycle_height').($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
+			.'&graph_end='.time().'&graph_width='.$width.'&graph_height='.$height.($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
 			.'</a></td>';
 
 		$out .= "<td valign='top' style='padding: 3px;' class='noprint' width='10px'>" . 
@@ -296,12 +302,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 						$title      = $row['title_cache'];
 						$curr_found = true;
 						//cacti_log("Found (1) current graph id '" . $row['id'] . "'", false);
-						$graphs[$i]['graph_id'] = $graph_id;
+						$graphs[$graph_id]['graph_id'] = $graph_id;
 						$i++;
 					}else{
 						if (sizeof($graphs) < $graphpp) {
 							//cacti_log("Found (1) graph id '" . $row['id'] . "'", false);
-							$graphs[$i]['graph_id'] = $row['id'];
+							$graphs[$row['id']]['graph_id'] = $row['id'];
 							$i++;
 						}else{
 							//cacti_log("Found (1) next graph id '" . $row['id'] . "'", false);
@@ -356,12 +362,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 							$title      = $row['title_cache'];
 							$curr_found = true;
 							//cacti_log("Found (2) current graph id '" . $row['id'] . "'", false);
-							$graphs[$i]['graph_id'] = $graph_id;
+							$graphs[$graph_id]['graph_id'] = $graph_id;
 							$i++;
 						}else{
 							if (sizeof($graphs) < $graphpp) {
 								//cacti_log("Found (2) graph id '" . $row['id'] . "'", false);
-								$graphs[$i]['graph_id'] = $row['id'];
+								$graphs[$row['id']]['graph_id'] = $row['id'];
 								$i++;
 							}else{
 								//cacti_log("Found (2) next graph id '" . $row['id'] . "'", false);

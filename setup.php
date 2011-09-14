@@ -153,7 +153,7 @@ function cycle_config_settings () {
 			"friendly_name" => "Delay Interval",
 			"description" => "This is the time in seconds before the next graph is displayed.",
 			"method" => "drop_array",
-			"default" => 5,
+			"default" => 60,
 			"array" => $page_refresh_interval
 			),
 		"cycle_timespan" => array(
@@ -209,12 +209,13 @@ function cycle_config_settings () {
 			"friendly_name" => "Title Font Color",
 			"description" => "This is the font color for the title.",
 			"method" => "drop_color",
-			"max_length" => 10,
+			"default" => "1"
 			),
 		"cycle_legend" => array(
 			"friendly_name" => "Display Legend",
 			"description" => "Check this to display legend.",
 			"method" => "checkbox",
+			"default" => ""
 			),
 		"cycle_cheader" => array(
 			"friendly_name" => "Predefined Rotations",
