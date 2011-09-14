@@ -60,7 +60,7 @@ input_validate_input_number(get_request_var_request("id"));
 
 /* clean up search string */
 if (isset($_REQUEST["filter"])) {
-	$_REQUEST["filter"] = sanitize_search_string(get_request_var_request("filter"));
+	$_REQUEST["filter"] = cycle_sanitize_search_string(get_request_var_request("filter"));
 }
 
 /* clean up legend */
@@ -108,7 +108,7 @@ $html       = "";
 $out        = "";
 
 /* detect the next graph regardless of type */
-get_next_graphid($graphpp, $filter);
+get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id);
 
 switch(read_config_option("cycle_custom_graphs_type")) {
 case "0":
@@ -119,7 +119,7 @@ case "1":
 case "2":
 	$tree_list = get_graph_tree_array();
 	if (sizeof($tree_list) > 1) {
-		$html ="<select id='tree' name='tree' onChange='newTree()'>\n";
+		$html ="<select id='tree_id' name='tree_id' onChange='newTree()'>\n";
 
 		foreach ($tree_list as $tree) {
 			$html .= "<option value='".$tree["id"]."'".($graph_tree == $tree["id"] ? " selected" : "").">".title_trim($tree["name"], 30)."</option>\n";
@@ -130,10 +130,10 @@ case "2":
 		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' ORDER BY order_key");
 
 		if (sizeof($leaves)) {
-			$html .= "<select id='leaf' name='leaf' onChange='newTree()'>\n";
+			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()'>\n";
 
-			$html .= "<option value='-1'" . ($leaf_id == -1 ? " selected" : "") . ">All</option>\n";
-			$html .= "<option value='-2'" . ($leaf_id == -2 ? " selected" : "") . ">Top</option>\n";
+			$html .= "<option value='-1'" . ($leaf_id == -1 ? " selected" : "") . ">All Levels</option>\n";
+			$html .= "<option value='-2'" . ($leaf_id == -2 ? " selected" : "") . ">Top Level</option>\n";
 
 			foreach ($leaves as $leaf) {
 				$html .= "<option value='" . $leaf["id"] . "'" . ($leaf_id == $leaf["id"] ? " selected":"") . ">" . $leaf["title"] . "</option>\n";
@@ -145,7 +145,7 @@ case "2":
 }
 
 /* process the filter section */
-$html .= "<input id='filter' name='filter' type='textbox' size='40' onkeypress='processReturn(event)' value='" . $filter . "'>";
+$html .= "<input id='filter' name='filter' type='textbox' title='Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)' size='40' onkeypress='processReturn(event)' value='" . $filter . "'>";
 
 /* create the graph structure and output */
 $out       = '<table cellpadding="5" cellspacing="5" border="0">';
@@ -153,32 +153,34 @@ $max_cols  = $cols;
 $col_count = 1;
 
 if (sizeof($graphs)) {
-foreach($graphs as $graph) {
-	if ($col_count == 1)
-		$out .= '<tr>';
+	foreach($graphs as $graph) {
+		if ($col_count == 1)
+			$out .= '<tr>';
 
-	$out .= '<td align="center" class="graphholder" style="width:' . (read_config_option('cycle_width')) . 'px;">'
-		.'<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
-		."<img border='0' src='../../graph_image.php?local_graph_id=".$graph['graph_id']."&rra_id=0&graph_start=".$timespan["begin_now"]
-		.'&graph_end='.time().'&graph_width='.read_config_option('cycle_width').'&graph_height='.read_config_option('cycle_height').($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
-		.'</a></td>';
+		$out .= '<td align="center" class="graphholder" style="width:' . (read_config_option('cycle_width')) . 'px;">'
+			.'<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
+			."<img border='0' src='../../graph_image.php?local_graph_id=".$graph['graph_id']."&rra_id=0&graph_start=".$timespan["begin_now"]
+			.'&graph_end='.time().'&graph_width='.read_config_option('cycle_width').'&graph_height='.read_config_option('cycle_height').($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
+			.'</a></td>';
 
-	$out .= "<td valign='top' style='padding: 3px;' class='noprint' width='10px'>" . 
-		"<a href='./../../graph.php?action=zoom&local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_zoom.gif' border='0' alt='Zoom Graph' title='Zoom Graph' style='padding: 3px;'></a><br>" . 
-		"<a href='./../../graph_xport.php?local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_query.png' border='0' alt='CSV Export' title='CSV Export' style='padding: 3px;'></a><br>" . 
-		"<a href='./../../graph.php?action=properties&local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_properties.gif' border='0' alt='Graph Source/Properties' title='Graph Source/Properties' style='padding: 3px;'></a><br>";
+		$out .= "<td valign='top' style='padding: 3px;' class='noprint' width='10px'>" . 
+			"<a href='./../../graph.php?action=zoom&local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_zoom.gif' border='0' alt='Zoom Graph' title='Zoom Graph' style='padding: 3px;'></a><br>" . 
+			"<a href='./../../graph_xport.php?local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_query.png' border='0' alt='CSV Export' title='CSV Export' style='padding: 3px;'></a><br>" . 
+			"<a href='./../../graph.php?action=properties&local_graph_id=" . $graph['graph_id'] . "&rra_id=5&view_type='><img src='./../../images/graph_properties.gif' border='0' alt='Graph Source/Properties' title='Graph Source/Properties' style='padding: 3px;'></a><br>";
 
-	ob_start();
-	api_plugin_hook('graph_buttons', array('hook' => 'view', 'local_graph_id' =>$graph['graph_id'], 'rra' => '5', 'view_type' => ""));
-	$out .= ob_get_clean();
+		ob_start();
+		api_plugin_hook('graph_buttons', array('hook' => 'view', 'local_graph_id' =>$graph['graph_id'], 'rra' => '5', 'view_type' => ""));
+		$out .= ob_get_clean();
 
-	if ($col_count == $max_cols) {
-		$out .= '</tr>';
-		$col_count=1;
-	} else {
-		$col_count++;
+		if ($col_count == $max_cols) {
+			$out .= '</tr>';
+			$col_count=1;
+		} else {
+			$col_count++;
+		}
 	}
-}
+}else{
+	$out = "<h1>No Graphs Found Matching Criteria</h1>";
 }
 
 if ($col_count  <= $max_cols) {
@@ -207,8 +209,8 @@ function cycle_check_changed($request, $session) {
 	}
 }
 
-function get_next_graphid($graphpp, $filter) {
-	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id, $graph_tree;
+function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
+	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id;
 
 	/* if no default graph list has been specified, default to 0 */
 	$type = read_config_option("cycle_custom_graphs_type");
@@ -227,7 +229,7 @@ function get_next_graphid($graphpp, $filter) {
 		}
 
 		$sql_where = "WHERE gl.id>=$graph_id";
-		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache LIKE '%$filter%'";
+		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 		if ($type == 1) {
 			$cases = explode(",", read_config_option("cycle_custom_graphs_list"));
 			$newcase = "";
@@ -237,10 +239,12 @@ function get_next_graphid($graphpp, $filter) {
 
 			if (strlen($newcase)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN($newcase)";
 		}elseif ($type == 2) {
-			$graph_data = get_tree_graphs($graph_tree);
+			$graph_data = get_tree_graphs($graph_tree, $leaf_id);
 			$local_graph_ids = array_keys($graph_data);
 			if (sizeof($local_graph_ids)) {
 				$sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN(" . implode(",", $local_graph_ids) . ")";
+			}else{
+				break;
 			}
 		}
 
@@ -291,16 +295,16 @@ function get_next_graphid($graphpp, $filter) {
 						$graph_id   = $row['id'];
 						$title      = $row['title_cache'];
 						$curr_found = true;
-cacti_log("Found (1) current graph id '" . $row['id'] . "'", false);
+						//cacti_log("Found (1) current graph id '" . $row['id'] . "'", false);
 						$graphs[$i]['graph_id'] = $graph_id;
 						$i++;
 					}else{
 						if (sizeof($graphs) < $graphpp) {
-cacti_log("Found (1) graph id '" . $row['id'] . "'", false);
+							//cacti_log("Found (1) graph id '" . $row['id'] . "'", false);
 							$graphs[$i]['graph_id'] = $row['id'];
 							$i++;
 						}else{
-cacti_log("Found (1) next graph id '" . $row['id'] . "'", false);
+							//cacti_log("Found (1) next graph id '" . $row['id'] . "'", false);
 							$next_graph_id = $row['id'];
 							$next_found    = true;
 
@@ -326,7 +330,7 @@ cacti_log("Found (1) next graph id '" . $row['id'] . "'", false);
 		 */
 		if (sizeof($graphs) < $graphpp) {
 			$sql_where = "";
-			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache LIKE '%$filter%'";
+			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 
 			$start = 0;
 			$done  = false;
@@ -351,16 +355,16 @@ cacti_log("Found (1) next graph id '" . $row['id'] . "'", false);
 							$graph_id   = $row['id'];
 							$title      = $row['title_cache'];
 							$curr_found = true;
-cacti_log("Found (2) current graph id '" . $row['id'] . "'", false);
+							//cacti_log("Found (2) current graph id '" . $row['id'] . "'", false);
 							$graphs[$i]['graph_id'] = $graph_id;
 							$i++;
 						}else{
 							if (sizeof($graphs) < $graphpp) {
-cacti_log("Found (2) graph id '" . $row['id'] . "'", false);
+								//cacti_log("Found (2) graph id '" . $row['id'] . "'", false);
 								$graphs[$i]['graph_id'] = $row['id'];
 								$i++;
 							}else{
-cacti_log("Found (2) next graph id '" . $row['id'] . "'", false);
+								//cacti_log("Found (2) next graph id '" . $row['id'] . "'", false);
 								$next_graph_id = $row['id'];
 								$next_found    = true;
 		
@@ -390,7 +394,7 @@ cacti_log("Found (2) next graph id '" . $row['id'] . "'", false);
 		 * also have to ajust for underflow in this case.
 		 */
 		$sql_where = "WHERE gl.id<$graph_id";
-		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache LIKE '%$filter%'";
+		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 
 		$done    = false;
 		$start   = 0;
@@ -412,10 +416,10 @@ cacti_log("Found (2) next graph id '" . $row['id'] . "'", false);
 			foreach ($rows as $row) {
 				if (is_graph_allowed($row['id'])) {
 					if (sizeof($pgraphs) < ($graphpp-1)) {
-cacti_log("Found (1) prev graph id '" . $row['id'] . "'", false);
+						//cacti_log("Found (1) prev graph id '" . $row['id'] . "'", false);
 						$pgraphs[] = $row['id'];
 					}else{
-cacti_log("Found (1) prev prev graph id '" . $row['id'] . "'", false);
+						//cacti_log("Found (1) prev prev graph id '" . $row['id'] . "'", false);
 						$prev_graph_id = $row['id'];
 						break;
 					}
@@ -438,7 +442,7 @@ cacti_log("Found (1) prev prev graph id '" . $row['id'] . "'", false);
 		 */
 		if ($prev_graph_id == 0) {
 			$sql_where = "";
-			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache LIKE '%$filter%'";
+			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 
 			$start = 0;
 			$done  = false;
@@ -459,10 +463,10 @@ cacti_log("Found (1) prev prev graph id '" . $row['id'] . "'", false);
 				foreach ($rows as $row) {
 					if (is_graph_allowed($row['id'])) {
 						if (sizeof($pgraphs) < ($graphpp-1)) {
-cacti_log("Found (2) prev graph id '" . $row['id'] . "'", false);
+							//cacti_log("Found (2) prev graph id '" . $row['id'] . "'", false);
 							$pgraphs[] = $row['id'];
 						}else{
-cacti_log("Found (2) prev prev graph id '" . $row['id'] . "'", false);
+							//cacti_log("Found (2) prev prev graph id '" . $row['id'] . "'", false);
 							$prev_graph_id = $row['id'];
 							break;
 						}
@@ -484,7 +488,7 @@ cacti_log("Found (2) prev prev graph id '" . $row['id'] . "'", false);
 	}
 }
 
-function get_tree_graphs($tree_id) {
+function get_tree_graphs($tree_id, $leaf_id) {
 	/* graph permissions */
 	if (read_config_option("auth_method") != 0) {
 		/* at this point this user is good to go... so get some setting about this
@@ -518,6 +522,18 @@ function get_tree_graphs($tree_id) {
 		$sql_join = "LEFT JOIN graph_templates_graph ON (graph_templates_graph.local_graph_id=graph_tree_items.local_graph_id)";
 	}
 
+	if ($leaf_id == -2) { // Base items only
+		$sql_where .= (strlen($sql_where) ? " AND ":"WHERE ") . "order_key LIKE '___000%'";
+	}elseif ($leaf_id > 0) { 
+		$order_key = db_fetch_cell("SELECT order_key FROM graph_tree_items WHERE id=$leaf_id");
+		if (strlen($order_key)) {
+			$search_key = rtrim($order_key, '0');
+			$sql_where .= (strlen($sql_where) ? " AND ":"WHERE ") . "order_key LIKE '$search_key%'";
+		}
+	}
+
+	$sql_where .= (strlen($sql_where) ? " AND ":"WHERE ") . "graph_tree_items.title=''";
+
 	$sql = "SELECT DISTINCT graph_tree_items.local_graph_id, graph_tree_items.host_id
 		FROM graph_tree_items
 		$sql_join
@@ -525,10 +541,13 @@ function get_tree_graphs($tree_id) {
 		" . (empty($sql_where) ? "WHERE" : "AND") . " graph_tree_items.graph_tree_id=$tree_id
 		ORDER BY graph_tree_items.order_key";
 
+	//$sql = str_replace("\t", "", str_replace("\n", " ", $sql));
+	//cacti_log($sql, false);
+
 	$rows     = db_fetch_assoc($sql);
 	$outArray = array();
 
-	if (count($rows)) {
+	if (sizeof($rows)) {
 		foreach ($rows as $row) {
 			if ((empty($row['title'])) && ($row['local_graph_id'] > 0 )) {
 				/* graph on tree */
@@ -551,7 +570,7 @@ function get_tree_graphs($tree_id) {
 					$sql_where = "";
 					$sql_join = "LEFT JOIN graph_templates_graph ON (graph_templates_graph.local_graph_id=graph_tree_items.local_graph_id)";
 				}
-				
+
 				$sql = "SELECT DISTINCT graph_local.id
 					FROM graph_local
 					$sql_join
@@ -573,5 +592,31 @@ function get_tree_graphs($tree_id) {
 	}
 	
 	return($outArray);
+}
+
+/* cycle_sanitize_search_string - cleans up a search string submitted by the user to be passed
+   it has been modified from the Cacti version to allow specific other characters to allow
+   for limited regular expression matches.
+   @arg $string - the original raw search string
+   @returns - the sanitized search string */
+function cycle_sanitize_search_string($string) {
+	static $drop_char_match =   array('$', '<', '>', '`', '\'', '"', ',', '~', '+', '[', ']', '{', '}', '#', ';', '!', '=');
+	static $drop_char_replace = array(' ', ' ', ' ',  '',   '', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
+
+	/* Replace line endings by a null */
+	$string = preg_replace('/[\n\r]/is', '', $string);
+	/* HTML entities like &nbsp; */
+	$string = preg_replace('/\b&[a-z]+;\b/', '', $string);
+	/* Remove URL's */
+	$string = preg_replace('/\b[a-z0-9]+:\/\/[a-z0-9\.\-]+(\/[a-z0-9\?\.%_\-\+=&\/]+)?/', '', $string);
+
+	/* Filter out strange characters like ^, $, &, change "it's" to "its" */
+	for($i = 0; $i < count($drop_char_match); $i++) {
+		$string =  str_replace($drop_char_match[$i], $drop_char_replace[$i], $string);
+	}
+
+	$string = str_replace('*', '', $string);
+
+	return $string;
 }
 

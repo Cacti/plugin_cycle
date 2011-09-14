@@ -73,17 +73,17 @@ function stopTime() {
 }
 
 function processAjax(url) {
-		$.get("cycle_ajax.php"+url, function(data) {
-			data = $.parseJSON(data);
-			if (data.html)         html=data.html;	
-			if (data.image)        image=base64_decode(data.image);	
-			if (data.graphid)      current=data.graphid;
-			if (data.nextgraphid)  next=data.nextgraphid;
-			if (data.prevgraphid)  prev=data.prevgraphid;
-			//alert("Cur Graph ID:"+current+", Next Graph ID:"+next+", Prev Graph ID:"+prev);
-			$('#html').html(html);
-			$('#image').html(image);
-		});
+	$.get("cycle_ajax.php"+url, function(data) {
+		data = $.parseJSON(data);
+		if (data.html)         html=data.html;	
+		if (data.image)        image=base64_decode(data.image);	
+		if (data.graphid)      current=data.graphid;
+		if (data.nextgraphid)  next=data.nextgraphid;
+		if (data.prevgraphid)  prev=data.prevgraphid;
+		//alert("Cur Graph ID:"+current+", Next Graph ID:"+next+", Prev Graph ID:"+prev);
+		$('#html').html(html);
+		$('#image').html(image);
+	});
 }
 
 function formatProcessUrl(nextid) {
@@ -92,12 +92,12 @@ function formatProcessUrl(nextid) {
 	}else{
 		filter="";
 	}
-	if ($('tree_id').val()) {
+	if ($('#tree_id').val()) {
 		tree=$('#tree_id').val();
 	}else{
 		tree="";
 	}
-	if ($('leaf_id').val()) {
+	if ($('#leaf_id').val()) {
 		leaf=$('#leaf_id').val();
 	}else{
 		leaf="";
