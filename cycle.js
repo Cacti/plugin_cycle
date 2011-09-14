@@ -80,11 +80,32 @@ function processAjax(url) {
 			if (data.graphid)      current=data.graphid;
 			if (data.nextgraphid)  next=data.nextgraphid;
 			if (data.prevgraphid)  prev=data.prevgraphid;
-			if (data.cur_leaf_id)  cur_leaf_id=data.cur_leaf_id;
 			//alert("Cur Graph ID:"+current+", Next Graph ID:"+next+", Prev Graph ID:"+prev);
 			$('#html').html(html);
 			$('#image').html(image);
 		});
+}
+
+function formatProcessUrl(nextid) {
+	if ($('#filter').val()) {
+		filter=$('#filter').val();
+	}else{
+		filter="";
+	}
+	if ($('tree_id').val()) {
+		tree=$('#tree_id').val();
+	}else{
+		tree="";
+	}
+	if ($('leaf_id').val()) {
+		leaf=$('#leaf_id').val();
+	}else{
+		leaf="";
+	}
+
+	url="?id="+nextid+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+tree+"&leaf_id="+leaf+"&legend="+$('#legend:checked').length;
+
+	processAjax(url);
 }
 
 function refreshTime() {
@@ -92,13 +113,7 @@ function refreshTime() {
 	$('#countdown').html(formattime(time));
 	if (time == 0) {
 		time=rtime/1000+1;
-		if ($('#filter').val()) {
-			filter=$('#filter').val();
-		}else{
-			filter="";
-		}
-		url="?id="+next+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
-		processAjax(url);
+		formatProcessUrl(next);
 	}
 	time=time-1
 }
@@ -106,68 +121,32 @@ function refreshTime() {
 function newRefresh() {
 	rtime=$('#refresh').val() * 1000;
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(current);
 }
 
 function newTimespan() {
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(current);
 }
 
 function newGraph() {
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+$('#graph').val()+"&tree_id="+"&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(current);
 }
 
 function newTree() {
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+current+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+$('#tree').val()+"&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(current);
 }
 
 function getnext() {
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+next+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id=&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(next);
 }
 
 function getprev() {
 	time=rtime/1000;
-	if ($('#filter').val()) {
-		filter=$('#filter').val();
-	}else{
-		filter="";
-	}
-	url="?id="+prev+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id=&legend="+$('#legend:checked').length;
-	processAjax(url);
+	formatProcessUrl(prev);
 }
 
 function processReturn(event) {

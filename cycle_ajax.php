@@ -50,6 +50,7 @@ $graph_cols = array(
 
 /* ================= input validation ================= */
 input_validate_input_number(get_request_var_request("tree_id"));
+input_validate_input_number(get_request_var_request("leaf_id"));
 input_validate_input_number(get_request_var_request("timespan"));
 input_validate_input_number(get_request_var_request("graphs"));
 input_validate_input_number(get_request_var_request("graph"));
@@ -70,6 +71,7 @@ if (isset($_REQUEST["legend"])) {
 $changed = false;
 $changed += cycle_check_changed("filter", "sess_cycle_filter");
 $changed += cycle_check_changed("tree_id", "sess_cycle_tree_id");
+$changed += cycle_check_changed("leaf_id", "sess_cycle_leaf_id");
 $changed += cycle_check_changed("graphs", "sess_cycle_graphpp");
 
 if ($changed) {
@@ -79,6 +81,7 @@ if ($changed) {
 /* remember these search fields in session vars so we don't have to keep passing them around */
 load_current_session_value("filter",   "sess_cycle_filter",   "");
 load_current_session_value("tree_id",  "sess_cycle_tree_id",  read_config_option("cycle_custom_graphs_tree"));
+load_current_session_value("leaf_id",  "sess_cycle_leaf_id",  "-2");
 load_current_session_value("graphs",   "sess_cycle_graphpp",  read_config_option("cycle_graphs"));
 load_current_session_value("cols",     "sess_cycle_cols",     read_config_option("cycle_cols"));
 load_current_session_value("legend",   "sess_cycle_legend",   read_config_option("cycle_legend"));
@@ -86,6 +89,7 @@ load_current_session_value("action",   "sess_cycle_action",   "view");
 
 $legend  = get_request_var_request("legend");
 $tree_id = get_request_var_request("tree_id");
+$leaf_id = get_request_var_request("leaf_id");
 $graphpp = get_request_var_request("graphs");
 $cols    = get_request_var_request("cols");
 $filter  = get_request_var_request("filter");
@@ -106,7 +110,6 @@ $out        = "";
 /* detect the next graph regardless of type */
 get_next_graphid($graphpp, $filter);
 
-/* process the filter section */
 switch(read_config_option("cycle_custom_graphs_type")) {
 case "0":
 case "1":
@@ -123,35 +126,26 @@ case "2":
 		}
 
 		$html .= "</select>\n";
-	}
 
-	$graphs = get_tree_graphs($graph_tree, $graphpp, $filter);
+		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' ORDER BY order_key");
 
-	if (sizeof($graphs)) {
-		$html .= "<select id='graph' name='graph' onChange='newGraph()'>";
+		if (sizeof($leaves)) {
+			$html .= "<select id='leaf' name='leaf' onChange='newTree()'>\n";
 
-		foreach($graphs as $data) {
-			foreach($data as $subdata) {
-				if (is_array($subdata)) {
-					foreach($subdata as $graph) {
-						$html .= "<option value='" . $graph['graph_id'] . "'" . ($graph_id == $graph['graph_id'] ? " selected" : "") . ">" . title_trim($graph['graph_title'], 70) . "</option>\n";
-					}
-				}
+			$html .= "<option value='-1'" . ($leaf_id == -1 ? " selected" : "") . ">All</option>\n";
+			$html .= "<option value='-2'" . ($leaf_id == -2 ? " selected" : "") . ">Top</option>\n";
+
+			foreach ($leaves as $leaf) {
+				$html .= "<option value='" . $leaf["id"] . "'" . ($leaf_id == $leaf["id"] ? " selected":"") . ">" . $leaf["title"] . "</option>\n";
 			}
+
+			$html .= "</select>\n";
 		}
-
-		$html .= "</select>\n";
 	}
-
-	$html .= "<input id='id' name='id' type='hidden' value='-1'>";
-
-	break;
 }
 
+/* process the filter section */
 $html .= "<input id='filter' name='filter' type='textbox' size='40' onkeypress='processReturn(event)' value='" . $filter . "'>";
-//$html .= "<input id='prev_graph_id' name='prev_graph_id' type='hidden' value='$prev_graph_id'>";
-//$html .= "<input id='next_graph_id' name='next_graph_id' type='hidden' value='$next_graph_id'>";
-//$html .= "<input id='cur_leaf_id'   name='cur_leaf_id'   type='hidden' value='$cur_leaf_id'>";
 
 /* create the graph structure and output */
 $out       = '<table cellpadding="5" cellspacing="5" border="0">';
@@ -200,7 +194,7 @@ if ($col_count  <= $max_cols) {
 
 $out .= '</table>';
 
-$output = array("html" => $html, "graphid" => $graph_id, "nextgraphid" => $next_graph_id, "prevgraphid" => $prev_graph_id, "cur_leaf_id" => $cur_leaf_id, "image" => base64_encode($out));
+$output = array("html" => $html, "graphid" => $graph_id, "nextgraphid" => $next_graph_id, "prevgraphid" => $prev_graph_id, "image" => base64_encode($out));
 print json_encode($output);
 
 exit;
@@ -214,7 +208,7 @@ function cycle_check_changed($request, $session) {
 }
 
 function get_next_graphid($graphpp, $filter) {
-	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id, $graph_tree, $cur_leaf_id;
+	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id, $graph_tree;
 
 	/* if no default graph list has been specified, default to 0 */
 	$type = read_config_option("cycle_custom_graphs_type");
@@ -225,6 +219,7 @@ function get_next_graphid($graphpp, $filter) {
 	switch($type) {
 	case "0":
 	case "1":
+	case "2":
 		$graph_id = $id;
 
 		if ($graph_id <= 0) {
@@ -241,6 +236,12 @@ function get_next_graphid($graphpp, $filter) {
 			}
 
 			if (strlen($newcase)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN($newcase)";
+		}elseif ($type == 2) {
+			$graph_data = get_tree_graphs($graph_tree);
+			$local_graph_ids = array_keys($graph_data);
+			if (sizeof($local_graph_ids)) {
+				$sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN(" . implode(",", $local_graph_ids) . ")";
+			}
 		}
 
 		$done          = false;
@@ -480,148 +481,10 @@ cacti_log("Found (2) prev prev graph id '" . $row['id'] . "'", false);
 		}
 
 		break;
-	case "1":
-		$graphs   = explode(",", read_config_option("cycle_custom_graphs_list"));
-		$graph_id = $id;
-		$ngraphs  = array();
-
-		if ($graph_id == -1) {
-			if (isset($graphs[$graphpp+1])) {
-				$next_graph_id = $graphs[$graphpp+1];
-			}else{
-				$total = sizeof($graphs);
-				$next_graph_id = $graphs[$graphpp-$total];
-			}
-
-			$prev_graph_id = $graphs[count($graphs)-1];
-			$graph_id      = $graphs[0];
-		} else {
-			$where = array_search($id, $graphs);
-			if (count($graphs)-1 > $where) {
-				$next_graph_id = $graphs[$where+1];
-			}
-
-			if (0<$where) {
-				$prev_graph_id = $graphs[$where-1];
-			}
-		}
-
-		if (empty($next_graph_id)) {
-			$next_graph_id = $graphs[0];
-		}
-
-		if (empty($prev_graph_id)) {
-			$prev_graph_id = $graphs[count($graphs)-1];
-		}
-
-		$sql = "SELECT
-			graph_local.id,
-			graph_templates_graph.title_cache
-			FROM graph_local
-			INNER JOIN graph_templates_graph
-			ON graph_local.id=graph_templates_graph.local_graph_id 
-			WHERE graph_local.id=$graph_id";
-
-		$row      = db_fetch_row($sql);
-		$graph_id = $row['id'];
-		$title    = $row['title_cache'];
-
-		break;
-	case "2":
-		$graph_data = get_tree_graphs($graph_tree, $graphpp, $filter);
-		$graph_id   = $id;
-
-		$graphs = array();
-		$count  = 0;
-
-		if (sizeof($graph_data)>0) {
-			foreach($graph_data as $data) {
-				foreach($data as $subdata) {
-					if (is_array($subdata)) {
-						foreach($subdata as $key=>$graph) {
-								$graphs[$count] = $graph['graph_id'];
-								$count = $count + 1;
-						}
-					}
-				}
-			}
-
-			if ($graph_id == -1) {
-				if (isset($graphs[1])) {
-					$next_graph_id = $graphs[1];
-				}else{
-					$next_graph_id = $graphs[0];
-				}
-
-				$prev_graph_id = $graphs[count($graphs)-1];
-				$graph_id      = $graphs[0];
-			} else {
-				$where = array_search($_GET['id'], $graphs);
-
-				if (count($graphs)-1 > $where) {
-					$next_graph_id = $graphs[$where+1];
-				}
-
-				if (0 < $where) {
-					$prev_graph_id = $graphs[$where-1];
-				}
-			}
-
-			if (empty($next_graph_id)) {
-				$next_graph_id = $graphs[0];
-			}
-
-			if (empty($prev_graph_id)) {
-				$prev_graph_id = $graphs[count($graphs)-1];
-			}
-		}
-
-		/*
-		$graphs        = get_tree_graphs($graph_tree, $graphpp, $filter);
-		$cur_leaf_id   = $id;
-		$prev_graph_id = null;
-		$next_graph_id = null;
-		$leaf_found    = false;
-		$first_leaf    = null;
-		$leaf_name     = "";
-
-		if (sizeof($graphs)) {
-			foreach ($graphs as $leaf_id => $leaf_data) {
-				if (is_null($first_leaf)) {
-					$first_leaf = $leaf_id;
-				}
-
-				if ($cur_leaf_id < 1) {
-					$cur_leaf_id   = $leaf_id;
-					$prev_graph_id = $leaf_id;
-					$leaf_found    = true;
-				} elseif ($cur_leaf_id == $leaf_id) {
-					$leaf_found    = true;
-				} elseif ($leaf_found == true) {
-					$next_graph_id = $leaf_id;
-					break;
-				} else {
-					$prev_graph_id = $leaf_id;
-					continue;
-				}
-
-				if (isset($leaf_data['graph_data'])) {
-					$graph_id = $leaf_data['graph_data'];
-					$title    = "Tree View";
-				}
-			}
-		}
-
-		if (is_null($next_graph_id)) {
-			$next_graph_id = $first_leaf;
-		}
-		*/
-
-		break;
 	}
 }
 
-function get_tree_graphs($tree_id, $graphpp, $filter) {
+function get_tree_graphs($tree_id) {
 	/* graph permissions */
 	if (read_config_option("auth_method") != 0) {
 		/* at this point this user is good to go... so get some setting about this
@@ -655,8 +518,6 @@ function get_tree_graphs($tree_id, $graphpp, $filter) {
 		$sql_join = "LEFT JOIN graph_templates_graph ON (graph_templates_graph.local_graph_id=graph_tree_items.local_graph_id)";
 	}
 
-	if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " graph_templates_graph.title_cache LIKE '%$filter%'";
-	
 	$sql = "SELECT DISTINCT graph_tree_items.local_graph_id, graph_tree_items.host_id
 		FROM graph_tree_items
 		$sql_join
@@ -668,15 +529,12 @@ function get_tree_graphs($tree_id, $graphpp, $filter) {
 	$outArray = array();
 
 	if (count($rows)) {
-		$title_id = null;
 		foreach ($rows as $row) {
-			if (((!empty($row['title'])) && ($row['host_id'] == 0)) && ($row['local_graph_id'] == 0)) {
-				//$outArray[$row['id']]['title'] = $row['title'];
-				//$title_id = $row['id'];
-			} elseif ((empty($row['title'])) && ($row['local_graph_id'] > 0 )) {
-				$outArray[$title_id]['graph_data'][] = array( 'graph_id' => $row['local_graph_id'], 'graph_title' => get_graph_title($row['local_graph_id']));
+			if ((empty($row['title'])) && ($row['local_graph_id'] > 0 )) {
+				/* graph on tree */
+				$outArray[$row['local_graph_id']] = get_graph_title($row['local_graph_id']);
 			} elseif ($row['host_id'] > 0) {
-				/* Host Tree Graph Search */
+				/* host on tree */
 				
 				/* Check Permission */
 				if (read_config_option("auth_method") != 0) {
@@ -694,13 +552,11 @@ function get_tree_graphs($tree_id, $graphpp, $filter) {
 					$sql_join = "LEFT JOIN graph_templates_graph ON (graph_templates_graph.local_graph_id=graph_tree_items.local_graph_id)";
 				}
 				
-				if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " graph_templates_graph.title_cache LIKE '%$filter%'";
-
 				$sql = "SELECT DISTINCT graph_local.id
 					FROM graph_local
 					$sql_join
 					$sql_where 
-					" . (empty($sql_where) ? "WHERE" : "AND") . " graph_local.host_id=".$row['host_id']."
+					" . (empty($sql_where) ? "WHERE" : "AND") . " graph_local.host_id=" . $row['host_id']."
 					ORDER BY graph_templates_graph.title";
 								
 				$rows2     = db_fetch_assoc($sql);
@@ -708,7 +564,7 @@ function get_tree_graphs($tree_id, $graphpp, $filter) {
 					$title_id = null;
 					foreach ($rows2 as $row2) {
 						if ($row2['id'] > 0) {
-							$outArray[$title_id]['graph_data'][] = array( 'graph_id' => $row2['id'], 'graph_title' => get_graph_title($row2['id']));
+							$outArray[$row2['id']] = get_graph_title($row2['id']);
 						}
 					}
 				}
@@ -716,18 +572,6 @@ function get_tree_graphs($tree_id, $graphpp, $filter) {
 		}
 	}
 	
-	$resultArray = super_unique($outArray);
-	return($resultArray);
+	return($outArray);
 }
 
-function super_unique($array) {
-	$result = array_map("unserialize", array_unique(array_map("serialize", $array)));
-
-	foreach ($result as $key => $value) {
-		if (is_array($value)) {
-			$result[$key] = super_unique($value);
-		}
-	}
-
-	return $result;
-}
