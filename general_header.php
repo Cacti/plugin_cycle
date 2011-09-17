@@ -56,9 +56,6 @@ $page_title = api_plugin_hook_function('page_title', 'Cacti');
 	<link href="<?php echo $config['url_path']; ?>include/main.css" rel="stylesheet">
 	<link href="<?php echo $config['url_path']; ?>images/favicon.ico" rel="shortcut icon"/>
 	<link rel="stylesheet" type="text/css" href="cycle.css">
-	<script type="text/javascript" src="cycle.js"></script>
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.autocomplete.js"></script>
 	<?php api_plugin_hook('page_head'); ?>
 </head>
 <?php if ($oper_mode == OPER_MODE_NATIVE) {?>

@@ -30,6 +30,7 @@ function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'config_form',           'cycle_config_form',          "setup.php");
 	api_plugin_register_hook('cycle', 'config_settings',       'cycle_config_settings',      "setup.php");
 	api_plugin_register_hook('cycle', 'api_graph_save',        'cycle_api_graph_save',       "setup.php");
+	api_plugin_register_hook('cycle', 'page_head',             'cycle_page_head',            "setup.php");
 
 	api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
 
@@ -129,6 +130,16 @@ function cycle_version () {
 		'email'    => 'larryjadams@comcast.net',
 		'url'      => 'http://versions.cactiusers.org/'
 	);
+}
+
+function cycle_page_head() {
+	if (basename($_SERVER["PHP_SELF"]) == "cycle.php") {
+		?>
+		<script type="text/javascript" src="cycle.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.autocomplete.js"></script>
+		<?php
+	}
 }
 
 function cycle_config_settings () {
