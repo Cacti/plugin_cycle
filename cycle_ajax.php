@@ -101,7 +101,7 @@ $id      = get_request_var_request("id");
 $width   = get_request_var_request("width");
 $height  = get_request_var_request("height");
 
-if (empty($tree_id)) $tree_id = read_config_option("cycle_custom_graphs_tree");
+if (empty($tree_id)) $tree_id = db_fetch_cell("SELECT id FROM graph_tree ORDER BY name LIMIT 1");
 if (empty($id))      $id      = -1;
 
 /* get the start and end times for the graph */
