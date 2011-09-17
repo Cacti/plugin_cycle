@@ -133,7 +133,7 @@ case "2":
 
 		$html .= "</select>\n";
 
-		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' ORDER BY order_key");
+		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' AND graph_tree_id='$graph_tree' ORDER BY order_key");
 
 		if (sizeof($leaves)) {
 			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()' title='Select Tree Leaf to Display'>\n";
@@ -546,9 +546,6 @@ function get_tree_graphs($tree_id, $leaf_id) {
 		$sql_where 
 		" . (empty($sql_where) ? "WHERE" : "AND") . " graph_tree_items.graph_tree_id=$tree_id
 		ORDER BY graph_tree_items.order_key";
-
-	//$sql = str_replace("\t", "", str_replace("\n", " ", $sql));
-	//cacti_log($sql, false);
 
 	$rows     = db_fetch_assoc($sql);
 	$outArray = array();
