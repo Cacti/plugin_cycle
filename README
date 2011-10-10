@@ -4,7 +4,7 @@
     Contact ........ cacti-user@lists.sourceforge.net
     Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
-    Version ........ 2.0
+    Version ........ 2.1
     Purpose ........ Automatically cycle through cacti graphs
     Original Work .. Matt Emerick-Law
 
@@ -48,6 +48,9 @@
     Got any ideas then please let me know.
 
 ----[ Changelog
+    --- 2.1 ---
+    -feature: Support for Ugroup Plugin
+
     --- 2.0 ---
     -feature: Allow searching through graphs with regular expression
     -feature: Allow selecting both tree and leaves
