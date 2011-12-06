@@ -198,7 +198,7 @@ function cycle_set_defaults() {
 
 		foreach($defaults as $name => $value) {
 			$current = db_fetch_cell("SELECT value FROM settings WHERE name='$name'");
-			if ($current !== false) {
+			if ($current === false) {
 				db_execute("REPLACE INTO settings (name,value) VALUES ('$name', '$value')");
 			}
 		}
