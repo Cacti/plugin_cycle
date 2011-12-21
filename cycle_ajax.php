@@ -255,9 +255,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		}
 
 		$sql_where = "WHERE gl.id>=$graph_id";
+
 		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
+
 		if ($type == 1) {
 			$cases = explode(",", read_config_option("cycle_custom_graphs_list"));
+			sort($cases);
 			$newcase = "";
 			foreach($cases as $case) {
 				$newcase .= (is_numeric($case) ? (strlen($newcase) ? ",":"") . $case:"");
@@ -267,6 +270,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		}elseif ($type == 2) {
 			$graph_data = get_tree_graphs($graph_tree, $leaf_id);
 			$local_graph_ids = array_keys($graph_data);
+			sort($local_graph_ids);
 			if (sizeof($local_graph_ids)) {
 				$sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN(" . implode(",", $local_graph_ids) . ")";
 			}else{
@@ -275,6 +279,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		}
 
 		$done          = false;
+		$next_found    = false;
 		$start         = 0;
 		$next_graph_id = 0;
 		$prev_graph_id = 0;
@@ -308,6 +313,8 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 
 			$rows = db_fetch_assoc($sql);
 
+			//cacti_log(str_replace("\n", " ", str_replace("\t", " ", "First Pass:" . $sql)));
+
 			if ($graph_id > 0) {
 				$curr_found    = true;
 			}else{
@@ -325,7 +332,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 						$graphs[$graph_id]['graph_id'] = $graph_id;
 						$i++;
 					}else{
-						if (sizeof($graphs) < $graphpp || $next_graph_id == 0) {
+						if (sizeof($graphs) < $graphpp) {
 							//cacti_log("Found (1) graph id '" . $row['id'] . "'", false);
 							$graphs[$row['id']]['graph_id'] = $row['id'];
 							$i++;
@@ -354,12 +361,21 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		 * move backwards from lowest graph id until the
 		 * array is fully populated or we run out of graphs.
 		 */
-		if (sizeof($graphs) < $graphpp) {
+		if (sizeof($graphs) < $graphpp || $next_graph_id == 0) {
 			$sql_where = "";
+
+			/* setup the standard filters less the starting range, in other words start from the first graph */
 			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 
-			$start = 0;
-			$done  = false;
+			if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
+				$sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN(" . implode(",", $local_graph_ids) . ")";
+			}
+
+			if (isset($newcase) && strlen($newcase)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
+
+			$start      = 0;
+			$done       = false;
+			$next_found = false;
 
 			while (!$done) {
 				$sql = "SELECT
@@ -373,6 +389,8 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 					LIMIT $start, $graphpp";
 
 				$rows = db_fetch_assoc($sql);
+
+				//cacti_log(str_replace("\n", " ", str_replace("\t", " ", "Second Pass:" . $sql)));
 
 				if (sizeof($rows)) {
 				foreach ($rows as $row) {
@@ -420,7 +438,15 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		 * also have to adjust for underflow in this case.
 		 */
 		$sql_where = "WHERE gl.id<$graph_id";
+
+		/* setup the standard filters less the starting range, in other words start from the first graph */
 		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
+
+		if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
+			$sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gl.id IN(" . implode(",", $local_graph_ids) . ")";
+		}
+
+		if (isset($newcase) && strlen($newcase)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";
 
 		$done    = false;
 		$start   = 0;

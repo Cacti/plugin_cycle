@@ -54,6 +54,7 @@
     -bug#0002115: The filtering did not work as expected 
     -bug#0002114: Graphs are not cycled correctly
     -bug#0002120: No graphs not shown if default deny policy used 
+    -fix: Ordering of Tree Graph ID's breaks cycling
 
     --- 2.2 ---
     -fix: defaults keep getting reset
