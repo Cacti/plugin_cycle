@@ -535,7 +535,8 @@ function get_tree_graphs($tree_id, $leaf_id) {
 	/* check permissions */
 	if (read_config_option("auth_method") != 0) {
 		/* get policy information for the sql where clause */
-		$sql_where = "WHERE " . get_graph_permissions_sql($current_user["policy_graphs"], $current_user["policy_hosts"], $current_user["policy_graph_templates"]);
+		$sql_where = get_graph_permissions_sql($current_user["policy_graphs"], $current_user["policy_hosts"], $current_user["policy_graph_templates"]);
+		$sql_where = (empty($sql_where) ? "" : "WHERE (" . $sql_where . " OR graph_tree_items.local_graph_id=0)");
 			
 		$sql_join = "LEFT JOIN graph_templates_graph ON (graph_templates_graph.local_graph_id=graph_tree_items.local_graph_id)
 			LEFT JOIN user_auth_perms ON ((graph_templates_graph.local_graph_id=user_auth_perms.item_id
