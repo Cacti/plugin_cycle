@@ -61,8 +61,26 @@ input_validate_input_number(get_request_var_request("height"));
 /* ==================================================== */
 
 /* clean up search string */
-if (isset($_REQUEST["filter"])) {
-	$_REQUEST["filter"] = cycle_sanitize_search_string(get_request_var_request("filter"));
+if (isset($_REQUEST["clear"])) {
+	unset($_REQUEST["filter"]);
+	$_SESSION["sess_cycle_filter"] = "";
+} elseif (isset($_REQUEST["set"])) {
+	/* If the user pushed the 'Set' button */
+	if (isset($_REQUEST["filter"])) {
+		$_REQUEST["filter"] = cycle_sanitize_search_string(get_request_var_request("filter"));
+
+		if (empty($_REQUEST["filter"])) {
+			unset($_REQUEST["filter"]);
+			$_SESSION["sess_cycle_filter"] = "";
+		}
+	}
+} else {
+	/* If the user is not setting or clearing the search filter,
+	 * then clear the request. Later code will pick up the
+	 * session variable, or the default, and use that as the
+	 * request instead.
+	 */
+	unset($_REQUEST["filter"]);
 }
 
 /* clean up legend */
@@ -305,7 +323,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 						$graphs[$graph_id]['graph_id'] = $graph_id;
 						$i++;
 					}else{
-						if (sizeof($graphs) < $graphpp) {
+						if (sizeof($graphs) < $graphpp || $next_graph_id == 0) {
 							//cacti_log("Found (1) graph id '" . $row['id'] . "'", false);
 							$graphs[$row['id']]['graph_id'] = $row['id'];
 							$i++;

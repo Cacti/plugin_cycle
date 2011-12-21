@@ -123,7 +123,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '2.2',
+		'version'  => '2.3',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',

@@ -29,6 +29,8 @@ var prev    = 1
 var time    = 5
 var ltime   = 0
 var current = 0
+var setfilter   = 0
+var clearfilter = 0
 var timed
 var newtime
 var stime
@@ -87,7 +89,21 @@ function processAjax(url) {
 }
 
 function formatProcessUrl(nextid) {
-	if ($('#filter').val()) {
+	if (clearfilter == 1) {
+		clearfilter=0;
+		filter="";
+		filter=filter + "&clear";
+	} else if (setfilter == 1) {
+		setfilter=0;
+
+		if ($('#filter').val()) {
+			filter=$('#filter').val();
+			filter=filter + "&set";
+		}else{
+			filter="";
+			filter=filter + "&clear";
+		}
+	} else if ($('#filter').val()) {
 		filter=$('#filter').val();
 	}else{
 		filter="";
@@ -149,8 +165,29 @@ function getprev() {
 	formatProcessUrl(prev);
 }
 
+function clearFilter() {
+	clearfilter=1;
+
+	if ($('#tree').val()) {
+		newTree();
+	}else{
+		newRefresh();
+	}
+}
+
+function setFilter() {
+	setfilter=1;
+
+	if ($('#tree').val()) {
+		newTree();
+	}else{
+		newRefresh();
+	}
+}
+
 function processReturn(event) {
 	if (event.which == 13) {
+		setfilter=1;
 		if ($('#tree').val()) {
 			newTree();
 		}else{

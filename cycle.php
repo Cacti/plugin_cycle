@@ -145,6 +145,8 @@ $legend = $_SESSION["sess_cycle_legend"];
 						</div>
 						<div style="margin:4px;">
 							<span id="html"></span>
+							<input type='button' id='go' value='Set' name='go' title='Set Filter'>
+							<input type='button' id='clear' value='Clear' name='clear' title='Clear Filter'>
 						</div>
 					</div>
 				</div>
@@ -175,6 +177,8 @@ $legend = $_SESSION["sess_cycle_legend"];
 	$('#cstart').click(function(){startTime()});
 	$('#legend').change(function(){newRefresh()});
 	$('#refreshb').click(function(){newRefresh()});
+	$('#go').click(function(){setFilter()});
+	$('#clear').click(function(){clearFilter()});
 </script>
 <?php
 include("./include/bottom_footer.php");
