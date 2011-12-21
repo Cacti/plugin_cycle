@@ -33,6 +33,10 @@ if (!isset($_SESSION["sess_cycle_legend"])) {
 	$_SESSION["sess_cycle_legend"] = read_config_option("cycle_legend");
 }
 
+if (!isset($_SESSION["sess_cycle_timespan"])) {
+	$_SESSION["sess_cycle_timespan"] = read_config_option("cycle_timespan");
+}
+
 if (!isset($_SESSION["sess_cycle_delay"])) {
 	$_SESSION["sess_cycle_delay"] = read_config_option("cycle_delay");
 }
@@ -54,7 +58,7 @@ if (!isset($_SESSION["sess_cycle_height"])) {
 }
 
 if (empty($_SESSION["sess_cycle_delay"])) {
-	db_execute("REPLACE INTO settings SET name='cycle_delay', value='5'");
+	db_execute("REPLACE INTO settings SET name='cycle_delay', value='60'");
 }
 
 if (empty($_SESSION["sess_cycle_graphs_pp"])) {
@@ -62,7 +66,7 @@ if (empty($_SESSION["sess_cycle_graphs_pp"])) {
 }
 
 $graphs_array = array(
-    1  => "1 Graphs",
+    1  => "1 Graph",
     2  => "2 Graphs",
     4  => "4 Graphs",
     6  => "6 Graphs",
@@ -91,7 +95,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 								<?php
 								if (sizeof($graph_timespans)) {
 								foreach($graph_timespans as $key=>$value) {
-										print "<option value='$key'"; if (read_config_option("cycle_timespan") == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+										print "<option value='$key'"; if ($_SESSION["sess_cycle_timespan"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
 								}
 								}
 								?>
@@ -138,7 +142,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 							<input type='button' id='cstop' value='Stop' name='cstop' title='Stop Cycling'>
 							<input type='button' id='cstart' value='Start' name='cstart' style='display:none;' title='Resume Cycling'>
 							<input type='button' id='next' value='Next' name='next' title='Cycle to Next Graphs'>
-							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" ? print ' checked=yes' : "" ); ?> title='Display Graph Legend'>
+							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" || $legend==1 ? print ' checked=yes' : "" ); ?> title='Display Graph Legend'>
 							<label for='legend' style='vertical-align:25%' title='Display Graph Legend'>Display Legend</label>
 							<input type='button' id='refreshb' value='Refresh' name='refreshb'>
 							<br>
@@ -159,7 +163,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 	<span id="image"></span><br>
 </center>
 <script type="text/javascript">
-	rtime=<?php echo read_config_option("cycle_delay")*1000;?>;
+	rtime=<?php echo $_SESSION["sess_cycle_delay"]*1000;?>;
 	$().ready(function() {
 		startTime();
 		refreshTime();

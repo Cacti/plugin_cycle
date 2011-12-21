@@ -50,6 +50,7 @@
 ----[ Changelog
 
     --- 2.3 ---
+    -bug#0002113: Several graph settings are not preserved during session
     -bug#0002115: The filtering did not work as expected 
     -bug#0002114: Graphs are not cycled correctly
 

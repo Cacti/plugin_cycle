@@ -32,7 +32,7 @@ include_once("./lib/api_tree.php");
 include_once("./lib/api_data_source.php");
 
 $graphs_array = array(
-	1  => "1 Graphs",
+	1  => "1 Graph",
 	2  => "2 Graphs",
 	4  => "4 Graphs",
 	6  => "6 Graphs",
@@ -92,7 +92,7 @@ $changed = false;
 $changed += cycle_check_changed("filter", "sess_cycle_filter");
 $changed += cycle_check_changed("tree_id", "sess_cycle_tree_id");
 $changed += cycle_check_changed("leaf_id", "sess_cycle_leaf_id");
-$changed += cycle_check_changed("graphs", "sess_cycle_graphpp");
+$changed += cycle_check_changed("graphs", "sess_cycle_graphs_pp");
 
 if ($changed) {
 	$_REQUEST["id"] = -1;
@@ -102,12 +102,14 @@ if ($changed) {
 load_current_session_value("filter",   "sess_cycle_filter",   "");
 load_current_session_value("tree_id",  "sess_cycle_tree_id",  read_config_option("cycle_custom_graphs_tree"));
 load_current_session_value("leaf_id",  "sess_cycle_leaf_id",  "-2");
-load_current_session_value("graphs",   "sess_cycle_graphpp",  read_config_option("cycle_graphs"));
-load_current_session_value("cols",     "sess_cycle_cols",     read_config_option("cycle_cols"));
+load_current_session_value("graphs",   "sess_cycle_graphs_pp",  read_config_option("cycle_graphs"));
+load_current_session_value("cols",     "sess_cycle_graph_cols", read_config_option("cycle_columns"));
 load_current_session_value("legend",   "sess_cycle_legend",   read_config_option("cycle_legend"));
 load_current_session_value("action",   "sess_cycle_action",   "view");
 load_current_session_value("width",    "sess_cycle_width",    read_config_option("cycle_width"));
 load_current_session_value("height",   "sess_cycle_height",   read_config_option("cycle_height"));
+load_current_session_value("timespan", "sess_cycle_timespan", read_config_option("cycle_timespan"));
+load_current_session_value("refresh",  "sess_cycle_delay",    read_config_option("cycle_delay"));
 
 $legend  = get_request_var_request("legend");
 $tree_id = get_request_var_request("tree_id");
@@ -348,9 +350,9 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 			}
 		}
 
-		/* if we did not fine all the graphs requested
+		/* If we did not find all the graphs requested,
 		 * move backwards from lowest graph id until the
-		 * array fully populated, or we run out of graphs.
+		 * array is fully populated or we run out of graphs.
 		 */
 		if (sizeof($graphs) < $graphpp) {
 			$sql_where = "";
@@ -409,13 +411,13 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 			}
 		}
 
-		/* When a user hits the 'Prev' button, we have to go backward
+		/* When a user hits the 'Prev' button, we have to go backwards.
 		 * Therefore, find the graph_id that would have to be used as 
 		 * the starting point if the user were to hit the 'Prev' button.
 		 *
 		 * Just like the 'Next' button, we need to scan the database until
 		 * we reach the $graphpp variable or until we run out of rows.  We
-		 * also have to ajust for underflow in this case.
+		 * also have to adjust for underflow in this case.
 		 */
 		$sql_where = "WHERE gl.id<$graph_id";
 		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? " AND":"WHERE") . " gtg.title_cache RLIKE '$filter'";

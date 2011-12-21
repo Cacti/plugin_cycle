@@ -119,7 +119,7 @@ function formatProcessUrl(nextid) {
 		leaf="";
 	}
 
-	url="?id="+nextid+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+tree+"&leaf_id="+leaf+"&legend="+$('#legend:checked').length+"&width="+$('#width').val()+"&height="+$('#height').val();
+	url="?id="+nextid+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+tree+"&leaf_id="+leaf+"&legend="+$('#legend:checked').length+"&width="+$('#width').val()+"&height="+$('#height').val()+"&refresh="+$('#refresh').val();
 
 	processAjax(url);
 }
