@@ -1,6 +1,6 @@
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2008 The Cacti Group                                 |
+ | Copyright (C) 2004-2014 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -278,8 +278,8 @@ function utf8_decode (str_data) {
 	while (i < str_data.length) {
 		c1 = str_data.charCodeAt(i);
 		if (c1 < 128) {
-            tmp_arr[ac++] = String.fromCharCode(c1);
-            i++;
+			tmp_arr[ac++] = String.fromCharCode(c1);
+			i++;
 		} else if (c1 > 191 && c1 < 224) {
 			c2 = str_data.charCodeAt(i + 1);
 			tmp_arr[ac++] = String.fromCharCode(((c1 & 31) << 6) | (c2 & 63));

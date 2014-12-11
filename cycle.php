@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2008 The Cacti Group                                 |
+ | Copyright (C) 2004-2014 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -25,7 +25,8 @@
 chdir('../../');
 $guest_account = true;
 include_once("./include/auth.php");
-include_once("./plugins/cycle/general_header.php");
+
+general_header();
 
 cycle_set_defaults();
 
@@ -88,75 +89,102 @@ $legend = $_SESSION["sess_cycle_legend"];
 	<table>
 		<tr>
 			<td>
-				<div id="outter">
-					<div id="inner">
-						<div style="margin:5px;">
-							<select id='timespan' name='timespan' title='Graph Display Timespan'>
-								<?php
-								if (sizeof($graph_timespans)) {
-								foreach($graph_timespans as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_timespan"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-								}
-								}
-								?>
-							</select>
-							<select id='refresh' name='refresh' title='Cycle Rotation Refresh Frequency'>
-								<?php
-								if (sizeof($page_refresh_interval)) {
-								foreach($page_refresh_interval as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_delay"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
-								}
-								}
-								?>
-							</select>
-							<select id='graphs' name='graphs' title='Number of Graphs per Page'>
-								<?php
-								foreach($graphs_array as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_graphs_pp"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
-								}
-								?>
-							</select>
-							<select id='cols' name='cols' title='Number of Graph Columns'>
-								<?php
-								foreach($graph_cols as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_graph_cols"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
-								}
-								?>
-							</select>
-							<select id='height' name='height' title='Graph Height'>
-								<?php
-								foreach($cycle_height as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_height"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
-								}
-								?>
-							</select>
-							<span style='vertical-align:center;'>X</span>
-							<select id='width' name='width' title='Graph Width'>
-								<?php
-								foreach($cycle_width as $key=>$value) {
-										print "<option value='$key'"; if ($_SESSION["sess_cycle_width"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
-								}
-								?>
-							</select>
-							<input type='button' id='prev' value='Prev' name='prev' title='Cycle to Previous Graphs'>
-							<input type='button' id='cstop' value='Stop' name='cstop' title='Stop Cycling'>
-							<input type='button' id='cstart' value='Start' name='cstart' style='display:none;' title='Resume Cycling'>
-							<input type='button' id='next' value='Next' name='next' title='Cycle to Next Graphs'>
-							<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" || $legend==1 ? print ' checked=yes' : "" ); ?> title='Display Graph Legend'>
-							<label for='legend' style='vertical-align:25%' title='Display Graph Legend'>Display Legend</label>
-							<input type='button' id='refreshb' value='Refresh' name='refreshb'>
-							<br>
-						</div>
-						<div style="margin:4px;">
-							<span id="html"></span>
-							<input type='button' id='go' value='Set' name='go' title='Set Filter'>
-							<input type='button' id='clear' value='Clear' name='clear' title='Clear Filter'>
-						</div>
-					</div>
-				</div>
+				<select id='timespan' name='timespan' title='Graph Display Timespan'>
+					<?php
+					if (sizeof($graph_timespans)) {
+					foreach($graph_timespans as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_timespan"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+					}
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<select id='refresh' name='refresh' title='Cycle Rotation Refresh Frequency'>
+					<?php
+					if (sizeof($page_refresh_interval)) {
+					foreach($page_refresh_interval as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_delay"] == $key) { print " selected"; } print ">" . title_trim($value, 40) . "</option>\n";
+					}
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<select id='graphs' name='graphs' title='Number of Graphs per Page'>
+					<?php
+					foreach($graphs_array as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_graphs_pp"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<select id='cols' name='cols' title='Number of Graph Columns'>
+					<?php
+					foreach($graph_cols as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_graph_cols"] == $key) { print " selected"; } print ">" . $value . "</option>\n";
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<select id='height' name='height' title='Graph Height'>
+					<?php
+					foreach($cycle_height as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_height"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<span style='vertical-align:center;'>X</span>
+			</td>
+			<td>
+				<select id='width' name='width' title='Graph Width'>
+					<?php
+					foreach($cycle_width as $key=>$value) {
+						print "<option value='$key'"; if ($_SESSION["sess_cycle_width"] == $key) { print " selected"; } print ">" . $key . "</option>\n";
+					}
+					?>
+				</select>
+			</td>
+			<td>
+				<input type='button' id='prev' value='Prev' name='prev' title='Cycle to Previous Graphs'>
+			</td>
+			<td>
+				<input type='button' id='cstop' value='Stop' name='cstop' title='Stop Cycling'>
+			</td>
+			<td>
+				<input type='button' id='cstart' value='Start' name='cstart' style='display:none;' title='Resume Cycling'>
+			</td>
+			<td>
+				<input type='button' id='next' value='Next' name='next' title='Cycle to Next Graphs'>
+			</td>
+			<td>
+				<input type="checkbox" id='legend' name='legend' <?php ($legend=="on" || $legend==1 ? print ' checked=yes' : "" ); ?> title='Display Graph Legend'>
+			</td>
+			<td>
+				<label for='legend' style='vertical-align:25%' title='Display Graph Legend'>Display Legend</label>
+			</td>
+			<td>
+				<input type='button' id='refreshb' value='Refresh' name='refreshb'>
 			</td>
 		</tr>
 	</table>
+	<table>
+		<tr>
+			<td>
+				<span id="html"></span>
+			</td>
+			<td>
+				<input type='button' id='go' value='Set' name='go' title='Set Filter'>
+			</td>
+			<td>
+				<input type='button' id='clear' value='Clear' name='clear' title='Clear Filter'>
+			</td>
+		</tr>
+	</table><br>
 	<!-- Ticker -->
 	Next Update In <span id="countdown"></span><br>
 	<!-- Image -->
@@ -185,7 +213,7 @@ $legend = $_SESSION["sess_cycle_legend"];
 	$('#clear').click(function(){clearFilter()});
 </script>
 <?php
-include("./include/bottom_footer.php");
+bottom_footer();
 
 function cycle_set_defaults() {
 	if (!isset($_SESSION["sess_cycle_defaults"])) {

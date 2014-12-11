@@ -4,7 +4,7 @@
     Contact ........ cacti-user@lists.sourceforge.net
     Home Site ...... http://www.cacti.net
     Program ........ Cycle Graphs
-    Version ........ 2.3
+    Version ........ 3.1
     Purpose ........ Automatically cycle through cacti graphs
     Original Work .. Matt Emerick-Law
 
@@ -48,6 +48,9 @@
     Got any ideas then please let me know.
 
 ----[ Changelog
+
+    --- 3.1 ---
+    -feature: Compatibility with new Themes engine
 
     --- 2.3 ---
     -bug#0002113: Several graph settings are not preserved during session

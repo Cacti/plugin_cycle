@@ -1,7 +1,7 @@
 <?php
 /*
  +-------------------------------------------------------------------------+
- | Copyright (C) 2004-2009 The Cacti Group                                 |
+ | Copyright (C) 2004-2014 The Cacti Group                                 |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -123,7 +123,7 @@ function cycle_setup_table_new () {
 function cycle_version () {
 	return array(
 		'name'     => 'Cycle Graphs',
-		'version'  => '2.3',
+		'version'  => '3.1',
 		'longname' => 'Cycle Graphs',
 		'author'   => 'The Cacti Group',
 		'homepage' => 'http://www.cacti.net',
@@ -132,13 +132,12 @@ function cycle_version () {
 	);
 }
 
-function cycle_page_head() {
+function cycle_page_head () {
+	global $config;
+
 	if (basename($_SERVER["PHP_SELF"]) == "cycle.php") {
-		?>
-		<script type="text/javascript" src="cycle.js"></script>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="jquery.autocomplete.js"></script>
-		<?php
+		print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/cycle.js'></script>\n";
+		print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/jquery.autocomplete.js'></script>\n";
 	}
 }
 
