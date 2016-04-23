@@ -22,8 +22,8 @@
 */
 
 var timerID = null
-var image   = ""
-var html    = ""
+var image   = ''
+var html    = ''
 var next    = -1
 var prev    = 1
 var time    = 5
@@ -45,45 +45,46 @@ function formattime(secs) {
 	hours   = calcage(secs,3600,24)
 	minutes = calcage(secs,60,60)
 	seconds = calcage(secs,1,60)
-	newtime = ""
-	if (days==1) { newtime=days+" Day " }
-	if (days>1)  { newtime=days+" Days " }
+	newtime = ''
+	if (days==1) { newtime=days+' Day ' }
+	if (days>1)  { newtime=days+' Days ' }
 
-	if (hours==1) { newtime=newtime+hours+" Hour " }
-	if (hours>1)  { newtime=newtime+hours+" Hours " }
+	if (hours==1) { newtime=newtime+hours+' Hour ' }
+	if (hours>1)  { newtime=newtime+hours+' Hours ' }
 
-	if (minutes==1) { newtime=newtime+minutes+" Minute " }
-	if (minutes>1)  { newtime=newtime+minutes+" Minutes " }
+	if (minutes==1) { newtime=newtime+minutes+' Minute ' }
+	if (minutes>1)  { newtime=newtime+minutes+' Minutes ' }
 
-	if (seconds==1) { newtime=newtime+seconds+" Second " }
-	if (seconds>1)  { newtime=newtime+seconds+" Seconds " }
+	if (seconds==1) { newtime=newtime+seconds+' Second ' }
+	if (seconds>1)  { newtime=newtime+seconds+' Seconds ' }
 
-	if (newtime=="") { return "0 Seconds" }
+	if (newtime=='') { return '0 Seconds' }
 	return newtime
 }
 
 function startTime() {
 	timerID = self.setInterval('refreshTime()', 1000)
-	$('#cstop').css("display", "inline");
-	$('#cstart').css("display", "none");
+	$('#cstop').css('display', 'inline');
+	$('#cstart').css('display', 'none');
 }
 
 function stopTime() {
 	self.clearInterval(timerID)
-	$('#cstop').css("display", "none");
-	$('#cstart').css("display", "inline");
+	$('#cstop').css('display', 'none');
+	$('#cstart').css('display', 'inline');
 }
 
 function processAjax(url) {
-	$.get("cycle_ajax.php"+url, function(data) {
+	$.get('cycle_ajax.php'+url, function(data) {
 		data = $.parseJSON(data);
+
 		if (data.html)         html=data.html;	
 		if (data.image)        image=base64_decode(data.image);	
 		if (data.graphid)      current=data.graphid;
 		if (data.nextgraphid)  next=data.nextgraphid;
 		if (data.prevgraphid)  prev=data.prevgraphid;
-		//alert("Cur Graph ID:"+current+", Next Graph ID:"+next+", Prev Graph ID:"+prev);
-		$('#html').html(html);
+
+		$('#izone').empty().prepend(html);
 		$('#image').html(image);
 	});
 }
@@ -91,37 +92,66 @@ function processAjax(url) {
 function formatProcessUrl(nextid) {
 	if (clearfilter == 1) {
 		clearfilter=0;
-		filter="";
-		filter=filter + "&clear";
+		filter='';
+		filter=filter + '&clear=true';
 	} else if (setfilter == 1) {
 		setfilter=0;
 
 		if ($('#filter').val()) {
 			filter=$('#filter').val();
-			filter=filter + "&set";
+			filter=filter + '&set';
 		}else{
-			filter="";
-			filter=filter + "&clear";
+			filter='';
+			filter=filter + '&clear';
 		}
 	} else if ($('#filter').val()) {
 		filter=$('#filter').val();
 	}else{
-		filter="";
+		filter='';
 	}
 	if ($('#tree_id').val()) {
 		tree=$('#tree_id').val();
 	}else{
-		tree="";
+		tree='';
 	}
 	if ($('#leaf_id').val()) {
 		leaf=$('#leaf_id').val();
 	}else{
-		leaf="";
+		leaf='';
 	}
 
-	url="?id="+nextid+"&filter="+filter+"&cols="+$('#cols').val()+"&timespan="+$('#timespan').val()+"&graphs="+$('#graphs').val()+"&tree_id="+tree+"&leaf_id="+leaf+"&legend="+$('#legend:checked').length+"&width="+$('#width').val()+"&height="+$('#height').val()+"&refresh="+$('#refresh').val();
+	url='?action=view&id='+nextid+'&filter='+filter+'&cols='+$('#cols').val()+'&timespan='+$('#timespan').val()+'&graphs='+$('#graphs').val()+'&tree_id='+tree+'&leaf_id='+leaf+'&legend='+$('#legend:checked').length+'&width='+$('#width').val()+'&height='+$('#height').val()+'&delay='+$('#delay').val();
 
 	processAjax(url);
+}
+
+function saveFilter() {
+	if ($('#tree_id').val()) {
+		tree=$('#tree_id').val();
+	}else{
+		tree='';
+	}
+	if ($('#leaf_id').val()) {
+		leaf=$('#leaf_id').val();
+	}else{
+		leaf='';
+	}
+
+	url='cycle_ajax.php?action=save' +
+		'&filter='   + filter +
+		'&cols='     + $('#cols').val() +
+		'&timespan=' + $('#timespan').val() +
+		'&graphs='   + $('#graphs').val() +
+		'&tree_id='  + tree +
+		'&leaf_id='  + leaf +
+		'&legend='   + $('#legend').is(':checked') +
+		'&width='    + $('#width').val() +
+		'&height='   + $('#height').val() +
+		'&delay='    + $('#delay').val();
+
+	$.get(url, function(data) {
+		$('#text').show().text('Filter Settings Saved').fadeOut(2000);
+	});
 }
 
 function refreshTime() {
@@ -135,7 +165,7 @@ function refreshTime() {
 }
 
 function newRefresh() {
-	rtime=$('#refresh').val() * 1000;
+	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
 	formatProcessUrl(current);
 }
@@ -146,21 +176,25 @@ function newTimespan() {
 }
 
 function newGraph() {
+	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
 	formatProcessUrl(current);
 }
 
 function newTree() {
+	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
 	formatProcessUrl(current);
 }
 
 function getnext() {
+	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
 	formatProcessUrl(next);
 }
 
 function getprev() {
+	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
 	formatProcessUrl(prev);
 }
@@ -215,10 +249,10 @@ function base64_decode(data) {
 	//if (typeof this.window['btoa'] == 'function') {
 	//    return btoa(data);
 	//}
-	var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+	var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 	var o1, o2, o3, h1, h2, h3, h4, bits, i = 0,
 		ac = 0,
-		dec = "",
+		dec = '',
 		tmp_arr = [];
 
 	if (!data) {
@@ -259,7 +293,7 @@ function utf8_decode (str_data) {
     // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)
     // +      input by: Aman Gupta
     // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +   improved by: Norman "zEh" Fuchs
+    // +   improved by: Norman 'zEh' Fuchs
     // +   bugfixed by: hitwork
     // +   bugfixed by: Onno Marsman
     // +      input by: Brett Zamir (http://brett-zamir.me)
