@@ -64,6 +64,7 @@ get_timespan($timespan, time(), get_request_var('timespan') , $first_weekdayid);
 $graph_tree = $tree_id;
 $html       = '';
 $out        = '';
+cacti_log($timespan['begin_now']);
 
 /* detect the next graph regardless of type */
 get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id);
@@ -122,7 +123,7 @@ if (sizeof($graphs)) {
 		$out .= '<td align="center" class="graphholder">'
 			. '<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
 			. "<img border='0' style='width:" . $width . "px;height:" . $height . "px' "
-			. "src='../../graph_image.php?local_graph_id=" . $graph['graph_id'] . "&rra_id=0&graph_start=" . $timespan["begin_now"]
+			. "src='../../graph_image.php?image_format=png&disable_cache=true&local_graph_id=" . $graph['graph_id'] . "&rra_id=0&graph_start=" . $timespan['begin_now']
 			. '&graph_end=' . time() . '&graph_width=' . $width . '&graph_height=' . $height . ($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
 			. '</a></td>';
 
