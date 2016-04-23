@@ -23,12 +23,34 @@
 */
 
 $graphs_array = array(
-    1  => '1 Graph',
-    2  => '2 Graphs',
-    4  => '4 Graphs',
-    6  => '6 Graphs',
-    8  => '8 Graphs',
-    10 => '10 Graphs'
+    1   => '1 Graph',
+    2   => '2 Graphs',
+    4   => '4 Graphs',
+    6   => '6 Graphs',
+    8   => '8 Graphs',
+    9   => '9 Graphs',
+    10  => '10 Graphs',
+    12  => '12 Graphs',
+    15  => '15 Graphs',
+    16  => '16 Graphs',
+    18  => '18 Graphs',
+    20  => '20 Graphs',
+    24  => '24 Graphs',
+    25  => '25 Graphs',
+    28  => '28 Graphs',
+    30  => '30 Graphs',
+    32  => '32 Graphs',
+    35  => '35 Graphs',
+    36  => '36 Graphs',
+    40  => '40 Graphs',
+    42  => '42 Graphs',
+    48  => '48 Graphs',
+    50  => '50 Graphs',
+    60  => '60 Graphs',
+    70  => '70 Graphs',
+    80  => '80 Graphs',
+    90  => '90 Graphs',
+    100 => '100 Graphs'
 );
 
 $graph_cols = array(
@@ -36,7 +58,10 @@ $graph_cols = array(
 	2  => '2 Columns',
 	3  => '3 Columns',
 	4  => '4 Columns',
-	5  => '5 Columns'
+	5  => '5 Columns',
+	6  => '6 Columns',
+	7  => '7 Columns',
+	8  => '8 Columns'
 );
 
 function save_settings() {
