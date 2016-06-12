@@ -244,7 +244,7 @@ function cycle_config_settings () {
 			'max_length' => 255,
 			),
 		'cycle_custom_graphs_tree' => array(
-			'friendly_name' => 'Default Graph Tree',
+			'friendly_name' => 'Default Tree',
 			'description' => 'Select the graph tree to cycle if Tree Mode is selected',
 			'method' => 'drop_array',
 			'default' => 'None',

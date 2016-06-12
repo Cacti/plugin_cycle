@@ -64,7 +64,6 @@ get_timespan($timespan, time(), get_request_var('timespan') , $first_weekdayid);
 $graph_tree = $tree_id;
 $html       = '';
 $out        = '';
-cacti_log($timespan['begin_now']);
 
 /* detect the next graph regardless of type */
 get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id);
@@ -78,7 +77,7 @@ case '1':
 case '2':
 	$tree_list = get_graph_tree_array();
 	if (sizeof($tree_list)) {
-		$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='Select Graph Tree to View'>\n";
+		$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='Select Tree to View'>\n";
 
 		foreach ($tree_list as $tree) {
 			$html .= "<option value='" . $tree['id'] . "'" . ($graph_tree == $tree['id'] ? ' selected' : '') . '>' . title_trim($tree['name'], 30)."</option>\n";
