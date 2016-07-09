@@ -44,7 +44,7 @@ $legend = get_request_var('cycle_legend');
 	<table>
 		<tr>
 			<td>
-				<select id='timespan' name='timespan' title='Graph Display Timespan'>
+				<select id='timespan' name='timespan' title='<?php print __('Graph Display Timespan');?>'>
 					<?php
 					if (sizeof($graph_timespans)) {
 					foreach($graph_timespans as $key=>$value) {
@@ -55,7 +55,7 @@ $legend = get_request_var('cycle_legend');
 				</select>
 			</td>
 			<td>
-				<select id='delay' name='delay' title='Cycle Rotation Refresh Frequency'>
+				<select id='delay' name='delay' title='<?php print __('Cycle Rotation Refresh Frequency');?>'>
 					<?php
 					if (sizeof($page_refresh_interval)) {
 					foreach($page_refresh_interval as $key=>$value) {
@@ -66,7 +66,7 @@ $legend = get_request_var('cycle_legend');
 				</select>
 			</td>
 			<td>
-				<select id='graphs' name='graphs' title='Number of Graphs per Page'>
+				<select id='graphs' name='graphs' title='<?php print __('Number of Graphs per Page');?>'>
 					<?php
 					foreach($graphs_array as $key=>$value) {
 						print "<option value='$key'"; if (get_request_var('graphs') == $key) { print ' selected'; } print '>' . $value . "</option>\n";
@@ -75,7 +75,7 @@ $legend = get_request_var('cycle_legend');
 				</select>
 			</td>
 			<td>
-				<select id='cols' name='cols' title='Number of Graph Columns'>
+				<select id='cols' name='cols' title='<?php print __('Number of Graph Columns');?>'>
 					<?php
 					foreach($graph_cols as $key=>$value) {
 						print "<option value='$key'"; if (get_request_var('cols') == $key) { print ' selected'; } print '>' . $value . "</option>\n";
@@ -84,7 +84,7 @@ $legend = get_request_var('cycle_legend');
 				</select>
 			</td>
 			<td>
-				<select id='height' name='height' title='Graph Height'>
+				<select id='height' name='height' title='<?php print __('Graph Height');?>'>
 					<?php
 					foreach($cycle_height as $key=>$value) {
 						print "<option value='$key'"; if (get_request_var('height') == $key) { print ' selected'; } print '>' . $key . "</option>\n";
@@ -96,7 +96,7 @@ $legend = get_request_var('cycle_legend');
 				<span style='vertical-align:center;'>X</span>
 			</td>
 			<td>
-				<select id='width' name='width' title='Graph Width'>
+				<select id='width' name='width' title='<?php print __('Graph Width');?>'>
 					<?php
 					foreach($cycle_width as $key=>$value) {
 						print "<option value='$key'"; if (get_request_var('width') == $key) { print ' selected'; } print '>' . $key . "</option>\n";
@@ -105,28 +105,28 @@ $legend = get_request_var('cycle_legend');
 				</select>
 			</td>
 			<td>
-				<input type='button' id='prev' value='Prev' name='prev' title='Cycle to Previous Graphs'>
+				<input type='button' id='prev' value='<?php print __('Prev');?>' name='prev' title='<?php print __('Cycle to Previous Graphs');?>'>
 			</td>
 			<td>
-				<input type='button' id='cstop' value='Stop' name='cstop' title='Stop Cycling'>
+				<input type='button' id='cstop' value='<?php print __('Stop');?>' name='cstop' title='<?php print __('Stop Cycling');?>'>
 			</td>
 			<td>
-				<input type='button' id='cstart' value='Start' name='cstart' style='display:none;' title='Resume Cycling'>
+				<input type='button' id='cstart' value='<?php print __('Start');?>' name='cstart' style='display:none;' title='<?php print __('Resume Cycling');?>'>
 			</td>
 			<td>
-				<input type='button' id='next' value='Next' name='next' title='Cycle to Next Graphs'>
+				<input type='button' id='next' value='<?php print __('Next');?>' name='next' title='<?php print __('Cycle to Next Graphs');?>'>
 			</td>
 			<td>
-				<input type='checkbox' id='legend' name='legend' <?php ($legend=='on' || $legend==1 ? print ' checked=yes' : '' ); ?> title='Display Graph Legend'>
+				<input type='checkbox' id='legend' name='legend' <?php ($legend=='on' || $legend==1 ? print ' checked=yes' : '' ); ?> title='<?php print __('Display Graph Legend');?>'>
 			</td>
 			<td>
-				<label for='legend' style='vertical-align:25%' title='Display Graph Legend'>Legend</label>
+				<label for='legend' style='vertical-align:25%' title='<?php print __('Display Graph Legend');?>'><?php print __('Legend');?></label>
 			</td>
 			<td>
-				<input type='button' id='refreshb' value='Refresh' name='refreshb' title='Refresh Graphs Now'>
+				<input type='button' id='refreshb' value='<?php print __('Refresh');?>' name='refreshb' title='<?php print __('Refresh Graphs Now');?>'>
 			</td>
 			<td>
-				<input type='button' id='savedb' value='Save' name='savedb' title='Save Filter Settings'>
+				<input type='button' id='savedb' value='<?php print __('Save');?>' name='savedb' title='<?php print __('Save Filter Settings');?>'>
 			</td>
 		</tr>
 	</table>
@@ -134,7 +134,7 @@ $legend = get_request_var('cycle_legend');
 		<tr id='izone'>
 		</tr>
 	</table><span id='text'></span><br>
-	Next Update In <span id='countdown'></span><br><br>
+	<?php print __('Next Update In');?> <span id='countdown'></span><br><br>
 	<span id='image'></span><br>
 </center>
 <script type='text/javascript'>
