@@ -1,6 +1,8 @@
 [info]
+name = cycle
 version = 4.0
 longname = Cycle Graphs
 author = The Cacti Group
 email = 
+homepage = http://www.cacti.net
 compat = 1.0.0
