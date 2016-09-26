@@ -53,10 +53,6 @@ function plugin_cycle_upgrade () {
 	return false;
 }
 
-function plugin_cycle_version () {
-	return cycle_version();
-}
-
 function cycle_check_upgrade () {
 	global $config;
 
@@ -120,16 +116,10 @@ function cycle_check_dependencies() {
 function cycle_setup_table_new () {
 }
 
-function cycle_version () {
-	return array(
-		'name'     => 'Cycle Graphs',
-		'version'  => '4.0',
-		'longname' => 'Cycle Graphs',
-		'author'   => 'The Cacti Group',
-		'homepage' => 'http://www.cacti.net',
-		'email'    => 'larryjadams@comcast.net',
-		'url'      => 'http://versions.cactiusers.org/'
-	);
+function plugin_cycle_version () {
+	global $config;
+	$info = parse_ini_file($config['base_path'] . '/plugins/cycle/INFO', true);
+	return $info['info'];
 }
 
 function cycle_page_head () {
