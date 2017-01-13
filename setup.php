@@ -222,14 +222,14 @@ function cycle_config_settings () {
 			),
 		'cycle_custom_graphs_type' => array(
 			'friendly_name' => __('Rotation Type'),
-			'description' => __('Select which method to use for custom graph rotation.  If you select \'Specific List\', you must define a list of graph id\'s'),
+			'description' => __('Select which method to use for custom graph rotation.  If you select \'Specific List\', you must define a list of Graph ID\'s'),
 			'method' => 'drop_array',
 			'default' => '1',
 			'array' => array(0 => __('Legacy (All)'), 1 => __('Specific List'), 2 => __('Tree Mode')),
 			),
 		'cycle_custom_graphs_list' => array(
 			'friendly_name' => __('Custom Graph List'),
-			'description' => __('This must be a comma delimited list of graph id\'s to cycle through. For example \'1,2,3,4\''),
+			'description' => __('This must be a comma delimited list of Graph ID\'s to cycle through. For example \'1,2,3,4\''),
 			'method' => 'textbox',
 			'max_length' => 255,
 			),
