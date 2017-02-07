@@ -222,8 +222,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 			if (strlen($newcase)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gl.id IN($newcase)";
 		}elseif ($type == 2) {
 			$graph_data = get_tree_graphs($graph_tree, $leaf_id);
-			$local_graph_ids = array_keys($graph_data);
-			sort($local_graph_ids);
+			$local_graph_ids = array();
+
+			if (sizeof($graph_data)) {
+				$local_graph_ids = array_keys($graph_data);
+				sort($local_graph_ids);
+			}
 
 			if (sizeof($local_graph_ids)) {
 				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
