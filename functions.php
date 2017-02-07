@@ -486,6 +486,10 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 }
 
 function get_tree_graphs($tree_id, $leaf_id) {
+	$graphs   = array();
+	$hosts    = array();
+	$outArray = array();
+
 	if (is_tree_allowed($tree_id)) {
 		if ($leaf_id == -2) {
 			$sql_leaf = 'parent=0 AND';
@@ -498,10 +502,6 @@ function get_tree_graphs($tree_id, $leaf_id) {
 		$items = db_fetch_assoc('SELECT *
 			FROM graph_tree_items AS gti
 			WHERE ' . $sql_leaf . ' graph_tree_id=' . $tree_id);
-
-		$graphs   = array();
-		$hosts    = array();
-		$outArray = array();
 
 		if (sizeof($items)) {
 			foreach($items as $i) {
@@ -524,7 +524,7 @@ function get_tree_graphs($tree_id, $leaf_id) {
 		}
 	}
 	
-	if (sizeof($graphs)) {
+	if (isset($graphs) && sizeof($graphs)) {
 		foreach($graphs as $i) {
 			$outArray[$i['local_graph_id']] = $i['title_cache'];
 		}
