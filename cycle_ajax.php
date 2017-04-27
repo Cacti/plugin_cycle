@@ -77,7 +77,7 @@ case '1':
 case '2':
 	$tree_list = get_graph_tree_array();
 	if (sizeof($tree_list)) {
-		$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='" . __('Select Tree to View') . "'>\n";
+		$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
 
 		foreach ($tree_list as $tree) {
 			$html .= "<option value='" . $tree['id'] . "'" . ($graph_tree == $tree['id'] ? ' selected' : '') . '>' . title_trim($tree['name'], 30)."</option>\n";
@@ -88,10 +88,10 @@ case '2':
 		$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' AND graph_tree_id='$graph_tree' ORDER BY parent, position");
 
 		if (sizeof($leaves)) {
-			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()' title='" . __('Select Tree Leaf to Display') . "'>\n";
+			$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()' title='" . __esc('Select Tree Leaf to Display', 'cycle') . "'>\n";
 
-			$html .= "<option value='-1'" . ($leaf_id == -1 ? ' selected' : '') . ">" . __('All Levels') . "</option>\n";
-			$html .= "<option value='-2'" . ($leaf_id == -2 ? ' selected' : '') . ">" . __('Top Level') . "</option>\n";
+			$html .= "<option value='-1'" . ($leaf_id == -1 ? ' selected' : '') . ">" . __('All Levels', 'cycle') . "</option>\n";
+			$html .= "<option value='-2'" . ($leaf_id == -2 ? ' selected' : '') . ">" . __('Top Level', 'cycle') . "</option>\n";
 
 			foreach ($leaves as $leaf) {
 				$html .= "<option value='" . $leaf['id'] . "'" . ($leaf_id == $leaf['id'] ? ' selected':'') . '>' . $leaf['title'] . "</option>\n";
@@ -105,9 +105,9 @@ case '2':
 }
 
 /* process the filter section */
-$html .= "<td><input id='filter' name='filter' type='textbox' title='" . __('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)') . "' size='60' onkeypress='processReturn(event)' value='" . $filter . "'></td>";
+$html .= "<td><input id='filter' name='filter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='60' onkeypress='processReturn(event)' value='" . $filter . "'></td>";
 
-$html .= "<td><input type='button' id='go' value='" . __('Set') . "' name='go' title='" . __('Set Filter') . "'></td><td><input type='button' id='clear' value='" . __('Clear') . "' name='clear' title='" . __('Clear Filter') . "' onClick='clearFilter()'></td>";
+$html .= "<td><input type='button' id='go' value='" . __esc('Set', 'cycle') . "' name='go' title='" . __esc('Set Filter', 'cycle') . "'></td><td><input type='button' id='clear' value='" . __esc('Clear', 'cycle') . "' name='clear' title='" . __esc('Clear Filter', 'cycle') . "' onClick='clearFilter()'></td>";
 
 /* create the graph structure and output */
 $out       = '<table cellpadding="5" cellspacing="5" border="0">';
@@ -137,7 +137,7 @@ if (sizeof($graphs)) {
 		}
 	}
 }else{
-	$out = '<h1>' . __('No Graphs Found Matching Criteria') . '</h1>';
+	$out = '<h1>' . __('No Graphs Found Matching Criteria', 'cycle') . '</h1>';
 }
 
 if ($col_count  <= $max_cols) {

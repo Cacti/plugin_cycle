@@ -32,7 +32,7 @@ function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'api_graph_save',        'cycle_api_graph_save',       'setup.php');
 	api_plugin_register_hook('cycle', 'page_head',             'cycle_page_head',            'setup.php');
 
-	api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', __('Plugin -> Cycle Graphs'), 1);
+	api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', __('Plugin -> Cycle Graphs', 'cycle'), 1);
 
 	cycle_setup_table_new ();
 }
@@ -140,102 +140,102 @@ function cycle_config_settings () {
 	if (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
 		return;
 
-	$tabs['cycle'] = __('Cycle');
+	$tabs['cycle'] = __('Cycle', 'cycle');
 
 	$treeList = array_rekey(get_graph_tree_array(null, true), 'id', 'name');
 	$temp = array(
 		'cycle_header' => array(
-			'friendly_name' => __('Cycle Graphs'),
+			'friendly_name' => __('Cycle Graphs', 'cycle'),
 			'method' => 'spacer',
 			),
 		'cycle_delay' => array(
-			'friendly_name' => __('Delay Interval'),
-			'description' => __('This is the time in seconds before the next graph is displayed.'),
+			'friendly_name' => __('Delay Interval', 'cycle'),
+			'description' => __('This is the time in seconds before the next graph is displayed.', 'cycle'),
 			'method' => 'drop_array',
 			'default' => 60,
 			'array' => $page_refresh_interval
 			),
 		'cycle_timespan' => array(
-			'friendly_name' => __('Graph Timespan'),
-			'description' => __('This is the default timespan that will be displayed on the page.'),
+			'friendly_name' => __('Graph Timespan', 'cycle'),
+			'description' => __('This is the default timespan that will be displayed on the page.', 'cycle'),
 			'method' => 'drop_array',
 			'default' => 5,
 			'array' => $graph_timespans
 			),
 		'cycle_columns' => array(
-			'friendly_name' => __('Column Count'),
-			'description' => __('In Tree Mode this is the number of columns that will be used.'),
+			'friendly_name' => __('Column Count', 'cycle'),
+			'description' => __('In Tree Mode this is the number of columns that will be used.', 'cycle'),
 			'method' => 'drop_array',
 			'default' => 2,
 			'array' => $cycle_cols
 			),
 		'cycle_graphs' => array(
-			'friendly_name' => __('Number of Graphs per Page'),
-			'description' => __('Select the number of graphs to display per page'),
+			'friendly_name' => __('Number of Graphs per Page', 'cycle'),
+			'description' => __('Select the number of graphs to display per page', 'cycle'),
 			'method' => 'drop_array',
 			'default' => '4',
 			'array' => $cycle_graphs,
 			),
 		'cycle_height' => array(
-			'friendly_name' => __('Graph Height'),
-			'description' => __('This sets the graph height for the displayed graphs.'),
+			'friendly_name' => __('Graph Height', 'cycle'),
+			'description' => __('This sets the graph height for the displayed graphs.', 'cycle'),
 			'method' => 'drop_array',
 			'default' => '100',
 			'array' => $cycle_height
 			),
 		'cycle_width' => array(
-			'friendly_name' => __('Graph Width'),
-			'description' => __('This sets the graph width for the displayed graphs.'),
+			'friendly_name' => __('Graph Width', 'cycle'),
+			'description' => __('This sets the graph width for the displayed graphs.', 'cycle'),
 			'method' => 'drop_array',
 			'default' => '400',
 			'array' => $cycle_width
 			),
 		'cycle_font_size' => array(
-			'friendly_name' => __('Title Font Size'),
-			'description' => __('This is the font size in pixels for the title. (1 - 100)'),
+			'friendly_name' => __('Title Font Size', 'cycle'),
+			'description' => __('This is the font size in pixels for the title. (1 - 100)', 'cycle'),
 			'method' => 'textbox',
 			'default' => '8',
 			'max_length' => 3,
 			'size' => 4
 			),
 		'cycle_font_face' => array(
-			'friendly_name' => __('Title Font Face'),
-			'description' => __('This is the font face for the title.'),
+			'friendly_name' => __('Title Font Face', 'cycle'),
+			'description' => __('This is the font face for the title.', 'cycle'),
 			'method' => 'textbox',
 			'max_length' => 100,
 			),
 		'cycle_font_color' => array(
-			'friendly_name' => __('Title Font Color'),
-			'description' => __('This is the font color for the title.'),
+			'friendly_name' => __('Title Font Color', 'cycle'),
+			'description' => __('This is the font color for the title.', 'cycle'),
 			'method' => 'drop_color',
 			'default' => '1'
 			),
 		'cycle_legend' => array(
-			'friendly_name' => __('Display Legend'),
-			'description' => __('Check this to display legend.'),
+			'friendly_name' => __('Display Legend', 'cycle'),
+			'description' => __('Check this to display legend.', 'cycle'),
 			'method' => 'checkbox',
 			'default' => ''
 			),
 		'cycle_cheader' => array(
-			'friendly_name' => __('Predefined Rotations'),
+			'friendly_name' => __('Predefined Rotations', 'cycle'),
 			'method' => 'spacer',
 			),
 		'cycle_custom_graphs_type' => array(
-			'friendly_name' => __('Rotation Type'),
-			'description' => __('Select which method to use for custom graph rotation.  If you select \'Specific List\', you must define a list of Graph ID\'s'),
+			'friendly_name' => __('Rotation Type', 'cycle'),
+			'description' => __('Select which method to use for custom graph rotation.  If you select \'Specific List\', you must define a list of Graph ID\'s', 'cycle'),
 			'method' => 'drop_array',
 			'default' => '1',
-			'array' => array(0 => __('Legacy (All)'), 1 => __('Specific List'), 2 => __('Tree Mode')),
+			'array' => array(0 => __('Legacy (All)', 'cycle'), 1 => __('Specific List', 'cycle'), 2 => __('Tree Mode', 'cycle')),
 			),
 		'cycle_custom_graphs_list' => array(
-			'friendly_name' => __('Custom Graph List'),
-			'description' => __('This must be a comma delimited list of Graph ID\'s to cycle through. For example \'1,2,3,4\''),
+			'friendly_name' => __('Custom Graph List', 'cycle'),
+			'description' => __('This must be a comma delimited list of Graph ID\'s to cycle through. For example \'1,2,3,4\'', 'cycle'),
 			'method' => 'textbox',
 			'max_length' => 255,
 			),
 		'cycle_custom_graphs_tree' => array(
-			'friendly_name' => __('Default Tree'),
-			'description' => __('Select the graph tree to cycle if Tree Mode is selected'),
+			'friendly_name' => __('Default Tree', 'cycle'),
+			'description' => __('Select the graph tree to cycle if Tree Mode is selected', 'cycle'),
 			'method' => 'drop_array',
 			'default' => 'None',
 			'array' => $treeList,
@@ -265,56 +265,56 @@ function cycle_config_arrays () {
 	global $cycle_graphs, $cycle_cols, $cycle_width, $cycle_height;
 	
 	$cycle_graphs = array(
-		1  => __('%d Graph', 1), 
-		2  => __('%d Graphs', 2), 
-		4  => __('%d Graphs', 4), 
-		6  => __('%d Graphs', 6), 
-		8  => __('%d Graphs', 8), 
-		10 => __('%d Graphs', 10)
+		1  => __('%d Graph', 1, 'cycle'), 
+		2  => __('%d Graphs', 2, 'cycle'), 
+		4  => __('%d Graphs', 4, 'cycle'), 
+		6  => __('%d Graphs', 6, 'cycle'), 
+		8  => __('%d Graphs', 8, 'cycle'), 
+		10 => __('%d Graphs', 10, 'cycle')
 	);
 
 	$cycle_cols   = array(
-		1 => __('%d Column', 1), 
-		2 => __('%d Columns', 2), 
-		3 => __('%d Columns', 3), 
-		4 => __('%d Columns', 4), 
-		5 => __('%d Columns', 5)
+		1 => __('%d Column', 1, 'cycle'), 
+		2 => __('%d Columns', 2, 'cycle'), 
+		3 => __('%d Columns', 3, 'cycle'), 
+		4 => __('%d Columns', 4, 'cycle'), 
+		5 => __('%d Columns', 5, 'cycle')
 	);
 
 	$cycle_height = array(
-		75  => __('%d Pixels', 75), 
-		100 => __('%d Pixels', 100), 
-		125 => __('%d Pixels', 125), 
-		150 => __('%d Pixels', 150), 
-		175 => __('%d Pixels', 175), 
-		200 => __('%d Pixels', 200), 
-		250 => __('%d Pixels', 250), 
-		300 => __('%d Pixels', 300), 
-		350 => __('%d Pixels', 350), 
-		400 => __('%d Pixels', 400), 
-		500 => __('%d Pixels', 500)
+		75  => __('%d Pixels', 75, 'cycle'), 
+		100 => __('%d Pixels', 100, 'cycle'), 
+		125 => __('%d Pixels', 125, 'cycle'), 
+		150 => __('%d Pixels', 150, 'cycle'), 
+		175 => __('%d Pixels', 175, 'cycle'), 
+		200 => __('%d Pixels', 200, 'cycle'), 
+		250 => __('%d Pixels', 250, 'cycle'), 
+		300 => __('%d Pixels', 300, 'cycle'), 
+		350 => __('%d Pixels', 350, 'cycle'), 
+		400 => __('%d Pixels', 400, 'cycle'), 
+		500 => __('%d Pixels', 500, 'cycle')
 	);
 
 	$cycle_width  = array(
-		100 => __('%d Pixels', 100), 
-		125 => __('%d Pixels', 125), 
-		150 => __('%d Pixels', 150), 
-		175 => __('%d Pixels', 175), 
-		200 => __('%d Pixels', 200), 
-		250 => __('%d Pixels', 250), 
-		300 => __('%d Pixels', 300), 
-		350 => __('%d Pixels', 350), 
-		400 => __('%d Pixels', 400), 
-		500 => __('%d Pixels', 500), 
-		600 => __('%d Pixels', 600), 
-		700 => __('%d Pixels', 700)
+		100 => __('%d Pixels', 100, 'cycle'), 
+		125 => __('%d Pixels', 125, 'cycle'), 
+		150 => __('%d Pixels', 150, 'cycle'), 
+		175 => __('%d Pixels', 175, 'cycle'), 
+		200 => __('%d Pixels', 200, 'cycle'), 
+		250 => __('%d Pixels', 250, 'cycle'), 
+		300 => __('%d Pixels', 300, 'cycle'), 
+		350 => __('%d Pixels', 350, 'cycle'), 
+		400 => __('%d Pixels', 400, 'cycle'), 
+		500 => __('%d Pixels', 500, 'cycle'), 
+		600 => __('%d Pixels', 600, 'cycle'), 
+		700 => __('%d Pixels', 700, 'cycle')
 	);
 
 	return true;
 }
 
 function cycle_draw_navigation_text ($nav) {
-	$nav['cycle.php:'] = array('title' => __('Cycling'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
+	$nav['cycle.php:'] = array('title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
 	return $nav;
 }
 
