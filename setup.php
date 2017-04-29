@@ -142,7 +142,7 @@ function cycle_config_settings () {
 
 	$tabs['cycle'] = __('Cycle', 'cycle');
 
-	$treeList = array_rekey(get_graph_tree_array(null, true), 'id', 'name');
+	$treeList = array_rekey(get_allowed_trees(), 'id', 'name');
 	$temp = array(
 		'cycle_header' => array(
 			'friendly_name' => __('Cycle Graphs', 'cycle'),

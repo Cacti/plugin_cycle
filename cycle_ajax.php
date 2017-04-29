@@ -75,7 +75,8 @@ case '1':
 
 	break;
 case '2':
-	$tree_list = get_graph_tree_array();
+	$tree_list = get_allowed_trees();
+
 	if (sizeof($tree_list)) {
 		$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
 
