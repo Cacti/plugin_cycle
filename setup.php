@@ -254,9 +254,9 @@ function cycle_show_tab () {
 
 	if (api_user_realm_auth('cycle.php')) {
 		if (substr_count($_SERVER['REQUEST_URI'], 'cycle.php')) {
-			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="Cycle" align="absmiddle" border="0"></a>';
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle_down.gif" alt="' . __('Cycle') . '"></a>';
 		}else{
-			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="Cycle" align="absmiddle" border="0"></a>';
+			print '<a href="' . $config['url_path'] . 'plugins/cycle/cycle.php"><img src="' . $config['url_path'] . 'plugins/cycle/images/tab_cycle.gif" alt="' . __('Cycle') . '"></a>';
 		}
 	}
 }
