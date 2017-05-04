@@ -120,7 +120,7 @@ $legend = get_request_var('cycle_legend');
 				<input type='checkbox' id='legend' name='legend' <?php ($legend=='on' || $legend==1 ? print ' checked=yes' : '' ); ?> title='<?php print __esc('Display Graph Legend', 'cycle');?>'>
 			</td>
 			<td>
-				<label for='legend' style='vertical-align:25%' title='<?php print __esc('Display Graph Legend', 'cycle');?>'><?php print __esc('Legend', 'cycle');?></label>
+				<label for='legend' style='vertical-align:25%' title='<?php print __esc('Display Graph Legend', 'cycle');?>'><?php print __esc('Legend', 'cycle');?> </label>
 			</td>
 			<td>
 				<input type='button' id='refreshb' value='<?php print __esc('Refresh', 'cycle');?>' name='refreshb' title='<?php print __esc('Refresh Graphs Now', 'cycle');?>'>
