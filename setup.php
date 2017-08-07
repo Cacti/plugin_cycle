@@ -61,9 +61,10 @@ function cycle_check_upgrade () {
 		return;
 	}
 
-	$current = plugin_cycle_version();
-	$current = $current['version'];
+	$info    = plugin_cycle_version();
+	$current = $info['version'];
 	$old     = db_fetch_row("SELECT * FROM plugin_config WHERE directory='cycle'");
+
 	if (sizeof($old) && $current != $old['version']) {
 		/* if the plugin is installed and/or active */
 		if ($old['status'] == 1 || $old['status'] == 4) {
@@ -93,8 +94,8 @@ function cycle_check_upgrade () {
 		}
 
 		/* update the plugin information */
-		$info = plugin_cycle_version();
 		$id   = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
+
 		db_execute("UPDATE plugin_config
 			SET name='" . $info['longname'] . "',
 			author='"   . $info['author']   . "',
@@ -263,50 +264,50 @@ function cycle_show_tab () {
 
 function cycle_config_arrays () {
 	global $cycle_graphs, $cycle_cols, $cycle_width, $cycle_height;
-	
+
 	$cycle_graphs = array(
-		1  => __('%d Graph', 1, 'cycle'), 
-		2  => __('%d Graphs', 2, 'cycle'), 
-		4  => __('%d Graphs', 4, 'cycle'), 
-		6  => __('%d Graphs', 6, 'cycle'), 
-		8  => __('%d Graphs', 8, 'cycle'), 
+		1  => __('%d Graph', 1, 'cycle'),
+		2  => __('%d Graphs', 2, 'cycle'),
+		4  => __('%d Graphs', 4, 'cycle'),
+		6  => __('%d Graphs', 6, 'cycle'),
+		8  => __('%d Graphs', 8, 'cycle'),
 		10 => __('%d Graphs', 10, 'cycle')
 	);
 
 	$cycle_cols   = array(
-		1 => __('%d Column', 1, 'cycle'), 
-		2 => __('%d Columns', 2, 'cycle'), 
-		3 => __('%d Columns', 3, 'cycle'), 
-		4 => __('%d Columns', 4, 'cycle'), 
+		1 => __('%d Column', 1, 'cycle'),
+		2 => __('%d Columns', 2, 'cycle'),
+		3 => __('%d Columns', 3, 'cycle'),
+		4 => __('%d Columns', 4, 'cycle'),
 		5 => __('%d Columns', 5, 'cycle')
 	);
 
 	$cycle_height = array(
-		75  => __('%d Pixels', 75, 'cycle'), 
-		100 => __('%d Pixels', 100, 'cycle'), 
-		125 => __('%d Pixels', 125, 'cycle'), 
-		150 => __('%d Pixels', 150, 'cycle'), 
-		175 => __('%d Pixels', 175, 'cycle'), 
-		200 => __('%d Pixels', 200, 'cycle'), 
-		250 => __('%d Pixels', 250, 'cycle'), 
-		300 => __('%d Pixels', 300, 'cycle'), 
-		350 => __('%d Pixels', 350, 'cycle'), 
-		400 => __('%d Pixels', 400, 'cycle'), 
+		75  => __('%d Pixels', 75, 'cycle'),
+		100 => __('%d Pixels', 100, 'cycle'),
+		125 => __('%d Pixels', 125, 'cycle'),
+		150 => __('%d Pixels', 150, 'cycle'),
+		175 => __('%d Pixels', 175, 'cycle'),
+		200 => __('%d Pixels', 200, 'cycle'),
+		250 => __('%d Pixels', 250, 'cycle'),
+		300 => __('%d Pixels', 300, 'cycle'),
+		350 => __('%d Pixels', 350, 'cycle'),
+		400 => __('%d Pixels', 400, 'cycle'),
 		500 => __('%d Pixels', 500, 'cycle')
 	);
 
 	$cycle_width  = array(
-		100 => __('%d Pixels', 100, 'cycle'), 
-		125 => __('%d Pixels', 125, 'cycle'), 
-		150 => __('%d Pixels', 150, 'cycle'), 
-		175 => __('%d Pixels', 175, 'cycle'), 
-		200 => __('%d Pixels', 200, 'cycle'), 
-		250 => __('%d Pixels', 250, 'cycle'), 
-		300 => __('%d Pixels', 300, 'cycle'), 
-		350 => __('%d Pixels', 350, 'cycle'), 
-		400 => __('%d Pixels', 400, 'cycle'), 
-		500 => __('%d Pixels', 500, 'cycle'), 
-		600 => __('%d Pixels', 600, 'cycle'), 
+		100 => __('%d Pixels', 100, 'cycle'),
+		125 => __('%d Pixels', 125, 'cycle'),
+		150 => __('%d Pixels', 150, 'cycle'),
+		175 => __('%d Pixels', 175, 'cycle'),
+		200 => __('%d Pixels', 200, 'cycle'),
+		250 => __('%d Pixels', 250, 'cycle'),
+		300 => __('%d Pixels', 300, 'cycle'),
+		350 => __('%d Pixels', 350, 'cycle'),
+		400 => __('%d Pixels', 400, 'cycle'),
+		500 => __('%d Pixels', 500, 'cycle'),
+		600 => __('%d Pixels', 600, 'cycle'),
 		700 => __('%d Pixels', 700, 'cycle')
 	);
 
