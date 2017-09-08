@@ -37,7 +37,7 @@ validate_request_vars();
 
 general_header();
 
-$legend = get_request_var('cycle_legend');
+$legend = get_request_var('legend');
 
 ?>
 <center><!-- Timespan - Refresh - Prev - Stop - Next links -->
