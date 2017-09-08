@@ -144,7 +144,7 @@ function saveFilter() {
 		'&graphs='   + $('#graphs').val() +
 		'&tree_id='  + tree +
 		'&leaf_id='  + leaf +
-		'&legend='   + $('#legend').is(':checked') +
+		'&legend='   + ( ( $('#legend').is(':checked') ) ? 1:0 ) +
 		'&width='    + $('#width').val() +
 		'&height='   + $('#height').val() +
 		'&delay='    + $('#delay').val();
