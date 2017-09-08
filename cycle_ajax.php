@@ -122,7 +122,7 @@ if (sizeof($graphs)) {
 
 		$out .= '<td align="center" class="graphholder">'
 			. '<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
-			. "<img style='width:" . $width . "px;height:" . $height . "px' "
+			. "<img "
 			. "src='../../graph_image.php?image_format=png&disable_cache=true&local_graph_id=" . $graph['graph_id'] . "&rra_id=0&graph_start=" . $timespan['begin_now']
 			. '&graph_end=' . time() . '&graph_width=' . $width . '&graph_height=' . $height . ($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
 			. '</a></td>';
