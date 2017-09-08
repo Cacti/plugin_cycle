@@ -124,7 +124,7 @@ if (sizeof($graphs)) {
 			. '<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
 			. "<img "
 			. "src='../../graph_image.php?image_format=png&disable_cache=true&local_graph_id=" . $graph['graph_id'] . "&rra_id=0&graph_start=" . $timespan['begin_now']
-			. '&graph_end=' . time() . '&graph_width=' . $width . '&graph_height=' . $height . ($legend==0 || $legend=='' ? '&graph_nolegend=true' : '')."'>"
+			. '&graph_end=' . time() . '&graph_width=' . $width . '&graph_height=' . $height . ($legend == '' || $legend=='false' ? '&graph_nolegend=true' : '')."'>"
 			. '</a></td>';
 
 		ob_start();

@@ -120,7 +120,18 @@ function formatProcessUrl(nextid) {
 		leaf='';
 	}
 
-	url='?action=view&id='+nextid+'&filter='+filter+'&cols='+$('#cols').val()+'&timespan='+$('#timespan').val()+'&graphs='+$('#graphs').val()+'&tree_id='+tree+'&leaf_id='+leaf+'&legend='+$('#legend:checked').length+'&width='+$('#width').val()+'&height='+$('#height').val()+'&delay='+$('#delay').val();
+	url='?action=view' +
+		'&id='       + nextid +
+		'&filter='   + filter +
+		'&cols='     + $('#cols').val() +
+		'&timespan=' + $('#timespan').val() +
+		'&graphs='   + $('#graphs').val() +
+		'&tree_id='  + tree +
+		'&leaf_id='  + leaf +
+		'&legend='   + $('#legend').is(':checked') +
+		'&width='    + $('#width').val() +
+		'&height='   + $('#height').val() +
+		'&delay='    + $('#delay').val();
 
 	processAjax(url);
 }

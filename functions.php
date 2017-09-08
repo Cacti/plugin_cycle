@@ -68,34 +68,40 @@ function save_settings() {
 	validate_request_vars();
 
 	if (sizeof($_REQUEST)) {
-	foreach($_REQUEST as $var => $value) {
-		switch($var) {
-		case 'timespan':
-			set_user_setting('cycle_timespan', get_request_var('timespan'));
-			break;
-		case 'refresh':
-			set_user_setting('cycle_delay', get_request_var('refresh'));
-			break;
-		case 'graphs':
-			set_user_setting('cycle_graphs', get_request_var('graphs'));
-			break;
-		case 'cols':
-			set_user_setting('cycle_columns', get_request_var('cols'));
-			break;
-		case 'height':
-			set_user_setting('cycle_height', get_request_var('height'));
-			break;
-		case 'width':
-			set_user_setting('cycle_width', get_request_var('width'));
-			break;
-		case 'legend':
-			set_user_setting('cycle_legend', get_request_var('legend'));
-			break;
-		case 'filter':
-			set_user_setting('cycle_filter', get_request_var('filter'));
-			break;
+		foreach($_REQUEST as $var => $value) {
+			switch($var) {
+			case 'timespan':
+				set_user_setting('cycle_timespan', get_request_var('timespan'));
+				break;
+			case 'refresh':
+				set_user_setting('cycle_delay', get_request_var('refresh'));
+				break;
+			case 'graphs':
+				set_user_setting('cycle_graphs', get_request_var('graphs'));
+				break;
+			case 'cols':
+				set_user_setting('cycle_columns', get_request_var('cols'));
+				break;
+			case 'height':
+				set_user_setting('cycle_height', get_request_var('height'));
+				break;
+			case 'width':
+				set_user_setting('cycle_width', get_request_var('width'));
+				break;
+			case 'legend':
+				if ($value == 'true') {
+					$value = 'on';
+				} else {
+					$value = '';
+				}
+
+				set_user_setting('cycle_legend', $value);
+				break;
+			case 'filter':
+				set_user_setting('cycle_filter', get_request_var('filter'));
+				break;
+			}
 		}
-	}
 	}
 
 	validate_request_vars(true);
@@ -142,7 +148,6 @@ function validate_request_vars($force = false) {
 			),
 		'legend' => array(
 			'filter' => FILTER_CALLBACK,
-			'pageset' => true,
 			'default' => read_user_setting('cycle_legend', read_config_option('cycle_legend'), $force),
 			'options' => array('options' => 'sanitize_search_string')
 			),
@@ -178,9 +183,17 @@ function cycle_set_defaults() {
 		);
 
 		foreach($defaults as $name => $value) {
-			$current = db_fetch_cell("SELECT value FROM settings_user WHERE name='$name' AND user_id=$user");
+			$current = db_fetch_cell_prepared('SELECT value 
+				FROM settings_user 
+				WHERE name = ?
+				AND user_id = ?', 
+				array($name, $user));
+
 			if ($current === false) {
-				db_execute("REPLACE INTO settings_user (user_id,name,value) VALUES ($user, '$name', '$value')");
+				db_execute_prepared('REPLACE INTO settings_user 
+					(user_id, name, value) 
+					VALUES (?, ?, ?)', 
+					array($user, $name, $value));
 			}
 		}
 

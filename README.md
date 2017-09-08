@@ -39,6 +39,7 @@ Got any ideas then please let us know.
 
 --- 4.0 ---
 * feature: Support for Cacti 1.0
+* issue#3: Legend is not functioning properly in Cycle
 * issue#4: Errors in Cacti log when specific graph list is used
 
 --- 3.1 ---
