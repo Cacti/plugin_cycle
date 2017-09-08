@@ -209,7 +209,9 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 
 		$sql_where = "WHERE gl.id>=$graph_id";
 
-		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+		if ($filter != '') {
+			$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+		}
 
 		if ($type == 1) {
 			$cases = explode(',', read_config_option('cycle_custom_graphs_list'));
@@ -219,9 +221,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 				$newcase .= (is_numeric($case) ? (strlen($newcase) ? ',':'') . $case:'');
 			}
 
-			if (strlen($newcase)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gl.id IN($newcase)";
+			if (strlen($newcase)) {
+				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gl.id IN($newcase)";
+			}
 		}elseif ($type == 2) {
-			$graph_data = get_tree_graphs($graph_tree, $leaf_id);
+			$newcase         = '';
+			$graph_data      = get_tree_graphs($graph_tree, $leaf_id);
 			$local_graph_ids = array();
 
 			if (sizeof($graph_data)) {
@@ -319,13 +324,13 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 			$sql_where = '';
 
 			/* setup the standard filters less the starting range, in other words start from the first graph */
-			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+			if ($filter != '') {
+				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+			}
 
 			if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
 				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
 			}
-
-			if (isset($newcase) && strlen($newcase)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
 
 			$start      = 0;
 			$done       = false;
@@ -386,16 +391,16 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		 * we reach the $graphpp variable or until we run out of rows.  We
 		 * also have to adjust for underflow in this case.
 		 */
-		$sql_where = "WHERE gl.id<$graph_id";
+		$sql_where = "WHERE gl.id < $graph_id";
 
 		/* setup the standard filters less the starting range, in other words start from the first graph */
-		if (strlen($filter)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+		if ($filter != '') {
+			$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+		}
 
 		if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
 			$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
 		}
-
-		if (isset($newcase) && strlen($newcase)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
 
 		$done    = false;
 		$start   = 0;
@@ -441,7 +446,10 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		 */
 		if ($prev_graph_id == 0) {
 			$sql_where = '';
-			if (strlen($filter)) $sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+
+			if ($filter != '') {
+				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+			}
 
 			$start = 0;
 			$done  = false;
