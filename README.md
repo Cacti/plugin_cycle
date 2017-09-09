@@ -1,7 +1,6 @@
 # cycle
  
-    The Cacti Cycle plugin allows you to automatically view the Cacti graphs one by one
-    after a specified time delay.
+The Cacti Cycle plugin allows you to automatically view the Cacti graphs one by one after a specified time delay.  It allows you to select a tree, or branch, as well as specifically selected graphs.
 
 # Features
 
