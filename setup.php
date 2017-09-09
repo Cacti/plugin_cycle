@@ -307,7 +307,9 @@ function cycle_config_arrays () {
 		350 => __('%d Pixels', 350, 'cycle'),
 		400 => __('%d Pixels', 400, 'cycle'),
 		500 => __('%d Pixels', 500, 'cycle'),
+		550 => __('%d Pixels', 550, 'cycle'),
 		600 => __('%d Pixels', 600, 'cycle'),
+		650 => __('%d Pixels', 650, 'cycle'),
 		700 => __('%d Pixels', 700, 'cycle')
 	);
 
@@ -316,6 +318,9 @@ function cycle_config_arrays () {
 
 function cycle_draw_navigation_text ($nav) {
 	$nav['cycle.php:'] = array('title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
+	$nav['cycle.php:view'] = array('title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
+	$nav['cycle.php:graphs'] = array('title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
+	$nav['cycle.php:save'] = array('title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1');
 	return $nav;
 }
 

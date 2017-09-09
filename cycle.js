@@ -24,8 +24,8 @@
 var timerID = null
 var image   = ''
 var html    = ''
-var next    = -1
-var prev    = 1
+var nextid  = -1
+var previd  = 1
 var time    = 5
 var ltime   = 0
 var current = 0
@@ -38,50 +38,6 @@ var url
 
 var graph_width  = parseInt($(window).width() / $('#cols').val());
 var graph_height = parseInt($('#height') * (graph_width / $('#width').val()));
-
-$(function() {
-	startTime();
-	refreshTime();
-	getnext();
-
-	$('#timespan').change(function(){
-		newTimespan()
-	});
-
-	$('#prev').click(function(){
-		getprev()
-	});
-
-	$('#next').click(function(){
-		getnext()
-	});
-
-	$('#cstop').click(function(){
-		stopTime()
-	});
-
-	$('#cstart').click(function(){
-		startTime()
-	});
-
-	$('#go').click(function(){
-		setFilter()
-	});
-
-	$('#clear').click(function(){
-		clearFilter()
-	});
-
-	$('#savedb').click(function(){
-		saveFilter()
-	});
-
-	$('#tree_id, #refreshb, #legend, #height, #width, #cols, #graphs, #delay').click(function() {
-		newRefresh();
-	});
-
-	$('input, label, button').tooltip();
-});
 
 $(window).resize(function() {
 	resizeGraphs();
@@ -116,34 +72,16 @@ function formattime(secs) {
 }
 
 function startTime() {
-	timerID = self.setInterval('refreshTime()', 1000)
+	timerID = setInterval('refreshTime()', 1000)
 	$('#cstop').css('display', 'inline');
 	$('#cstart').css('display', 'none');
 }
 
 function stopTime() {
-	self.clearInterval(timerID)
+	clearInterval(timerID)
 	$('#cstop').css('display', 'none');
 	$('#cstart').css('display', 'inline');
 }
-
-function processAjax(url) {
-	$.get('cycle.php'+url, function(data) {
-		data = $.parseJSON(data);
-
-		if (data.html)         html=data.html;	
-		if (data.image)        image=base64_decode(data.image);	
-		if (data.graphid)      current=data.graphid;
-		if (data.nextgraphid)  next=data.nextgraphid;
-		if (data.prevgraphid)  prev=data.prevgraphid;
-
-		$('#izone').empty().prepend(html);
-		$('#image').html(image);
-
-		resizeGraphs();
-	});
-}
-
 
 function resizeGraphs() {
 	graph_width  = parseInt(($(window).width() - 60) / $('#cols').val());
@@ -154,46 +92,22 @@ function resizeGraphs() {
 	$('.cycle_image').css('width', graph_width).css('height', graph_height).css('padding', '3px');
 }
 
-function formatProcessUrl(nextid, graphs) {
-	if (clearfilter == 1) {
-		clearfilter=0;
-		rfilter = '';
-		rfilter = rfilter + '&clear=true';
-	} else if (setfilter == 1) {
-		setfilter=0;
-
-		if ($('#rfilter').val()) {
-			rfilter = $('#filter').val();
-			rfilter = filter + '&set';
-		}else{
-			rfilter = '';
-			rfilter = rfilter + '&clear';
-		}
-	} else if ($('#rfilter').val()) {
-		rfilter=$('#rfilter').val();
-	}else{
-		rfilter='';
-	}
-	if ($('#tree_id').val()) {
+function loadGraphs(nextid) {
+	if ($('#tree_id').length) {
 		tree=$('#tree_id').val();
 	}else{
 		tree='';
 	}
-	if ($('#leaf_id').val()) {
+
+	if ($('#leaf_id').length) {
 		leaf=$('#leaf_id').val();
 	}else{
 		leaf='';
 	}
 
-	if (graphs) {
-		action = 'graphs';
-	}else{
-		action = 'view';
-	}
-
-	url='?action=graphs' +
+	strURL = 'cycle.php?action=graphs' + 
 		'&id='       + nextid +
-		'&rfilter='  + rfilter +
+		'&rfilter='  + $('#rfilter').val() +
 		'&cols='     + $('#cols').val() +
 		'&timespan=' + $('#timespan').val() +
 		'&graphs='   + $('#graphs').val() +
@@ -204,23 +118,35 @@ function formatProcessUrl(nextid, graphs) {
 		'&height='   + $('#height').val() +
 		'&delay='    + $('#delay').val();
 
-	processAjax(url);
+	$.get(strURL, function(data) {
+		data = $.parseJSON(data);
+
+		if (data.image)        image=base64_decode(data.image);	
+		if (data.graphid)      current=data.graphid;
+		if (data.nextgraphid)  next=data.nextgraphid;
+		if (data.prevgraphid)  prev=data.prevgraphid;
+
+		$('#image').html(image);
+
+		resizeGraphs();
+	});
 }
 
 function saveFilter() {
-	if ($('#tree_id').val()) {
+	if ($('#tree_id').length) {
 		tree=$('#tree_id').val();
 	}else{
 		tree='';
 	}
-	if ($('#leaf_id').val()) {
+
+	if ($('#leaf_id').length) {
 		leaf=$('#leaf_id').val();
 	}else{
 		leaf='';
 	}
 
 	url='cycle.php?action=save' +
-		'&rfilter='  + rfilter +
+		'&rfilter='  + $('#rfilter').val() +
 		'&cols='     + $('#cols').val() +
 		'&timespan=' + $('#timespan').val() +
 		'&graphs='   + $('#graphs').val() +
@@ -241,7 +167,7 @@ function refreshTime() {
 	$('#countdown').html(formattime(time));
 	if (time == 0) {
 		time=rtime/1000+1;
-		formatProcessUrl(next, true);
+		loadGraphs();
 	}
 	time=time-1
 }
@@ -249,68 +175,67 @@ function refreshTime() {
 function newRefresh() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	formatProcessUrl(current, false);
+	loadGraphs(current);
 }
 
 function newTimespan() {
 	time=rtime/1000;
-	formatProcessUrl(current, true);
+	loadGraphs(current);
 }
 
 function newGraph() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	formatProcessUrl(current, true);
+	loadGraphs(current);
 }
 
-function newTree() {
+function getNext() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	formatProcessUrl(current, false);
+	loadGraphs(next);
 }
 
-function getnext() {
+function getPrev() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	formatProcessUrl(next, true);
-}
-
-function getprev() {
-	rtime=$('#delay').val() * 1000;
-	time=rtime/1000;
-	formatProcessUrl(prev, true);
+	loadGraphs(prev);
 }
 
 function clearFilter() {
-	clearfilter = 1;
-
-	if ($('#tree_id').val()) {
-		newTree();
-	}else{
-		newRefresh();
-	}
+	strURL = 'cycle.php?action=view&clear=true&header=false';
+	loadPageNoHeader(strURL, function() {
+		loadGraphs(current);
+	});
 }
 
-function setFilter() {
-	setfilter=1;
-
-	if ($('#tree_id').val()) {
-		newTree();
+function applyFilter() {
+	if ($('#tree_id').length) {
+		tree=$('#tree_id').val();
 	}else{
-		newRefresh();
+		tree='';
 	}
-}
 
-function processReturn(event) {
-	if (event.which == 13) {
-		setfilter = 1;
-
-		if ($('#tree_id').val()) {
-			newTree();
-		}else{
-			newRefresh();
-		}
+	if ($('#leaf_id').length) {
+		leaf=$('#leaf_id').val();
+	}else{
+		leaf='';
 	}
+
+	strURL = 'cycle.php?action=view' +
+		'&header=false' +
+		'&id='       + nextid +
+		'&rfilter='  + $('#rfilter').val() +
+		'&cols='     + $('#cols').val() +
+		'&timespan=' + $('#timespan').val() +
+		'&graphs='   + $('#graphs').val() +
+		'&tree_id='  + tree +
+		'&leaf_id='  + leaf +
+		'&legend='   + $('#legend').is(':checked') +
+		'&width='    + $('#width').val() +
+		'&height='   + $('#height').val() +
+		'&delay='    + $('#delay').val();
+
+	loadPageNoHeader(strURL);
 }
 
 function base64_decode(data) {

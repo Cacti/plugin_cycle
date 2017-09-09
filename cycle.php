@@ -98,11 +98,11 @@ function cycle_graphs() {
 				$out .= '<tr>';
 
 			$out .= '<td align="center" class="graphholder">'
-				. '<a href = ../../graph.php?local_graph_id='.$graph['graph_id'].'&rra_id=all>'
+				. "<a href='../../graph.php?local_graph_id=" . $graph['graph_id'] . "&rra_id=all'>"
 				. "<img class='cycle_image' "
 				. "src='../../graph_image.php?image_format=png&disable_cache=true&local_graph_id=" . $graph['graph_id'] . "&rra_id=0&graph_start=" . $timespan['begin_now']
-				. '&graph_end=' . time() . '&graph_width=' . $width . '&graph_height=' . $height . ($legend == '' || $legend=='false' ? '&graph_nolegend=true' : '')."'>"
-				. '</a></td>';
+				. "&graph_end=" . time() . "&graph_width=" . $width . "&graph_height=" . $height . ($legend == '' || $legend=='false' ? "&graph_nolegend=true" : "") . "'>"
+				. "</a></td>";
 
 			ob_start();
 			$out .= ob_get_clean();
@@ -130,7 +130,6 @@ function cycle_graphs() {
 	}
 
 	$out .= '</table>';
-	$out .= '<script type="text/javascript">$(function() { applySkin(); $("input, label, button").tooltip(); });</script>';
 
 	$output = array('graphid' => $graph_id, 'nextgraphid' => $next_graph_id, 'prevgraphid' => $prev_graph_id, 'image' => base64_encode($out));
 
@@ -175,7 +174,7 @@ function cycle() {
 	$html       = '';
 	$out        = '';
 
-	html_start_box(__('Cycle Graph Filter', 'cycle'), '100%', '', 3, 'center', '');
+	html_start_box(__('Cycle Graph Filter', 'cycle') . ' [ ' . __('Next Update In', 'cycle') . " <i id='countdown'></i> ]", '100%', '', 3, 'center', '');
 	?>
 	<tr class='odd'><td>
 		<table class='filterTable'>
@@ -220,8 +219,10 @@ function cycle() {
 						<input type='button' id='cstop' value='<?php print __esc('Stop', 'cycle');?>' title='<?php print __esc('Stop Cycling', 'cycle');?>'>
 						<input type='button' id='cstart' value='<?php print __esc('Start', 'cycle');?>' style='display:none;' title='<?php print __esc('Resume Cycling', 'cycle');?>'>
 						<input type='button' id='next' value='<?php print __esc('Next', 'cycle');?>' title='<?php print __esc('Cycle to Next Graphs', 'cycle');?>'>
-						<input type='button' id='refreshb' value='<?php print __esc('Refresh', 'cycle');?>' title='<?php print __esc('Refresh Graphs Now', 'cycle');?>'>
-						<input type='button' id='savedb' value='<?php print __esc('Save', 'cycle');?>' title='<?php print __esc('Save Filter Settings', 'cycle');?>'>
+						<input type='button' id='refresh' value='<?php print __esc('Refresh', 'cycle');?>' title='<?php print __esc('Refresh Graphs Now', 'cycle');?>'>
+						<input type='button' id='clear' value='<?php print __esc('Clear', 'cycle');?>' title='<?php print __esc('Clear Filter', 'cycle');?>'>
+						<input type='button' id='save' value='<?php print __esc('Save', 'cycle');?>' title='<?php print __esc('Save Filter Settings', 'cycle');?>'>
+						<i id='text'></i>
 					</span>
 				</td>
 			</table>
@@ -275,7 +276,7 @@ function cycle() {
 					break;
 				case '2':
 					if (sizeof($tree_list)) {
-						$html ="<td><select id='tree_id' onChange='newTree()' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
+						$html ="<td><select id='tree_id' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
 
 						foreach ($tree_list as $tree) {
 							$html .= "<option value='" . $tree['id'] . "'" . ($graph_tree == $tree['id'] ? ' selected' : '') . '>' . title_trim($tree['name'], 30)."</option>\n";
@@ -291,7 +292,7 @@ function cycle() {
 							array($graph_tree));
 
 						if (sizeof($leaves)) {
-							$html .= "<select id='leaf_id' onChange='newTree()' title='" . __esc('Select Tree Leaf to Display', 'cycle') . "'>\n";
+							$html .= "<select id='leaf_id' title='" . __esc('Select Tree Leaf to Display', 'cycle') . "'>\n";
 
 							$html .= "<option value='-1'" . ($leaf_id == -1 ? ' selected' : '') . ">" . __('All Levels', 'cycle') . "</option>\n";
 							$html .= "<option value='-2'" . ($leaf_id == -2 ? ' selected' : '') . ">" . __('Top Level', 'cycle') . "</option>\n";
@@ -308,9 +309,7 @@ function cycle() {
 				}
 
 				/* process the rfilter section */
-				$html .= "<td><input id='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='30' onkeypress='processReturn(event)' value='" . $rfilter . "'></td>";
-
-				$html .= "<td><span class='nowrap'><input type='button' id='go' value='" . __esc('Set', 'cycle') . "' title='" . __esc('Set Filter', 'cycle') . "'><input type='button' id='clear' value='" . __esc('Clear', 'cycle') . "' title='" . __esc('Clear Filter', 'cycle') . "' onClick='clearFilter()'></span></td>";
+				$html .= "<td><input id='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='30' value='" . $rfilter . "'></td>";
 
 				print $html;
 				?>
@@ -324,10 +323,59 @@ function cycle() {
 		</table>
 	</td></tr>
 	<?php html_end_box();?>
-	<?php html_start_box(__('Graphs', 'cycle') . ' [ ' . __('Next Update In', 'cycle') . " <i id='countdown'></i><i id='text'></i> ]", '100%', '', '3', 'center', '');?>
+	<?php html_start_box(__('Cycle Graphs', 'cycle'), '100%', '', '3', 'center', '');?>
 	<tr>
 		<td>
 			<span style='text-align:center;' id='image'></span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<script type='text/javascript'>
+		$(function() {
+			$('#timespan').change(function(){
+				newTimespan()
+			});
+
+			$('#prev').click(function(){
+				getPrev()
+			});
+
+			$('#next').click(function(){
+				getNext()
+			});
+
+			$('#cstop').click(function(){
+				stopTime()
+			});
+
+			$('#cstart').click(function(){
+				startTime()
+			});
+
+			$('#clear').click(function(){
+				clearFilter()
+			});
+
+			$('#save').click(function(){
+				saveFilter()
+			});
+
+			$('#tree_id, #leaf_id, #height, #width, #cols, #graphs, #delay').change(function() {
+				applyFilter();
+			});
+
+			$('#refresh, #legend').click(function() {
+				applyFilter();
+			});
+
+			$('input, label, button').tooltip();
+
+			clearInterval(timerID)
+			startTime();
+			newGraph();
+		});
+		</script>
 		</td>
 	</tr>
 	<?php 
