@@ -155,8 +155,16 @@ function cycle() {
 	$width     = get_request_var('width');
 	$height    = get_request_var('height');
 
-	if (empty($tree_id)) $tree_id = db_fetch_cell('SELECT id FROM graph_tree ORDER BY name LIMIT 1');
-	if (empty($id))      $id      = -1;
+	if (empty($tree_id)) {
+		$tree_id = db_fetch_cell('SELECT id 
+			FROM graph_tree 
+			ORDER BY name 
+			LIMIT 1');
+	}
+
+	if (empty($id)) {
+		$id      = -1;
+	}
 
 	/* get the start and end times for the graph */
 	$timespan        = array();
@@ -179,7 +187,7 @@ function cycle() {
 					<select id='timespan' title='<?php print __esc('Graph Display Timespan', 'cycle');?>'>
 						<?php
 						if (sizeof($graph_timespans)) {
-							foreach($graph_timespans as $key=>$value) {
+							foreach($graph_timespans as $key => $value) {
 								print "<option value='$key'"; if (get_request_var('timespan') == $key) { print ' selected'; } print '>' . title_trim($value, 40) . "</option>\n";
 							}
 						}
@@ -190,7 +198,7 @@ function cycle() {
 					<select id='delay' title='<?php print __esc('Cycle Rotation Refresh Frequency', 'cycle');?>'>
 						<?php
 						if (sizeof($page_refresh_interval)) {
-							foreach($page_refresh_interval as $key=>$value) {
+							foreach($page_refresh_interval as $key => $value) {
 								print "<option value='$key'"; if (get_request_var('delay') == $key) { print ' selected'; } print '>' . title_trim($value, 40) . "</option>\n";
 							}
 						}
@@ -200,7 +208,7 @@ function cycle() {
 				<td>
 					<select id='graphs' title='<?php print __esc('Number of Graphs per Page', 'cycle');?>'>
 						<?php
-						foreach($graphs_ppage as $key=>$value) {
+						foreach($graphs_ppage as $key => $value) {
 							print "<option value='$key'"; if (get_request_var('graphs') == $key) { print ' selected'; } print '>' . $value . "</option>\n";
 						}
 						?>
@@ -267,7 +275,7 @@ function cycle() {
 					break;
 				case '2':
 					if (sizeof($tree_list)) {
-						$html ="<td><select id='tree_id' name='tree_id' onChange='newTree()' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
+						$html ="<td><select id='tree_id' onChange='newTree()' title='" . __esc('Select Tree to View', 'cycle') . "'>\n";
 
 						foreach ($tree_list as $tree) {
 							$html .= "<option value='" . $tree['id'] . "'" . ($graph_tree == $tree['id'] ? ' selected' : '') . '>' . title_trim($tree['name'], 30)."</option>\n";
@@ -275,10 +283,15 @@ function cycle() {
 
 						$html .= "</select>\n";
 
-						$leaves = db_fetch_assoc("SELECT * FROM graph_tree_items WHERE title!='' AND graph_tree_id='$graph_tree' ORDER BY parent, position");
+						$leaves = db_fetch_assoc_prepared('SELECT * 
+							FROM graph_tree_items 
+							WHERE title != "" 
+							AND graph_tree_id = ?
+							ORDER BY parent, position', 
+							array($graph_tree));
 
 						if (sizeof($leaves)) {
-							$html .= "<select id='leaf_id' name='leaf_id' onChange='newTree()' title='" . __esc('Select Tree Leaf to Display', 'cycle') . "'>\n";
+							$html .= "<select id='leaf_id' onChange='newTree()' title='" . __esc('Select Tree Leaf to Display', 'cycle') . "'>\n";
 
 							$html .= "<option value='-1'" . ($leaf_id == -1 ? ' selected' : '') . ">" . __('All Levels', 'cycle') . "</option>\n";
 							$html .= "<option value='-2'" . ($leaf_id == -2 ? ' selected' : '') . ">" . __('Top Level', 'cycle') . "</option>\n";
@@ -295,9 +308,9 @@ function cycle() {
 				}
 
 				/* process the rfilter section */
-				$html .= "<td><input id='rfilter' name='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='30' onkeypress='processReturn(event)' value='" . $rfilter . "'></td>";
+				$html .= "<td><input id='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='30' onkeypress='processReturn(event)' value='" . $rfilter . "'></td>";
 
-				$html .= "<td><span class='nowrap'><input type='button' id='go' value='" . __esc('Set', 'cycle') . "' name='go' title='" . __esc('Set Filter', 'cycle') . "'><input type='button' id='clear' value='" . __esc('Clear', 'cycle') . "' name='clear' title='" . __esc('Clear Filter', 'cycle') . "' onClick='clearFilter()'></span></td>";
+				$html .= "<td><span class='nowrap'><input type='button' id='go' value='" . __esc('Set', 'cycle') . "' title='" . __esc('Set Filter', 'cycle') . "'><input type='button' id='clear' value='" . __esc('Clear', 'cycle') . "' title='" . __esc('Clear Filter', 'cycle') . "' onClick='clearFilter()'></span></td>";
 
 				print $html;
 				?>
@@ -305,18 +318,16 @@ function cycle() {
 		</table>
 		<table class='filterTable'>
 			<tr id='izone'>
-				<tr>
+				<td>
 				</td>
 			</tr>
 		</table>
 	</td></tr>
 	<?php html_end_box();?>
-	<?php html_start_box(__('Graphs', 'cycle'), '100%', '', '3', 'center', '');?>
+	<?php html_start_box(__('Graphs', 'cycle') . ' [ ' . __('Next Update In', 'cycle') . " <i id='countdown'></i><i id='text'></i> ]", '100%', '', '3', 'center', '');?>
 	<tr>
 		<td>
-			<span id='text'></span><br>
-			<?php print __('Next Update In', 'cycle');?> <span id='countdown'></span><br><br>
-			<span style='text-align:center;' id='image'></span><br>
+			<span style='text-align:center;' id='image'></span>
 		</td>
 	</tr>
 	<?php 

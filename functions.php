@@ -98,7 +98,7 @@ function save_settings() {
 				set_user_setting('cycle_legend', $value);
 				break;
 			case 'filter':
-				set_user_setting('cycle_filter', get_request_var('filter'));
+				set_user_setting('cycle_filter', get_request_var('rfilter'));
 				break;
 			}
 		}
