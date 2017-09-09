@@ -36,6 +36,36 @@ var newtime
 var stime
 var url
 
+var graph_width  = parseInt($(window).width() / $('#cols').val());
+var graph_height = parseInt($('#height') * (graph_width / $('#width').val()));
+
+$(function() {
+	startTime();
+	refreshTime();
+	getnext();
+
+	$('#timespan').change(function(){newTimespan()});
+	$('#delay').change(function(){newRefresh()});
+	$('#graphs').change(function(){newRefresh()});
+	$('#cols').change(function(){newRefresh()});
+	$('#width').change(function(){newRefresh()});
+	$('#height').change(function(){newRefresh()});
+	$('#prev').click(function(){getprev()});
+	$('#next').click(function(){getnext()});
+	$('#cstop').click(function(){stopTime()});
+	$('#cstart').click(function(){startTime()});
+	$('#legend').change(function(){newRefresh()});
+	$('#refreshb').click(function(){newRefresh()});
+	$('#go').click(function(){setFilter()});
+	$('#clear').click(function(){clearFilter()});
+	$('#savedb').click(function(){saveFilter()});
+	$('input, label, button').tooltip();
+});
+
+$(window).resize(function() {
+	resizeGraphs();
+});
+
 function calcage(secs, num1, num2) {
 	return ((Math.floor(secs/num1))%num2).toString()
 }
@@ -75,7 +105,7 @@ function stopTime() {
 }
 
 function processAjax(url) {
-	$.get('cycle_ajax.php'+url, function(data) {
+	$.get('cycle.php'+url, function(data) {
 		data = $.parseJSON(data);
 
 		if (data.html)         html=data.html;	
@@ -86,28 +116,40 @@ function processAjax(url) {
 
 		$('#izone').empty().prepend(html);
 		$('#image').html(image);
+
+		resizeGraphs();
 	});
+}
+
+
+function resizeGraphs() {
+	graph_width  = parseInt(($(window).width() - 60) / $('#cols').val());
+	if (graph_width > $('#width').val()) {
+		graph_width = $('#width').val();
+	}
+	graph_height = parseInt($('#height').val() * (graph_width / $('#width').val()));
+	$('.cycle_image').css('width', graph_width).css('height', graph_height).css('padding', '3px');
 }
 
 function formatProcessUrl(nextid) {
 	if (clearfilter == 1) {
 		clearfilter=0;
-		filter='';
-		filter=filter + '&clear=true';
+		rfilter = '';
+		rfilter = rfilter + '&clear=true';
 	} else if (setfilter == 1) {
 		setfilter=0;
 
-		if ($('#filter').val()) {
-			filter=$('#filter').val();
-			filter=filter + '&set';
+		if ($('#rfilter').val()) {
+			rfilter = $('#filter').val();
+			rfilter = filter + '&set';
 		}else{
-			filter='';
-			filter=filter + '&clear';
+			rfilter = '';
+			rfilter = rfilter + '&clear';
 		}
-	} else if ($('#filter').val()) {
-		filter=$('#filter').val();
+	} else if ($('#rfilter').val()) {
+		rfilter=$('#rfilter').val();
 	}else{
-		filter='';
+		rfilter='';
 	}
 	if ($('#tree_id').val()) {
 		tree=$('#tree_id').val();
@@ -120,9 +162,9 @@ function formatProcessUrl(nextid) {
 		leaf='';
 	}
 
-	url='?action=view' +
+	url='?action=graphs' +
 		'&id='       + nextid +
-		'&filter='   + filter +
+		'&rfilter='  + rfilter +
 		'&cols='     + $('#cols').val() +
 		'&timespan=' + $('#timespan').val() +
 		'&graphs='   + $('#graphs').val() +
@@ -148,8 +190,8 @@ function saveFilter() {
 		leaf='';
 	}
 
-	url='cycle_ajax.php?action=save' +
-		'&filter='   + filter +
+	url='cycle.php?action=save' +
+		'&rfilter='  + rfilter +
 		'&cols='     + $('#cols').val() +
 		'&timespan=' + $('#timespan').val() +
 		'&graphs='   + $('#graphs').val() +
@@ -211,7 +253,7 @@ function getprev() {
 }
 
 function clearFilter() {
-	clearfilter=1;
+	clearfilter = 1;
 
 	if ($('#tree').val()) {
 		newTree();
@@ -232,7 +274,8 @@ function setFilter() {
 
 function processReturn(event) {
 	if (event.which == 13) {
-		setfilter=1;
+		setfilter = 1;
+
 		if ($('#tree').val()) {
 			newTree();
 		}else{

@@ -37,6 +37,10 @@ Got any ideas then please let us know.
 
 # Changelog
 
+--- 4.1 ---
+* feature: Change layout to be resposive
+* feature: Change filtering to be more consistent with Cacti framework
+
 --- 4.0 ---
 * feature: Support for Cacti 1.0
 * issue#3: Legend is not functioning properly in Cycle

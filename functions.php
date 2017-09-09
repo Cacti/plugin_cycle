@@ -22,7 +22,7 @@
  +-------------------------------------------------------------------------+
 */
 
-$graphs_array = array(
+$graphs_ppage = array(
     1   => __('%d Graph', 1, 'cycle'),
     2   => __('%d Graphs', 2, 'cycle'),
     4   => __('%d Graphs', 4, 'cycle'),
@@ -151,8 +151,8 @@ function validate_request_vars($force = false) {
 			'default' => read_user_setting('cycle_legend', read_config_option('cycle_legend'), $force),
 			'options' => array('options' => 'sanitize_search_string')
 			),
-		'filter' => array(
-			'filter' => FILTER_CALLBACK,
+		'rfilter' => array(
+			'filter' => FILTER_VALIDATE_IS_REGEX,
 			'pageset' => true,
 			'default' => read_user_setting('cycle_filter', '', $force),
 			'options' => array('options' => 'sanitize_search_string')
@@ -177,6 +177,7 @@ function cycle_set_defaults() {
 			'cycle_font_size'  => '8',
 			'cycle_font_face'  => '',
 			'max_length'       => '100',
+			'cycle_filter'     => '',
 			'cycle_font_color' => '1',
 			'cycle_legend'     => '',
 			'cycle_custom_graphs_type' => '2'
