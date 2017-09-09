@@ -191,26 +191,6 @@ function cycle_config_settings () {
 			'default' => '400',
 			'array' => $cycle_width
 			),
-		'cycle_font_size' => array(
-			'friendly_name' => __('Title Font Size', 'cycle'),
-			'description' => __('This is the font size in pixels for the title. (1 - 100)', 'cycle'),
-			'method' => 'textbox',
-			'default' => '8',
-			'max_length' => 3,
-			'size' => 4
-			),
-		'cycle_font_face' => array(
-			'friendly_name' => __('Title Font Face', 'cycle'),
-			'description' => __('This is the font face for the title.', 'cycle'),
-			'method' => 'textbox',
-			'max_length' => 100,
-			),
-		'cycle_font_color' => array(
-			'friendly_name' => __('Title Font Color', 'cycle'),
-			'description' => __('This is the font color for the title.', 'cycle'),
-			'method' => 'drop_color',
-			'default' => '1'
-			),
 		'cycle_legend' => array(
 			'friendly_name' => __('Display Legend', 'cycle'),
 			'description' => __('Check this to display legend.', 'cycle'),

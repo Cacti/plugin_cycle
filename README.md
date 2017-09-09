@@ -8,7 +8,6 @@ The Cacti Cycle plugin allows you to automatically view the Cacti graphs one by 
 * Can set permissions on who can view.
 * Graph height and width can be specified.
 * Graphs are not displayed if the user does not have access to them.
-* Title of graph is displayed, font face, size and color can be changed.
 * You can use the Prev/Next buttons to change graph.
 * You can stop the rotation with the Stop button.
 * The time until the next graph change is displayed under the title.
