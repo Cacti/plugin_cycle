@@ -121,10 +121,21 @@ function loadGraphs(nextid) {
 	$.get(strURL, function(data) {
 		data = $.parseJSON(data);
 
-		if (data.image)        image=base64_decode(data.image);	
-		if (data.graphid)      current=data.graphid;
-		if (data.nextgraphid)  next=data.nextgraphid;
-		if (data.prevgraphid)  prev=data.prevgraphid;
+		if (data.image) {
+	       image = base64_decode(data.image);	
+		}
+
+		if (data.graphid) {
+			current = data.graphid;
+		}
+
+		if (data.nextgraphid) {
+			next = data.nextgraphid;
+		}
+
+		if (data.prevgraphid) {
+			prev = data.prevgraphid;
+		}
 
 		$('#image').html(image);
 
@@ -167,7 +178,7 @@ function refreshTime() {
 	$('#countdown').html(formattime(time));
 	if (time == 0) {
 		time=rtime/1000+1;
-		loadGraphs();
+		loadGraphs(next);
 	}
 	time=time-1
 }
