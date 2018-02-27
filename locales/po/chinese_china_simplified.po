@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cycle on cacti 1.1.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-21 22:33+0800\n"
+"PO-Revision-Date: 2018-02-22 13:59+0800\n"
+"Last-Translator: \n"
+"Language-Team: sfqas <sfqas@163.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+
+#: ../cycle.php:47
+msgid "Graph Display Timespan"
+msgstr "图表显示时间跨度"
+
+#: ../cycle.php:58
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "周期轮流刷新频率"
+
+#: ../cycle.php:69
+#: ../setup.php:173
+msgid "Number of Graphs per Page"
+msgstr "每页图形数"
+
+#: ../cycle.php:78
+msgid "Number of Graph Columns"
+msgstr "图表列数"
+
+#: ../cycle.php:87
+#: ../setup.php:180
+msgid "Graph Height"
+msgstr "图形高度"
+
+#: ../cycle.php:99
+#: ../setup.php:187
+msgid "Graph Width"
+msgstr "图形宽度"
+
+#: ../cycle.php:108
+msgid "Cycle to Previous Graphs"
+msgstr "循环到以前的图"
+
+#: ../cycle.php:108
+msgid "Prev"
+msgstr "上一页"
+
+#: ../cycle.php:111
+msgid "Stop"
+msgstr "停止"
+
+#: ../cycle.php:111
+msgid "Stop Cycling"
+msgstr "停止循环"
+
+#: ../cycle.php:114
+msgid "Resume Cycling"
+msgstr "恢复循环"
+
+#: ../cycle.php:114
+msgid "Start"
+msgstr "开始"
+
+#: ../cycle.php:117
+msgid "Cycle to Next Graphs"
+msgstr "循环到下一个图形"
+
+#: ../cycle.php:117
+msgid "Next"
+msgstr "下一个"
+
+#: ../cycle.php:120
+#: ../cycle.php:123
+msgid "Display Graph Legend"
+msgstr "显示图例"
+
+#: ../cycle.php:123
+msgid "Legend"
+msgstr "图例"
+
+#: ../cycle.php:126
+msgid "Refresh"
+msgstr "刷新"
+
+#: ../cycle.php:126
+msgid "Refresh Graphs Now"
+msgstr "立即刷新图形"
+
+#: ../cycle.php:129
+msgid "Save"
+msgstr "保存"
+
+#: ../cycle.php:129
+msgid "Save Filter Settings"
+msgstr "保存过滤器设置"
+
+#: ../cycle.php:137
+msgid "Next Update In"
+msgstr "下一次更新中"
+
+#: ../cycle_ajax.php:81
+msgid "Select Tree to View"
+msgstr "选择要查看的树"
+
+#: ../cycle_ajax.php:92
+msgid "Select Tree Leaf to Display"
+msgstr "选择要显示的树分支"
+
+#: ../cycle_ajax.php:94
+msgid "All Levels"
+msgstr "所有级别"
+
+#: ../cycle_ajax.php:95
+msgid "Top Level"
+msgstr "顶层"
+
+#: ../cycle_ajax.php:109
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "输入正则表达式匹配（仅允许使用字母数字和特殊字符\\\"(^_|?)\\\" ）"
+
+#: ../cycle_ajax.php:111
+msgid "Clear"
+msgstr "清除"
+
+#: ../cycle_ajax.php:111
+msgid "Clear Filter"
+msgstr "清除过滤器"
+
+#: ../cycle_ajax.php:111
+msgid "Set"
+msgstr "设置"
+
+#: ../cycle_ajax.php:111
+msgid "Set Filter"
+msgstr "设置过滤器"
+
+#: ../cycle_ajax.php:141
+msgid "No Graphs Found Matching Criteria"
+msgstr "找不到匹配标准的图"
+
+#: ../functions.php:26
+#: ../setup.php:268
+#, php-format
+msgid "%d Graph"
+msgstr "%d 图"
+
+#: ../functions.php:27
+#: ../functions.php:28
+#: ../functions.php:29
+#: ../functions.php:30
+#: ../functions.php:31
+#: ../functions.php:32
+#: ../functions.php:33
+#: ../functions.php:34
+#: ../functions.php:35
+#: ../functions.php:36
+#: ../functions.php:37
+#: ../functions.php:38
+#: ../functions.php:39
+#: ../functions.php:40
+#: ../functions.php:41
+#: ../functions.php:42
+#: ../functions.php:43
+#: ../functions.php:44
+#: ../functions.php:45
+#: ../functions.php:46
+#: ../functions.php:47
+#: ../functions.php:48
+#: ../functions.php:49
+#: ../functions.php:50
+#: ../functions.php:51
+#: ../functions.php:52
+#: ../functions.php:53
+#: ../setup.php:269
+#: ../setup.php:270
+#: ../setup.php:271
+#: ../setup.php:272
+#: ../setup.php:273
+#, php-format
+msgid "%d Graphs"
+msgstr "%d 图"
+
+#: ../functions.php:57
+#: ../setup.php:277
+#, php-format
+msgid "%d Column"
+msgstr "%d 列"
+
+#: ../functions.php:58
+#: ../functions.php:59
+#: ../functions.php:60
+#: ../functions.php:61
+#: ../functions.php:62
+#: ../functions.php:63
+#: ../functions.php:64
+#: ../setup.php:278
+#: ../setup.php:279
+#: ../setup.php:280
+#: ../setup.php:281
+#, php-format
+msgid "%d Columns"
+msgstr "%d 列"
+
+#: ../setup.php:35
+msgid "Plugin -> Cycle Graphs"
+msgstr "插件 - >循环图"
+
+#: ../setup.php:143
+#: ../setup.php:257
+#: ../setup.php:259
+msgid "Cycle"
+msgstr "循环"
+
+#: ../setup.php:148
+msgid "Cycle Graphs"
+msgstr "循环图"
+
+#: ../setup.php:152
+msgid "Delay Interval"
+msgstr "延迟间隔"
+
+#: ../setup.php:153
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "这是显示下一个图形之前的几秒钟时间。"
+
+#: ../setup.php:159
+msgid "Graph Timespan"
+msgstr "图形时间跨度"
+
+#: ../setup.php:160
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "这是将在页面上显示的默认时间跨度。"
+
+#: ../setup.php:166
+msgid "Column Count"
+msgstr "列数"
+
+#: ../setup.php:167
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "在树模式下，这是将要使用的列数。"
+
+#: ../setup.php:174
+msgid "Select the number of graphs to display per page"
+msgstr "选择每页显示的图形数量"
+
+#: ../setup.php:181
+msgid "This sets the graph height for the displayed graphs."
+msgstr "这将为显示的图形设置图形高度。"
+
+#: ../setup.php:188
+msgid "This sets the graph width for the displayed graphs."
+msgstr "这将为显示的图形设置图形宽度。"
+
+#: ../setup.php:194
+msgid "Title Font Size"
+msgstr "标题字体大小"
+
+#: ../setup.php:195
+msgid "This is the font size in pixels for the title. (1 - 100)"
+msgstr "这是标题的字体大小（以像素为单位）。 （1 - 100）"
+
+#: ../setup.php:202
+msgid "Title Font Face"
+msgstr "标题字体"
+
+#: ../setup.php:203
+msgid "This is the font face for the title."
+msgstr "这是标题的字体。"
+
+#: ../setup.php:208
+msgid "Title Font Color"
+msgstr "标题字体颜色"
+
+#: ../setup.php:209
+msgid "This is the font color for the title."
+msgstr "这是标题的字体颜色。"
+
+#: ../setup.php:214
+msgid "Display Legend"
+msgstr "显示图例"
+
+#: ../setup.php:215
+msgid "Check this to display legend."
+msgstr "选中此项以显示图例。"
+
+#: ../setup.php:220
+msgid "Predefined Rotations"
+msgstr "预定义的轮换"
+
+#: ../setup.php:224
+msgid "Rotation Type"
+msgstr "轮换类型"
+
+#: ../setup.php:225
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "选择用于自定义图形旋转的方法。 如果您选择“特定列表”，则必须定义图 ID的列表"
+
+#: ../setup.php:228
+msgid "Legacy (All)"
+msgstr " 继承（全部）"
+
+#: ../setup.php:228
+msgid "Specific List"
+msgstr "具体清单"
+
+#: ../setup.php:228
+msgid "Tree Mode"
+msgstr "树模式"
+
+#: ../setup.php:231
+msgid "Custom Graph List"
+msgstr "自定义图表列表"
+
+#: ../setup.php:232
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "这必须是逗号分隔的图 ID的循环列表。 例如'1,2,3,4'"
+
+#: ../setup.php:237
+msgid "Default Tree"
+msgstr "默认树"
+
+#: ../setup.php:238
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "如果选择树形模式，选择图形树进行循环"
+
+#: ../setup.php:285
+#: ../setup.php:286
+#: ../setup.php:287
+#: ../setup.php:288
+#: ../setup.php:289
+#: ../setup.php:290
+#: ../setup.php:291
+#: ../setup.php:292
+#: ../setup.php:293
+#: ../setup.php:294
+#: ../setup.php:295
+#: ../setup.php:299
+#: ../setup.php:300
+#: ../setup.php:301
+#: ../setup.php:302
+#: ../setup.php:303
+#: ../setup.php:304
+#: ../setup.php:305
+#: ../setup.php:306
+#: ../setup.php:307
+#: ../setup.php:308
+#: ../setup.php:309
+#: ../setup.php:310
+#, php-format
+msgid "%d Pixels"
+msgstr "%d 像素"
+
+#: ../setup.php:317
+msgid "Cycling"
+msgstr "循环"
+
