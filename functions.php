@@ -288,7 +288,6 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 				ORDER BY gl.id ASC
 				LIMIT $start, $graphpp";
 
-			cacti_log('CYCLE: sql - ' . $sql);
 			$rows = db_fetch_assoc($sql);
 
 			if ($graph_id > 0) {
