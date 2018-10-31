@@ -105,7 +105,7 @@ function loadGraphs(nextid) {
 		leaf='';
 	}
 
-	strURL = 'cycle.php?action=graphs' + 
+	strURL = 'cycle.php?action=graphs' +
 		'&id='       + nextid +
 		'&rfilter='  + $('#rfilter').val() +
 		'&cols='     + $('#cols').val() +
@@ -122,7 +122,7 @@ function loadGraphs(nextid) {
 		data = $.parseJSON(data);
 
 		if (data.image) {
-	       image = base64_decode(data.image);	
+			image = base64_decode(data.image);
 		}
 
 		if (data.graphid) {
@@ -130,11 +130,11 @@ function loadGraphs(nextid) {
 		}
 
 		if (data.nextgraphid) {
-			next = data.nextgraphid;
+			nextid = data.nextgraphid;
 		}
 
 		if (data.prevgraphid) {
-			prev = data.prevgraphid;
+			previd = data.prevgraphid;
 		}
 
 		$('#image').html(image);
@@ -178,7 +178,7 @@ function refreshTime() {
 	$('#countdown').html(formattime(time));
 	if (time == 0) {
 		time=rtime/1000+1;
-		loadGraphs(next);
+		loadGraphs(nextid);
 	}
 	time=time-1
 }
@@ -203,13 +203,13 @@ function newGraph() {
 function getNext() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	loadGraphs(next);
+	loadGraphs(nextid);
 }
 
 function getPrev() {
 	rtime=$('#delay').val() * 1000;
 	time=rtime/1000;
-	loadGraphs(prev);
+	loadGraphs(previd);
 }
 
 function clearFilter() {

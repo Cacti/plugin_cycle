@@ -92,7 +92,6 @@ function cycle_graphs() {
 	$max_cols  = $cols;
 	$col_count = 1;
 
-	cacti_log('CYCLE: graphs = ' . json_encode($graphs));
 	if ($graphs !== null && $graphs !== false && sizeof($graphs)) {
 		foreach($graphs as $graph) {
 			if ($col_count == 1)
