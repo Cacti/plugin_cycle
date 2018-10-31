@@ -34,7 +34,6 @@ include_once('./lib/api_tree.php');
 include_once('./lib/utility.php');
 include_once('./lib/api_data_source.php');
 include_once('./plugins/cycle/functions.php');
-include_once('./plugins/cycle/functions.php');
 
 set_default_action();
 
@@ -93,7 +92,8 @@ function cycle_graphs() {
 	$max_cols  = $cols;
 	$col_count = 1;
 
-	if (sizeof($graphs)) {
+	cacti_log('CYCLE: graphs = ' . json_encode($graphs));
+	if ($graphs !== null && $graphs !== false && sizeof($graphs)) {
 		foreach($graphs as $graph) {
 			if ($col_count == 1)
 				$out .= '<tr>';
@@ -182,7 +182,7 @@ function cycle() {
 			<tr>
 				<td>
 					<script type='text/javascript'>
-						var rtime=<?php echo get_request_var('cycle_delay')*1000;?>;
+						var rtime=<?php echo get_request_var('delay')*1000;?>;
 					</script>
 					<select id='timespan' title='<?php print __esc('Graph Display Timespan', 'cycle');?>'>
 						<?php
