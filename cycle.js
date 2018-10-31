@@ -92,7 +92,7 @@ function resizeGraphs() {
 	$('.cycle_image').css('width', graph_width).css('height', graph_height).css('padding', '3px');
 }
 
-function loadGraphs(nextid) {
+function loadGraphs(id) {
 	if ($('#tree_id').length) {
 		tree=$('#tree_id').val();
 	}else{
@@ -106,7 +106,7 @@ function loadGraphs(nextid) {
 	}
 
 	strURL = 'cycle.php?action=graphs' +
-		'&id='       + nextid +
+		'&id='       + id +
 		'&rfilter='  + $('#rfilter').val() +
 		'&cols='     + $('#cols').val() +
 		'&timespan=' + $('#timespan').val() +
