@@ -40,6 +40,7 @@ Got any ideas then please let us know.
 --- 4.2 ---
 
 * issue#10: Non-numeric value when clicking 'Cycle' tab
+* issue#11: Unable to edit user settings
 
 --- 4.1 ---
 

@@ -132,23 +132,26 @@ function cycle_page_head () {
 }
 
 function cycle_config_settings ($force = false) {
-	global $tabs, $settings, $page_refresh_interval, $graph_timespans;
+	global $tabs, $settings, $tabs_graphs, $settings_user, $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height, $cycle_cols, $cycle_graphs;
 
 	/* check for an upgrade */
 	plugin_cycle_check_config();
 
-	if ($force === false && isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
+	if ($force === false && isset($_SERVER['PHP_SELF']) &&
+		basename($_SERVER['PHP_SELF']) != 'settings.php' &&
+		basename($_SERVER['PHP_SELF']) != 'auth_profile.php')
 		return;
 
 	$tabs['cycle'] = __('Cycle', 'cycle');
+	$tabs_graphs['cycle'] = __('Cycle', 'cycle');
 
 	$treeList = array_rekey(get_allowed_trees(), 'id', 'name');
-	$temp = array(
-		'cycle_header' => array(
+	$tempHeader = array('cycle_header' => array(
 			'friendly_name' => __('Cycle Graphs', 'cycle'),
 			'method' => 'spacer',
-			),
+			));
+	$temp = array(
 		'cycle_delay' => array(
 			'friendly_name' => __('Delay Interval', 'cycle'),
 			'description' => __('This is the time in seconds before the next graph is displayed.', 'cycle'),
@@ -224,9 +227,15 @@ function cycle_config_settings ($force = false) {
 	);
 
 	if (isset($settings['cycle'])) {
-		$settings['cycle'] = array_merge($settings['cycle'], $temp);
+		$settings['cycle'] = array_merge($settings['cycle'], $tempHeader, $temp);
 	}else {
-		$settings['cycle'] = $temp;
+		$settings['cycle'] = array_merge($tempHeader, $temp);
+	}
+
+	if (isset($settings_user['cycle'])) {
+		$settings_user['cycle'] = array_merge($settings_user['cycle'], $temp);
+	}else {
+		$settings_user['cycle'] = $temp;
 	}
 }
 
