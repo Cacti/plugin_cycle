@@ -131,14 +131,14 @@ function cycle_page_head () {
 	}
 }
 
-function cycle_config_settings () {
+function cycle_config_settings ($force = false) {
 	global $tabs, $settings, $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height, $cycle_cols, $cycle_graphs;
 
 	/* check for an upgrade */
 	plugin_cycle_check_config();
 
-	if (isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
+	if ($force === false && isset($_SERVER['PHP_SELF']) && basename($_SERVER['PHP_SELF']) != 'settings.php')
 		return;
 
 	$tabs['cycle'] = __('Cycle', 'cycle');

@@ -22,6 +22,8 @@
  +-------------------------------------------------------------------------+
 */
 
+include_once(__DIR__ . '/setup.php');
+
 $graphs_ppage = array(
     1   => __('%d Graph', 1, 'cycle'),
     2   => __('%d Graphs', 2, 'cycle'),
@@ -108,6 +110,8 @@ function save_settings() {
 }
 
 function validate_request_vars($force = false) {
+	cycle_config_settings(true);
+
 	/* ================= input validation and session storage ================= */
 	$filters = array(
 		'id' => array(
