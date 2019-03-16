@@ -5,152 +5,147 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-04 22:25+0200\n"
-"PO-Revision-Date: 2019-03-16 19:29+0000\n"
-"Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
-"Language-Team: German <http://translate.cacti.net/projects/cacti/cycle/de-DE/"
-">\n"
-"Language: de-DE\n"
+"POT-Creation-Date: 2017-04-28 00:49+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: he-IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4-dev\n"
 
 #: ../cycle.php:47
 msgid "Graph Display Timespan"
-msgstr "Ausgewählter Diagramm Zeitraum"
+msgstr ""
 
 #: ../cycle.php:58
 msgid "Cycle Rotation Refresh Frequency"
-msgstr "Wechselfrequenz"
+msgstr ""
 
 #: ../cycle.php:69 ../setup.php:173
 msgid "Number of Graphs per Page"
-msgstr "Anzahl der Diagramme pro Seite"
+msgstr ""
 
 #: ../cycle.php:78
 msgid "Number of Graph Columns"
-msgstr "Anzahl der Diagramm-Spalten"
+msgstr ""
 
 #: ../cycle.php:87 ../setup.php:180
 msgid "Graph Height"
-msgstr "Diagramm Höhe"
+msgstr ""
 
 #: ../cycle.php:99 ../setup.php:187
 msgid "Graph Width"
-msgstr "Diagramm Breite"
+msgstr ""
 
 #: ../cycle.php:108
 msgid "Cycle to Previous Graphs"
-msgstr "Wechseln zu vorherigen Diagramme"
+msgstr ""
 
 #: ../cycle.php:108
 msgid "Prev"
-msgstr "Zurück"
+msgstr ""
 
 #: ../cycle.php:111
 msgid "Stop"
-msgstr "Stop"
+msgstr ""
 
 #: ../cycle.php:111
 msgid "Stop Cycling"
-msgstr "Rotation anhalten"
+msgstr ""
 
 #: ../cycle.php:114
 msgid "Resume Cycling"
-msgstr "Wechsel fortsetzen"
+msgstr ""
 
 #: ../cycle.php:114
 msgid "Start"
-msgstr "Start"
+msgstr ""
 
 #: ../cycle.php:117
 msgid "Cycle to Next Graphs"
-msgstr "Wechsel zum nächsten Diagramm"
+msgstr ""
 
 #: ../cycle.php:117
 msgid "Next"
-msgstr "Weiter"
+msgstr ""
 
 #: ../cycle.php:120 ../cycle.php:123
 msgid "Display Graph Legend"
-msgstr "Legende anzeigen"
+msgstr ""
 
 #: ../cycle.php:123
 msgid "Legend"
-msgstr "Legende"
+msgstr ""
 
 #: ../cycle.php:126
 msgid "Refresh"
-msgstr "Aktualisieren"
+msgstr ""
 
 #: ../cycle.php:126
 msgid "Refresh Graphs Now"
-msgstr "Aktualisiere Diagramme"
+msgstr ""
 
 #: ../cycle.php:129
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 #: ../cycle.php:129
 msgid "Save Filter Settings"
-msgstr "Filtereinstellungen speichern"
+msgstr ""
 
 #: ../cycle.php:137
 msgid "Next Update In"
-msgstr "Nächste Aktualisierung in"
+msgstr ""
 
 #: ../cycle_ajax.php:80
 msgid "Select Tree to View"
-msgstr "Baum Ansicht auswählen"
+msgstr ""
 
 #: ../cycle_ajax.php:91
 msgid "Select Tree Leaf to Display"
-msgstr "Baumblatt zur Anzeige auswählen"
+msgstr ""
 
 #: ../cycle_ajax.php:93
 msgid "All Levels"
-msgstr "Alle Ebenen"
+msgstr ""
 
 #: ../cycle_ajax.php:94
 msgid "Top Level"
-msgstr "Oberste Ebene"
+msgstr ""
 
 #: ../cycle_ajax.php:108
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
 "\\\"(^_|?)\\\" permitted)"
 msgstr ""
-"Geben Sie einen regulären Ausdruck zwecks Diagramm Auswahl an (nur alpha-"
-"numerische und spezielle Zeichen \\ \"(^ _ |?) \\ \"sind erlaubt)"
 
 #: ../cycle_ajax.php:110
 msgid "Clear"
-msgstr "Zurücksetzen"
+msgstr ""
 
 #: ../cycle_ajax.php:110
 msgid "Clear Filter"
-msgstr "Filter zurücksetzen"
+msgstr ""
 
 #: ../cycle_ajax.php:110
 msgid "Set"
-msgstr "Anwenden"
+msgstr ""
 
 #: ../cycle_ajax.php:110
 msgid "Set Filter"
-msgstr "Filter anwenden"
+msgstr ""
 
 #: ../cycle_ajax.php:140
 msgid "No Graphs Found Matching Criteria"
-msgstr "Keine Diagramme entsprechender Kriterien gefunden"
+msgstr ""
 
 #: ../functions.php:26 ../setup.php:268
 #, php-format
 msgid "%d Graph"
-msgstr "%d Diagramm"
+msgstr ""
 
 #: ../functions.php:27 ../functions.php:28 ../functions.php:29
 #: ../functions.php:30 ../functions.php:31 ../functions.php:32
@@ -164,12 +159,12 @@ msgstr "%d Diagramm"
 #: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
 #, php-format
 msgid "%d Graphs"
-msgstr "%d Diagramme"
+msgstr ""
 
 #: ../functions.php:57 ../setup.php:277
 #, php-format
 msgid "%d Column"
-msgstr "%d Spalte"
+msgstr ""
 
 #: ../functions.php:58 ../functions.php:59 ../functions.php:60
 #: ../functions.php:61 ../functions.php:62 ../functions.php:63
@@ -177,142 +172,131 @@ msgstr "%d Spalte"
 #: ../setup.php:281
 #, php-format
 msgid "%d Columns"
-msgstr "%d Spalten"
+msgstr ""
 
 #: ../setup.php:35
 msgid "Plugin -> Cycle Graphs"
-msgstr "Erweiterung -> Diagramm Wechsel"
+msgstr ""
 
 #: ../setup.php:143
 msgid "Cycle"
-msgstr "Rotation"
+msgstr ""
 
 #: ../setup.php:148
 msgid "Cycle Graphs"
-msgstr "Diagramm Wechsel"
+msgstr ""
 
 #: ../setup.php:152
 msgid "Delay Interval"
-msgstr "Verzögerungsintervall"
+msgstr ""
 
 #: ../setup.php:153
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr ""
-"Definiert die Verzögerung in Sekunden, bevor das nächste Diagramm angezeigt "
-"wird."
 
 #: ../setup.php:159
 msgid "Graph Timespan"
-msgstr "Diagramm Zeitraum"
+msgstr ""
 
 #: ../setup.php:160
 msgid "This is the default timespan that will be displayed on the page."
-msgstr "Legt die standardmäßige Zeitspanne fest, die angezeigt werden soll."
+msgstr ""
 
 #: ../setup.php:166
 msgid "Column Count"
-msgstr "Anzahl der Spalten"
+msgstr ""
 
 #: ../setup.php:167
 msgid "In Tree Mode this is the number of columns that will be used."
-msgstr "Anzahl der Spalten, die im Baum Modus verwendet werden soll."
+msgstr ""
 
 #: ../setup.php:174
 msgid "Select the number of graphs to display per page"
 msgstr ""
-"Wählen Sie die Anzahl der Diagramme, die pro Seite angezeigt werden sollen"
 
 #: ../setup.php:181
 msgid "This sets the graph height for the displayed graphs."
-msgstr "Legt die Höhe der anzuzeigenden Diagramme fest."
+msgstr ""
 
 #: ../setup.php:188
 msgid "This sets the graph width for the displayed graphs."
-msgstr "Legt die Breite der anzuzeigenden Diagramme fest."
+msgstr ""
 
 #: ../setup.php:194
 msgid "Title Font Size"
-msgstr "Überschrift Schriftgrösse"
+msgstr ""
 
 #: ../setup.php:195
 msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr "Definition der Titel-Schriftgröße in Pixeln. (1 - 100)"
+msgstr ""
 
 #: ../setup.php:202
 msgid "Title Font Face"
-msgstr "Schriftart des Titels"
+msgstr ""
 
 #: ../setup.php:203
 msgid "This is the font face for the title."
-msgstr "Dies ist die Schriftart für den Titel."
+msgstr ""
 
 #: ../setup.php:208
 msgid "Title Font Color"
-msgstr "Schriftfarbe Titel"
+msgstr ""
 
 #: ../setup.php:209
 msgid "This is the font color for the title."
-msgstr "Dies ist die Schriftfarbe für den Titel."
+msgstr ""
 
 #: ../setup.php:214
 msgid "Display Legend"
-msgstr "Legende anzeigen"
+msgstr ""
 
 #: ../setup.php:215
 msgid "Check this to display legend."
 msgstr ""
-"Markieren Sie diese Option, um alle Diagramme nebst Legende anzuzeigen."
 
 #: ../setup.php:220
 msgid "Predefined Rotations"
-msgstr "Vordefinierte Wechsel"
+msgstr ""
 
 #: ../setup.php:224
 msgid "Rotation Type"
-msgstr "Rotationstyp"
+msgstr ""
 
 #: ../setup.php:225
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
 "'Specific List', you must define a list of Graph ID's"
 msgstr ""
-"Wählen Sie diese Methode falls Sie einen benutzerdefinierten Diagrammwechsel "
-"verwenden möchten.  Sofern Sie die Option \"Konkrete Liste\" auswählen, "
-"müssen Sie im nächsten Schritt eine Liste der Diagramm IDs festlegen"
 
 #: ../setup.php:228
 msgid "Legacy (All)"
-msgstr "Veraltet (alle)"
+msgstr ""
 
 #: ../setup.php:228
 msgid "Specific List"
-msgstr "Konkrete Liste"
+msgstr ""
 
 #: ../setup.php:228
 msgid "Tree Mode"
-msgstr "Baum Ansicht"
+msgstr ""
 
 #: ../setup.php:231
 msgid "Custom Graph List"
-msgstr "Benutzerdefinierte Diagramm-Liste"
+msgstr ""
 
 #: ../setup.php:232
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
 "example '1,2,3,4'"
 msgstr ""
-"Definiert eine mittels Komma getrennte Liste von Diagramm IDs, die während "
-"der Rotation zu durchlaufen sind. Zum Beispiel \"1,2,3,4\""
 
 #: ../setup.php:237
 msgid "Default Tree"
-msgstr "Standard Baum"
+msgstr ""
 
 #: ../setup.php:238
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr ""
-"Wähle Sie den Diagram-Baum für die Rotation aus, sofern der Baum-Modus "
-"gewählt wurde"
 
 #: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
 #: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
@@ -322,8 +306,8 @@ msgstr ""
 #: ../setup.php:308 ../setup.php:309 ../setup.php:310
 #, php-format
 msgid "%d Pixels"
-msgstr "%d Pixel"
+msgstr ""
 
 #: ../setup.php:317
 msgid "Cycling"
-msgstr "Rotation"
+msgstr ""
