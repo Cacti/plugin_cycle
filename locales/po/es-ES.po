@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 00:49+0200\n"
-"PO-Revision-Date: 2019-03-16 19:29+0000\n"
-"Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
+"PO-Revision-Date: 2019-03-17 00:21+0000\n"
+"Last-Translator: Larry Adams <thewitness@cacti.net>\n"
 "Language-Team: Spanish <http://translate.cacti.net/projects/cacti/cycle/"
 "es-ES/>\n"
 "Language: es-ES\n"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: ../cycle.php:126
 msgid "Refresh"
-msgstr ""
+msgstr "Refrescar"
 
 #: ../cycle.php:126
 msgid "Refresh Graphs Now"
