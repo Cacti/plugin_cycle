@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cycle on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 22:33+0800\n"
+"POT-Creation-Date: 2017-04-28 00:49+0200\n"
 "PO-Revision-Date: 2018-02-22 13:59+0800\n"
 "Last-Translator: \n"
 "Language-Team: sfqas <sfqas@163.com>\n"
@@ -26,8 +26,7 @@ msgstr "图表显示时间跨度"
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "周期轮流刷新频率"
 
-#: ../cycle.php:69
-#: ../setup.php:173
+#: ../cycle.php:69 ../setup.php:173
 msgid "Number of Graphs per Page"
 msgstr "每页图形数"
 
@@ -35,13 +34,11 @@ msgstr "每页图形数"
 msgid "Number of Graph Columns"
 msgstr "图表列数"
 
-#: ../cycle.php:87
-#: ../setup.php:180
+#: ../cycle.php:87 ../setup.php:180
 msgid "Graph Height"
 msgstr "图形高度"
 
-#: ../cycle.php:99
-#: ../setup.php:187
+#: ../cycle.php:99 ../setup.php:187
 msgid "Graph Width"
 msgstr "图形宽度"
 
@@ -77,8 +74,7 @@ msgstr "循环到下一个图形"
 msgid "Next"
 msgstr "下一个"
 
-#: ../cycle.php:120
-#: ../cycle.php:123
+#: ../cycle.php:120 ../cycle.php:123
 msgid "Display Graph Legend"
 msgstr "显示图例"
 
@@ -106,104 +102,75 @@ msgstr "保存过滤器设置"
 msgid "Next Update In"
 msgstr "下一次更新中"
 
-#: ../cycle_ajax.php:81
+#: ../cycle_ajax.php:80
 msgid "Select Tree to View"
 msgstr "选择要查看的树"
 
-#: ../cycle_ajax.php:92
+#: ../cycle_ajax.php:91
 msgid "Select Tree Leaf to Display"
 msgstr "选择要显示的树分支"
 
-#: ../cycle_ajax.php:94
+#: ../cycle_ajax.php:93
 msgid "All Levels"
 msgstr "所有级别"
 
-#: ../cycle_ajax.php:95
+#: ../cycle_ajax.php:94
 msgid "Top Level"
 msgstr "顶层"
 
-#: ../cycle_ajax.php:109
-msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+#: ../cycle_ajax.php:108
+msgid ""
+"Enter Regular Expression Match (only alpha, numeric, and special characters "
+"\\\"(^_|?)\\\" permitted)"
 msgstr "输入正则表达式匹配（仅允许使用字母数字和特殊字符\\\"(^_|?)\\\" ）"
 
-#: ../cycle_ajax.php:111
+#: ../cycle_ajax.php:110
 msgid "Clear"
 msgstr "清除"
 
-#: ../cycle_ajax.php:111
+#: ../cycle_ajax.php:110
 msgid "Clear Filter"
 msgstr "清除过滤器"
 
-#: ../cycle_ajax.php:111
+#: ../cycle_ajax.php:110
 msgid "Set"
 msgstr "设置"
 
-#: ../cycle_ajax.php:111
+#: ../cycle_ajax.php:110
 msgid "Set Filter"
 msgstr "设置过滤器"
 
-#: ../cycle_ajax.php:141
+#: ../cycle_ajax.php:140
 msgid "No Graphs Found Matching Criteria"
 msgstr "找不到匹配标准的图"
 
-#: ../functions.php:26
-#: ../setup.php:268
+#: ../functions.php:26 ../setup.php:268
 #, php-format
 msgid "%d Graph"
 msgstr "%d 图"
 
-#: ../functions.php:27
-#: ../functions.php:28
-#: ../functions.php:29
-#: ../functions.php:30
-#: ../functions.php:31
-#: ../functions.php:32
-#: ../functions.php:33
-#: ../functions.php:34
-#: ../functions.php:35
-#: ../functions.php:36
-#: ../functions.php:37
-#: ../functions.php:38
-#: ../functions.php:39
-#: ../functions.php:40
-#: ../functions.php:41
-#: ../functions.php:42
-#: ../functions.php:43
-#: ../functions.php:44
-#: ../functions.php:45
-#: ../functions.php:46
-#: ../functions.php:47
-#: ../functions.php:48
-#: ../functions.php:49
-#: ../functions.php:50
-#: ../functions.php:51
-#: ../functions.php:52
-#: ../functions.php:53
-#: ../setup.php:269
-#: ../setup.php:270
-#: ../setup.php:271
-#: ../setup.php:272
-#: ../setup.php:273
+#: ../functions.php:27 ../functions.php:28 ../functions.php:29
+#: ../functions.php:30 ../functions.php:31 ../functions.php:32
+#: ../functions.php:33 ../functions.php:34 ../functions.php:35
+#: ../functions.php:36 ../functions.php:37 ../functions.php:38
+#: ../functions.php:39 ../functions.php:40 ../functions.php:41
+#: ../functions.php:42 ../functions.php:43 ../functions.php:44
+#: ../functions.php:45 ../functions.php:46 ../functions.php:47
+#: ../functions.php:48 ../functions.php:49 ../functions.php:50
+#: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
+#: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
 #, php-format
 msgid "%d Graphs"
 msgstr "%d 图"
 
-#: ../functions.php:57
-#: ../setup.php:277
+#: ../functions.php:57 ../setup.php:277
 #, php-format
 msgid "%d Column"
 msgstr "%d 列"
 
-#: ../functions.php:58
-#: ../functions.php:59
-#: ../functions.php:60
-#: ../functions.php:61
-#: ../functions.php:62
-#: ../functions.php:63
-#: ../functions.php:64
-#: ../setup.php:278
-#: ../setup.php:279
-#: ../setup.php:280
+#: ../functions.php:58 ../functions.php:59 ../functions.php:60
+#: ../functions.php:61 ../functions.php:62 ../functions.php:63
+#: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
 #: ../setup.php:281
 #, php-format
 msgid "%d Columns"
@@ -214,8 +181,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "插件 - >循环图"
 
 #: ../setup.php:143
-#: ../setup.php:257
-#: ../setup.php:259
 msgid "Cycle"
 msgstr "循环"
 
@@ -300,8 +265,11 @@ msgid "Rotation Type"
 msgstr "轮换类型"
 
 #: ../setup.php:225
-msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "选择用于自定义图形旋转的方法。 如果您选择“特定列表”，则必须定义图 ID的列表"
+msgid ""
+"Select which method to use for custom graph rotation.  If you select "
+"'Specific List', you must define a list of Graph ID's"
+msgstr ""
+"选择用于自定义图形旋转的方法。 如果您选择“特定列表”，则必须定义图 ID的列表"
 
 #: ../setup.php:228
 msgid "Legacy (All)"
@@ -320,7 +288,9 @@ msgid "Custom Graph List"
 msgstr "自定义图表列表"
 
 #: ../setup.php:232
-msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgid ""
+"This must be a comma delimited list of Graph ID's to cycle through. For "
+"example '1,2,3,4'"
 msgstr "这必须是逗号分隔的图 ID的循环列表。 例如'1,2,3,4'"
 
 #: ../setup.php:237
@@ -331,29 +301,12 @@ msgstr "默认树"
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "如果选择树形模式，选择图形树进行循环"
 
-#: ../setup.php:285
-#: ../setup.php:286
-#: ../setup.php:287
-#: ../setup.php:288
-#: ../setup.php:289
-#: ../setup.php:290
-#: ../setup.php:291
-#: ../setup.php:292
-#: ../setup.php:293
-#: ../setup.php:294
-#: ../setup.php:295
-#: ../setup.php:299
-#: ../setup.php:300
-#: ../setup.php:301
-#: ../setup.php:302
-#: ../setup.php:303
-#: ../setup.php:304
-#: ../setup.php:305
-#: ../setup.php:306
-#: ../setup.php:307
-#: ../setup.php:308
-#: ../setup.php:309
-#: ../setup.php:310
+#: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
+#: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
+#: ../setup.php:293 ../setup.php:294 ../setup.php:295 ../setup.php:299
+#: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
+#: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
+#: ../setup.php:308 ../setup.php:309 ../setup.php:310
 #, php-format
 msgid "%d Pixels"
 msgstr "%d 像素"
@@ -361,4 +314,3 @@ msgstr "%d 像素"
 #: ../setup.php:317
 msgid "Cycling"
 msgstr "循环"
-
