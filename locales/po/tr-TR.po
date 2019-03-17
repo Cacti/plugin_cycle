@@ -5,147 +5,181 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 00:49+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: tr-TR\n"
+"PO-Revision-Date: 2019-03-16 20:36-0400\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../cycle.php:47
+#, fuzzy
 msgid "Graph Display Timespan"
-msgstr ""
+msgstr "Grafik Görüntüleme Zaman Aralığı"
 
 #: ../cycle.php:58
+#, fuzzy
 msgid "Cycle Rotation Refresh Frequency"
-msgstr ""
+msgstr "Döngü Döndürme Yenileme Sıklığı"
 
 #: ../cycle.php:69 ../setup.php:173
+#, fuzzy
 msgid "Number of Graphs per Page"
-msgstr ""
+msgstr "Sayfa Başına Grafik Sayısı"
 
 #: ../cycle.php:78
+#, fuzzy
 msgid "Number of Graph Columns"
-msgstr ""
+msgstr "Grafik Sütunları Sayısı"
 
 #: ../cycle.php:87 ../setup.php:180
+#, fuzzy
 msgid "Graph Height"
-msgstr ""
+msgstr "Grafik Yüksekliği"
 
 #: ../cycle.php:99 ../setup.php:187
+#, fuzzy
 msgid "Graph Width"
-msgstr ""
+msgstr "Grafik Genişliği"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Cycle to Previous Graphs"
-msgstr ""
+msgstr "Önceki Grafiklere Döndür"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Prev"
-msgstr ""
+msgstr "Önceki"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop"
-msgstr ""
+msgstr "Dur"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop Cycling"
-msgstr ""
+msgstr "Bisiklete binmeyi durdur"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Resume Cycling"
-msgstr ""
+msgstr "Bisiklete binme"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Start"
-msgstr ""
+msgstr "Başla"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Cycle to Next Graphs"
-msgstr ""
+msgstr "Sonraki Grafiklere Döndür"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Next"
-msgstr ""
+msgstr "Sonraki"
 
 #: ../cycle.php:120 ../cycle.php:123
+#, fuzzy
 msgid "Display Graph Legend"
-msgstr ""
+msgstr "Grafik Göstergesini Göster"
 
 #: ../cycle.php:123
+#, fuzzy
 msgid "Legend"
-msgstr ""
+msgstr "Efsane"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh"
-msgstr ""
+msgstr "Yenile"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh Graphs Now"
-msgstr ""
+msgstr "Grafikleri Şimdi Yenile"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save Filter Settings"
-msgstr ""
+msgstr "Filtre Ayarlarını Kaydet"
 
 #: ../cycle.php:137
+#, fuzzy
 msgid "Next Update In"
-msgstr ""
+msgstr "Sonraki Güncelleme"
 
 #: ../cycle_ajax.php:80
+#, fuzzy
 msgid "Select Tree to View"
-msgstr ""
+msgstr "Görüntülenecek Ağacı Seçin"
 
 #: ../cycle_ajax.php:91
+#, fuzzy
 msgid "Select Tree Leaf to Display"
-msgstr ""
+msgstr "Görüntülenecek Ağaç Yapısını Seçin"
 
 #: ../cycle_ajax.php:93
+#, fuzzy
 msgid "All Levels"
-msgstr ""
+msgstr "Tüm Seviyeler"
 
 #: ../cycle_ajax.php:94
+#, fuzzy
 msgid "Top Level"
-msgstr ""
+msgstr "Üst Seviye"
 
 #: ../cycle_ajax.php:108
+#, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
 "\\\"(^_|?)\\\" permitted)"
 msgstr ""
+"Normal İfade Eşlemesi girin (yalnızca alfa, sayısal ve özel karakterler \\ "
+"\"(^ _ |?) \\\" İzin verilir)"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear"
-msgstr ""
+msgstr "Temizle"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear Filter"
-msgstr ""
+msgstr "Filtreyi Temizle"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set"
-msgstr ""
+msgstr "Ayarla"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set Filter"
-msgstr ""
+msgstr "Filtreyi Ayarla"
 
 #: ../cycle_ajax.php:140
+#, fuzzy
 msgid "No Graphs Found Matching Criteria"
-msgstr ""
+msgstr "Eşleşen Kriterler Bulunamadı"
 
 #: ../functions.php:26 ../setup.php:268
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graph"
-msgstr ""
+msgstr "% d Grafik"
 
 #: ../functions.php:27 ../functions.php:28 ../functions.php:29
 #: ../functions.php:30 ../functions.php:31 ../functions.php:32
@@ -157,146 +191,182 @@ msgstr ""
 #: ../functions.php:48 ../functions.php:49 ../functions.php:50
 #: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
 #: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graphs"
-msgstr ""
+msgstr "% d Grafik"
 
 #: ../functions.php:57 ../setup.php:277
-#, php-format
+#, fuzzy, php-format
 msgid "%d Column"
-msgstr ""
+msgstr "% d Sütun"
 
 #: ../functions.php:58 ../functions.php:59 ../functions.php:60
 #: ../functions.php:61 ../functions.php:62 ../functions.php:63
 #: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
 #: ../setup.php:281
-#, php-format
+#, fuzzy, php-format
 msgid "%d Columns"
-msgstr ""
+msgstr "% d Sütunlar"
 
 #: ../setup.php:35
+#, fuzzy
 msgid "Plugin -> Cycle Graphs"
-msgstr ""
+msgstr "Eklentisi -> Döngü Grafikleri"
 
 #: ../setup.php:143
+#, fuzzy
 msgid "Cycle"
-msgstr ""
+msgstr "Çevrim"
 
 #: ../setup.php:148
+#, fuzzy
 msgid "Cycle Graphs"
-msgstr ""
+msgstr "Döngü Grafikleri"
 
 #: ../setup.php:152
+#, fuzzy
 msgid "Delay Interval"
-msgstr ""
+msgstr "Gecikme süresi"
 
 #: ../setup.php:153
+#, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr ""
+"Bu, bir sonraki grafiğin görüntülenmesinden önceki saniye cinsinden süredir."
 
 #: ../setup.php:159
+#, fuzzy
 msgid "Graph Timespan"
-msgstr ""
+msgstr "Graph Timespan"
 
 #: ../setup.php:160
+#, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
-msgstr ""
+msgstr "Bu sayfada görüntülenecek varsayılan zaman aralığıdır."
 
 #: ../setup.php:166
+#, fuzzy
 msgid "Column Count"
-msgstr ""
+msgstr "Sütun sayısı"
 
 #: ../setup.php:167
+#, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
-msgstr ""
+msgstr "Ağaç Modunda bu kullanılacak olan sütun sayısıdır."
 
 #: ../setup.php:174
+#, fuzzy
 msgid "Select the number of graphs to display per page"
-msgstr ""
+msgstr "Sayfa başına görüntülenecek grafik sayısını seçin"
 
 #: ../setup.php:181
+#, fuzzy
 msgid "This sets the graph height for the displayed graphs."
-msgstr ""
+msgstr "Bu, görüntülenen grafikler için grafik yüksekliğini ayarlar."
 
 #: ../setup.php:188
+#, fuzzy
 msgid "This sets the graph width for the displayed graphs."
-msgstr ""
+msgstr "Bu, görüntülenen grafikler için grafik genişliğini ayarlar."
 
 #: ../setup.php:194
+#, fuzzy
 msgid "Title Font Size"
-msgstr ""
+msgstr "Başlık Yazı Boyutu"
 
 #: ../setup.php:195
+#, fuzzy
 msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr ""
+msgstr "Bu başlık için piksel cinsinden yazı tipi boyutu. (1 - 100)"
 
 #: ../setup.php:202
+#, fuzzy
 msgid "Title Font Face"
-msgstr ""
+msgstr "Başlık Yazı Tipi Yüz"
 
 #: ../setup.php:203
+#, fuzzy
 msgid "This is the font face for the title."
-msgstr ""
+msgstr "Bu, başlığın yazı tipi yüzüdür."
 
 #: ../setup.php:208
+#, fuzzy
 msgid "Title Font Color"
-msgstr ""
+msgstr "Başlık Yazı Tipi Rengi"
 
 #: ../setup.php:209
+#, fuzzy
 msgid "This is the font color for the title."
-msgstr ""
+msgstr "Bu, başlık için yazı tipi rengidir."
 
 #: ../setup.php:214
+#, fuzzy
 msgid "Display Legend"
-msgstr ""
+msgstr "Göstergeyi Göster"
 
 #: ../setup.php:215
+#, fuzzy
 msgid "Check this to display legend."
-msgstr ""
+msgstr "Göstergeyi görüntülemek için bunu kontrol edin."
 
 #: ../setup.php:220
+#, fuzzy
 msgid "Predefined Rotations"
-msgstr ""
+msgstr "Önceden Tanımlanmış Rotasyonlar"
 
 #: ../setup.php:224
+#, fuzzy
 msgid "Rotation Type"
-msgstr ""
+msgstr "Dönme tipi"
 
 #: ../setup.php:225
+#, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
 "'Specific List', you must define a list of Graph ID's"
 msgstr ""
+"Özel grafik döndürme için hangi yöntemi kullanacağınızı seçin. 'Özel "
+"Liste'yi seçtiyseniz, Grafik Kimliklerinin bir listesini tanımlamanız "
+"gerekir."
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Legacy (All)"
-msgstr ""
+msgstr "Miras (Hepsi)"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Specific List"
-msgstr ""
+msgstr "Belirli liste"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Tree Mode"
-msgstr ""
+msgstr "Ağaç modu"
 
 #: ../setup.php:231
+#, fuzzy
 msgid "Custom Graph List"
-msgstr ""
+msgstr "Özel Grafik Listesi"
 
 #: ../setup.php:232
+#, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
 "example '1,2,3,4'"
 msgstr ""
+"Bu, içinde gezinmek için virgülle ayrılmış bir Grafik Kimliği listesi "
+"olmalıdır. Örneğin '1,2,3,4'"
 
 #: ../setup.php:237
+#, fuzzy
 msgid "Default Tree"
-msgstr ""
+msgstr "Varsayılan Ağaç"
 
 #: ../setup.php:238
+#, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr ""
+msgstr "Ağaç Modu seçiliyse, çevrilecek grafik ağacını seçin"
 
 #: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
 #: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
@@ -304,10 +374,11 @@ msgstr ""
 #: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
 #: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
 #: ../setup.php:308 ../setup.php:309 ../setup.php:310
-#, php-format
+#, fuzzy, php-format
 msgid "%d Pixels"
-msgstr ""
+msgstr "% d Piksel"
 
 #: ../setup.php:317
+#, fuzzy
 msgid "Cycling"
-msgstr ""
+msgstr "Bisiklet sürmek"

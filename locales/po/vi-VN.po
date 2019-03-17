@@ -5,147 +5,181 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 00:49+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: vi-VN\n"
+"PO-Revision-Date: 2019-03-16 20:36-0400\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../cycle.php:47
+#, fuzzy
 msgid "Graph Display Timespan"
-msgstr ""
+msgstr "Hiển thị thời gian biểu đồ"
 
 #: ../cycle.php:58
+#, fuzzy
 msgid "Cycle Rotation Refresh Frequency"
-msgstr ""
+msgstr "Tần số làm mới chu kỳ quay"
 
 #: ../cycle.php:69 ../setup.php:173
+#, fuzzy
 msgid "Number of Graphs per Page"
-msgstr ""
+msgstr "Số lượng đồ thị trên mỗi trang"
 
 #: ../cycle.php:78
+#, fuzzy
 msgid "Number of Graph Columns"
-msgstr ""
+msgstr "Số cột biểu đồ"
 
 #: ../cycle.php:87 ../setup.php:180
+#, fuzzy
 msgid "Graph Height"
-msgstr ""
+msgstr "Chiều cao đồ thị"
 
 #: ../cycle.php:99 ../setup.php:187
+#, fuzzy
 msgid "Graph Width"
-msgstr ""
+msgstr "Đồ thị chiều rộng"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Cycle to Previous Graphs"
-msgstr ""
+msgstr "Chuyển sang đồ thị trước"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Prev"
-msgstr ""
+msgstr "Trước"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop"
-msgstr ""
+msgstr "Dừng"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop Cycling"
-msgstr ""
+msgstr "Dừng đạp xe"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Resume Cycling"
-msgstr ""
+msgstr "Tiếp tục đạp xe"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Start"
-msgstr ""
+msgstr "Bắt đầu"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Cycle to Next Graphs"
-msgstr ""
+msgstr "Chuyển sang đồ thị tiếp theo"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Next"
-msgstr ""
+msgstr "Tiếp"
 
 #: ../cycle.php:120 ../cycle.php:123
+#, fuzzy
 msgid "Display Graph Legend"
-msgstr ""
+msgstr "Hiển thị biểu đồ huyền thoại"
 
 #: ../cycle.php:123
+#, fuzzy
 msgid "Legend"
-msgstr ""
+msgstr "Chú thích"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh"
-msgstr ""
+msgstr "Làm mới"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh Graphs Now"
-msgstr ""
+msgstr "Làm mới đồ thị ngay"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save"
-msgstr ""
+msgstr "Lưu"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save Filter Settings"
-msgstr ""
+msgstr "Lưu cài đặt bộ lọc"
 
 #: ../cycle.php:137
+#, fuzzy
 msgid "Next Update In"
-msgstr ""
+msgstr "Cập nhật tiếp theo"
 
 #: ../cycle_ajax.php:80
+#, fuzzy
 msgid "Select Tree to View"
-msgstr ""
+msgstr "Chọn cây để xem"
 
 #: ../cycle_ajax.php:91
+#, fuzzy
 msgid "Select Tree Leaf to Display"
-msgstr ""
+msgstr "Chọn Cây Lá để Hiển thị"
 
 #: ../cycle_ajax.php:93
+#, fuzzy
 msgid "All Levels"
-msgstr ""
+msgstr "Tất cả cấp độ"
 
 #: ../cycle_ajax.php:94
+#, fuzzy
 msgid "Top Level"
-msgstr ""
+msgstr "Cấp cao nhất"
 
 #: ../cycle_ajax.php:108
+#, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
 "\\\"(^_|?)\\\" permitted)"
 msgstr ""
+"Nhập Kết hợp biểu thức chính quy (chỉ cho phép các ký tự alpha, số và ký tự "
+"đặc biệt \\ \"(^ _ |?) \\\")"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear"
-msgstr ""
+msgstr "Xóa"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear Filter"
-msgstr ""
+msgstr "Xóa bộ lọc"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set"
-msgstr ""
+msgstr "bộ dụng cụ"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set Filter"
-msgstr ""
+msgstr "Đặt bộ lọc"
 
 #: ../cycle_ajax.php:140
+#, fuzzy
 msgid "No Graphs Found Matching Criteria"
-msgstr ""
+msgstr "Không tìm thấy đồ thị phù hợp với tiêu chí"
 
 #: ../functions.php:26 ../setup.php:268
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graph"
-msgstr ""
+msgstr "% d Đồ thị"
 
 #: ../functions.php:27 ../functions.php:28 ../functions.php:29
 #: ../functions.php:30 ../functions.php:31 ../functions.php:32
@@ -157,146 +191,181 @@ msgstr ""
 #: ../functions.php:48 ../functions.php:49 ../functions.php:50
 #: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
 #: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graphs"
-msgstr ""
+msgstr "% d Đồ thị"
 
 #: ../functions.php:57 ../setup.php:277
-#, php-format
+#, fuzzy, php-format
 msgid "%d Column"
-msgstr ""
+msgstr "% d Cột"
 
 #: ../functions.php:58 ../functions.php:59 ../functions.php:60
 #: ../functions.php:61 ../functions.php:62 ../functions.php:63
 #: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
 #: ../setup.php:281
-#, php-format
+#, fuzzy, php-format
 msgid "%d Columns"
-msgstr ""
+msgstr "% d Cột"
 
 #: ../setup.php:35
+#, fuzzy
 msgid "Plugin -> Cycle Graphs"
-msgstr ""
+msgstr "Plugin -> Đồ thị chu kỳ"
 
 #: ../setup.php:143
+#, fuzzy
 msgid "Cycle"
-msgstr ""
+msgstr "Vòng"
 
 #: ../setup.php:148
+#, fuzzy
 msgid "Cycle Graphs"
-msgstr ""
+msgstr "Đồ thị chu kỳ"
 
 #: ../setup.php:152
+#, fuzzy
 msgid "Delay Interval"
-msgstr ""
+msgstr "Thơi gian bị tri hoan"
 
 #: ../setup.php:153
+#, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr ""
+"Đây là thời gian tính bằng giây trước khi biểu đồ tiếp theo được hiển thị."
 
 #: ../setup.php:159
+#, fuzzy
 msgid "Graph Timespan"
-msgstr ""
+msgstr "Biểu đồ thời gian"
 
 #: ../setup.php:160
+#, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
-msgstr ""
+msgstr "Đây là khoảng thời gian mặc định sẽ được hiển thị trên trang."
 
 #: ../setup.php:166
+#, fuzzy
 msgid "Column Count"
-msgstr ""
+msgstr "Số cột"
 
 #: ../setup.php:167
+#, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
-msgstr ""
+msgstr "Trong Chế độ cây, đây là số lượng cột sẽ được sử dụng."
 
 #: ../setup.php:174
+#, fuzzy
 msgid "Select the number of graphs to display per page"
-msgstr ""
+msgstr "Chọn số lượng biểu đồ để hiển thị trên mỗi trang"
 
 #: ../setup.php:181
+#, fuzzy
 msgid "This sets the graph height for the displayed graphs."
-msgstr ""
+msgstr "Điều này đặt chiều cao biểu đồ cho các biểu đồ được hiển thị."
 
 #: ../setup.php:188
+#, fuzzy
 msgid "This sets the graph width for the displayed graphs."
-msgstr ""
+msgstr "Điều này đặt chiều rộng biểu đồ cho các biểu đồ được hiển thị."
 
 #: ../setup.php:194
+#, fuzzy
 msgid "Title Font Size"
-msgstr ""
+msgstr "Kích thước phông chữ tiêu đề"
 
 #: ../setup.php:195
+#, fuzzy
 msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr ""
+msgstr "Đây là kích thước phông chữ tính bằng pixel cho tiêu đề. (1 - 100)"
 
 #: ../setup.php:202
+#, fuzzy
 msgid "Title Font Face"
-msgstr ""
+msgstr "Tiêu đề khuôn mặt"
 
 #: ../setup.php:203
+#, fuzzy
 msgid "This is the font face for the title."
-msgstr ""
+msgstr "Đây là khuôn mặt phông chữ cho tiêu đề."
 
 #: ../setup.php:208
+#, fuzzy
 msgid "Title Font Color"
-msgstr ""
+msgstr "Màu tiêu đề trang"
 
 #: ../setup.php:209
+#, fuzzy
 msgid "This is the font color for the title."
-msgstr ""
+msgstr "Đây là màu phông chữ cho tiêu đề."
 
 #: ../setup.php:214
+#, fuzzy
 msgid "Display Legend"
-msgstr ""
+msgstr "Hiển thị huyền thoại"
 
 #: ../setup.php:215
+#, fuzzy
 msgid "Check this to display legend."
-msgstr ""
+msgstr "Kiểm tra điều này để hiển thị huyền thoại."
 
 #: ../setup.php:220
+#, fuzzy
 msgid "Predefined Rotations"
-msgstr ""
+msgstr "Xoay được xác định trước"
 
 #: ../setup.php:224
+#, fuzzy
 msgid "Rotation Type"
-msgstr ""
+msgstr "Kiểu quay"
 
 #: ../setup.php:225
+#, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
 "'Specific List', you must define a list of Graph ID's"
 msgstr ""
+"Chọn phương pháp để sử dụng cho xoay đồ thị tùy chỉnh. Nếu bạn chọn 'Danh "
+"sách cụ thể', bạn phải xác định danh sách ID đồ thị"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Legacy (All)"
-msgstr ""
+msgstr "Di sản (Tất cả)"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Specific List"
-msgstr ""
+msgstr "Danh sách cụ thể"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Tree Mode"
-msgstr ""
+msgstr "Chế độ cây"
 
 #: ../setup.php:231
+#, fuzzy
 msgid "Custom Graph List"
-msgstr ""
+msgstr "Danh sách đồ thị tùy chỉnh"
 
 #: ../setup.php:232
+#, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
 "example '1,2,3,4'"
 msgstr ""
+"Đây phải là danh sách được phân tách bằng dấu phẩy của ID đồ thị để chuyển "
+"qua. Ví dụ: '1,2,3,4'"
 
 #: ../setup.php:237
+#, fuzzy
 msgid "Default Tree"
-msgstr ""
+msgstr "Cây mặc định"
 
 #: ../setup.php:238
+#, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr ""
+msgstr "Chọn cây biểu đồ để chu kỳ nếu Chế độ cây được chọn"
 
 #: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
 #: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
@@ -304,10 +373,11 @@ msgstr ""
 #: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
 #: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
 #: ../setup.php:308 ../setup.php:309 ../setup.php:310
-#, php-format
+#, fuzzy, php-format
 msgid "%d Pixels"
-msgstr ""
+msgstr "% d pixel"
 
 #: ../setup.php:317
+#, fuzzy
 msgid "Cycling"
-msgstr ""
+msgstr "Đạp xe "

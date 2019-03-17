@@ -5,147 +5,181 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 00:49+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: sv-SE\n"
+"PO-Revision-Date: 2019-03-16 20:35-0400\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../cycle.php:47
+#, fuzzy
 msgid "Graph Display Timespan"
-msgstr ""
+msgstr "Graph Display Timespan"
 
 #: ../cycle.php:58
+#, fuzzy
 msgid "Cycle Rotation Refresh Frequency"
-msgstr ""
+msgstr "Cykelrotationsuppdateringsfrekvens"
 
 #: ../cycle.php:69 ../setup.php:173
+#, fuzzy
 msgid "Number of Graphs per Page"
-msgstr ""
+msgstr "Antal diagram per sida"
 
 #: ../cycle.php:78
+#, fuzzy
 msgid "Number of Graph Columns"
-msgstr ""
+msgstr "Antal grafkolumner"
 
 #: ../cycle.php:87 ../setup.php:180
+#, fuzzy
 msgid "Graph Height"
-msgstr ""
+msgstr "Grafhöjd"
 
 #: ../cycle.php:99 ../setup.php:187
+#, fuzzy
 msgid "Graph Width"
-msgstr ""
+msgstr "Grafbredd"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Cycle to Previous Graphs"
-msgstr ""
+msgstr "Cykla till tidigare grafer"
 
 #: ../cycle.php:108
+#, fuzzy
 msgid "Prev"
-msgstr ""
+msgstr "Föregående"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop"
-msgstr ""
+msgstr "Stopp"
 
 #: ../cycle.php:111
+#, fuzzy
 msgid "Stop Cycling"
-msgstr ""
+msgstr "Sluta cykla"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Resume Cycling"
-msgstr ""
+msgstr "Fortsätt cykla"
 
 #: ../cycle.php:114
+#, fuzzy
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Cycle to Next Graphs"
-msgstr ""
+msgstr "Cykla till nästa grafer"
 
 #: ../cycle.php:117
+#, fuzzy
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 #: ../cycle.php:120 ../cycle.php:123
+#, fuzzy
 msgid "Display Graph Legend"
-msgstr ""
+msgstr "Display Graph Legend"
 
 #: ../cycle.php:123
+#, fuzzy
 msgid "Legend"
-msgstr ""
+msgstr "Historia"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh"
-msgstr ""
+msgstr "Uppdatera"
 
 #: ../cycle.php:126
+#, fuzzy
 msgid "Refresh Graphs Now"
-msgstr ""
+msgstr "Uppdatera grafer nu"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: ../cycle.php:129
+#, fuzzy
 msgid "Save Filter Settings"
-msgstr ""
+msgstr "Spara filterinställningar"
 
 #: ../cycle.php:137
+#, fuzzy
 msgid "Next Update In"
-msgstr ""
+msgstr "Nästa uppdatering i"
 
 #: ../cycle_ajax.php:80
+#, fuzzy
 msgid "Select Tree to View"
-msgstr ""
+msgstr "Välj träd för visning"
 
 #: ../cycle_ajax.php:91
+#, fuzzy
 msgid "Select Tree Leaf to Display"
-msgstr ""
+msgstr "Välj trädblad till bildskärm"
 
 #: ../cycle_ajax.php:93
+#, fuzzy
 msgid "All Levels"
-msgstr ""
+msgstr "Alla Nivåer"
 
 #: ../cycle_ajax.php:94
+#, fuzzy
 msgid "Top Level"
-msgstr ""
+msgstr "Toppnivå"
 
 #: ../cycle_ajax.php:108
+#, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
 "\\\"(^_|?)\\\" permitted)"
 msgstr ""
+"Ange Regular Expression Match (endast alfanumeriska, numeriska och "
+"specialtecken \\ \"(^ _ |?) \\\" Tillåtna)"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Clear Filter"
-msgstr ""
+msgstr "Rensa filter"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set"
-msgstr ""
+msgstr "Sätt"
 
 #: ../cycle_ajax.php:110
+#, fuzzy
 msgid "Set Filter"
-msgstr ""
+msgstr "Ange filter"
 
 #: ../cycle_ajax.php:140
+#, fuzzy
 msgid "No Graphs Found Matching Criteria"
-msgstr ""
+msgstr "Inga diagram hittades matchande kriterier"
 
 #: ../functions.php:26 ../setup.php:268
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graph"
-msgstr ""
+msgstr "% d Graph"
 
 #: ../functions.php:27 ../functions.php:28 ../functions.php:29
 #: ../functions.php:30 ../functions.php:31 ../functions.php:32
@@ -157,146 +191,180 @@ msgstr ""
 #: ../functions.php:48 ../functions.php:49 ../functions.php:50
 #: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
 #: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, php-format
+#, fuzzy, php-format
 msgid "%d Graphs"
-msgstr ""
+msgstr "% d Grafer"
 
 #: ../functions.php:57 ../setup.php:277
-#, php-format
+#, fuzzy, php-format
 msgid "%d Column"
-msgstr ""
+msgstr "% d kolumn"
 
 #: ../functions.php:58 ../functions.php:59 ../functions.php:60
 #: ../functions.php:61 ../functions.php:62 ../functions.php:63
 #: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
 #: ../setup.php:281
-#, php-format
+#, fuzzy, php-format
 msgid "%d Columns"
-msgstr ""
+msgstr "% d kolumner"
 
 #: ../setup.php:35
+#, fuzzy
 msgid "Plugin -> Cycle Graphs"
-msgstr ""
+msgstr "Plugin -> Cykeldiagram"
 
 #: ../setup.php:143
+#, fuzzy
 msgid "Cycle"
-msgstr ""
+msgstr "Cykel"
 
 #: ../setup.php:148
+#, fuzzy
 msgid "Cycle Graphs"
-msgstr ""
+msgstr "Cykeldiagram"
 
 #: ../setup.php:152
+#, fuzzy
 msgid "Delay Interval"
-msgstr ""
+msgstr "Delay Interval"
 
 #: ../setup.php:153
+#, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
-msgstr ""
+msgstr "Detta är tiden i sekunder innan nästa graf visas."
 
 #: ../setup.php:159
+#, fuzzy
 msgid "Graph Timespan"
-msgstr ""
+msgstr "Graf Timespan"
 
 #: ../setup.php:160
+#, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
-msgstr ""
+msgstr "Det här är standardtidpunkten som kommer att visas på sidan."
 
 #: ../setup.php:166
+#, fuzzy
 msgid "Column Count"
-msgstr ""
+msgstr "Kolumnräkning"
 
 #: ../setup.php:167
+#, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
-msgstr ""
+msgstr "I Tree Mode är det antalet kolumner som ska användas."
 
 #: ../setup.php:174
+#, fuzzy
 msgid "Select the number of graphs to display per page"
-msgstr ""
+msgstr "Välj antal diagram som ska visas per sida"
 
 #: ../setup.php:181
+#, fuzzy
 msgid "This sets the graph height for the displayed graphs."
-msgstr ""
+msgstr "Detta ställer in grafhöjden för de visade graferna."
 
 #: ../setup.php:188
+#, fuzzy
 msgid "This sets the graph width for the displayed graphs."
-msgstr ""
+msgstr "Detta anger grafbredd för de visade graferna."
 
 #: ../setup.php:194
+#, fuzzy
 msgid "Title Font Size"
-msgstr ""
+msgstr "Rubrikstorlek"
 
 #: ../setup.php:195
+#, fuzzy
 msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr ""
+msgstr "Detta är teckenstorleken i pixlar för titeln. (1 - 100)"
 
 #: ../setup.php:202
+#, fuzzy
 msgid "Title Font Face"
-msgstr ""
+msgstr "Titel Font Face"
 
 #: ../setup.php:203
+#, fuzzy
 msgid "This is the font face for the title."
-msgstr ""
+msgstr "Detta är typsnittet för titeln."
 
 #: ../setup.php:208
+#, fuzzy
 msgid "Title Font Color"
-msgstr ""
+msgstr "Teckenfärg för titel"
 
 #: ../setup.php:209
+#, fuzzy
 msgid "This is the font color for the title."
-msgstr ""
+msgstr "Detta är teckensnittsfärgen för titeln."
 
 #: ../setup.php:214
+#, fuzzy
 msgid "Display Legend"
-msgstr ""
+msgstr "Display Legend"
 
 #: ../setup.php:215
+#, fuzzy
 msgid "Check this to display legend."
-msgstr ""
+msgstr "Kolla här för att visa legenden."
 
 #: ../setup.php:220
+#, fuzzy
 msgid "Predefined Rotations"
-msgstr ""
+msgstr "Fördefinierade rotationer"
 
 #: ../setup.php:224
+#, fuzzy
 msgid "Rotation Type"
-msgstr ""
+msgstr "Rotationstyp"
 
 #: ../setup.php:225
+#, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
 "'Specific List', you must define a list of Graph ID's"
 msgstr ""
+"Välj vilken metod som ska användas för anpassad grafrotation. Om du väljer "
+"\"Specifik lista\" måste du definiera en lista med graf ID"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Legacy (All)"
-msgstr ""
+msgstr "Legacy (All)"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Specific List"
-msgstr ""
+msgstr "Specifik lista"
 
 #: ../setup.php:228
+#, fuzzy
 msgid "Tree Mode"
-msgstr ""
+msgstr "Trädläge"
 
 #: ../setup.php:231
+#, fuzzy
 msgid "Custom Graph List"
-msgstr ""
+msgstr "Anpassad graflista"
 
 #: ../setup.php:232
+#, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
 "example '1,2,3,4'"
 msgstr ""
+"Det här måste vara en kommaavgränsad lista över graf ID-er för att gå "
+"igenom. Till exempel \"1,2,3,4\""
 
 #: ../setup.php:237
+#, fuzzy
 msgid "Default Tree"
-msgstr ""
+msgstr "Standard Tree"
 
 #: ../setup.php:238
+#, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr ""
+msgstr "Välj grafträdet för att cykla om trädläget är valt"
 
 #: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
 #: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
@@ -304,10 +372,11 @@ msgstr ""
 #: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
 #: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
 #: ../setup.php:308 ../setup.php:309 ../setup.php:310
-#, php-format
+#, fuzzy, php-format
 msgid "%d Pixels"
-msgstr ""
+msgstr "% d pixlar"
 
 #: ../setup.php:317
+#, fuzzy
 msgid "Cycling"
-msgstr ""
+msgstr "Cykling"
