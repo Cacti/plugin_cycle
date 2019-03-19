@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-28 00:49+0200\n"
+"POT-Creation-Date: 2019-03-19 09:50+0000\n"
 "PO-Revision-Date: 2019-03-16 20:26-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,132 +17,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: ../cycle.php:47
+#: cycle.php:118
 #, fuzzy
-msgid "Graph Display Timespan"
-msgstr "Durée d'affichage du graphique"
+msgid "No Graphs Found Matching Criteria"
+msgstr "Aucun graphique n'a été trouvé Critères d'appariement"
 
-#: ../cycle.php:58
+#: cycle.php:177
 #, fuzzy
-msgid "Cycle Rotation Refresh Frequency"
-msgstr "Fréquence de rafraîchissement du cycle de rotation"
+msgid "Cycle Graph Filter"
+msgstr "Graphiques de cycle"
 
-#: ../cycle.php:69 ../setup.php:173
-#, fuzzy
-msgid "Number of Graphs per Page"
-msgstr "Nombre de graphiques par page"
-
-#: ../cycle.php:78
-#, fuzzy
-msgid "Number of Graph Columns"
-msgstr "Nombre de colonnes du graphique"
-
-#: ../cycle.php:87 ../setup.php:180
-#, fuzzy
-msgid "Graph Height"
-msgstr "Hauteur du Graphe"
-
-#: ../cycle.php:99 ../setup.php:187
-#, fuzzy
-msgid "Graph Width"
-msgstr "Largeur du graphique"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Cycle to Previous Graphs"
-msgstr "Accéder aux graphiques précédents"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Prev"
-msgstr "Précédent"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop"
-msgstr "Arrêter"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop Cycling"
-msgstr "Arrêter de faire du vélo"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Resume Cycling"
-msgstr "Reprendre le cyclisme"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Start"
-msgstr "Sélecteur de date de démarrage"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Cycle to Next Graphs"
-msgstr "Passer aux graphiques suivants"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Next"
-msgstr "Suivant"
-
-#: ../cycle.php:120 ../cycle.php:123
-#, fuzzy
-msgid "Display Graph Legend"
-msgstr "Afficher la légende du graphique"
-
-#: ../cycle.php:123
-#, fuzzy
-msgid "Legend"
-msgstr "Taille de la fonte utilisée pour les légendes du graphique"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh"
-msgstr "Actualiser"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh Graphs Now"
-msgstr "Rafraîchir les graphiques maintenant"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save"
-msgstr "Sauvegarder"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save Filter Settings"
-msgstr "Enregistrer les paramètres du filtre"
-
-#: ../cycle.php:137
+#: cycle.php:177
 #, fuzzy
 msgid "Next Update In"
 msgstr "Prochaine mise à jour"
 
-#: ../cycle_ajax.php:80
+#: cycle.php:186
+#, fuzzy
+msgid "Graph Display Timespan"
+msgstr "Durée d'affichage du graphique"
+
+#: cycle.php:197
+#, fuzzy
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Fréquence de rafraîchissement du cycle de rotation"
+
+#: cycle.php:208 setup.php:177
+#, fuzzy
+msgid "Number of Graphs per Page"
+msgstr "Nombre de graphiques par page"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Cycle to Previous Graphs"
+msgstr "Accéder aux graphiques précédents"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Prev"
+msgstr "Précédent"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop"
+msgstr "Arrêter"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop Cycling"
+msgstr "Arrêter de faire du vélo"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Resume Cycling"
+msgstr "Reprendre le cyclisme"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Start"
+msgstr "Sélecteur de date de démarrage"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Cycle to Next Graphs"
+msgstr "Passer aux graphiques suivants"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Next"
+msgstr "Suivant"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh Graphs Now"
+msgstr "Rafraîchir les graphiques maintenant"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear"
+msgstr "Effacer"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear Filter"
+msgstr "Effacer le filtre"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save Filter Settings"
+msgstr "Enregistrer les paramètres du filtre"
+
+#: cycle.php:231
+#, fuzzy
+msgid "Number of Graph Columns"
+msgstr "Nombre de colonnes du graphique"
+
+#: cycle.php:240 setup.php:184
+#, fuzzy
+msgid "Graph Height"
+msgstr "Hauteur du Graphe"
+
+#: cycle.php:252 setup.php:191
+#, fuzzy
+msgid "Graph Width"
+msgstr "Largeur du graphique"
+
+#: cycle.php:261 cycle.php:264
+#, fuzzy
+msgid "Display Graph Legend"
+msgstr "Afficher la légende du graphique"
+
+#: cycle.php:264
+#, fuzzy
+msgid "Legend"
+msgstr "Taille de la fonte utilisée pour les légendes du graphique"
+
+#: cycle.php:279
 #, fuzzy
 msgid "Select Tree to View"
 msgstr "Sélectionner l'arborescence à afficher"
 
-#: ../cycle_ajax.php:91
+#: cycle.php:295
 #, fuzzy
 msgid "Select Tree Leaf to Display"
 msgstr "Sélectionner la feuille d'arbre à afficher"
 
-#: ../cycle_ajax.php:93
+#: cycle.php:297
 #, fuzzy
 msgid "All Levels"
 msgstr "Tous les niveaus"
 
-#: ../cycle_ajax.php:94
+#: cycle.php:298
 #, fuzzy
 msgid "Top Level"
 msgstr "Niveau supérieur"
 
-#: ../cycle_ajax.php:108
+#: cycle.php:312
 #, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
@@ -152,174 +172,116 @@ msgstr ""
 "alphabétiques, numériques et spéciaux \\\"(^_| ?)\\\" (^_| ?)\\\" sont "
 "autorisés)"
 
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear"
-msgstr "Effacer"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear Filter"
-msgstr "Effacer le filtre"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set"
-msgstr "Définir"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set Filter"
-msgstr "Définir le filtre"
-
-#: ../cycle_ajax.php:140
-#, fuzzy
-msgid "No Graphs Found Matching Criteria"
-msgstr "Aucun graphique n'a été trouvé Critères d'appariement"
-
-#: ../functions.php:26 ../setup.php:268
-#, fuzzy, php-format
-msgid "%d Graph"
-msgstr "Graphique en %d"
-
-#: ../functions.php:27 ../functions.php:28 ../functions.php:29
-#: ../functions.php:30 ../functions.php:31 ../functions.php:32
-#: ../functions.php:33 ../functions.php:34 ../functions.php:35
-#: ../functions.php:36 ../functions.php:37 ../functions.php:38
-#: ../functions.php:39 ../functions.php:40 ../functions.php:41
-#: ../functions.php:42 ../functions.php:43 ../functions.php:44
-#: ../functions.php:45 ../functions.php:46 ../functions.php:47
-#: ../functions.php:48 ../functions.php:49 ../functions.php:50
-#: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
-#: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, fuzzy, php-format
-msgid "%d Graphs"
-msgstr "Graphiques en %d"
-
-#: ../functions.php:57 ../setup.php:277
-#, fuzzy, php-format
-msgid "%d Column"
-msgstr "%d colonne"
-
-#: ../functions.php:58 ../functions.php:59 ../functions.php:60
-#: ../functions.php:61 ../functions.php:62 ../functions.php:63
-#: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
-#: ../setup.php:281
-#, fuzzy, php-format
-msgid "%d Columns"
-msgstr "%d colonnes"
-
-#: ../setup.php:35
-#, fuzzy
-msgid "Plugin -> Cycle Graphs"
-msgstr "Plugin -> Graphiques de cycles"
-
-#: ../setup.php:143
-#, fuzzy
-msgid "Cycle"
-msgstr "Cycle"
-
-#: ../setup.php:148
+#: cycle.php:326 setup.php:151
 #, fuzzy
 msgid "Cycle Graphs"
 msgstr "Graphiques de cycle"
 
-#: ../setup.php:152
+#: functions.php:28 setup.php:258
+#, fuzzy, php-format
+msgid "%d Graph"
+msgstr "Graphique en %d"
+
+#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
+#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
+#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
+#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
+#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
+#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:259
+#: setup.php:260 setup.php:261 setup.php:262 setup.php:263
+#, fuzzy, php-format
+msgid "%d Graphs"
+msgstr "Graphiques en %d"
+
+#: functions.php:59 setup.php:267
+#, fuzzy, php-format
+msgid "%d Column"
+msgstr "%d colonne"
+
+#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:268
+#: setup.php:269 setup.php:270 setup.php:271
+#, fuzzy, php-format
+msgid "%d Columns"
+msgstr "%d colonnes"
+
+#: setup.php:35
+#, fuzzy
+msgid "Plugin -> Cycle Graphs"
+msgstr "Plugin -> Graphiques de cycles"
+
+#: setup.php:146 setup.php:147 setup.php:247 setup.php:249
+#, fuzzy
+msgid "Cycle"
+msgstr "Cycle"
+
+#: setup.php:156
 #, fuzzy
 msgid "Delay Interval"
 msgstr "Délai"
 
-#: ../setup.php:153
+#: setup.php:157
 #, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "C'est le temps en secondes avant l'affichage du graphique suivant."
 
-#: ../setup.php:159
+#: setup.php:163
 #, fuzzy
 msgid "Graph Timespan"
 msgstr "Durée de vie du graphique"
 
-#: ../setup.php:160
+#: setup.php:164
 #, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "C'est la durée par défaut qui sera affichée sur la page."
 
-#: ../setup.php:166
+#: setup.php:170
 #, fuzzy
 msgid "Column Count"
 msgstr "Nombre de colonnes"
 
-#: ../setup.php:167
+#: setup.php:171
 #, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "En mode Arbre, c'est le nombre de colonnes qui seront utilisées."
 
-#: ../setup.php:174
+#: setup.php:178
 #, fuzzy
 msgid "Select the number of graphs to display per page"
 msgstr "Sélectionner le nombre de graphiques à afficher par page"
 
-#: ../setup.php:181
+#: setup.php:185
 #, fuzzy
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Ceci définit la hauteur du graphique pour les graphiques affichés."
 
-#: ../setup.php:188
+#: setup.php:192
 #, fuzzy
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Ceci définit la largeur du graphique pour les graphiques affichés."
 
-#: ../setup.php:194
-#, fuzzy
-msgid "Title Font Size"
-msgstr "Taille de la fonte du titre"
-
-#: ../setup.php:195
-#, fuzzy
-msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr "Il s'agit de la taille de la police en pixels pour le titre. (1 - 100)"
-
-#: ../setup.php:202
-#, fuzzy
-msgid "Title Font Face"
-msgstr "Face de police de titre"
-
-#: ../setup.php:203
-#, fuzzy
-msgid "This is the font face for the title."
-msgstr "Il s'agit de la police de caractères du titre."
-
-#: ../setup.php:208
-#, fuzzy
-msgid "Title Font Color"
-msgstr "Couleur de la police du Titre"
-
-#: ../setup.php:209
-#, fuzzy
-msgid "This is the font color for the title."
-msgstr "C'est la couleur de police du titre."
-
-#: ../setup.php:214
+#: setup.php:198
 #, fuzzy
 msgid "Display Legend"
 msgstr "Légende de l'affichage"
 
-#: ../setup.php:215
+#: setup.php:199
 #, fuzzy
 msgid "Check this to display legend."
 msgstr "Cochez cette case pour afficher la légende."
 
-#: ../setup.php:220
+#: setup.php:204
 #, fuzzy
 msgid "Predefined Rotations"
 msgstr "Rotations prédéfinies"
 
-#: ../setup.php:224
+#: setup.php:208
 #, fuzzy
 msgid "Rotation Type"
 msgstr "Type Rotation"
 
-#: ../setup.php:225
+#: setup.php:209
 #, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
@@ -329,27 +291,27 @@ msgstr ""
 "graphique.  Si vous sélectionnez'Liste spécifique', vous devez définir une "
 "liste de Graph ID's."
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Legacy (All)"
 msgstr "Héritage (Tous)"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Specific List"
 msgstr "Liste spécifique"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Tree Mode"
 msgstr "Mode arbre"
 
-#: ../setup.php:231
+#: setup.php:215
 #, fuzzy
 msgid "Custom Graph List"
 msgstr "Liste de graphiques personnalisés"
 
-#: ../setup.php:232
+#: setup.php:216
 #, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
@@ -358,29 +320,61 @@ msgstr ""
 "Il doit s'agir d'une liste délimitée par des virgules de Graph ID à "
 "parcourir. Par exemple'1,2,3,4'."
 
-#: ../setup.php:237
+#: setup.php:221
 #, fuzzy
 msgid "Default Tree"
 msgstr "Arbre par défaut"
 
-#: ../setup.php:238
+#: setup.php:222
 #, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr ""
 "Sélectionnez l'arborescence du graphique à faire défiler si le mode Arbre "
 "est sélectionné."
 
-#: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
-#: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
-#: ../setup.php:293 ../setup.php:294 ../setup.php:295 ../setup.php:299
-#: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
-#: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
-#: ../setup.php:308 ../setup.php:309 ../setup.php:310
+#: setup.php:275 setup.php:276 setup.php:277 setup.php:278 setup.php:279
+#: setup.php:280 setup.php:281 setup.php:282 setup.php:283 setup.php:284
+#: setup.php:285 setup.php:289 setup.php:290 setup.php:291 setup.php:292
+#: setup.php:293 setup.php:294 setup.php:295 setup.php:296 setup.php:297
+#: setup.php:298 setup.php:299 setup.php:300 setup.php:301 setup.php:302
 #, fuzzy, php-format
 msgid "%d Pixels"
 msgstr "Pixels %d"
 
-#: ../setup.php:317
+#: setup.php:309 setup.php:310 setup.php:311 setup.php:312
 #, fuzzy
 msgid "Cycling"
 msgstr "Cyclisme"
+
+#, fuzzy
+#~ msgid "Set"
+#~ msgstr "Définir"
+
+#, fuzzy
+#~ msgid "Set Filter"
+#~ msgstr "Définir le filtre"
+
+#, fuzzy
+#~ msgid "Title Font Size"
+#~ msgstr "Taille de la fonte du titre"
+
+#, fuzzy
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr ""
+#~ "Il s'agit de la taille de la police en pixels pour le titre. (1 - 100)"
+
+#, fuzzy
+#~ msgid "Title Font Face"
+#~ msgstr "Face de police de titre"
+
+#, fuzzy
+#~ msgid "This is the font face for the title."
+#~ msgstr "Il s'agit de la police de caractères du titre."
+
+#, fuzzy
+#~ msgid "Title Font Color"
+#~ msgstr "Couleur de la police du Titre"
+
+#, fuzzy
+#~ msgid "This is the font color for the title."
+#~ msgstr "C'est la couleur de police du titre."
