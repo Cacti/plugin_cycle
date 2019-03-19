@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-28 00:49+0200\n"
+"POT-Creation-Date: 2019-03-19 09:50+0000\n"
 "PO-Revision-Date: 2019-03-16 20:28-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,132 +17,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: ../cycle.php:47
+#: cycle.php:118
 #, fuzzy
-msgid "Graph Display Timespan"
-msgstr "ग्राफ प्रदर्शन Timespan"
+msgid "No Graphs Found Matching Criteria"
+msgstr "कोई रेखांकन मिलाप मानदंड नहीं मिला"
 
-#: ../cycle.php:58
+#: cycle.php:177
 #, fuzzy
-msgid "Cycle Rotation Refresh Frequency"
-msgstr "साइकल रोटेशन रिफ्रेश फ्रीक्वेंसी"
+msgid "Cycle Graph Filter"
+msgstr "साइकिल रेखांकन"
 
-#: ../cycle.php:69 ../setup.php:173
-#, fuzzy
-msgid "Number of Graphs per Page"
-msgstr "प्रति पृष्ठ ग्राफ़ की संख्या"
-
-#: ../cycle.php:78
-#, fuzzy
-msgid "Number of Graph Columns"
-msgstr "ग्राफ कॉलम की संख्या"
-
-#: ../cycle.php:87 ../setup.php:180
-#, fuzzy
-msgid "Graph Height"
-msgstr "ग्राफ ऊंचाई"
-
-#: ../cycle.php:99 ../setup.php:187
-#, fuzzy
-msgid "Graph Width"
-msgstr "ग्राफ चौड़ाई"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Cycle to Previous Graphs"
-msgstr "पिछले ग्राफ़ के लिए साइकिल"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Prev"
-msgstr "पिछला"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop"
-msgstr "रुकें"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop Cycling"
-msgstr "साइकिल चलाना बंद करो"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Resume Cycling"
-msgstr "साइकिल चलाना फिर से शुरू करें"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Start"
-msgstr "शुरु"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Cycle to Next Graphs"
-msgstr "अगले ग्राफ के लिए साइकिल"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Next"
-msgstr "अगला"
-
-#: ../cycle.php:120 ../cycle.php:123
-#, fuzzy
-msgid "Display Graph Legend"
-msgstr "ग्राफ किंवदंती प्रदर्शित करें"
-
-#: ../cycle.php:123
-#, fuzzy
-msgid "Legend"
-msgstr "किंवदंती"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh"
-msgstr "ताज़ा करना"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh Graphs Now"
-msgstr "ग्राफ़ को अब ताज़ा करें"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save"
-msgstr "सेव करें"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save Filter Settings"
-msgstr "फ़िल्टर सेटिंग्स सहेजें"
-
-#: ../cycle.php:137
+#: cycle.php:177
 #, fuzzy
 msgid "Next Update In"
 msgstr "अगला अपडेट इन"
 
-#: ../cycle_ajax.php:80
+#: cycle.php:186
+#, fuzzy
+msgid "Graph Display Timespan"
+msgstr "ग्राफ प्रदर्शन Timespan"
+
+#: cycle.php:197
+#, fuzzy
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "साइकल रोटेशन रिफ्रेश फ्रीक्वेंसी"
+
+#: cycle.php:208 setup.php:177
+#, fuzzy
+msgid "Number of Graphs per Page"
+msgstr "प्रति पृष्ठ ग्राफ़ की संख्या"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Cycle to Previous Graphs"
+msgstr "पिछले ग्राफ़ के लिए साइकिल"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Prev"
+msgstr "पिछला"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop"
+msgstr "रुकें"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop Cycling"
+msgstr "साइकिल चलाना बंद करो"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Resume Cycling"
+msgstr "साइकिल चलाना फिर से शुरू करें"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Start"
+msgstr "शुरु"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Cycle to Next Graphs"
+msgstr "अगले ग्राफ के लिए साइकिल"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Next"
+msgstr "अगला"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh"
+msgstr "ताज़ा करना"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh Graphs Now"
+msgstr "ग्राफ़ को अब ताज़ा करें"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear"
+msgstr "明确"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear Filter"
+msgstr "स्पष्ट निस्यंदक"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save"
+msgstr "सेव करें"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save Filter Settings"
+msgstr "फ़िल्टर सेटिंग्स सहेजें"
+
+#: cycle.php:231
+#, fuzzy
+msgid "Number of Graph Columns"
+msgstr "ग्राफ कॉलम की संख्या"
+
+#: cycle.php:240 setup.php:184
+#, fuzzy
+msgid "Graph Height"
+msgstr "ग्राफ ऊंचाई"
+
+#: cycle.php:252 setup.php:191
+#, fuzzy
+msgid "Graph Width"
+msgstr "ग्राफ चौड़ाई"
+
+#: cycle.php:261 cycle.php:264
+#, fuzzy
+msgid "Display Graph Legend"
+msgstr "ग्राफ किंवदंती प्रदर्शित करें"
+
+#: cycle.php:264
+#, fuzzy
+msgid "Legend"
+msgstr "किंवदंती"
+
+#: cycle.php:279
 #, fuzzy
 msgid "Select Tree to View"
 msgstr "देखने के लिए ट्री का चयन करें"
 
-#: ../cycle_ajax.php:91
+#: cycle.php:295
 #, fuzzy
 msgid "Select Tree Leaf to Display"
 msgstr "प्रदर्शित करने के लिए ट्री लीफ चुनें"
 
-#: ../cycle_ajax.php:93
+#: cycle.php:297
 #, fuzzy
 msgid "All Levels"
 msgstr "सभी स्तरों"
 
-#: ../cycle_ajax.php:94
+#: cycle.php:298
 #, fuzzy
 msgid "Top Level"
 msgstr "सर्वोच्च स्तर"
 
-#: ../cycle_ajax.php:108
+#: cycle.php:312
 #, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
@@ -151,174 +171,116 @@ msgstr ""
 "नियमित अभिव्यक्ति मिलान दर्ज करें (केवल अल्फा, संख्यात्मक और विशेष वर्ण \\ \"(^ _ |?) \\"
 "\" की अनुमति है)"
 
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear"
-msgstr "明确"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear Filter"
-msgstr "स्पष्ट निस्यंदक"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set"
-msgstr "सेट"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set Filter"
-msgstr "फ़िल्टर सेट करें"
-
-#: ../cycle_ajax.php:140
-#, fuzzy
-msgid "No Graphs Found Matching Criteria"
-msgstr "कोई रेखांकन मिलाप मानदंड नहीं मिला"
-
-#: ../functions.php:26 ../setup.php:268
-#, fuzzy, php-format
-msgid "%d Graph"
-msgstr "% d ग्राफ"
-
-#: ../functions.php:27 ../functions.php:28 ../functions.php:29
-#: ../functions.php:30 ../functions.php:31 ../functions.php:32
-#: ../functions.php:33 ../functions.php:34 ../functions.php:35
-#: ../functions.php:36 ../functions.php:37 ../functions.php:38
-#: ../functions.php:39 ../functions.php:40 ../functions.php:41
-#: ../functions.php:42 ../functions.php:43 ../functions.php:44
-#: ../functions.php:45 ../functions.php:46 ../functions.php:47
-#: ../functions.php:48 ../functions.php:49 ../functions.php:50
-#: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
-#: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, fuzzy, php-format
-msgid "%d Graphs"
-msgstr "% d रेखांकन"
-
-#: ../functions.php:57 ../setup.php:277
-#, fuzzy, php-format
-msgid "%d Column"
-msgstr "% d स्तम्भ"
-
-#: ../functions.php:58 ../functions.php:59 ../functions.php:60
-#: ../functions.php:61 ../functions.php:62 ../functions.php:63
-#: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
-#: ../setup.php:281
-#, fuzzy, php-format
-msgid "%d Columns"
-msgstr "% d कॉलम"
-
-#: ../setup.php:35
-#, fuzzy
-msgid "Plugin -> Cycle Graphs"
-msgstr "प्लगइन -> साइकिल रेखांकन"
-
-#: ../setup.php:143
-#, fuzzy
-msgid "Cycle"
-msgstr "चक्र"
-
-#: ../setup.php:148
+#: cycle.php:326 setup.php:151
 #, fuzzy
 msgid "Cycle Graphs"
 msgstr "साइकिल रेखांकन"
 
-#: ../setup.php:152
+#: functions.php:28 setup.php:258
+#, fuzzy, php-format
+msgid "%d Graph"
+msgstr "% d ग्राफ"
+
+#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
+#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
+#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
+#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
+#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
+#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:259
+#: setup.php:260 setup.php:261 setup.php:262 setup.php:263
+#, fuzzy, php-format
+msgid "%d Graphs"
+msgstr "% d रेखांकन"
+
+#: functions.php:59 setup.php:267
+#, fuzzy, php-format
+msgid "%d Column"
+msgstr "% d स्तम्भ"
+
+#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:268
+#: setup.php:269 setup.php:270 setup.php:271
+#, fuzzy, php-format
+msgid "%d Columns"
+msgstr "% d कॉलम"
+
+#: setup.php:35
+#, fuzzy
+msgid "Plugin -> Cycle Graphs"
+msgstr "प्लगइन -> साइकिल रेखांकन"
+
+#: setup.php:146 setup.php:147 setup.php:247 setup.php:249
+#, fuzzy
+msgid "Cycle"
+msgstr "चक्र"
+
+#: setup.php:156
 #, fuzzy
 msgid "Delay Interval"
 msgstr "विलंब अंतराल"
 
-#: ../setup.php:153
+#: setup.php:157
 #, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "यह अगले ग्राफ प्रदर्शित होने से पहले सेकंड में समय है।"
 
-#: ../setup.php:159
+#: setup.php:163
 #, fuzzy
 msgid "Graph Timespan"
 msgstr "ग्राफ टाइमपेन"
 
-#: ../setup.php:160
+#: setup.php:164
 #, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "यह डिफ़ॉल्ट टाइमपेन है जो पेज पर प्रदर्शित होगा।"
 
-#: ../setup.php:166
+#: setup.php:170
 #, fuzzy
 msgid "Column Count"
 msgstr "कॉलम की गिनती"
 
-#: ../setup.php:167
+#: setup.php:171
 #, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "ट्री मोड में यह उन स्तंभों की संख्या है जिनका उपयोग किया जाएगा।"
 
-#: ../setup.php:174
+#: setup.php:178
 #, fuzzy
 msgid "Select the number of graphs to display per page"
 msgstr "प्रति पृष्ठ प्रदर्शित करने के लिए ग्राफ़ की संख्या का चयन करें"
 
-#: ../setup.php:181
+#: setup.php:185
 #, fuzzy
 msgid "This sets the graph height for the displayed graphs."
 msgstr "यह प्रदर्शित रेखांकन के लिए ग्राफ ऊंचाई निर्धारित करता है।"
 
-#: ../setup.php:188
+#: setup.php:192
 #, fuzzy
 msgid "This sets the graph width for the displayed graphs."
 msgstr "यह प्रदर्शित रेखांकन के लिए ग्राफ चौड़ाई निर्धारित करता है।"
 
-#: ../setup.php:194
-#, fuzzy
-msgid "Title Font Size"
-msgstr "शीर्षक फ़ॉन्ट आकार"
-
-#: ../setup.php:195
-#, fuzzy
-msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr "यह शीर्षक के लिए पिक्सेल में फ़ॉन्ट आकार है। (1 - 100)"
-
-#: ../setup.php:202
-#, fuzzy
-msgid "Title Font Face"
-msgstr "शीर्षक फ़ॉन्ट चेहरा"
-
-#: ../setup.php:203
-#, fuzzy
-msgid "This is the font face for the title."
-msgstr "यह शीर्षक के लिए फ़ॉन्ट चेहरा है।"
-
-#: ../setup.php:208
-#, fuzzy
-msgid "Title Font Color"
-msgstr "शीर्षक फ़ॉन्ट रंग"
-
-#: ../setup.php:209
-#, fuzzy
-msgid "This is the font color for the title."
-msgstr "यह शीर्षक के लिए फ़ॉन्ट रंग है।"
-
-#: ../setup.php:214
+#: setup.php:198
 #, fuzzy
 msgid "Display Legend"
 msgstr "प्रदर्शन किंवदंती"
 
-#: ../setup.php:215
+#: setup.php:199
 #, fuzzy
 msgid "Check this to display legend."
 msgstr "किंवदंती प्रदर्शित करने के लिए इसे जांचें।"
 
-#: ../setup.php:220
+#: setup.php:204
 #, fuzzy
 msgid "Predefined Rotations"
 msgstr "पूर्वनिर्धारित रोटेशन"
 
-#: ../setup.php:224
+#: setup.php:208
 #, fuzzy
 msgid "Rotation Type"
 msgstr "रोटेशन प्रकार"
 
-#: ../setup.php:225
+#: setup.php:209
 #, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
@@ -327,27 +289,27 @@ msgstr ""
 "कस्टम ग्राफ़ रोटेशन के लिए किस विधि का उपयोग करें। यदि आप 'विशिष्ट सूची' चुनते हैं, तो "
 "आपको ग्राफ़ आईडी की सूची को परिभाषित करना होगा"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Legacy (All)"
 msgstr "विरासत (सभी)"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Specific List"
 msgstr "विशिष्ट सूची"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Tree Mode"
 msgstr "ट्री मोड"
 
-#: ../setup.php:231
+#: setup.php:215
 #, fuzzy
 msgid "Custom Graph List"
 msgstr "कस्टम ग्राफ़ सूची"
 
-#: ../setup.php:232
+#: setup.php:216
 #, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
@@ -355,27 +317,58 @@ msgid ""
 msgstr ""
 "यह ग्राफ आईडी की एक अल्पविराम सीमांकित सूची होनी चाहिए। उदाहरण के लिए '1,2,3,4'"
 
-#: ../setup.php:237
+#: setup.php:221
 #, fuzzy
 msgid "Default Tree"
 msgstr "डिफ़ॉल्ट पेड़"
 
-#: ../setup.php:238
+#: setup.php:222
 #, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "यदि ट्री मोड का चयन किया गया है, तो चक्र में ग्राफ ट्री का चयन करें"
 
-#: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
-#: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
-#: ../setup.php:293 ../setup.php:294 ../setup.php:295 ../setup.php:299
-#: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
-#: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
-#: ../setup.php:308 ../setup.php:309 ../setup.php:310
+#: setup.php:275 setup.php:276 setup.php:277 setup.php:278 setup.php:279
+#: setup.php:280 setup.php:281 setup.php:282 setup.php:283 setup.php:284
+#: setup.php:285 setup.php:289 setup.php:290 setup.php:291 setup.php:292
+#: setup.php:293 setup.php:294 setup.php:295 setup.php:296 setup.php:297
+#: setup.php:298 setup.php:299 setup.php:300 setup.php:301 setup.php:302
 #, fuzzy, php-format
 msgid "%d Pixels"
 msgstr "% d पिक्सेल"
 
-#: ../setup.php:317
+#: setup.php:309 setup.php:310 setup.php:311 setup.php:312
 #, fuzzy
 msgid "Cycling"
 msgstr "सायक्लिंग"
+
+#, fuzzy
+#~ msgid "Set"
+#~ msgstr "सेट"
+
+#, fuzzy
+#~ msgid "Set Filter"
+#~ msgstr "फ़िल्टर सेट करें"
+
+#, fuzzy
+#~ msgid "Title Font Size"
+#~ msgstr "शीर्षक फ़ॉन्ट आकार"
+
+#, fuzzy
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "यह शीर्षक के लिए पिक्सेल में फ़ॉन्ट आकार है। (1 - 100)"
+
+#, fuzzy
+#~ msgid "Title Font Face"
+#~ msgstr "शीर्षक फ़ॉन्ट चेहरा"
+
+#, fuzzy
+#~ msgid "This is the font face for the title."
+#~ msgstr "यह शीर्षक के लिए फ़ॉन्ट चेहरा है।"
+
+#, fuzzy
+#~ msgid "Title Font Color"
+#~ msgstr "शीर्षक फ़ॉन्ट रंग"
+
+#, fuzzy
+#~ msgid "This is the font color for the title."
+#~ msgstr "यह शीर्षक के लिए फ़ॉन्ट रंग है।"
