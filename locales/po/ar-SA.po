@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-28 00:49+0200\n"
+"POT-Creation-Date: 2019-03-19 09:50+0000\n"
 "PO-Revision-Date: 2019-03-16 20:23-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,132 +17,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: ../cycle.php:47
+#: cycle.php:118
 #, fuzzy
-msgid "Graph Display Timespan"
-msgstr "عرض الرسم البياني Timespan"
+msgid "No Graphs Found Matching Criteria"
+msgstr "لا توجد رسوم بيانية مطابقة للمعايير"
 
-#: ../cycle.php:58
+#: cycle.php:177
 #, fuzzy
-msgid "Cycle Rotation Refresh Frequency"
-msgstr "دورة دوران تحديث التردد"
+msgid "Cycle Graph Filter"
+msgstr "دورة الرسوم البيانية"
 
-#: ../cycle.php:69 ../setup.php:173
-#, fuzzy
-msgid "Number of Graphs per Page"
-msgstr "عدد الرسوم البيانية لكل صفحة"
-
-#: ../cycle.php:78
-#, fuzzy
-msgid "Number of Graph Columns"
-msgstr "عدد أعمدة الرسم البياني"
-
-#: ../cycle.php:87 ../setup.php:180
-#, fuzzy
-msgid "Graph Height"
-msgstr "الرسم البياني الارتفاع"
-
-#: ../cycle.php:99 ../setup.php:187
-#, fuzzy
-msgid "Graph Width"
-msgstr "عرض الرسم البياني"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Cycle to Previous Graphs"
-msgstr "الانتقال إلى الرسوم البيانية السابقة"
-
-#: ../cycle.php:108
-#, fuzzy
-msgid "Prev"
-msgstr "السابق"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop"
-msgstr "توقف"
-
-#: ../cycle.php:111
-#, fuzzy
-msgid "Stop Cycling"
-msgstr "وقف الدراجات"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Resume Cycling"
-msgstr "استئناف الدراجات"
-
-#: ../cycle.php:114
-#, fuzzy
-msgid "Start"
-msgstr "بداية"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Cycle to Next Graphs"
-msgstr "الانتقال إلى الرسوم البيانية التالية"
-
-#: ../cycle.php:117
-#, fuzzy
-msgid "Next"
-msgstr "التالي"
-
-#: ../cycle.php:120 ../cycle.php:123
-#, fuzzy
-msgid "Display Graph Legend"
-msgstr "عرض الرسم البياني ليجند"
-
-#: ../cycle.php:123
-#, fuzzy
-msgid "Legend"
-msgstr "وسيلة ايضاح"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh"
-msgstr "تحديث"
-
-#: ../cycle.php:126
-#, fuzzy
-msgid "Refresh Graphs Now"
-msgstr "تحديث الرسوم البيانية الآن"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save"
-msgstr "حفظ"
-
-#: ../cycle.php:129
-#, fuzzy
-msgid "Save Filter Settings"
-msgstr "حفظ إعدادات التصفية"
-
-#: ../cycle.php:137
+#: cycle.php:177
 #, fuzzy
 msgid "Next Update In"
 msgstr "التحديث القادم في"
 
-#: ../cycle_ajax.php:80
+#: cycle.php:186
+#, fuzzy
+msgid "Graph Display Timespan"
+msgstr "عرض الرسم البياني Timespan"
+
+#: cycle.php:197
+#, fuzzy
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "دورة دوران تحديث التردد"
+
+#: cycle.php:208 setup.php:177
+#, fuzzy
+msgid "Number of Graphs per Page"
+msgstr "عدد الرسوم البيانية لكل صفحة"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Cycle to Previous Graphs"
+msgstr "الانتقال إلى الرسوم البيانية السابقة"
+
+#: cycle.php:218
+#, fuzzy
+msgid "Prev"
+msgstr "السابق"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop"
+msgstr "توقف"
+
+#: cycle.php:219
+#, fuzzy
+msgid "Stop Cycling"
+msgstr "وقف الدراجات"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Resume Cycling"
+msgstr "استئناف الدراجات"
+
+#: cycle.php:220
+#, fuzzy
+msgid "Start"
+msgstr "بداية"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Cycle to Next Graphs"
+msgstr "الانتقال إلى الرسوم البيانية التالية"
+
+#: cycle.php:221
+#, fuzzy
+msgid "Next"
+msgstr "التالي"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh"
+msgstr "تحديث"
+
+#: cycle.php:222
+#, fuzzy
+msgid "Refresh Graphs Now"
+msgstr "تحديث الرسوم البيانية الآن"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear"
+msgstr "واضح"
+
+#: cycle.php:223
+#, fuzzy
+msgid "Clear Filter"
+msgstr "مرشح واضح"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save"
+msgstr "حفظ"
+
+#: cycle.php:224
+#, fuzzy
+msgid "Save Filter Settings"
+msgstr "حفظ إعدادات التصفية"
+
+#: cycle.php:231
+#, fuzzy
+msgid "Number of Graph Columns"
+msgstr "عدد أعمدة الرسم البياني"
+
+#: cycle.php:240 setup.php:184
+#, fuzzy
+msgid "Graph Height"
+msgstr "الرسم البياني الارتفاع"
+
+#: cycle.php:252 setup.php:191
+#, fuzzy
+msgid "Graph Width"
+msgstr "عرض الرسم البياني"
+
+#: cycle.php:261 cycle.php:264
+#, fuzzy
+msgid "Display Graph Legend"
+msgstr "عرض الرسم البياني ليجند"
+
+#: cycle.php:264
+#, fuzzy
+msgid "Legend"
+msgstr "وسيلة ايضاح"
+
+#: cycle.php:279
 #, fuzzy
 msgid "Select Tree to View"
 msgstr "حدد شجرة للعرض"
 
-#: ../cycle_ajax.php:91
+#: cycle.php:295
 #, fuzzy
 msgid "Select Tree Leaf to Display"
 msgstr "حدد شجرة ليف لعرضه"
 
-#: ../cycle_ajax.php:93
+#: cycle.php:297
 #, fuzzy
 msgid "All Levels"
 msgstr "جميع المستويات"
 
-#: ../cycle_ajax.php:94
+#: cycle.php:298
 #, fuzzy
 msgid "Top Level"
 msgstr "افضل مستوى"
 
-#: ../cycle_ajax.php:108
+#: cycle.php:312
 #, fuzzy
 msgid ""
 "Enter Regular Expression Match (only alpha, numeric, and special characters "
@@ -151,174 +171,116 @@ msgstr ""
 "أدخل مطابقة التعبير العادية (أحرف أبجدية وأرقامًا وحروف خاصة فقط \\ \"(^ _ "
 "|؟) \\\" مسموح بها)"
 
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear"
-msgstr "واضح"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Clear Filter"
-msgstr "مرشح واضح"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set"
-msgstr "تعيين"
-
-#: ../cycle_ajax.php:110
-#, fuzzy
-msgid "Set Filter"
-msgstr "ضبط مرشح"
-
-#: ../cycle_ajax.php:140
-#, fuzzy
-msgid "No Graphs Found Matching Criteria"
-msgstr "لا توجد رسوم بيانية مطابقة للمعايير"
-
-#: ../functions.php:26 ../setup.php:268
-#, fuzzy, php-format
-msgid "%d Graph"
-msgstr "٪ d الرسم البياني"
-
-#: ../functions.php:27 ../functions.php:28 ../functions.php:29
-#: ../functions.php:30 ../functions.php:31 ../functions.php:32
-#: ../functions.php:33 ../functions.php:34 ../functions.php:35
-#: ../functions.php:36 ../functions.php:37 ../functions.php:38
-#: ../functions.php:39 ../functions.php:40 ../functions.php:41
-#: ../functions.php:42 ../functions.php:43 ../functions.php:44
-#: ../functions.php:45 ../functions.php:46 ../functions.php:47
-#: ../functions.php:48 ../functions.php:49 ../functions.php:50
-#: ../functions.php:51 ../functions.php:52 ../functions.php:53 ../setup.php:269
-#: ../setup.php:270 ../setup.php:271 ../setup.php:272 ../setup.php:273
-#, fuzzy, php-format
-msgid "%d Graphs"
-msgstr "٪ d الرسوم البيانية"
-
-#: ../functions.php:57 ../setup.php:277
-#, fuzzy, php-format
-msgid "%d Column"
-msgstr "٪ d العمود"
-
-#: ../functions.php:58 ../functions.php:59 ../functions.php:60
-#: ../functions.php:61 ../functions.php:62 ../functions.php:63
-#: ../functions.php:64 ../setup.php:278 ../setup.php:279 ../setup.php:280
-#: ../setup.php:281
-#, fuzzy, php-format
-msgid "%d Columns"
-msgstr "٪ د الأعمدة"
-
-#: ../setup.php:35
-#, fuzzy
-msgid "Plugin -> Cycle Graphs"
-msgstr "البرنامج المساعد -> دورة الرسوم البيانية"
-
-#: ../setup.php:143
-#, fuzzy
-msgid "Cycle"
-msgstr "دورة"
-
-#: ../setup.php:148
+#: cycle.php:326 setup.php:151
 #, fuzzy
 msgid "Cycle Graphs"
 msgstr "دورة الرسوم البيانية"
 
-#: ../setup.php:152
+#: functions.php:28 setup.php:258
+#, fuzzy, php-format
+msgid "%d Graph"
+msgstr "٪ d الرسم البياني"
+
+#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
+#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
+#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
+#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
+#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
+#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:259
+#: setup.php:260 setup.php:261 setup.php:262 setup.php:263
+#, fuzzy, php-format
+msgid "%d Graphs"
+msgstr "٪ d الرسوم البيانية"
+
+#: functions.php:59 setup.php:267
+#, fuzzy, php-format
+msgid "%d Column"
+msgstr "٪ d العمود"
+
+#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:268
+#: setup.php:269 setup.php:270 setup.php:271
+#, fuzzy, php-format
+msgid "%d Columns"
+msgstr "٪ د الأعمدة"
+
+#: setup.php:35
+#, fuzzy
+msgid "Plugin -> Cycle Graphs"
+msgstr "البرنامج المساعد -> دورة الرسوم البيانية"
+
+#: setup.php:146 setup.php:147 setup.php:247 setup.php:249
+#, fuzzy
+msgid "Cycle"
+msgstr "دورة"
+
+#: setup.php:156
 #, fuzzy
 msgid "Delay Interval"
 msgstr "فترة التأخير"
 
-#: ../setup.php:153
+#: setup.php:157
 #, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "هذا هو الوقت بالثواني قبل عرض الرسم البياني التالي."
 
-#: ../setup.php:159
+#: setup.php:163
 #, fuzzy
 msgid "Graph Timespan"
 msgstr "الرسم البياني Timespan"
 
-#: ../setup.php:160
+#: setup.php:164
 #, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "هذا هو الوقت الافتراضي الذي سيتم عرضه على الصفحة."
 
-#: ../setup.php:166
+#: setup.php:170
 #, fuzzy
 msgid "Column Count"
 msgstr "عدد الأعمدة"
 
-#: ../setup.php:167
+#: setup.php:171
 #, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "في وضع الشجرة ، هذا هو عدد الأعمدة التي سيتم استخدامها."
 
-#: ../setup.php:174
+#: setup.php:178
 #, fuzzy
 msgid "Select the number of graphs to display per page"
 msgstr "حدد عدد الرسوم البيانية لعرضها في كل صفحة"
 
-#: ../setup.php:181
+#: setup.php:185
 #, fuzzy
 msgid "This sets the graph height for the displayed graphs."
 msgstr "هذا يعين ارتفاع الرسم البياني للرسوم البيانية المعروضة."
 
-#: ../setup.php:188
+#: setup.php:192
 #, fuzzy
 msgid "This sets the graph width for the displayed graphs."
 msgstr "هذا يعين عرض الرسم البياني للرسوم البيانية المعروضة."
 
-#: ../setup.php:194
-#, fuzzy
-msgid "Title Font Size"
-msgstr "حجم الخط العنوان"
-
-#: ../setup.php:195
-#, fuzzy
-msgid "This is the font size in pixels for the title. (1 - 100)"
-msgstr "هذا هو حجم الخط بالبكسل للعنوان. (1 - 100)"
-
-#: ../setup.php:202
-#, fuzzy
-msgid "Title Font Face"
-msgstr "العنوان خط الوجه"
-
-#: ../setup.php:203
-#, fuzzy
-msgid "This is the font face for the title."
-msgstr "هذا هو وجه الخط الخاص بالعنوان."
-
-#: ../setup.php:208
-#, fuzzy
-msgid "Title Font Color"
-msgstr "العنوان لون الخط"
-
-#: ../setup.php:209
-#, fuzzy
-msgid "This is the font color for the title."
-msgstr "هذا هو لون الخط الخاص بالعنوان."
-
-#: ../setup.php:214
+#: setup.php:198
 #, fuzzy
 msgid "Display Legend"
 msgstr "عرض أسطورة"
 
-#: ../setup.php:215
+#: setup.php:199
 #, fuzzy
 msgid "Check this to display legend."
 msgstr "تحقق هذا لعرض وسيلة الإيضاح."
 
-#: ../setup.php:220
+#: setup.php:204
 #, fuzzy
 msgid "Predefined Rotations"
 msgstr "دورات محددة مسبقا"
 
-#: ../setup.php:224
+#: setup.php:208
 #, fuzzy
 msgid "Rotation Type"
 msgstr "نوع الدوران"
 
-#: ../setup.php:225
+#: setup.php:209
 #, fuzzy
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
@@ -327,27 +289,27 @@ msgstr ""
 "حدد الطريقة التي يجب استخدامها لتدوير الرسم البياني المخصص. إذا قمت بتحديد "
 "\"قائمة محددة\" ، يجب عليك تحديد قائمة بمعرفات الرسم البياني"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Legacy (All)"
 msgstr "تراث (الكل)"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Specific List"
 msgstr "قائمة محددة"
 
-#: ../setup.php:228
+#: setup.php:212
 #, fuzzy
 msgid "Tree Mode"
 msgstr "وضع الشجرة"
 
-#: ../setup.php:231
+#: setup.php:215
 #, fuzzy
 msgid "Custom Graph List"
 msgstr "قائمة الرسم البياني المخصص"
 
-#: ../setup.php:232
+#: setup.php:216
 #, fuzzy
 msgid ""
 "This must be a comma delimited list of Graph ID's to cycle through. For "
@@ -356,27 +318,58 @@ msgstr ""
 "يجب أن تكون هذه قائمة محددة بفواصل لمعرف الرسم البياني للتنقل خلالها. على "
 "سبيل المثال \"1،2،3،4\""
 
-#: ../setup.php:237
+#: setup.php:221
 #, fuzzy
 msgid "Default Tree"
 msgstr "الشجرة الافتراضية"
 
-#: ../setup.php:238
+#: setup.php:222
 #, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "حدد شجرة الرسم البياني للتنقل في حالة تحديد وضع الشجرة"
 
-#: ../setup.php:285 ../setup.php:286 ../setup.php:287 ../setup.php:288
-#: ../setup.php:289 ../setup.php:290 ../setup.php:291 ../setup.php:292
-#: ../setup.php:293 ../setup.php:294 ../setup.php:295 ../setup.php:299
-#: ../setup.php:300 ../setup.php:301 ../setup.php:302 ../setup.php:303
-#: ../setup.php:304 ../setup.php:305 ../setup.php:306 ../setup.php:307
-#: ../setup.php:308 ../setup.php:309 ../setup.php:310
+#: setup.php:275 setup.php:276 setup.php:277 setup.php:278 setup.php:279
+#: setup.php:280 setup.php:281 setup.php:282 setup.php:283 setup.php:284
+#: setup.php:285 setup.php:289 setup.php:290 setup.php:291 setup.php:292
+#: setup.php:293 setup.php:294 setup.php:295 setup.php:296 setup.php:297
+#: setup.php:298 setup.php:299 setup.php:300 setup.php:301 setup.php:302
 #, fuzzy, php-format
 msgid "%d Pixels"
 msgstr "٪ د بكسل"
 
-#: ../setup.php:317
+#: setup.php:309 setup.php:310 setup.php:311 setup.php:312
 #, fuzzy
 msgid "Cycling"
 msgstr "ركوب الدراجات"
+
+#, fuzzy
+#~ msgid "Set"
+#~ msgstr "تعيين"
+
+#, fuzzy
+#~ msgid "Set Filter"
+#~ msgstr "ضبط مرشح"
+
+#, fuzzy
+#~ msgid "Title Font Size"
+#~ msgstr "حجم الخط العنوان"
+
+#, fuzzy
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "هذا هو حجم الخط بالبكسل للعنوان. (1 - 100)"
+
+#, fuzzy
+#~ msgid "Title Font Face"
+#~ msgstr "العنوان خط الوجه"
+
+#, fuzzy
+#~ msgid "This is the font face for the title."
+#~ msgstr "هذا هو وجه الخط الخاص بالعنوان."
+
+#, fuzzy
+#~ msgid "Title Font Color"
+#~ msgstr "العنوان لون الخط"
+
+#, fuzzy
+#~ msgid "This is the font color for the title."
+#~ msgstr "هذا هو لون الخط الخاص بالعنوان."
