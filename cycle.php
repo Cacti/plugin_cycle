@@ -143,6 +143,10 @@ function cycle() {
 
 	general_header();
 
+	global $config;
+
+	print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/cycle.js'></script>\n";
+
 	$tree_list = get_allowed_trees();
 	$legend    = get_request_var('legend');
 	$tree_id   = get_request_var('tree_id');

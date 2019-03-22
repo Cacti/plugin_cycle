@@ -124,11 +124,6 @@ function plugin_cycle_version () {
 }
 
 function cycle_page_head () {
-	global $config;
-
-	if (basename($_SERVER['PHP_SELF']) == 'cycle.php') {
-		print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/cycle.js'></script>\n";
-	}
 }
 
 function cycle_config_settings ($force = false) {
