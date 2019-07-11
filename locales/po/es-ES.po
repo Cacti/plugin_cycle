@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-04-01 21:12+0000\n"
-"Last-Translator: Javier Pobeda <javier.pobeda@pm.me>\n"
+"PO-Revision-Date: 2019-07-11 17:14+0000\n"
+"Last-Translator: The Cacti Group <weblate@cacti.net>\n"
 "Language-Team: Spanish <http://translate.cacti.net/projects/cacti/cycle/"
 "es-ES/>\n"
 "Language: es-ES\n"
@@ -67,7 +67,7 @@ msgstr "Parar"
 #: cycle.php:219
 #, fuzzy
 msgid "Stop Cycling"
-msgstr "Dejar de andar en bicicleta"
+msgstr "Dejar de ciclismo"
 
 #: cycle.php:220
 #, fuzzy
