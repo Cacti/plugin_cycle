@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:29-0400\n"
+"PO-Revision-Date: 2019-07-21 20:59-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Ciclo ai grafici precedenti"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Precedente"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Stop"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Riprendere a pedalare"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Inizio"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Ciclo ai grafici successivi"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Successivo"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Aggiorna"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "Aggiorna i grafici ora"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Cancella"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Cancellare Filtro"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Salva"
 
@@ -138,7 +130,6 @@ msgid "Display Graph Legend"
 msgstr "Legenda del grafico del display"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Legenda"
 
@@ -153,12 +144,10 @@ msgid "Select Tree Leaf to Display"
 msgstr "Selezionare Foglia d'albero da visualizzare"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
-msgstr "Tutti i Livelli"
+msgstr "Tutti i livelli"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Livello Superiore"
 
@@ -194,14 +183,14 @@ msgid "%d Graphs"
 msgstr "Grafici %d"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "%d colonna"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "%d colonne"
 
@@ -211,7 +200,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Grafici di ciclo"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "Durata"
 
@@ -279,7 +267,6 @@ msgid "Predefined Rotations"
 msgstr "Rotazioni predefinite"
 
 #: setup.php:208
-#, fuzzy
 msgid "Rotation Type"
 msgstr "Tipo di rotazione"
 
@@ -344,7 +331,6 @@ msgid "%d Pixels"
 msgstr "%d Pixel"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Bicicletta"
 

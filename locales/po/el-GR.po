@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:24-0400\n"
+"PO-Revision-Date: 2019-07-21 20:57-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Κύκλος σε προηγούμενα γραφήματα"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Προηγούμενο"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Διακοπή"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Συνεχίστε την ποδηλασία"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Έναρξη"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Κάντε κύκλο στα επόμενα γραφήματα"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Επόμενο"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Ανανέωση"
 
@@ -98,7 +93,6 @@ msgid "Refresh Graphs Now"
 msgstr "Ανανέωση γραφημάτων τώρα"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Καθαρισμός"
 
@@ -108,7 +102,6 @@ msgid "Clear Filter"
 msgstr "Διαγραφή φίλτρου"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Αποθήκευση"
 
@@ -138,7 +131,6 @@ msgid "Display Graph Legend"
 msgstr "Εμφάνιση του λεκτικού γραφήματος"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Κατάσταση"
 
@@ -158,7 +150,6 @@ msgid "All Levels"
 msgstr "Ολα τα επίπεδα"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Δημοφιλές Επίπεδο Χρήστη"
 
@@ -194,14 +185,14 @@ msgid "%d Graphs"
 msgstr "% d Γραφήματα"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "Στήλη"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "Στήλες"
 
@@ -237,7 +228,6 @@ msgstr ""
 "Αυτή είναι η προεπιλεγμένη χρονική περίοδος που θα εμφανιστεί στη σελίδα."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Αριθμός Στηλών"
 
@@ -343,7 +333,6 @@ msgid "%d Pixels"
 msgstr "% d Pixels"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Ποδηλασία"
 

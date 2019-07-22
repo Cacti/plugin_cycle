@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:34-0400\n"
+"PO-Revision-Date: 2019-07-21 21:00-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Цикл перехода к предыдущим графикам"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Назад"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Стоп"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Возобновить езду на велосипеде"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Начало"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Цикл к следующим графикам"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Следующая"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Обновить"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "Обновить графики сейчас"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Очистить"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Очистить Фильтр"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr " Сохранить "
 
@@ -123,12 +115,10 @@ msgid "Number of Graph Columns"
 msgstr "Количество столбцов График Количество столбцов График"
 
 #: cycle.php:240 setup.php:184
-#, fuzzy
 msgid "Graph Height"
 msgstr "Высота графика"
 
 #: cycle.php:252 setup.php:191
-#, fuzzy
 msgid "Graph Width"
 msgstr "Ширина графика"
 
@@ -138,7 +128,6 @@ msgid "Display Graph Legend"
 msgstr "Отобразить график Легенда Легенда"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Легенда"
 
@@ -153,12 +142,10 @@ msgid "Select Tree Leaf to Display"
 msgstr "Выберите Отображаемый древовидный лист дерева"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Все уровни"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Верхний уровень"
 
@@ -194,7 +181,7 @@ msgid "%d Graphs"
 msgstr "d Графики"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "%d Колонка"
 
@@ -211,7 +198,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "Плагин -> Циклические графики"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "Цикл"
 
@@ -236,7 +222,6 @@ msgid "This is the default timespan that will be displayed on the page."
 msgstr "Это время по умолчанию, которое будет отображаться на странице."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Количество колонок"
 
@@ -277,7 +262,6 @@ msgid "Predefined Rotations"
 msgstr "Предварительно определенные вращения"
 
 #: setup.php:208
-#, fuzzy
 msgid "Rotation Type"
 msgstr "Тип Ротации"
 
@@ -320,7 +304,6 @@ msgstr ""
 "Это должен быть список Graph ID, разделенный запятыми. Например, \"1,2,3,4\"."
 
 #: setup.php:221
-#, fuzzy
 msgid "Default Tree"
 msgstr "Дерево по умолчанию"
 
@@ -341,7 +324,6 @@ msgid "%d Pixels"
 msgstr "%d Пиксели"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Циклирование"
 

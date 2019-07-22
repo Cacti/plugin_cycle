@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:35-0400\n"
+"PO-Revision-Date: 2019-07-21 21:00-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Cykla till tidigare grafer"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Föregående"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Stopp"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Fortsätt cykla"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Start"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Cykla till nästa grafer"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Nästa"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Uppdatera"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "Uppdatera grafer nu"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Rensa"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Rensa filter"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Spara"
 
@@ -138,7 +130,6 @@ msgid "Display Graph Legend"
 msgstr "Display Graph Legend"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Historia"
 
@@ -153,12 +144,10 @@ msgid "Select Tree Leaf to Display"
 msgstr "Välj trädblad till bildskärm"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Alla Nivåer"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Toppnivå"
 
@@ -338,7 +327,6 @@ msgid "%d Pixels"
 msgstr "% d pixlar"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Cykling"
 

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:26-0400\n"
+"PO-Revision-Date: 2019-07-21 20:58-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Accéder aux graphiques précédents"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Précédent"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Arrêter"
 
@@ -83,12 +81,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Passer aux graphiques suivants"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Suivant"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Actualiser"
 
@@ -98,17 +94,14 @@ msgid "Refresh Graphs Now"
 msgstr "Rafraîchir les graphiques maintenant"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Effacer"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Effacer le filtre"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -123,7 +116,6 @@ msgid "Number of Graph Columns"
 msgstr "Nombre de colonnes du graphique"
 
 #: cycle.php:240 setup.php:184
-#, fuzzy
 msgid "Graph Height"
 msgstr "Hauteur du Graphe"
 
@@ -153,12 +145,10 @@ msgid "Select Tree Leaf to Display"
 msgstr "Sélectionner la feuille d'arbre à afficher"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Tous les niveaus"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Niveau supérieur"
 
@@ -195,14 +185,14 @@ msgid "%d Graphs"
 msgstr "Graphiques en %d"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "%d colonne"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "%d colonnes"
 
@@ -212,12 +202,10 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Graphiques de cycles"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "Cycle"
 
 #: setup.php:156
-#, fuzzy
 msgid "Delay Interval"
 msgstr "Délai"
 
@@ -237,7 +225,6 @@ msgid "This is the default timespan that will be displayed on the page."
 msgstr "C'est la durée par défaut qui sera affichée sur la page."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Nombre de colonnes"
 
@@ -277,7 +264,6 @@ msgid "Predefined Rotations"
 msgstr "Rotations prédéfinies"
 
 #: setup.php:208
-#, fuzzy
 msgid "Rotation Type"
 msgstr "Type Rotation"
 
@@ -302,7 +288,6 @@ msgid "Specific List"
 msgstr "Liste spécifique"
 
 #: setup.php:212
-#, fuzzy
 msgid "Tree Mode"
 msgstr "Mode arbre"
 
@@ -342,7 +327,6 @@ msgid "%d Pixels"
 msgstr "Pixels %d"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Cyclisme"
 

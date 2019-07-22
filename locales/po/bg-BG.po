@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:23-0400\n"
+"PO-Revision-Date: 2019-07-21 20:57-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Цикъл към предишни графики"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Предишен"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Спри"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Възобновяване на колоезденето"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Старт"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Към следващите графики"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Следващ"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Обновяване"
 
@@ -98,7 +93,6 @@ msgid "Refresh Graphs Now"
 msgstr "Обновяване на графиките сега"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Изчисти"
 
@@ -108,7 +102,6 @@ msgid "Clear Filter"
 msgstr "Изчистване на филтъра"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Запази"
 
@@ -138,7 +131,6 @@ msgid "Display Graph Legend"
 msgstr "Показване на легендата за графиката"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Легенда"
 
@@ -237,7 +229,6 @@ msgstr ""
 "Това е стандартният период от време, който ще бъде показан на страницата."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Брой на Колона"
 
@@ -302,7 +293,6 @@ msgid "Specific List"
 msgstr "Специфичен списък"
 
 #: setup.php:212
-#, fuzzy
 msgid "Tree Mode"
 msgstr "Дървовиден изглед"
 

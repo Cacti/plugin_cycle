@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:36-0400\n"
+"PO-Revision-Date: 2019-07-21 21:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Önceki Grafiklere Döndür"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Önceki"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Dur"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Bisiklete binme"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Başla"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Sonraki Grafiklere Döndür"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Sonraki"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Yenile"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "Grafikleri Şimdi Yenile"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Temizle"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Filtreyi Temizle"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Kaydet"
 
@@ -138,7 +130,6 @@ msgid "Display Graph Legend"
 msgstr "Grafik Göstergesini Göster"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "Efsane"
 
@@ -153,12 +144,10 @@ msgid "Select Tree Leaf to Display"
 msgstr "Görüntülenecek Ağaç Yapısını Seçin"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Tüm Seviyeler"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
 msgstr "Üst Seviye"
 
@@ -216,7 +205,6 @@ msgid "Cycle"
 msgstr "Çevrim"
 
 #: setup.php:156
-#, fuzzy
 msgid "Delay Interval"
 msgstr "Gecikme süresi"
 
@@ -237,7 +225,6 @@ msgid "This is the default timespan that will be displayed on the page."
 msgstr "Bu sayfada görüntülenecek varsayılan zaman aralığıdır."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Sütun sayısı"
 

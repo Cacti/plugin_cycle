@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:37-0400\n"
+"PO-Revision-Date: 2019-07-21 21:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "循環到上一個圖表"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "上一頁"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "停止"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "恢復騎自行車"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "開始"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "循環到下一個圖表"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "下一頁"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "重新整理"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "立即刷新圖表"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "清除"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "清除篩選"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "儲存"
 
@@ -138,7 +130,6 @@ msgid "Display Graph Legend"
 msgstr "顯示圖表圖例"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "說明"
 
@@ -153,14 +144,12 @@ msgid "Select Tree Leaf to Display"
 msgstr "選擇要顯示的樹葉"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "所有級別"
 
 #: cycle.php:298
-#, fuzzy
 msgid "Top Level"
-msgstr "頂層"
+msgstr "頂層等級"
 
 #: cycle.php:312
 #, fuzzy
@@ -199,7 +188,7 @@ msgstr "％d列"
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "%d 行"
 
@@ -234,7 +223,6 @@ msgid "This is the default timespan that will be displayed on the page."
 msgstr "這是將在頁面上顯示的默認時間跨度。"
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "資料行數"
 
@@ -283,7 +271,8 @@ msgstr "旋轉類型"
 msgid ""
 "Select which method to use for custom graph rotation.  If you select "
 "'Specific List', you must define a list of Graph ID's"
-msgstr "選擇用於自定義圖形旋轉的方法。如果選擇“特定列表”，則必須定義圖形ID列表"
+msgstr ""
+"選擇用於自定義圖形旋轉的方法。如果選擇“特定列表”，則必須定義圖形ID列表"
 
 #: setup.php:212
 #, fuzzy
@@ -332,7 +321,6 @@ msgid "%d Pixels"
 msgstr "％d像素"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "自行车"
 

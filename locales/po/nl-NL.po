@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:32-0400\n"
+"PO-Revision-Date: 2019-07-21 20:59-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Cyclus naar vorige grafieken"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Vorige"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Stop"
 
@@ -83,12 +81,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Cyclus naar volgende grafieken"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Volgende"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Vernieuwen"
 
@@ -98,17 +94,14 @@ msgid "Refresh Graphs Now"
 msgstr "Vernieuw nu grafieken"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Herstel"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Reset Filter"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Opslaan"
 
@@ -123,12 +116,10 @@ msgid "Number of Graph Columns"
 msgstr "Het aantal grafiek kolommen."
 
 #: cycle.php:240 setup.php:184
-#, fuzzy
 msgid "Graph Height"
 msgstr "Grafiekhoogte"
 
 #: cycle.php:252 setup.php:191
-#, fuzzy
 msgid "Graph Width"
 msgstr "Grafiekbreedte"
 
@@ -153,7 +144,6 @@ msgid "Select Tree Leaf to Display"
 msgstr "Selecteer Boomblad om weer te geven"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Alle niveau’s"
 
@@ -194,14 +184,14 @@ msgid "%d Graphs"
 msgstr "%d Grafieken"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "%d Kolom"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "%d Kolommen"
 
@@ -211,7 +201,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Cycle Graphs"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "Cyclus"
 
@@ -227,7 +216,6 @@ msgstr ""
 "Dit is de tijd in seconden voordat de volgende grafiek wordt weergegeven."
 
 #: setup.php:163
-#, fuzzy
 msgid "Graph Timespan"
 msgstr "Grafiek tijdspanne"
 
@@ -237,7 +225,6 @@ msgid "This is the default timespan that will be displayed on the page."
 msgstr "Dit is de standaard tijdspanne die op de pagina wordt weergegeven."
 
 #: setup.php:170
-#, fuzzy
 msgid "Column Count"
 msgstr "Aantal kolom"
 
@@ -324,7 +311,6 @@ msgstr ""
 "bladeren. Bijvoorbeeld \"1,2,3,4\"."
 
 #: setup.php:221
-#, fuzzy
 msgid "Default Tree"
 msgstr "Standaard boom"
 
@@ -343,7 +329,6 @@ msgid "%d Pixels"
 msgstr "%d Pixels"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Fietsen"
 

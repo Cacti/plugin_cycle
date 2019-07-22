@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:23-0400\n"
+"PO-Revision-Date: 2019-07-21 20:57-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar_SA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "الانتقال إلى الرسوم البيانية السابقة"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "السابق"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "توقف"
 
@@ -83,12 +81,10 @@ msgid "Cycle to Next Graphs"
 msgstr "الانتقال إلى الرسوم البيانية التالية"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "التالي"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "تحديث"
 
@@ -98,7 +94,6 @@ msgid "Refresh Graphs Now"
 msgstr "تحديث الرسوم البيانية الآن"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "واضح"
 
@@ -108,7 +103,6 @@ msgid "Clear Filter"
 msgstr "مرشح واضح"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "حفظ"
 
@@ -138,7 +132,6 @@ msgid "Display Graph Legend"
 msgstr "عرض الرسم البياني ليجند"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
 msgstr "وسيلة ايضاح"
 
@@ -211,7 +204,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "البرنامج المساعد -> دورة الرسوم البيانية"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "دورة"
 

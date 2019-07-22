@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 09:50+0000\n"
-"PO-Revision-Date: 2019-03-16 20:36-0400\n"
+"PO-Revision-Date: 2019-07-21 21:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: cycle.php:118
 #, fuzzy
@@ -53,12 +53,10 @@ msgid "Cycle to Previous Graphs"
 msgstr "Chuyển sang đồ thị trước"
 
 #: cycle.php:218
-#, fuzzy
 msgid "Prev"
 msgstr "Trước"
 
 #: cycle.php:219
-#, fuzzy
 msgid "Stop"
 msgstr "Dừng"
 
@@ -73,7 +71,6 @@ msgid "Resume Cycling"
 msgstr "Tiếp tục đạp xe"
 
 #: cycle.php:220
-#, fuzzy
 msgid "Start"
 msgstr "Bắt đầu"
 
@@ -83,12 +80,10 @@ msgid "Cycle to Next Graphs"
 msgstr "Chuyển sang đồ thị tiếp theo"
 
 #: cycle.php:221
-#, fuzzy
 msgid "Next"
 msgstr "Tiếp"
 
 #: cycle.php:222
-#, fuzzy
 msgid "Refresh"
 msgstr "Làm mới"
 
@@ -98,17 +93,14 @@ msgid "Refresh Graphs Now"
 msgstr "Làm mới đồ thị ngay"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear"
 msgstr "Xóa"
 
 #: cycle.php:223
-#, fuzzy
 msgid "Clear Filter"
 msgstr "Xóa bộ lọc"
 
 #: cycle.php:224
-#, fuzzy
 msgid "Save"
 msgstr "Lưu"
 
@@ -138,9 +130,8 @@ msgid "Display Graph Legend"
 msgstr "Hiển thị biểu đồ huyền thoại"
 
 #: cycle.php:264
-#, fuzzy
 msgid "Legend"
-msgstr "Chú thích"
+msgstr "Chú giải"
 
 #: cycle.php:279
 #, fuzzy
@@ -153,7 +144,6 @@ msgid "Select Tree Leaf to Display"
 msgstr "Chọn Cây Lá để Hiển thị"
 
 #: cycle.php:297
-#, fuzzy
 msgid "All Levels"
 msgstr "Tất cả cấp độ"
 
@@ -194,14 +184,14 @@ msgid "%d Graphs"
 msgstr "% d Đồ thị"
 
 #: functions.php:59 setup.php:267
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
 msgstr "% d Cột"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:268
 #: setup.php:269 setup.php:270 setup.php:271
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
 msgstr "% d Cột"
 
@@ -211,7 +201,6 @@ msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Đồ thị chu kỳ"
 
 #: setup.php:146 setup.php:147 setup.php:247 setup.php:249
-#, fuzzy
 msgid "Cycle"
 msgstr "Vòng"
 
@@ -339,7 +328,6 @@ msgid "%d Pixels"
 msgstr "% d pixel"
 
 #: setup.php:309 setup.php:310 setup.php:311 setup.php:312
-#, fuzzy
 msgid "Cycling"
 msgstr "Đạp xe "
 
