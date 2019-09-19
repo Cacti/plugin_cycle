@@ -72,7 +72,7 @@ function formattime(secs) {
 }
 
 function startTime() {
-	timerID = setInterval('refreshTime()', 1000)
+	timerID = setInterval(refreshTime, 1000)
 	$('#cstop').css('display', 'inline');
 	$('#cstart').css('display', 'none');
 }
@@ -176,10 +176,10 @@ function saveFilter() {
 function refreshTime() {
 	ltime++
 	$('#countdown').html(formattime(time));
-	if (time == 0) {
-		time=rtime/1000+1;
-		loadGraphs(nextid);
-	}
+
+	if (time == 0)
+		getNext();
+
 	time=time-1
 }
 

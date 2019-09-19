@@ -45,6 +45,8 @@ Got any ideas then please let us know.
 
 * issue#13: Graphs do not show when entering 'Cycle' tab from another page
 
+* issue#14: Countdown timer does not stop when requested
+
 --- 4.1 ---
 
 * feature: Change layout to be resposive
