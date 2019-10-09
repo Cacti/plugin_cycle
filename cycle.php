@@ -377,7 +377,7 @@ function cycle() {
 
 			$('input, label, button').tooltip();
 
-			clearInterval(timerID)
+			stopTime();
 			startTime();
 			newGraph();
 		});

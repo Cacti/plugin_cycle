@@ -214,6 +214,7 @@ function getPrev() {
 
 function clearFilter() {
 	strURL = 'cycle.php?action=view&clear=true&header=false';
+	stopTime();
 	loadPageNoHeader(strURL, function() {
 		loadGraphs(current);
 	});
@@ -246,6 +247,7 @@ function applyFilter() {
 		'&height='   + $('#height').val() +
 		'&delay='    + $('#delay').val();
 
+	stopTime();
 	loadPageNoHeader(strURL);
 }
 
