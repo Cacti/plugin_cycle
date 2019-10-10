@@ -21,7 +21,7 @@
  +-------------------------------------------------------------------------+
 */
 
-var timerID;
+var timerID = null;
 var image   = ''
 var html    = ''
 var nextid  = -1
@@ -72,13 +72,20 @@ function formattime(secs) {
 }
 
 function startTime() {
-	timerID = setInterval(refreshTime, 1000)
+	if (timerID == null)
+		timerID = setInterval(refreshTime, 1000)
+
 	$('#cstop').css('display', 'inline');
 	$('#cstart').css('display', 'none');
 }
 
 function stopTime() {
-	clearInterval(timerID)
+	if (timerID != null)
+	{
+		clearInterval(timerID);
+		timerID = null;
+	}
+
 	$('#cstop').css('display', 'none');
 	$('#cstart').css('display', 'inline');
 }
@@ -93,6 +100,11 @@ function resizeGraphs() {
 }
 
 function loadGraphs(id) {
+	var hadTimer = (timerID != null);
+	if (hadTimer) {
+		stopTime();
+	}
+
 	if ($('#tree_id').length) {
 		tree=$('#tree_id').val();
 	}else{
@@ -140,6 +152,9 @@ function loadGraphs(id) {
 		$('#image').html(image);
 
 		resizeGraphs();
+		if (hadTimer) {
+			startTime();
+		}
 	});
 }
 
@@ -178,7 +193,11 @@ function refreshTime() {
 	$('#countdown').html(formattime(time));
 
 	if (time == 0)
+	{
+		stopTime();
 		getNext();
+		startTime();
+	}
 
 	time=time-1
 }
