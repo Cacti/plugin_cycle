@@ -21,7 +21,7 @@
  +-------------------------------------------------------------------------+
 */
 
-var timerID = null
+var timerID;
 var image   = ''
 var html    = ''
 var nextid  = -1
