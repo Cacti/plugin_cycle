@@ -47,6 +47,8 @@ Got any ideas then please let us know.
 
 * issue#14: Countdown timer does not stop when requested
 
+* issue#16: Cycle Javascript does not always refresh during updates
+
 --- 4.1 ---
 
 * feature: Change layout to be resposive
