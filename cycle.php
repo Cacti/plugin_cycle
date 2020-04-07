@@ -148,7 +148,7 @@ function cycle() {
 	global $config;
 
 	if (function_exists('get_md5_include_js')) {
-		print get_md5_include_js('plugin/cycle/cycle.js');
+		print get_md5_include_js('plugins/cycle/cycle.js');
 	} else {
 		print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/cycle.js'></script>\n";
 	}
