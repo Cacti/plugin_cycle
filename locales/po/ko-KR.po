@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 09:50+0000\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2020-12-12 22:15-0500\n"
 "PO-Revision-Date: 2019-07-21 20:59-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,155 +17,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.3\n"
 
-#: cycle.php:118
+#: cycle.php:120
 #, fuzzy
 msgid "No Graphs Found Matching Criteria"
 msgstr "일치하는 기준이 발견 된 그래프가 없습니다"
 
-#: cycle.php:177
+#: cycle.php:187
 #, fuzzy
 msgid "Cycle Graph Filter"
 msgstr "사이클 그래프"
 
-#: cycle.php:177
+#: cycle.php:187
 #, fuzzy
 msgid "Next Update In"
 msgstr "다음 업데이트"
 
-#: cycle.php:186
+#: cycle.php:196
 #, fuzzy
 msgid "Graph Display Timespan"
 msgstr "그래프 표시 시간 간격"
 
-#: cycle.php:197
+#: cycle.php:207
 #, fuzzy
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "사이클 회전 재생 빈도"
 
-#: cycle.php:208 setup.php:177
+#: cycle.php:218 setup.php:172
 #, fuzzy
 msgid "Number of Graphs per Page"
 msgstr "페이지 당 그래프 수"
 
-#: cycle.php:218
+#: cycle.php:228
 #, fuzzy
 msgid "Cycle to Previous Graphs"
 msgstr "이전 그래프로 순환"
 
-#: cycle.php:218
+#: cycle.php:228
 msgid "Prev"
 msgstr "이전"
 
-#: cycle.php:219
+#: cycle.php:229
 msgid "Stop"
 msgstr "중지"
 
-#: cycle.php:219
+#: cycle.php:229
 #, fuzzy
 msgid "Stop Cycling"
 msgstr "사이클링 중지"
 
-#: cycle.php:220
+#: cycle.php:230
 #, fuzzy
 msgid "Resume Cycling"
 msgstr "이력서 순환"
 
-#: cycle.php:220
+#: cycle.php:230
 msgid "Start"
 msgstr "시작"
 
-#: cycle.php:221
+#: cycle.php:231
 #, fuzzy
 msgid "Cycle to Next Graphs"
 msgstr "다음 그래프로 순환"
 
-#: cycle.php:221
+#: cycle.php:231
 msgid "Next"
 msgstr "다음"
 
-#: cycle.php:222
+#: cycle.php:232
 msgid "Refresh"
 msgstr "새로고침"
 
-#: cycle.php:222
+#: cycle.php:232
 #, fuzzy
 msgid "Refresh Graphs Now"
 msgstr "그래프 새로 고침"
 
-#: cycle.php:223
+#: cycle.php:233
 msgid "Clear"
 msgstr "지우기"
 
-#: cycle.php:223
+#: cycle.php:233
 msgid "Clear Filter"
 msgstr "필터 지우기"
 
-#: cycle.php:224
+#: cycle.php:234
 msgid "Save"
 msgstr "저장"
 
-#: cycle.php:224
+#: cycle.php:234
 #, fuzzy
 msgid "Save Filter Settings"
 msgstr "필터 설정 저장"
 
-#: cycle.php:231
+#: cycle.php:241
 #, fuzzy
 msgid "Number of Graph Columns"
 msgstr "그래프 열 수"
 
-#: cycle.php:240 setup.php:184
+#: cycle.php:250 setup.php:179
 #, fuzzy
 msgid "Graph Height"
 msgstr "그래프 높이"
 
-#: cycle.php:252 setup.php:191
+#: cycle.php:262 setup.php:186
 #, fuzzy
 msgid "Graph Width"
 msgstr "그래프 너비"
 
-#: cycle.php:261 cycle.php:264
+#: cycle.php:271 cycle.php:274
 #, fuzzy
 msgid "Display Graph Legend"
 msgstr "그래프 범례 표시"
 
-#: cycle.php:264
+#: cycle.php:274
 #, fuzzy
 msgid "Legend"
 msgstr "전설"
 
-#: cycle.php:279
+#: cycle.php:289
 #, fuzzy
 msgid "Select Tree to View"
 msgstr "트리를 선택하여보기"
 
-#: cycle.php:295
+#: cycle.php:305
 #, fuzzy
 msgid "Select Tree Leaf to Display"
 msgstr "표시 할 트리 리프 선택"
 
-#: cycle.php:297
+#: cycle.php:307
 msgid "All Levels"
 msgstr "모든 레벨"
 
-#: cycle.php:298
+#: cycle.php:308
 msgid "Top Level"
 msgstr "Top 회원등급"
 
-#: cycle.php:312
+#: cycle.php:322
 #, fuzzy
-msgid ""
-"Enter Regular Expression Match (only alpha, numeric, and special characters "
-"\\\"(^_|?)\\\" permitted)"
-msgstr ""
-"정규 표현식 일치 입력 (알파, 숫자 및 특수 문자 \\ \"(^ _ |?) \\\"만 허용)"
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "정규 표현식 일치 입력 (알파, 숫자 및 특수 문자 \\ \"(^ _ |?) \\\"만 허용)"
 
-#: cycle.php:326 setup.php:151
+#: cycle.php:336 setup.php:146
 #, fuzzy
 msgid "Cycle Graphs"
 msgstr "사이클 그래프"
 
-#: functions.php:28 setup.php:258
+#: functions.php:28 setup.php:253
 #, fuzzy, php-format
 msgid "%d Graph"
 msgstr "그래프 % d 개"
@@ -176,20 +173,20 @@ msgstr "그래프 % d 개"
 #: functions.php:41 functions.php:42 functions.php:43 functions.php:44
 #: functions.php:45 functions.php:46 functions.php:47 functions.php:48
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:259
-#: setup.php:260 setup.php:261 setup.php:262 setup.php:263
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:254
+#: setup.php:255 setup.php:256 setup.php:257 setup.php:258
 #, fuzzy, php-format
 msgid "%d Graphs"
 msgstr "그래프 % d 개"
 
-#: functions.php:59 setup.php:267
+#: functions.php:59 setup.php:262
 #, fuzzy, php-format
 msgid "%d Column"
 msgstr "% d 열"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:268
-#: setup.php:269 setup.php:270 setup.php:271
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:263
+#: setup.php:264 setup.php:265 setup.php:266
 #, fuzzy, php-format
 msgid "%d Columns"
 msgstr "% d 개의 열"
@@ -199,134 +196,151 @@ msgstr "% d 개의 열"
 msgid "Plugin -> Cycle Graphs"
 msgstr "플러그인 ->주기 그래프"
 
-#: setup.php:146 setup.php:147 setup.php:247 setup.php:249
+#: setup.php:141 setup.php:142 setup.php:242 setup.php:244
 #, fuzzy
 msgid "Cycle"
 msgstr "주기"
 
-#: setup.php:156
+#: setup.php:151
 msgid "Delay Interval"
 msgstr "지연 간격"
 
-#: setup.php:157
+#: setup.php:152
 #, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "다음 그래프가 표시되기까지의 시간 (초)입니다."
 
-#: setup.php:163
+#: setup.php:158
 #, fuzzy
 msgid "Graph Timespan"
 msgstr "그래프 시간"
 
-#: setup.php:164
+#: setup.php:159
 #, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "이것은 페이지에 표시 될 기본 시간 간격입니다."
 
-#: setup.php:170
+#: setup.php:165
 #, fuzzy
 msgid "Column Count"
 msgstr "열 수"
 
-#: setup.php:171
+#: setup.php:166
 #, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "트리 모드에서 이것은 사용할 컬럼 수입니다."
 
-#: setup.php:178
+#: setup.php:173
 #, fuzzy
 msgid "Select the number of graphs to display per page"
 msgstr "페이지 당 표시 할 그래프 수 선택"
 
-#: setup.php:185
+#: setup.php:180
 #, fuzzy
 msgid "This sets the graph height for the displayed graphs."
 msgstr "그러면 표시된 그래프의 그래프 높이가 설정됩니다."
 
-#: setup.php:192
+#: setup.php:187
 #, fuzzy
 msgid "This sets the graph width for the displayed graphs."
 msgstr "그러면 표시된 그래프의 그래프 너비가 설정됩니다."
 
-#: setup.php:198
+#: setup.php:193
 #, fuzzy
 msgid "Display Legend"
 msgstr "범례 표시"
 
-#: setup.php:199
+#: setup.php:194
 #, fuzzy
 msgid "Check this to display legend."
 msgstr "범례를 표시하려면이 옵션을 선택하십시오."
 
-#: setup.php:204
+#: setup.php:199
 #, fuzzy
 msgid "Predefined Rotations"
 msgstr "사전 정의 된 순환 게재"
 
-#: setup.php:208
+#: setup.php:203
 #, fuzzy
 msgid "Rotation Type"
 msgstr "회전 유형"
 
-#: setup.php:209
+#: setup.php:204
 #, fuzzy
-msgid ""
-"Select which method to use for custom graph rotation.  If you select "
-"'Specific List', you must define a list of Graph ID's"
-msgstr ""
-"사용자 정의 그래프 회전에 사용할 메소드를 선택하십시오. '특정 목록'을 선택하"
-"면 그래프 ID 목록을 정의해야합니다"
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "사용자 정의 그래프 회전에 사용할 메소드를 선택하십시오. '특정 목록'을 선택하면 그래프 ID 목록을 정의해야합니다"
 
-#: setup.php:212
+#: setup.php:207
 #, fuzzy
 msgid "Legacy (All)"
 msgstr "레거시 (전체)"
 
-#: setup.php:212
+#: setup.php:207
 #, fuzzy
 msgid "Specific List"
 msgstr "특정 목록"
 
-#: setup.php:212
+#: setup.php:207
 #, fuzzy
 msgid "Tree Mode"
 msgstr "트리 모드"
 
-#: setup.php:215
+#: setup.php:210
 #, fuzzy
 msgid "Custom Graph List"
 msgstr "맞춤 그래프 목록"
 
-#: setup.php:216
+#: setup.php:211
 #, fuzzy
-msgid ""
-"This must be a comma delimited list of Graph ID's to cycle through. For "
-"example '1,2,3,4'"
-msgstr ""
-"순환되는 쉼표로 구분 된 그래프 ID 목록이어야합니다. 예를 들어 '1,2,3,4'"
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "순환되는 쉼표로 구분 된 그래프 ID 목록이어야합니다. 예를 들어 '1,2,3,4'"
 
-#: setup.php:221
+#: setup.php:216
 #, fuzzy
 msgid "Default Tree"
 msgstr "기본 트리"
 
-#: setup.php:222
+#: setup.php:217
 #, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "트리 모드가 선택되면 순환 할 그래프 트리를 선택하십시오"
 
+#: setup.php:270 setup.php:271 setup.php:272 setup.php:273 setup.php:274
 #: setup.php:275 setup.php:276 setup.php:277 setup.php:278 setup.php:279
-#: setup.php:280 setup.php:281 setup.php:282 setup.php:283 setup.php:284
-#: setup.php:285 setup.php:289 setup.php:290 setup.php:291 setup.php:292
+#: setup.php:280 setup.php:284 setup.php:285 setup.php:286 setup.php:287
+#: setup.php:288 setup.php:289 setup.php:290 setup.php:291 setup.php:292
 #: setup.php:293 setup.php:294 setup.php:295 setup.php:296 setup.php:297
-#: setup.php:298 setup.php:299 setup.php:300 setup.php:301 setup.php:302
 #, fuzzy, php-format
 msgid "%d Pixels"
 msgstr "% d 픽셀"
 
-#: setup.php:309 setup.php:310 setup.php:311 setup.php:312
+#: setup.php:304 setup.php:305 setup.php:306 setup.php:307
 msgid "Cycling"
 msgstr "사이클링"
+
+#, fuzzy
+#~ msgid "This is the font color for the title."
+#~ msgstr "타이틀의 폰트 칼라입니다."
+
+#, fuzzy
+#~ msgid "Title Font Color"
+#~ msgstr "제목 폰트 색"
+
+#, fuzzy
+#~ msgid "This is the font face for the title."
+#~ msgstr "이것은 타이틀의 폰트 페이스입니다."
+
+#, fuzzy
+#~ msgid "Title Font Face"
+#~ msgstr "제목 글꼴 얼굴"
+
+#, fuzzy
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "제목의 글꼴 크기 (픽셀 단위)입니다. (1 - 100)"
+
+#, fuzzy
+#~ msgid "Title Font Size"
+#~ msgstr "제목 글자 크기"
 
 #, fuzzy
 #~ msgid "Set"
@@ -335,27 +349,3 @@ msgstr "사이클링"
 #, fuzzy
 #~ msgid "Set Filter"
 #~ msgstr "필터 설정"
-
-#, fuzzy
-#~ msgid "Title Font Size"
-#~ msgstr "제목 글자 크기"
-
-#, fuzzy
-#~ msgid "This is the font size in pixels for the title. (1 - 100)"
-#~ msgstr "제목의 글꼴 크기 (픽셀 단위)입니다. (1 - 100)"
-
-#, fuzzy
-#~ msgid "Title Font Face"
-#~ msgstr "제목 글꼴 얼굴"
-
-#, fuzzy
-#~ msgid "This is the font face for the title."
-#~ msgstr "이것은 타이틀의 폰트 페이스입니다."
-
-#, fuzzy
-#~ msgid "Title Font Color"
-#~ msgstr "제목 폰트 색"
-
-#, fuzzy
-#~ msgid "This is the font color for the title."
-#~ msgstr "타이틀의 폰트 칼라입니다."
