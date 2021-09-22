@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
-"PO-Revision-Date: 2019-07-21 20:58-0400\n"
-"Last-Translator: The Cacti Group <weblate@cacti.net>\n"
-"Language-Team: Spanish <http://translate.cacti.net/projects/cacti/cycle/es-ES/>\n"
-"Language: es_ES\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.3\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2021-09-22 14:09+0000\nLast-Translator: Tadeo Briceño <tadeobriceno@vencable.com>\nLanguage-Team: Spanish <http://translate.cacti.net/projects/cacti/cycle/es/>\nLanguage: es-ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\n"
 
 #: cycle.php:120
 #, fuzzy
@@ -86,7 +74,7 @@ msgstr "Siguiente"
 
 #: cycle.php:232
 msgid "Refresh"
-msgstr "Refrescar"
+msgstr "Actualizar"
 
 #: cycle.php:232
 #, fuzzy
