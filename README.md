@@ -7,12 +7,19 @@ well as specifically selected graphs.
 ## Features
 
 * You can set cycle time delay.
+
 * Can set permissions on who can view.
+
 * Graph height and width can be specified.
+
 * Graphs are not displayed if the user does not have access to them.
+
 * You can use the Prev/Next buttons to change graph.
+
 * You can stop the rotation with the Stop button.
+
 * The time until the next graph change is displayed under the title.
+
 * It can use a custom graph list and only cycle through those.
 
 ## Installation
@@ -178,3 +185,6 @@ Got any ideas then please let us know.
 --- 0.1 ---
 
 * Initial release
+
+-----------------------------------------------
+Copyright (c) 2004-2023 - The Cacti Group, Inc.
