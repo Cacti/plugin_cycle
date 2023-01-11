@@ -44,6 +44,10 @@ Got any ideas then please let us know.
 
 ## Changelog
 
+--- 4.3 ---
+
+* issue#19: Correct warnings in the lastest Cacti with cycle_config_form not existing
+
 --- 4.2 ---
 
 * issue#10: Non-numeric value when clicking 'Cycle' tab

@@ -27,7 +27,6 @@ function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'top_graph_header_tabs', 'cycle_show_tab',             'setup.php');
 	api_plugin_register_hook('cycle', 'config_arrays',         'cycle_config_arrays',        'setup.php');
 	api_plugin_register_hook('cycle', 'draw_navigation_text',  'cycle_draw_navigation_text', 'setup.php');
-	api_plugin_register_hook('cycle', 'config_form',           'cycle_config_form',          'setup.php');
 	api_plugin_register_hook('cycle', 'config_settings',       'cycle_config_settings',      'setup.php');
 	api_plugin_register_hook('cycle', 'api_graph_save',        'cycle_api_graph_save',       'setup.php');
 	api_plugin_register_hook('cycle', 'page_head',             'cycle_page_head',            'setup.php');
@@ -65,7 +64,7 @@ function cycle_check_upgrade () {
 	$current = $info['version'];
 	$old     = db_fetch_row("SELECT * FROM plugin_config WHERE directory='cycle'");
 
-	if (sizeof($old) && $current != $old['version']) {
+	if (cacti_sizeof($old) && $current != $old['version']) {
 		/* if the plugin is installed and/or active */
 		if ($old['status'] == 1 || $old['status'] == 4) {
 			/* re-register the hooks */
@@ -94,14 +93,15 @@ function cycle_check_upgrade () {
 		}
 
 		/* update the plugin information */
-		$id   = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
+		$id = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
 
-		db_execute("UPDATE plugin_config
-			SET name='" . $info['longname'] . "',
-			author='"   . $info['author']   . "',
-			webpage='"  . $info['homepage'] . "',
-			version='"  . $info['version']  . "'
-			WHERE id='$id'");
+		/* remove legacy hook */
+		db_execute('DELETE FROM plugin_hooks WHERE name="cycle" AND hook="config_form"');
+
+		db_execute_prepared('UPDATE plugin_config
+			SET name = ?, author = ?, webpage = ?, version = ?
+			WHERE id = ?',
+			array($info['longname'], $info['author'], $info['homepage'], $info['version'], $id));
 	}
 }
 
