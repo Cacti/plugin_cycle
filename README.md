@@ -46,7 +46,7 @@ Got any ideas then please let us know.
 
 --- 4.3 ---
 
-* issue#19: Correct warnings in the lastest Cacti with cycle_config_form not existing
+* issue#19: Correct warnings in the latest Cacti with cycle_config_form not existing
 
 --- 4.2 ---
 
@@ -62,7 +62,7 @@ Got any ideas then please let us know.
 
 --- 4.1 ---
 
-* feature: Change layout to be resposive
+* feature: Change layout to be responsive
 
 * feature: Change filtering to be more consistent with Cacti framework
 
@@ -146,7 +146,7 @@ Got any ideas then please let us know.
 
 * feature: Fixed custom tree mod view
 
-* feature: Fixed timespan function in defalt view
+* feature: Fixed timespan function in default view
 
 * feature: Fixed guest access permission
 
