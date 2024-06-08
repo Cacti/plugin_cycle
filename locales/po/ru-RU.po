@@ -4,14 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-01-01 00:07+0000\nLast-Translator: Sergey <ok1ean@ya.ru>\nLanguage-Team: Russian <http://translate.cacti.net/projects/cacti/cycle/ru/>\nLanguage: ru-RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.8.1\n"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2024-06-08 09:29-0400\n"
+"PO-Revision-Date: 2024-06-08 09:37-0400\n"
+"Last-Translator: Sergey <ok1ean@ya.ru>\n"
+"Language-Team: Russian <http://translate.cacti.net/projects/cacti/cycle/ru/>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
 msgstr "Не найдены графики подходящие под критерий"
 
 #: cycle.php:187
-#, fuzzy
 msgid "Cycle Graph Filter"
 msgstr "Графики циклов"
 
@@ -20,12 +31,10 @@ msgid "Next Update In"
 msgstr "Следующее обновление через"
 
 #: cycle.php:196
-#, fuzzy
 msgid "Graph Display Timespan"
 msgstr "Продолжительность отображения графика"
 
 #: cycle.php:207
-#, fuzzy
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Цикл Обновление частоты вращения Обновление частоты вращения"
 
@@ -34,7 +43,6 @@ msgid "Number of Graphs per Page"
 msgstr "Количество графиков на страницу"
 
 #: cycle.php:228
-#, fuzzy
 msgid "Cycle to Previous Graphs"
 msgstr "Цикл перехода к предыдущим графикам"
 
@@ -47,12 +55,10 @@ msgid "Stop"
 msgstr "Стоп"
 
 #: cycle.php:229
-#, fuzzy
 msgid "Stop Cycling"
 msgstr "Остановить езду на велосипеде"
 
 #: cycle.php:230
-#, fuzzy
 msgid "Resume Cycling"
 msgstr "Возобновить езду на велосипеде"
 
@@ -61,7 +67,6 @@ msgid "Start"
 msgstr "Начало"
 
 #: cycle.php:231
-#, fuzzy
 msgid "Cycle to Next Graphs"
 msgstr "Цикл к следующим графикам"
 
@@ -90,12 +95,10 @@ msgid "Save"
 msgstr "Сохранить"
 
 #: cycle.php:234
-#, fuzzy
 msgid "Save Filter Settings"
 msgstr "Сохранить настройки фильтра"
 
 #: cycle.php:241
-#, fuzzy
 msgid "Number of Graph Columns"
 msgstr "Количество столбцов График Количество столбцов График"
 
@@ -108,7 +111,6 @@ msgid "Graph Width"
 msgstr "Ширина графика"
 
 #: cycle.php:271 cycle.php:274
-#, fuzzy
 msgid "Display Graph Legend"
 msgstr "Отобразить график Легенда Легенда"
 
@@ -121,7 +123,6 @@ msgid "Select Tree to View"
 msgstr "Выберите Дерево для просмотра"
 
 #: cycle.php:305
-#, fuzzy
 msgid "Select Tree Leaf to Display"
 msgstr "Выберите Отображаемый древовидный лист дерева"
 
@@ -134,19 +135,17 @@ msgid "Top Level"
 msgstr "Верхний уровень"
 
 #: cycle.php:322
-#, fuzzy
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Введите \"Регулярное соответствие выражений\" (только буквы, цифры и специальные символы \\\" (^_|?)\\\" разрешено)."
 
 #: cycle.php:336 setup.php:146
-#, fuzzy
 msgid "Cycle Graphs"
 msgstr "Графики циклов"
 
 #: functions.php:28 setup.php:253
-#, fuzzy, php-format
+#, php-format
 msgid "%d Graph"
-msgstr "d График"
+msgstr "%d График"
 
 #: functions.php:29 functions.php:30 functions.php:31 functions.php:32
 #: functions.php:33 functions.php:34 functions.php:35 functions.php:36
@@ -156,9 +155,9 @@ msgstr "d График"
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
 #: functions.php:53 functions.php:54 functions.php:55 setup.php:254
 #: setup.php:255 setup.php:256 setup.php:257 setup.php:258
-#, fuzzy, php-format
+#, php-format
 msgid "%d Graphs"
-msgstr "d Графики"
+msgstr "%d Графики"
 
 #: functions.php:59 setup.php:262
 #, php-format
@@ -172,8 +171,7 @@ msgstr "%d Столбец"
 msgid "%d Columns"
 msgstr "%d Колонки"
 
-#: setup.php:35
-#, fuzzy
+#: setup.php:34
 msgid "Plugin -> Cycle Graphs"
 msgstr "Плагин -> Циклические графики"
 
@@ -186,7 +184,6 @@ msgid "Delay Interval"
 msgstr "Интервал задержки"
 
 #: setup.php:152
-#, fuzzy
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Это время в секундах перед отображением следующего графика."
 
@@ -195,7 +192,6 @@ msgid "Graph Timespan"
 msgstr "Интервал графика"
 
 #: setup.php:159
-#, fuzzy
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Это время по умолчанию, которое будет отображаться на странице."
 
@@ -204,22 +200,18 @@ msgid "Column Count"
 msgstr "Количество колонок"
 
 #: setup.php:166
-#, fuzzy
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "В режиме \"Дерево\" это количество столбцов, которые будут использоваться."
 
 #: setup.php:173
-#, fuzzy
 msgid "Select the number of graphs to display per page"
 msgstr "Выберите количество графиков для отображения на странице"
 
 #: setup.php:180
-#, fuzzy
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Устанавливает высоту графика для отображаемых графиков."
 
 #: setup.php:187
-#, fuzzy
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Устанавливает ширину графика для отображаемых графиков."
 
@@ -232,7 +224,6 @@ msgid "Check this to display legend."
 msgstr "Проверьте это, чтобы отобразить легенду."
 
 #: setup.php:199
-#, fuzzy
 msgid "Predefined Rotations"
 msgstr "Предварительно определенные вращения"
 
@@ -241,7 +232,6 @@ msgid "Rotation Type"
 msgstr "Тип Ротации"
 
 #: setup.php:204
-#, fuzzy
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Выберите метод, который будет использоваться для пользовательского вращения графика.  Если вы выберите 'Специфический список', вы должны определить список Graph ID's"
 
@@ -250,7 +240,6 @@ msgid "Legacy (All)"
 msgstr "Устаревшие (Все)"
 
 #: setup.php:207
-#, fuzzy
 msgid "Specific List"
 msgstr "Конкретный перечень"
 
@@ -259,12 +248,10 @@ msgid "Tree Mode"
 msgstr "Режим дерева"
 
 #: setup.php:210
-#, fuzzy
 msgid "Custom Graph List"
 msgstr "Пользовательский список графиков"
 
 #: setup.php:211
-#, fuzzy
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Это должен быть список Graph ID, разделенный запятыми. Например, \"1,2,3,4\"."
 
@@ -273,7 +260,6 @@ msgid "Default Tree"
 msgstr "Дерево по умолчанию"
 
 #: setup.php:217
-#, fuzzy
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Выберите дерево графиков для циклического отображения, если выбран режим Дерево."
 
@@ -291,33 +277,33 @@ msgid "Cycling"
 msgstr "Циклирование"
 
 #, fuzzy
-#~ msgid "This is the font color for the title."
-#~ msgstr "Это цвет шрифта заголовка."
-
-#, fuzzy
-#~ msgid "Title Font Color"
-#~ msgstr "Цвет шрифта заголовка"
-
-#, fuzzy
-#~ msgid "This is the font face for the title."
-#~ msgstr "Это лицо шрифта для заголовка."
-
-#, fuzzy
-#~ msgid "Title Font Face"
-#~ msgstr "Лицо со шрифтом заголовка"
-
-#, fuzzy
-#~ msgid "This is the font size in pixels for the title. (1 - 100)"
-#~ msgstr "Это размер шрифта в пикселях для заголовка. (1 - 100)"
-
-#, fuzzy
-#~ msgid "Title Font Size"
-#~ msgstr "Размер шрифта заголовка"
+#~ msgid "Set Filter"
+#~ msgstr "Установить фильтр"
 
 #, fuzzy
 #~ msgid "Set"
 #~ msgstr "Установить/Обновить фильтры"
 
 #, fuzzy
-#~ msgid "Set Filter"
-#~ msgstr "Установить фильтр"
+#~ msgid "Title Font Size"
+#~ msgstr "Размер шрифта заголовка"
+
+#, fuzzy
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "Это размер шрифта в пикселях для заголовка. (1 - 100)"
+
+#, fuzzy
+#~ msgid "Title Font Face"
+#~ msgstr "Лицо со шрифтом заголовка"
+
+#, fuzzy
+#~ msgid "This is the font face for the title."
+#~ msgstr "Это лицо шрифта для заголовка."
+
+#, fuzzy
+#~ msgid "Title Font Color"
+#~ msgstr "Цвет шрифта заголовка"
+
+#, fuzzy
+#~ msgid "This is the font color for the title."
+#~ msgstr "Это цвет шрифта заголовка."

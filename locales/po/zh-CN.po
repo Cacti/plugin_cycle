@@ -4,7 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: cycle on cacti 1.1.34\nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2020-12-12 22:15-0500\nPO-Revision-Date: 2024-03-03 08:53+0000\nLast-Translator: Junhua Huang <junhuahuang1218@gmail.com>\nLanguage-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/cycle/zh_Hans/>\nLanguage: zh-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.8.1\n"
+msgstr ""
+"Project-Id-Version: cycle on cacti 1.1.34\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2024-06-08 09:29-0400\n"
+"PO-Revision-Date: 2024-03-03 08:53+0000\n"
+"Last-Translator: Junhua Huang <junhuahuang1218@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/cycle/zh_Hans/>\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.8.1\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
@@ -159,7 +171,7 @@ msgstr "%d 列"
 msgid "%d Columns"
 msgstr "%d 列"
 
-#: setup.php:35
+#: setup.php:34
 msgid "Plugin -> Cycle Graphs"
 msgstr "插件 - >循环图"
 
@@ -264,26 +276,26 @@ msgstr "%d 像素"
 msgid "Cycling"
 msgstr "循环"
 
-#~ msgid "This is the font color for the title."
-#~ msgstr "这是标题的字体颜色。"
-
-#~ msgid "Title Font Color"
-#~ msgstr "标题字体颜色"
-
-#~ msgid "This is the font face for the title."
-#~ msgstr "这是标题的字体。"
-
-#~ msgid "Title Font Face"
-#~ msgstr "标题字体"
-
-#~ msgid "This is the font size in pixels for the title. (1 - 100)"
-#~ msgstr "这是标题的字体大小（以像素为单位）。 （1 - 100）"
-
-#~ msgid "Title Font Size"
-#~ msgstr "标题字体大小"
+#~ msgid "Set Filter"
+#~ msgstr "设置过滤器"
 
 #~ msgid "Set"
 #~ msgstr "设置"
 
-#~ msgid "Set Filter"
-#~ msgstr "设置过滤器"
+#~ msgid "Title Font Size"
+#~ msgstr "标题字体大小"
+
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "这是标题的字体大小（以像素为单位）。 （1 - 100）"
+
+#~ msgid "Title Font Face"
+#~ msgstr "标题字体"
+
+#~ msgid "This is the font face for the title."
+#~ msgstr "这是标题的字体。"
+
+#~ msgid "Title Font Color"
+#~ msgstr "标题字体颜色"
+
+#~ msgid "This is the font color for the title."
+#~ msgstr "这是标题的字体颜色。"

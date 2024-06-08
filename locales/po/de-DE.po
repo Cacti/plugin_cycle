@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2020-12-12 22:15-0500\n"
-"PO-Revision-Date: 2019-07-21 20:57-0400\n"
+"POT-Creation-Date: 2024-06-08 09:29-0400\n"
+"PO-Revision-Date: 2024-06-08 09:31-0400\n"
 "Last-Translator: Mark Brugnoli-Vinten <netniv@cacti.net>\n"
 "Language-Team: German <http://translate.cacti.net/projects/cacti/cycle/de-DE/>\n"
 "Language: de_DE\n"
@@ -16,14 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
 msgstr "Keine Diagramme entsprechender Kriterien gefunden"
 
 #: cycle.php:187
-#, fuzzy
 msgid "Cycle Graph Filter"
 msgstr "Diagramm Wechsel"
 
@@ -172,7 +171,7 @@ msgstr "%d Spalte"
 msgid "%d Columns"
 msgstr "%d Spalten"
 
-#: setup.php:35
+#: setup.php:34
 msgid "Plugin -> Cycle Graphs"
 msgstr "Erweiterung -> Diagramm Wechsel"
 
@@ -277,26 +276,26 @@ msgstr "%d Pixel"
 msgid "Cycling"
 msgstr "Rotation"
 
-#~ msgid "This is the font color for the title."
-#~ msgstr "Dies ist die Schriftfarbe für den Titel."
-
-#~ msgid "Title Font Color"
-#~ msgstr "Schriftfarbe Titel"
-
-#~ msgid "This is the font face for the title."
-#~ msgstr "Dies ist die Schriftart für den Titel."
-
-#~ msgid "Title Font Face"
-#~ msgstr "Schriftart des Titels"
-
-#~ msgid "This is the font size in pixels for the title. (1 - 100)"
-#~ msgstr "Definition der Titel-Schriftgröße in Pixeln. (1 - 100)"
-
-#~ msgid "Title Font Size"
-#~ msgstr "Überschrift Schriftgrösse"
+#~ msgid "Set Filter"
+#~ msgstr "Filter anwenden"
 
 #~ msgid "Set"
 #~ msgstr "Anwenden"
 
-#~ msgid "Set Filter"
-#~ msgstr "Filter anwenden"
+#~ msgid "Title Font Size"
+#~ msgstr "Überschrift Schriftgrösse"
+
+#~ msgid "This is the font size in pixels for the title. (1 - 100)"
+#~ msgstr "Definition der Titel-Schriftgröße in Pixeln. (1 - 100)"
+
+#~ msgid "Title Font Face"
+#~ msgstr "Schriftart des Titels"
+
+#~ msgid "This is the font face for the title."
+#~ msgstr "Dies ist die Schriftart für den Titel."
+
+#~ msgid "Title Font Color"
+#~ msgstr "Schriftfarbe Titel"
+
+#~ msgid "This is the font color for the title."
+#~ msgstr "Dies ist die Schriftfarbe für den Titel."
