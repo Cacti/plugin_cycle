@@ -171,19 +171,23 @@ function saveFilter() {
 		leaf='';
 	}
 
-	url='cycle.php?action=save' +
-		'&rfilter='  + $('#rfilter').val() +
-		'&cols='     + $('#cols').val() +
-		'&timespan=' + $('#timespan').val() +
-		'&graphs='   + $('#graphs').val() +
-		'&tree_id='  + tree +
-		'&leaf_id='  + leaf +
-		'&legend='   + $('#legend').is(':checked') +
-		'&width='    + $('#width').val() +
-		'&height='   + $('#height').val() +
-		'&delay='    + $('#delay').val();
+	var postData = {
+		rfilter: $('#rfilter').val(),
+		cols: $('#cols').val(),
+		timespan: $('#timespan').val(),
+		graphs: $('#graphs').val(),
+		tree_id: tree,
+		leaf_id: leaf,
+		legend: $('#legend').is(':checked'),
+		width: $('#width').val(),
+		height: $('#height').val(),
+		delay: $('#delay').val(),
+		__csrf_magic: csrfMagicToken
+	};
 
-	$.get(url, function(data) {
+	url = 'cycle.php?action=save';
+
+	$.post(url, postData).done(function(data) {
 		$('#text').show().text('Filter Settings Saved').fadeOut(2000);
 	});
 }
