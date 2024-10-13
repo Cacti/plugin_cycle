@@ -211,7 +211,8 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 
 	/* if no default graph list has been specified, default to 0 */
 	$type = read_config_option('cycle_custom_graphs_type');
-	if ($type == 1 && !strlen(read_config_option('cycle_custom_graphs_list'))) {
+	$list = read_config_option('cycle_custom_graphs_list');
+	if ($type == 1 && $list == '') {
 		$type = 0;
 	}
 
