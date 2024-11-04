@@ -100,14 +100,11 @@
 
 --- 0.6 ---
 
-* feature: Ability for cycle to use a Tree and cycle through the Leaf's instead
-  of just graphs.
+* feature: Ability for cycle to use a Tree and cycle through the Leaf's instead of just graphs.
 
 --- 0.3 ---
 
-* feature: Converted the rotation code to use AJAX so the page does not fully
-  refresh every time.
-
+* feature: Converted the rotation code to use AJAX so the page does not fully refresh every time.
 * feature: Added custom graph rotation
 
 --- 0.2 ---
