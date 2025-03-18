@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2024-06-08 09:29-0400\nPO-Revision-Date: 2025-03-14 13:08+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2024-06-08 09:29-0400\nPO-Revision-Date: 2025-03-18 09:56+0000\nLast-Translator: Daniel Nylander <weblate@danielnylander.se>\nLanguage-Team: Swedish <http://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.8.1\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
@@ -40,7 +40,7 @@ msgstr "Föregående"
 
 #: cycle.php:229
 msgid "Stop"
-msgstr "Stopp"
+msgstr "Stoppa"
 
 #: cycle.php:229
 msgid "Stop Cycling"
@@ -52,7 +52,7 @@ msgstr "Fortsätt cykla"
 
 #: cycle.php:230
 msgid "Start"
-msgstr "Start"
+msgstr "Starta"
 
 #: cycle.php:231
 msgid "Cycle to Next Graphs"
@@ -116,7 +116,7 @@ msgstr "Välj trädblad till bildskärm"
 
 #: cycle.php:307
 msgid "All Levels"
-msgstr "Alla Nivåer"
+msgstr "Alla nivåer"
 
 #: cycle.php:308
 msgid "Top Level"
@@ -133,7 +133,7 @@ msgstr "Cykeldiagram"
 #: functions.php:28 setup.php:253
 #, php-format
 msgid "%d Graph"
-msgstr "% d Graph"
+msgstr "%d graf"
 
 #: functions.php:29 functions.php:30 functions.php:31 functions.php:32
 #: functions.php:33 functions.php:34 functions.php:35 functions.php:36
@@ -145,7 +145,7 @@ msgstr "% d Graph"
 #: setup.php:255 setup.php:256 setup.php:257 setup.php:258
 #, php-format
 msgid "%d Graphs"
-msgstr "% d Grafer"
+msgstr "%d grafer"
 
 #: functions.php:59 setup.php:262
 #, php-format
@@ -157,11 +157,11 @@ msgstr "%d kolumn"
 #: setup.php:264 setup.php:265 setup.php:266
 #, php-format
 msgid "%d Columns"
-msgstr "% d kolumner"
+msgstr "%d kolumner"
 
 #: setup.php:34
 msgid "Plugin -> Cycle Graphs"
-msgstr "Plugin -> Cykeldiagram"
+msgstr "Tillägg -> Cykelgrafer"
 
 #: setup.php:141 setup.php:142 setup.php:242 setup.php:244
 msgid "Cycle"
@@ -177,7 +177,7 @@ msgstr "Detta är tiden i sekunder innan nästa graf visas."
 
 #: setup.php:158
 msgid "Graph Timespan"
-msgstr "Graf Timespan"
+msgstr "Grafens tidsintervall"
 
 #: setup.php:159
 msgid "This is the default timespan that will be displayed on the page."
@@ -258,7 +258,7 @@ msgstr "Välj grafträdet för att cykla om trädläget är valt"
 #: setup.php:293 setup.php:294 setup.php:295 setup.php:296 setup.php:297
 #, php-format
 msgid "%d Pixels"
-msgstr "% d pixlar"
+msgstr "%d bildpunkter"
 
 #: setup.php:304 setup.php:305 setup.php:306 setup.php:307
 msgid "Cycling"
