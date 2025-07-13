@@ -226,13 +226,13 @@ function cycle() {
 					</td>
 					<td>
 						<span class='nowrap'>
-							<input type='button' id='prev' value='<?php print __esc('Prev', 'cycle');?>' title='<?php print __esc('Cycle to Previous Graphs', 'cycle');?>'>
-							<input type='button' id='cstop' value='<?php print __esc('Stop', 'cycle');?>' title='<?php print __esc('Stop Cycling', 'cycle');?>'>
-							<input type='button' id='cstart' value='<?php print __esc('Start', 'cycle');?>' style='display:none;' title='<?php print __esc('Resume Cycling', 'cycle');?>'>
-							<input type='button' id='next' value='<?php print __esc('Next', 'cycle');?>' title='<?php print __esc('Cycle to Next Graphs', 'cycle');?>'>
-							<input type='submit' id='refresh' value='<?php print __esc('Refresh', 'cycle');?>' title='<?php print __esc('Refresh Graphs Now', 'cycle');?>'>
-							<input type='button' id='clear' value='<?php print __esc('Clear', 'cycle');?>' title='<?php print __esc('Clear Filter', 'cycle');?>'>
-							<input type='button' id='save' value='<?php print __esc('Save', 'cycle');?>' title='<?php print __esc('Save Filter Settings', 'cycle');?>'>
+							<button type='button' id='prev' class='ui-button ui-corner-all ui-widet' title='<?php print __esc('Cycle to Previous Graphs', 'cycle');?>'><?php print __esc('Prev', 'cycle');?></button>
+							<button type='button' id='cstop' class='ui-button ui-corner-all ui-widet' title='<?php print __esc('Stop Cycling', 'cycle');?>'><?php print __esc('Stop', 'cycle');?></button>
+							<button type='button' id='cstart' class='ui-button ui-corner-all ui-widet' style='display:none;' title='<?php print __esc('Resume Cycling', 'cycle');?>'><?php print __esc('Start', 'cycle');?></button>
+							<button type='button' id='next' class='ui-button ui-corner-all ui-widet' title='<?php print __esc('Cycle to Next Graphs', 'cycle');?>'><?php print __esc('Next', 'cycle');?></button>
+							<button type='submit' id='refresh' class='ui-button ui-corner-all ui-widet ui-state-active' title='<?php print __esc('Refresh Graphs Now', 'cycle');?>'><?php print __esc('Refresh', 'cycle');?></button>
+							<button type='button' id='clear' class='ui-button ui-corner-all ui-widet' title='<?php print __esc('Clear Filter', 'cycle');?>'><?php print __esc('Clear', 'cycle');?></button>
+							<button type='button' id='save' class='ui-button ui-corner-all ui-widet' title='<?php print __esc('Save Filter Settings', 'cycle');?>'><?php print __esc('Save', 'cycle');?></button>
 							<i id='text'></i>
 						</span>
 					</td>
