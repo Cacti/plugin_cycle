@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2024-06-08 09:29-0400\nPO-Revision-Date: 2025-10-16 18:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2024-06-08 09:29-0400\nPO-Revision-Date: 2025-10-17 05:01+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
@@ -12,7 +12,7 @@ msgstr "Inga diagram hittades matchande kriterier"
 
 #: cycle.php:187
 msgid "Cycle Graph Filter"
-msgstr "Cykeldiagram"
+msgstr "Filter för växling av diagram"
 
 #: cycle.php:187
 msgid "Next Update In"
@@ -20,11 +20,11 @@ msgstr "Nästa uppdatering om"
 
 #: cycle.php:196
 msgid "Graph Display Timespan"
-msgstr "Tidsintervall för grafvisning"
+msgstr "Tidsintervall för diagramvisning"
 
 #: cycle.php:207
 msgid "Cycle Rotation Refresh Frequency"
-msgstr "Uppdateringsfrekvens för cykelrotation"
+msgstr "Uppdateringsfrekvens för växlingsrotation"
 
 #: cycle.php:218 setup.php:172
 msgid "Number of Graphs per Page"
@@ -32,7 +32,7 @@ msgstr "Antal diagram per sida"
 
 #: cycle.php:228
 msgid "Cycle to Previous Graphs"
-msgstr "Växla till föregående grafer"
+msgstr "Växla till föregående diagram"
 
 #: cycle.php:228
 msgid "Prev"
@@ -44,11 +44,11 @@ msgstr "Stoppa"
 
 #: cycle.php:229
 msgid "Stop Cycling"
-msgstr "Stoppa cykling"
+msgstr "Stoppa växling"
 
 #: cycle.php:230
 msgid "Resume Cycling"
-msgstr "Fortsätt cykla"
+msgstr "Fortsätt växling"
 
 #: cycle.php:230
 msgid "Start"
@@ -56,7 +56,7 @@ msgstr "Starta"
 
 #: cycle.php:231
 msgid "Cycle to Next Graphs"
-msgstr "Växla till nästa grafer"
+msgstr "Växla till nästa diagram"
 
 #: cycle.php:231
 msgid "Next"
