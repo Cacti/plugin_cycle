@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2024-06-08 09:29-0400\n"
-"PO-Revision-Date: 2024-06-08 09:40-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: zh_TW\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2024-06-08 09:29-0400\nPO-Revision-Date: 2026-01-16 03:18+0000\nLast-Translator: sucharlie <su.charlie@gmail.com>\nLanguage-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/cycle/zh_Hant/>\nLanguage: zh-TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php:120
 msgid "No Graphs Found Matching Criteria"
@@ -50,6 +39,7 @@ msgid "Prev"
 msgstr "上一頁"
 
 #: cycle.php:229
+#, fuzzy
 msgid "Stop"
 msgstr "停止"
 
@@ -70,10 +60,12 @@ msgid "Cycle to Next Graphs"
 msgstr "循環到下一個圖表"
 
 #: cycle.php:231
+#, fuzzy
 msgid "Next"
 msgstr "下一頁"
 
 #: cycle.php:232
+#, fuzzy
 msgid "Refresh"
 msgstr "重新整理"
 
@@ -82,6 +74,7 @@ msgid "Refresh Graphs Now"
 msgstr "立即刷新圖表"
 
 #: cycle.php:233
+#, fuzzy
 msgid "Clear"
 msgstr "清除"
 
@@ -90,6 +83,7 @@ msgid "Clear Filter"
 msgstr "清除篩選"
 
 #: cycle.php:234
+#, fuzzy
 msgid "Save"
 msgstr "儲存"
 
@@ -102,10 +96,12 @@ msgid "Number of Graph Columns"
 msgstr "圖表列數"
 
 #: cycle.php:250 setup.php:179
+#, fuzzy
 msgid "Graph Height"
 msgstr "圖形高度"
 
 #: cycle.php:262 setup.php:186
+#, fuzzy
 msgid "Graph Width"
 msgstr "圖寬度"
 
@@ -166,7 +162,7 @@ msgstr "％d列"
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
 #: functions.php:64 functions.php:65 functions.php:66 setup.php:263
 #: setup.php:264 setup.php:265 setup.php:266
-#, php-format
+#, fuzzy, php-format
 msgid "%d Columns"
 msgstr "%d 行"
 
@@ -187,6 +183,7 @@ msgid "This is the time in seconds before the next graph is displayed."
 msgstr "這是顯示下一個圖形之前的秒數。"
 
 #: setup.php:158
+#, fuzzy
 msgid "Graph Timespan"
 msgstr "圖Timespan"
 
@@ -243,6 +240,7 @@ msgid "Specific List"
 msgstr "具體清單"
 
 #: setup.php:207
+#, fuzzy
 msgid "Tree Mode"
 msgstr "樹模式"
 
@@ -255,6 +253,7 @@ msgid "This must be a comma delimited list of Graph ID's to cycle through. For e
 msgstr "這必須是一個逗號分隔的圖表ID列表，以便循環顯示。例如'1,2,3,4'"
 
 #: setup.php:216
+#, fuzzy
 msgid "Default Tree"
 msgstr "默認樹"
 
