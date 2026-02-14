@@ -43,4 +43,4 @@ Cycle through Weathermaps (I need to look into how Weathermap works)
 Got any ideas then please let us know.
 
 -----------------------------------------------
-Copyright (c) 2004-2025 - The Cacti Group, Inc.
+Copyright (c) 2004-2026 - The Cacti Group, Inc.
