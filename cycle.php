@@ -73,7 +73,13 @@ function cycle_graphs() {
 	$width     = get_request_var('width');
 	$height    = get_request_var('height');
 
-	if (empty($tree_id)) $tree_id = db_fetch_cell('SELECT id FROM graph_tree ORDER BY name LIMIT 1');
+	if (empty($tree_id)) {
+		$tree_id = db_fetch_cell_prepared('SELECT id
+			FROM graph_tree
+			ORDER BY name
+			LIMIT 1',
+			array());
+	}
 	if (empty($id))      $id      = -1;
 
 	/* get the start and end times for the graph */
@@ -165,10 +171,11 @@ function cycle() {
 	$height    = get_request_var('height');
 
 	if (empty($tree_id)) {
-		$tree_id = db_fetch_cell('SELECT id
+		$tree_id = db_fetch_cell_prepared('SELECT id
 			FROM graph_tree
 			ORDER BY name
-			LIMIT 1');
+			LIMIT 1',
+			array());
 	}
 
 	if (empty($id)) {
@@ -401,4 +408,3 @@ function cycle() {
 
 	bottom_footer();
 }
-

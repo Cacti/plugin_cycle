@@ -62,7 +62,10 @@ function cycle_check_upgrade () {
 
 	$info    = plugin_cycle_version();
 	$current = $info['version'];
-	$old     = db_fetch_row("SELECT * FROM plugin_config WHERE directory='cycle'");
+	$old     = db_fetch_row_prepared('SELECT *
+		FROM plugin_config
+		WHERE directory = ?',
+		array('cycle'));
 
 	if (cacti_sizeof($old) && $current != $old['version']) {
 		/* if the plugin is installed and/or active */
@@ -78,22 +81,33 @@ function cycle_check_upgrade () {
 			api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
 
 			/* get the realm id's and change from old to new */
-			$user  = db_fetch_cell("SELECT id FROM plugin_realms WHERE file='cycle.php'")+100;
-			$users = db_fetch_assoc('SELECT user_id FROM user_auth_realm WHERE realm_id=42');
+			$user  = db_fetch_cell_prepared('SELECT id
+				FROM plugin_realms
+				WHERE file = ?',
+				array('cycle.php')) + 100;
+			$users = db_fetch_assoc_prepared('SELECT user_id
+				FROM user_auth_realm
+				WHERE realm_id = ?',
+				array(42));
 			if (sizeof($users)) {
 				foreach($users as $u) {
-					db_execute('INSERT INTO user_auth_realm
-						(realm_id, user_id) VALUES (' . $user . ', ' . $u['user_id'] . ')
-						ON DUPLICATE KEY UPDATE realm_id=VALUES(realm_id)');
-					db_execute('DELETE FROM user_auth_realm
-						WHERE user_id=' . $u['user_id'] . '
-						AND realm_id=' . $user);
+					db_execute_prepared('INSERT INTO user_auth_realm
+						(realm_id, user_id) VALUES (?, ?)
+						ON DUPLICATE KEY UPDATE realm_id=VALUES(realm_id)',
+						array($user, $u['user_id']));
+					db_execute_prepared('DELETE FROM user_auth_realm
+						WHERE user_id = ?
+						AND realm_id = ?',
+						array($u['user_id'], $user));
 				}
 			}
 		}
 
 		/* update the plugin information */
-		$id = db_fetch_cell("SELECT id FROM plugin_config WHERE directory='cycle'");
+		$id = db_fetch_cell_prepared('SELECT id
+			FROM plugin_config
+			WHERE directory = ?',
+			array('cycle'));
 
 		/* remove legacy hook */
 		db_execute('DELETE FROM plugin_hooks WHERE name="cycle" AND hook="config_form"');
