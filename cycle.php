@@ -34,6 +34,7 @@ include_once('./lib/api_tree.php');
 include_once('./lib/utility.php');
 include_once('./lib/api_data_source.php');
 include_once('./plugins/cycle/functions.php');
+include_once('./plugins/cycle/cycle_helpers.php');
 
 set_default_action();
 
@@ -63,18 +64,16 @@ function cycle_graphs() {
 	global $id, $graph_id, $next_graph_id, $prev_graph_id;
 
 	$tree_list = get_allowed_trees();
-	$legend    = get_request_var('legend');
-	$tree_id   = get_request_var('tree_id');
-	$leaf_id   = get_request_var('leaf_id');
-	$graphpp   = get_request_var('graphs');
-	$cols      = get_request_var('cols');
-	$rfilter   = get_request_var('rfilter');
-	$id        = get_request_var('id');
-	$width     = get_request_var('width');
-	$height    = get_request_var('height');
-
-	if (empty($tree_id)) $tree_id = db_fetch_cell('SELECT id FROM graph_tree ORDER BY name LIMIT 1');
-	if (empty($id))      $id      = -1;
+	$request   = cycle_get_request_context();
+	$legend    = $request['legend'];
+	$tree_id   = $request['tree_id'];
+	$leaf_id   = $request['leaf_id'];
+	$graphpp   = $request['graphs'];
+	$cols      = $request['cols'];
+	$rfilter   = $request['rfilter'];
+	$id        = $request['id'];
+	$width     = $request['width'];
+	$height    = $request['height'];
 
 	/* get the start and end times for the graph */
 	$timespan        = array();
@@ -154,26 +153,16 @@ function cycle() {
 	}
 
 	$tree_list = get_allowed_trees();
-	$legend    = get_request_var('legend');
-	$tree_id   = get_request_var('tree_id');
-	$leaf_id   = get_request_var('leaf_id');
-	$graphpp   = get_request_var('graphs');
-	$cols      = get_request_var('cols');
-	$rfilter   = get_request_var('rfilter');
-	$id        = get_request_var('id');
-	$width     = get_request_var('width');
-	$height    = get_request_var('height');
-
-	if (empty($tree_id)) {
-		$tree_id = db_fetch_cell('SELECT id
-			FROM graph_tree
-			ORDER BY name
-			LIMIT 1');
-	}
-
-	if (empty($id)) {
-		$id      = -1;
-	}
+	$request   = cycle_get_request_context();
+	$legend    = $request['legend'];
+	$tree_id   = $request['tree_id'];
+	$leaf_id   = $request['leaf_id'];
+	$graphpp   = $request['graphs'];
+	$cols      = $request['cols'];
+	$rfilter   = $request['rfilter'];
+	$id        = $request['id'];
+	$width     = $request['width'];
+	$height    = $request['height'];
 
 	/* get the start and end times for the graph */
 	$timespan        = array();
@@ -401,4 +390,3 @@ function cycle() {
 
 	bottom_footer();
 }
-
