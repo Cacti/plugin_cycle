@@ -61,6 +61,13 @@ assert_true(
 	preg_match_all('/db_execute_prepared\s*\(/', $setup_contents, $setup_execute_matches) >= 3
 );
 assert_true(
+	'setup.php preserves legacy realm migration semantics',
+	preg_match('/\$legacy_realm_id\s*=\s*42\s*;/', $setup_contents) === 1
+	&& preg_match('/INSERT INTO user_auth_realm\s*\(realm_id,\s*user_id\)\s*VALUES\s*\(\?,\s*\?\)/s', $setup_contents) === 1
+	&& preg_match('/DELETE FROM user_auth_realm[\s\S]*WHERE user_id = \?[\s\S]*AND realm_id = \?/s', $setup_contents) === 1
+	&& preg_match('/array\(\$u\[\'user_id\'\],\s*\$legacy_realm_id\)/', $setup_contents) === 1
+);
+assert_true(
 	'setup.php no longer concatenates user_id in SQL strings',
 	strpos($setup_contents, "WHERE user_id=' . \$u['user_id'] . '") === false
 );
