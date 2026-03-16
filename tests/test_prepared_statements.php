@@ -30,13 +30,19 @@ $setup_file = __DIR__ . '/../setup.php';
 $cycle_contents = file_get_contents($cycle_file);
 $setup_contents = file_get_contents($setup_file);
 
+assert_true('cycle.php is readable', $cycle_contents !== false);
+assert_true('setup.php is readable', $setup_contents !== false);
+
+$cycle_contents = ($cycle_contents === false ? '' : $cycle_contents);
+$setup_contents = ($setup_contents === false ? '' : $setup_contents);
+
 assert_true(
 	'cycle.php uses prepared tree-id lookup',
-	preg_match_all('/db_fetch_cell_prepared\s*\(\s*\'SELECT id\s+FROM graph_tree/s', $cycle_contents) >= 2
+	preg_match_all('/db_fetch_cell_prepared\s*\(\s*\'SELECT id\s+FROM graph_tree/s', $cycle_contents, $cycle_matches) >= 2
 );
 assert_true(
 	'cycle.php no longer uses raw tree-id db_fetch_cell lookup',
-	strpos($cycle_contents, "db_fetch_cell('SELECT id FROM graph_tree ORDER BY name LIMIT 1')") === false
+	preg_match('/db_fetch_cell\s*\(\s*[\'"]SELECT\s+id\s+FROM\s+graph_tree\s+ORDER\s+BY\s+name\s+LIMIT\s+1[\'"]/i', $cycle_contents) === 0
 );
 assert_true(
 	'setup.php uses prepared plugin_config row lookup',
@@ -52,7 +58,7 @@ assert_true(
 );
 assert_true(
 	'setup.php uses prepared realm insert/delete updates',
-	preg_match_all('/db_execute_prepared\s*\(/', $setup_contents) >= 3
+	preg_match_all('/db_execute_prepared\s*\(/', $setup_contents, $setup_execute_matches) >= 3
 );
 assert_true(
 	'setup.php no longer concatenates user_id in SQL strings',

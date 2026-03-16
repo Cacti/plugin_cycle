@@ -85,10 +85,11 @@ function cycle_check_upgrade () {
 				FROM plugin_realms
 				WHERE file = ?',
 				array('cycle.php')) + 100;
+			$legacy_realm_id = 42;
 			$users = db_fetch_assoc_prepared('SELECT user_id
 				FROM user_auth_realm
 				WHERE realm_id = ?',
-				array(42));
+				array($legacy_realm_id));
 			if (sizeof($users)) {
 				foreach($users as $u) {
 					db_execute_prepared('INSERT INTO user_auth_realm
@@ -98,7 +99,7 @@ function cycle_check_upgrade () {
 					db_execute_prepared('DELETE FROM user_auth_realm
 						WHERE user_id = ?
 						AND realm_id = ?',
-						array($u['user_id'], $user));
+						array($u['user_id'], $legacy_realm_id));
 				}
 			}
 		}
