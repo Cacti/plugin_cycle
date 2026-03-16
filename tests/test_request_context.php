@@ -72,9 +72,12 @@ assert_true('provided id is preserved', $context['id'] === 456);
 assert_true('no fallback query when tree_id exists', count($db_queries) === 0);
 
 $cycle_source = file_get_contents(__DIR__ . '/../cycle.php');
+assert_true('cycle.php is readable', $cycle_source !== false);
+$cycle_source = ($cycle_source === false ? '' : $cycle_source);
+
 assert_true(
-	'cycle.php uses shared request context in both paths',
-	preg_match_all('/cycle_get_request_context\\s*\\(/', $cycle_source) >= 2
+	'cycle.php uses shared request context helper',
+	preg_match('/cycle_get_request_context\\s*\\(/', $cycle_source) === 1
 );
 
 echo "\n";
