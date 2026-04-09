@@ -229,7 +229,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 		$sql_where = "WHERE gl.id>=$graph_id";
 
 		if ($filter != '') {
-			$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+			$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 		}
 
 		if ($type == 1) {
@@ -344,7 +344,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 
 			/* setup the standard filters less the starting range, in other words start from the first graph */
 			if ($filter != '') {
-				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 			}
 
 			if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
@@ -414,7 +414,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 
 		/* setup the standard filters less the starting range, in other words start from the first graph */
 		if ($filter != '') {
-			$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+			$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 		}
 
 		if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
@@ -467,7 +467,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 			$sql_where = '';
 
 			if ($filter != '') {
-				$sql_where .= (strlen($sql_where) ? ' AND':'WHERE') . " gtg.title_cache RLIKE '$filter'";
+				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 			}
 
 			$start = 0;

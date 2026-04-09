@@ -309,7 +309,7 @@ function cycle() {
 								$html .= "<option value='-2'" . ($leaf_id == -2 ? ' selected' : '') . ">" . __('Top Level', 'cycle') . '</option>';
 
 								foreach ($leaves as $leaf) {
-									$html .= "<option value='" . $leaf['id'] . "'" . ($leaf_id == $leaf['id'] ? ' selected':'') . '>' . $leaf['title'] . '</option>';
+									$html .= "<option value='" . html_escape($leaf['id']) . "'" . ($leaf_id == $leaf['id'] ? ' selected' : '') . '>' . html_escape($leaf['title']) . '</option>';
 								}
 
 								$html .= '</select>';
@@ -320,7 +320,7 @@ function cycle() {
 					}
 
 					/* process the rfilter section */
-					$html .= "<td><input id='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='45' value='" . $rfilter . "'></td>";
+					$html .= "<td><input id='rfilter' type='textbox' title='" . __esc('Enter Regular Expression Match (only alpha, numeric, and special characters \"(^_|?)\" permitted)', 'cycle') . "' size='45' value='" . html_escape($rfilter) . "'></td>";
 
 					print $html;
 					?>
