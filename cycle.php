@@ -56,6 +56,15 @@ switch(get_request_var('action')) {
 		break;
 }
 
+function cycle_get_timespan() {
+	$timespan        = [];
+	$first_weekdayid = read_user_setting('first_weekdayid');
+
+	get_timespan($timespan, time(), get_request_var('timespan'), $first_weekdayid);
+
+	return $timespan;
+}
+
 function cycle_graphs() {
 	global $graphs_ppage, $graph_cols, $graphs;
 	global $page_refresh_interval, $graph_timespans;
@@ -82,9 +91,7 @@ function cycle_graphs() {
 	}
 
 	// get the start and end times for the graph
-	$timespan        = [];
-	$first_weekdayid = read_user_setting('first_weekdayid');
-	get_timespan($timespan, time(), get_request_var('timespan'), $first_weekdayid);
+	$timespan = cycle_get_timespan();
 
 	$graph_tree = $tree_id;
 	$html       = '';
@@ -182,9 +189,7 @@ function cycle() {
 	}
 
 	// get the start and end times for the graph
-	$timespan        = [];
-	$first_weekdayid = read_user_setting('first_weekdayid');
-	get_timespan($timespan, time(), get_request_var('timespan') , $first_weekdayid);
+	$timespan = cycle_get_timespan();
 
 	$graph_tree = $tree_id;
 	$html       = '';
