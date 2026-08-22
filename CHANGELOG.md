@@ -1,6 +1,7 @@
 # ChangeLog
 
 --- develop ---
+* issue: Prepared statements, PHP 7.4 idioms, and security fixes (PR #27)
 
 * issue: Save filter uses get method instead of post causing save failures
 * issue: The use of strlen() for null strings causes an error in PHP8+
