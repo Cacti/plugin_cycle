@@ -2,16 +2,15 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: 'bug'
+labels: 'type:bug,status:needs-verification'
 assignees: ''
 
 ---
 <!--
  #
- # Copyright (C) 2004-2025 The Cacti Group
+ # Copyright (C) 2004-2026 The Cacti Group
  #
 -->
-
 # Describe the bug
 
 A clear and concise description of what the bug is.

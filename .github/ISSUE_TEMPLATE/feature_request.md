@@ -2,13 +2,13 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: 'enhancement'
+labels: 'type:enhancement'
 assignees: ''
 
 ---
 <!--
  #
- # Copyright (C) 2004-2025 The Cacti Group
+ # Copyright (C) 2004-2026 The Cacti Group
  #
 -->
 
