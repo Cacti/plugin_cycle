@@ -22,6 +22,18 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Installs the Cycle plugin: registers its Cacti hooks (top_header_tabs,
+ * top_graph_header_tabs, config_arrays, draw_navigation_text,
+ * config_settings, api_graph_save, page_head), registers its realm
+ * covering cycle.php and cycle_ajax.php, and creates its database
+ * tables. Invoked by Cacti's plugin architecture when an administrator
+ * installs this plugin from Console > Plugin Management, and re-invoked
+ * from cycle_check_upgrade() to refresh hook registrations after an
+ * upgrade.
+ *
+ * @return void
+ */
 function plugin_cycle_install() {
 	api_plugin_register_hook('cycle', 'top_header_tabs',       'cycle_show_tab',             'setup.php');
 	api_plugin_register_hook('cycle', 'top_graph_header_tabs', 'cycle_show_tab',             'setup.php');
@@ -36,10 +48,25 @@ function plugin_cycle_install() {
 	cycle_setup_table_new();
 }
 
+/**
+ * Uninstalls the Cycle plugin; currently a no-op placeholder (this
+ * plugin does not create any tables or settings that require explicit
+ * cleanup beyond what Cacti's plugin architecture handles automatically).
+ * Invoked by Cacti's plugin architecture when an administrator
+ * uninstalls this plugin from Console > Plugin Management.
+ *
+ * @return void
+ */
 function plugin_cycle_uninstall() {
 	// Do any extra Uninstall stuff here
 }
 
+/**
+ * Verifies the plugin's configuration by triggering its upgrade check.
+ * Invoked by Cacti's plugin architecture on relevant page loads.
+ *
+ * @return bool Always returns true.
+ */
 function plugin_cycle_check_config() {
 	// Here we will check to ensure everything is configured
 	cycle_check_upgrade();
@@ -47,6 +74,14 @@ function plugin_cycle_check_config() {
 	return true;
 }
 
+/**
+ * Performs any schema/data migrations needed when upgrading to a newer
+ * version of this plugin, by delegating to cycle_check_upgrade(). Invoked
+ * by Cacti's plugin architecture when an installed plugin's version
+ * increases.
+ *
+ * @return bool Always returns false.
+ */
 function plugin_cycle_upgrade() {
 	// Here we will upgrade to the newest version
 	cycle_check_upgrade();
@@ -54,6 +89,20 @@ function plugin_cycle_upgrade() {
 	return false;
 }
 
+/**
+ * Detects whether the installed plugin_config version differs from this
+ * plugin's INFO file version and, if so, re-registers hooks/database
+ * schema (for enabled/active installs), migrates a legacy realm's user
+ * permissions to the new realm id (for upgrades from pre-1.0), removes a
+ * stale legacy 'config_form' hook, and updates the stored plugin_config
+ * record. Only runs on index.php/plugins.php/cycle.php. Called from
+ * cycle_config_settings() on every relevant page load.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to check
+ *                        the current script name.
+ */
 function cycle_check_upgrade() {
 	global $config;
 
@@ -109,18 +158,60 @@ function cycle_check_upgrade() {
 	}
 }
 
+/**
+ * Applies database schema migrations for this plugin; currently a no-op
+ * placeholder (this plugin's schema has not required migrations since
+ * its initial release). Called from cycle_check_upgrade() when an
+ * enabled/active install's version has changed.
+ *
+ * @return void
+ */
 function cycle_database_upgrade() {
 }
 
+/**
+ * Verifies that this plugin's PHP/Cacti dependencies are met; currently
+ * always reports success. Invoked by Cacti's plugin architecture before
+ * enabling the plugin.
+ *
+ * @return bool Always returns true.
+ *
+ * @global array $plugins Reserved/declared for parity with other
+ *                         dependency-check functions; not used directly
+ *                         here.
+ * @global array $config  Reserved/declared for parity with other
+ *                         dependency-check functions; not used directly
+ *                         here.
+ */
 function cycle_check_dependencies() {
 	global $plugins, $config;
 
 	return true;
 }
 
+/**
+ * Creates this plugin's database tables; currently a no-op placeholder
+ * (this plugin does not require any dedicated database tables, relying
+ * instead on Cacti core's settings tables for its configuration). Called
+ * from plugin_cycle_install() during plugin installation.
+ *
+ * @return void
+ */
 function cycle_setup_table_new() {
 }
 
+/**
+ * Reads this plugin's INFO file and returns its [info] section. Used by
+ * Cacti's plugin architecture via the api_plugin_version hook, and
+ * internally by cycle_check_upgrade() to detect/report the plugin's
+ * version.
+ *
+ * @return array The parsed [info] section of the plugin's INFO file (keys
+ *               such as name, version, author, homepage, longname).
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the plugin's base path.
+ */
 function plugin_cycle_version() {
 	global $config;
 	$info = parse_ini_file($config['base_path'] . '/plugins/cycle/INFO', true);
@@ -128,9 +219,63 @@ function plugin_cycle_version() {
 	return $info['info'];
 }
 
+/**
+ * Hook implementation for Cacti's 'page_head' filter. Intended to include
+ * this plugin's page-level assets; currently a no-op (the function body
+ * is empty). Called by Cacti core via api_plugin_hook('page_head', ...)
+ * while rendering the page <head> section.
+ *
+ * @return void
+ */
 function cycle_page_head() {
 }
 
+/**
+ * Hook implementation for Cacti's 'config_settings' filter. Registers the
+ * "Cycle" Settings/Graph-settings tab and its fields (delay interval,
+ * default timespan, columns, graphs-per-page, height, width, legend, and
+ * rotation type/list/tree options), for both the global Settings page
+ * and per-user preferences. Also triggers this plugin's own upgrade
+ * check. Called by Cacti core via api_plugin_hook('config_settings', ...)
+ * while building the Settings page, restricted to settings.php/
+ * auth_profile.php unless $force is set.
+ *
+ * @param bool $force Whether to register the settings regardless of the
+ *                     current page (used when called directly from
+ *                     validate_request_vars() rather than via the hook);
+ *                     defaults to false.
+ *
+ * @return void
+ *
+ * @global array $tabs                  Cacti's registered Settings page
+ *                                       tabs, extended here with the
+ *                                       'cycle' tab.
+ * @global array $settings              Cacti's registered Settings page
+ *                                       fields, extended here with this
+ *                                       plugin's global settings.
+ * @global array $tabs_graphs           Cacti's registered per-graph
+ *                                       settings tabs, extended here with
+ *                                       the 'cycle' tab.
+ * @global array $settings_user         Cacti's registered per-user
+ *                                       settings fields, extended here
+ *                                       with this plugin's user-level
+ *                                       settings.
+ * @global array $page_refresh_interval Options for the cycle rotation
+ *                                       refresh delay, used to populate
+ *                                       the Delay Interval field.
+ * @global array $graph_timespans       Cacti's predefined graph timespan
+ *                                       options, used to populate the
+ *                                       Graph Timespan field.
+ * @global array $cycle_width           Options for graph width, used to
+ *                                       populate the Graph Width field.
+ * @global array $cycle_height          Options for graph height, used to
+ *                                       populate the Graph Height field.
+ * @global array $cycle_cols            Options for graph columns, used to
+ *                                       populate the Column Count field.
+ * @global array $cycle_graphs          Options for graphs-per-page, used
+ *                                       to populate the Number of Graphs
+ *                                       per Page field.
+ */
 function cycle_config_settings($force = false) {
 	global $tabs, $settings, $tabs_graphs, $settings_user, $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height, $cycle_cols, $cycle_graphs;
@@ -240,6 +385,19 @@ function cycle_config_settings($force = false) {
 	}
 }
 
+/**
+ * Hook implementation for Cacti's 'top_header_tabs'/'top_graph_header_tabs'
+ * filters. Prints a clickable tab icon linking to cycle.php, using a
+ * different icon when cycle.php is the currently displayed page. Called
+ * by Cacti core via api_plugin_hook('top_header_tabs'/
+ * 'top_graph_header_tabs', ...) while rendering the page header tabs, for
+ * users with access to cycle.php.
+ *
+ * @return void Outputs HTML directly.
+ *
+ * @global array $config Cacti global configuration array; used to build
+ *                        the tab's image/link URLs.
+ */
 function cycle_show_tab() {
 	global $config;
 
@@ -252,6 +410,25 @@ function cycle_show_tab() {
 	}
 }
 
+/**
+ * Hook implementation for Cacti's 'config_arrays' filter. Populates the
+ * shared $cycle_graphs, $cycle_cols, $cycle_height, and $cycle_width
+ * lookup arrays used throughout this plugin's filter/settings UI (as
+ * graphs-per-page, column-count, and pixel-size options). Called by
+ * Cacti core via api_plugin_hook('config_arrays', ...) while building the
+ * navigation menu.
+ *
+ * @return bool Always returns true.
+ *
+ * @global array $cycle_graphs Populated here with the graphs-per-page
+ *                              options.
+ * @global array $cycle_cols   Populated here with the column-count
+ *                              options.
+ * @global array $cycle_width  Populated here with the graph-width pixel
+ *                              options.
+ * @global array $cycle_height Populated here with the graph-height pixel
+ *                              options.
+ */
 function cycle_config_arrays() {
 	global $cycle_graphs, $cycle_cols, $cycle_width, $cycle_height;
 
@@ -306,6 +483,19 @@ function cycle_config_arrays() {
 	return true;
 }
 
+/**
+ * Hook implementation for Cacti's 'draw_navigation_text' filter. Adds
+ * breadcrumb entries for cycle.php's default, view, graphs, and save
+ * actions. Called by Cacti core via
+ * api_plugin_hook('draw_navigation_text', ...) while rendering the page
+ * breadcrumb trail.
+ *
+ * @param array $nav The existing breadcrumb map contributed by Cacti
+ *                    core and other plugins.
+ *
+ * @return array The $nav array with this plugin's breadcrumb entries
+ *               added.
+ */
 function cycle_draw_navigation_text($nav) {
 	$nav['cycle.php:']       = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
 	$nav['cycle.php:view']   = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
@@ -315,6 +505,16 @@ function cycle_draw_navigation_text($nav) {
 	return $nav;
 }
 
+/**
+ * Hook implementation for Cacti's 'api_graph_save' filter. Intended to
+ * react to graphs being created/updated; currently a no-op (the function
+ * body is empty). Called by Cacti core via
+ * api_plugin_hook('api_graph_save', ...) after a graph is saved.
+ *
+ * @param array $save The graph values that were saved.
+ *
+ * @return void
+ */
 function cycle_api_graph_save($save) {
 }
 ?>

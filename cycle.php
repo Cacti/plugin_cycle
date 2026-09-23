@@ -56,6 +56,15 @@ switch(get_request_var('action')) {
 		break;
 }
 
+/**
+ * Computes the current graph timespan (start/end times) for the selected
+ * 'timespan' filter value, honoring the user's configured first day of
+ * the week. Called from cycle()/cycle_graphs() before building each
+ * cycled graph's image URL.
+ *
+ * @return array The computed timespan details, including 'begin_now'
+ *               (the timespan's start time).
+ */
 function cycle_get_timespan() {
 	$timespan        = [];
 	$first_weekdayid = read_user_setting('first_weekdayid');
@@ -65,6 +74,42 @@ function cycle_get_timespan() {
 	return $timespan;
 }
 
+/**
+ * Builds the HTML grid of graph images for the current page of cycled
+ * graphs (filtered by tree/leaf/regex, sized and paged per the current
+ * filter settings) and returns it, along with the current/next/previous
+ * graph ids, as a base64-encoded JSON payload. Invoked from this file's
+ * dispatcher when the request's 'action' is 'graphs', called via AJAX by
+ * the client-side cycle.js to refresh the displayed graphs.
+ *
+ * @return void Outputs a JSON-encoded response directly.
+ *
+ * @global array $graphs_ppage          Options for graphs-per-page
+ *                                       (unused directly here; declared
+ *                                       for parity with cycle()).
+ * @global array $graph_cols            Options for graph columns per row
+ *                                       (unused directly here; declared
+ *                                       for parity with cycle()).
+ * @global int   $page_refresh_interval Reserved/declared for parity with
+ *                                       cycle(); not used directly here.
+ * @global array $graph_timespans       Reserved/declared for parity with
+ *                                       cycle(); not used directly here.
+ * @global array $cycle_width           Reserved/declared for parity with
+ *                                       cycle(); not used directly here.
+ * @global array $cycle_height          Reserved/declared for parity with
+ *                                       cycle(); not used directly here.
+ * @global int   $id                    Set from the request's 'id',
+ *                                       identifying the currently
+ *                                       displayed graph for next/prev
+ *                                       navigation.
+ * @global int   $graph_id              Set by get_next_graphid();
+ *                                       included in the JSON response as
+ *                                       the current graph id.
+ * @global int   $next_graph_id         Set by get_next_graphid();
+ *                                       included in the JSON response.
+ * @global int   $prev_graph_id         Set by get_next_graphid();
+ *                                       included in the JSON response.
+ */
 function cycle_graphs() {
 	global $graphs_ppage, $graph_cols, $graphs;
 	global $page_refresh_interval, $graph_timespans;
@@ -151,6 +196,32 @@ function cycle_graphs() {
 	print json_encode($output);
 }
 
+/**
+ * Renders the main Cycle page: the filter toolbar (timespan, refresh
+ * delay, graphs-per-page, columns, size, legend, tree/leaf or regex
+ * filter) and an empty image container that the client-side cycle.js
+ * fills in and periodically refreshes via the 'graphs' AJAX action.
+ * Invoked from this file's dispatcher for the default (no 'action')
+ * request.
+ *
+ * @return void Outputs the page HTML and JavaScript directly.
+ *
+ * @global array $graphs_ppage          Options for graphs-per-page, used
+ *                                       to populate that filter selector.
+ * @global array $graph_cols            Options for graph columns per row,
+ *                                       used to populate that filter
+ *                                       selector.
+ * @global int   $page_refresh_interval Options for the cycle rotation
+ *                                       refresh delay, used to populate
+ *                                       that filter selector.
+ * @global array $graph_timespans       Cacti's predefined graph timespan
+ *                                       options, used to populate the
+ *                                       timespan selector.
+ * @global array $cycle_width           Options for graph width, used to
+ *                                       populate that filter selector.
+ * @global array $cycle_height          Options for graph height, used to
+ *                                       populate that filter selector.
+ */
 function cycle() {
 	global $graphs_ppage, $graph_cols;
 	global $page_refresh_interval, $graph_timespans;
