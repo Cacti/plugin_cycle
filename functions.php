@@ -66,6 +66,15 @@ $graph_cols = [
 	8  => __('%d Columns', 8, 'cycle')
 ];
 
+/**
+ * Persists the submitted Cycle filter form values (timespan, refresh
+ * delay, graphs-per-page, columns, height, width, legend, regex filter)
+ * as per-user settings. Invoked from cycle.php's dispatcher when the
+ * request's 'action' is 'save', called via the filter toolbar's Save
+ * button.
+ *
+ * @return void
+ */
 function save_settings() {
 	validate_request_vars();
 
@@ -117,6 +126,20 @@ function save_settings() {
 	validate_request_vars(true);
 }
 
+/**
+ * Validates and persists (in session) the Cycle page's filter request
+ * variables (id, tree/leaf, graphs-per-page, columns, width, height,
+ * timespan, delay, legend, regex filter), defaulting each to the user's
+ * saved setting or the plugin's global configuration. Called from
+ * cycle.php's main flow and from save_settings() before/after applying
+ * changes.
+ *
+ * @param bool $force Whether to force re-reading the underlying user/
+ *                     config settings rather than using cached values;
+ *                     defaults to false.
+ *
+ * @return void
+ */
 function validate_request_vars($force = false) {
 	cycle_config_settings(true);
 
@@ -175,6 +198,15 @@ function validate_request_vars($force = false) {
 	// ================= input validation =================
 }
 
+/**
+ * Seeds this plugin's default per-user settings (delay, timespan,
+ * columns, graphs, height, width, font, filter, legend, etc.) for the
+ * current session user the first time they visit the Cycle page in a
+ * session, without overwriting any values the user has already saved.
+ * Called from cycle.php's main flow before validating request variables.
+ *
+ * @return void
+ */
 function cycle_set_defaults() {
 	$user = $_SESSION['sess_user_id'];
 
@@ -214,6 +246,49 @@ function cycle_set_defaults() {
 	}
 }
 
+/**
+ * Builds the list of graphs to display on the current page of the Cycle
+ * rotation (honoring the configured graph source - all graphs, a custom
+ * list, or a tree/leaf selection - plus any regex title filter), and
+ * determines the next/previous graph id to use when the rotation
+ * advances or the user clicks Prev/Next. Called from cycle_graphs() for
+ * every AJAX refresh of the cycled graphs.
+ *
+ * This function builds a graphs array of the number of graphs requested;
+ * this graph array is used for rendering. In addition, when the user
+ * hits next, or the graphs cycle, we need to know the next graph id to
+ * display, calculated based upon the offset $graphpp. If we overflow, we
+ * start from the beginning (the second section) until we either run out
+ * of rows or reach the $graphpp limit. Finally, we don't grab all graphs
+ * at once, since that takes too much memory on big systems.
+ *
+ * @param int    $graphpp    The number of graphs to display per page.
+ * @param string $filter     A regular expression to filter graph titles
+ *                            by (matched against title_cache via SQL
+ *                            RLIKE); '' for no filter.
+ * @param int    $graph_tree The graph tree id to scope graphs to, when
+ *                            the plugin is configured for tree-based
+ *                            selection.
+ * @param int    $leaf_id    The tree leaf id to scope graphs to, when the
+ *                            plugin is configured for tree-based
+ *                            selection.
+ *
+ * @return void
+ *
+ * @global int   $id             Set from the request's 'id'; used as the
+ *                                starting point for locating the current
+ *                                graph.
+ * @global int   $graph_id       Set to the current page's first graph id
+ *                                for the caller to use.
+ * @global array $graphs         Set to the map of local_graph_id => graph
+ *                                detail for the current page, for the
+ *                                caller to render.
+ * @global int   $next_graph_id  Set to the graph id that should start the
+ *                                next page/rotation, or 0 when none was
+ *                                found.
+ * @global int   $prev_graph_id  Set to the graph id that should start the
+ *                                previous page when the user clicks Prev.
+ */
 function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id;
 
@@ -524,6 +599,26 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
 	}
 }
 
+/**
+ * Recursively collects the local_graph_id => title_cache map of every
+ * graph reachable from a Cacti graph tree branch (a specific leaf, or
+ * every leaf under the tree root), resolving both directly-attached
+ * graphs and graphs belonging to attached hosts, and honoring the
+ * current user's tree/device visibility permissions. Called from
+ * get_next_graphid() when the plugin is configured for tree-based graph
+ * selection.
+ *
+ * @param int $tree_id The graph_tree.id to collect graphs from.
+ * @param int $leaf_id The graph_tree_items.id to start from: -2 selects
+ *                      the tree's top-level items only; a positive id
+ *                      selects that leaf's children; -1 (or any other
+ *                      non-positive value) applies no parent filter,
+ *                      selecting every item under the tree at all
+ *                      levels.
+ *
+ * @return array Map of local_graph_id to its title_cache, for every
+ *               allowed graph found under the given tree/leaf.
+ */
 function get_tree_graphs($tree_id, $leaf_id) {
 	$graphs   = [];
 	$hosts    = [];

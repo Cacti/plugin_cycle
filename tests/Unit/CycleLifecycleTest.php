@@ -59,11 +59,13 @@ it('re-registers hooks and updates plugin_config when an installed plugin versio
 	$info = plugin_cycle_version();
 
 	cycle_test_mock_db('db_fetch_row', 'plugin_config', array('version' => '0.0.0', 'status' => '1'));
+	cycle_test_mock_db('db_fetch_cell', 'plugin_realms', '5');
 	cycle_test_mock_db('db_fetch_cell', 'plugin_config', '42');
 
 	cycle_check_upgrade();
 
 	expect($GLOBALS['__test_registered_hooks'])->not->toBeEmpty();
+	expect($GLOBALS['__test_registered_realms'])->not->toBeEmpty();
 
 	$updates = array_values(array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'UPDATE plugin_config') !== false;
