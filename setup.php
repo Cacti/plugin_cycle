@@ -25,12 +25,12 @@
 /**
  * Installs the Cycle plugin: registers its Cacti hooks (top_header_tabs,
  * top_graph_header_tabs, config_arrays, draw_navigation_text,
- * config_settings, api_graph_save, page_head), registers its realm
- * covering cycle.php and cycle_ajax.php, and creates its database
- * tables. Invoked by Cacti's plugin architecture when an administrator
- * installs this plugin from Console > Plugin Management, and re-invoked
- * from cycle_check_upgrade() to refresh hook registrations after an
- * upgrade.
+ * config_settings, api_graph_save, page_head), and registers its realm
+ * covering cycle.php and cycle_ajax.php (this plugin does not require
+ * any dedicated database tables). Invoked by Cacti's plugin architecture
+ * when an administrator installs this plugin from Console > Plugin
+ * Management, and re-invoked from cycle_check_upgrade() to refresh hook
+ * registrations after an upgrade.
  *
  * @return void
  */
@@ -100,8 +100,10 @@ function plugin_cycle_upgrade() {
  *
  * @return void
  *
- * @global array $config Cacti global configuration array; used to check
- *                        the current script name.
+ * @global array $config Reserved/declared for parity with other
+ *                       functions in this file; not used directly here
+ *                       (the page guard uses $_SERVER['PHP_SELF']
+ *                       instead).
  */
 function cycle_check_upgrade() {
 	global $config;
@@ -126,7 +128,7 @@ function cycle_check_upgrade() {
 			cycle_database_upgrade();
 		}
 
-		if ($old < '1.0') {
+		if ($old['version'] < '1.0') {
 			api_plugin_register_realm('cycle', 'cycle.php,cycle_ajax.php', 'Plugin -> Cycle Graphs', 1);
 
 			// get the realm id's and change from old to new

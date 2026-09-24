@@ -609,9 +609,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
  * selection.
  *
  * @param int $tree_id The graph_tree.id to collect graphs from.
- * @param int $leaf_id The graph_tree_items.id to start from; -2 selects
- *                      the tree's top-level items, any other positive id
- *                      selects that leaf's children.
+ * @param int $leaf_id The graph_tree_items.id to start from: -2 selects
+ *                      the tree's top-level items only; a positive id
+ *                      selects that leaf's children; -1 (or any other
+ *                      non-positive value) applies no parent filter,
+ *                      selecting every item under the tree at all
+ *                      levels.
  *
  * @return array Map of local_graph_id to its title_cache, for every
  *               allowed graph found under the given tree/leaf.
