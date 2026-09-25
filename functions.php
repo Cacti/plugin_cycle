@@ -75,7 +75,7 @@ $graph_cols = [
  *
  * @return void
  */
-function save_settings() {
+function save_settings(): void {
 	validate_request_vars();
 
 	if (sizeof($_REQUEST)) {
@@ -135,12 +135,12 @@ function save_settings() {
  * changes.
  *
  * @param bool $force Whether to force re-reading the underlying user/
- *                     config settings rather than using cached values;
- *                     defaults to false.
+ *                    config settings rather than using cached values;
+ *                    defaults to false.
  *
  * @return void
  */
-function validate_request_vars($force = false) {
+function validate_request_vars($force = false): void {
 	cycle_config_settings(true);
 
 	// ================= input validation and session storage =================
@@ -207,7 +207,7 @@ function validate_request_vars($force = false) {
  *
  * @return void
  */
-function cycle_set_defaults() {
+function cycle_set_defaults(): void {
 	$user = $_SESSION['sess_user_id'];
 
 	if (!isset($_SESSION['sess_cycle_defaults'])) {
@@ -264,14 +264,14 @@ function cycle_set_defaults() {
  *
  * @param int    $graphpp    The number of graphs to display per page.
  * @param string $filter     A regular expression to filter graph titles
- *                            by (matched against title_cache via SQL
- *                            RLIKE); '' for no filter.
+ *                           by (matched against title_cache via SQL
+ *                           RLIKE); '' for no filter.
  * @param int    $graph_tree The graph tree id to scope graphs to, when
- *                            the plugin is configured for tree-based
- *                            selection.
+ *                           the plugin is configured for tree-based
+ *                           selection.
  * @param int    $leaf_id    The tree leaf id to scope graphs to, when the
- *                            plugin is configured for tree-based
- *                            selection.
+ *                           plugin is configured for tree-based
+ *                           selection.
  *
  * @return void
  *
@@ -289,7 +289,7 @@ function cycle_set_defaults() {
  * @global int   $prev_graph_id  Set to the graph id that should start the
  *                                previous page when the user clicks Prev.
  */
-function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
+function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id;
 
 	// if no default graph list has been specified, default to 0
@@ -610,16 +610,16 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id) {
  *
  * @param int $tree_id The graph_tree.id to collect graphs from.
  * @param int $leaf_id The graph_tree_items.id to start from: -2 selects
- *                      the tree's top-level items only; a positive id
- *                      selects that leaf's children; -1 (or any other
- *                      non-positive value) applies no parent filter,
- *                      selecting every item under the tree at all
- *                      levels.
+ *                     the tree's top-level items only; a positive id
+ *                     selects that leaf's children; -1 (or any other
+ *                     non-positive value) applies no parent filter,
+ *                     selecting every item under the tree at all
+ *                     levels.
  *
  * @return array Map of local_graph_id to its title_cache, for every
  *               allowed graph found under the given tree/leaf.
  */
-function get_tree_graphs($tree_id, $leaf_id) {
+function get_tree_graphs($tree_id, $leaf_id): array {
 	$graphs   = [];
 	$hosts    = [];
 	$outArray = [];
@@ -659,7 +659,7 @@ function get_tree_graphs($tree_id, $leaf_id) {
 		}
 	}
 
-	if (isset($graphs) && sizeof($graphs)) {
+	if (sizeof($graphs)) {
 		foreach ($graphs as $i) {
 			$outArray[$i['local_graph_id']] = $i['title_cache'];
 		}

@@ -34,7 +34,7 @@
  *
  * @return void
  */
-function plugin_cycle_install() {
+function plugin_cycle_install(): void {
 	api_plugin_register_hook('cycle', 'top_header_tabs',       'cycle_show_tab',             'setup.php');
 	api_plugin_register_hook('cycle', 'top_graph_header_tabs', 'cycle_show_tab',             'setup.php');
 	api_plugin_register_hook('cycle', 'config_arrays',         'cycle_config_arrays',        'setup.php');
@@ -57,7 +57,7 @@ function plugin_cycle_install() {
  *
  * @return void
  */
-function plugin_cycle_uninstall() {
+function plugin_cycle_uninstall(): void {
 	// Do any extra Uninstall stuff here
 }
 
@@ -67,7 +67,7 @@ function plugin_cycle_uninstall() {
  *
  * @return bool Always returns true.
  */
-function plugin_cycle_check_config() {
+function plugin_cycle_check_config(): bool {
 	// Here we will check to ensure everything is configured
 	cycle_check_upgrade();
 
@@ -82,7 +82,7 @@ function plugin_cycle_check_config() {
  *
  * @return bool Always returns false.
  */
-function plugin_cycle_upgrade() {
+function plugin_cycle_upgrade(): bool {
 	// Here we will upgrade to the newest version
 	cycle_check_upgrade();
 
@@ -105,7 +105,7 @@ function plugin_cycle_upgrade() {
  *                       (the page guard uses $_SERVER['PHP_SELF']
  *                       instead).
  */
-function cycle_check_upgrade() {
+function cycle_check_upgrade(): void {
 	global $config;
 
 	$files = ['index.php', 'plugins.php', 'cycle.php'];
@@ -168,7 +168,7 @@ function cycle_check_upgrade() {
  *
  * @return void
  */
-function cycle_database_upgrade() {
+function cycle_database_upgrade(): void {
 }
 
 /**
@@ -185,7 +185,7 @@ function cycle_database_upgrade() {
  *                         dependency-check functions; not used directly
  *                         here.
  */
-function cycle_check_dependencies() {
+function cycle_check_dependencies(): bool {
 	global $plugins, $config;
 
 	return true;
@@ -199,7 +199,7 @@ function cycle_check_dependencies() {
  *
  * @return void
  */
-function cycle_setup_table_new() {
+function cycle_setup_table_new(): void {
 }
 
 /**
@@ -214,11 +214,12 @@ function cycle_setup_table_new() {
  * @global array $config Cacti global configuration array; used to locate
  *                        the plugin's base path.
  */
-function plugin_cycle_version() {
+function plugin_cycle_version(): array {
 	global $config;
 	$info = parse_ini_file($config['base_path'] . '/plugins/cycle/INFO', true);
+	$info = is_array($info) ? $info : [];
 
-	return $info['info'];
+	return isset($info['info']) && is_array($info['info']) ? $info['info'] : [];
 }
 
 /**
@@ -229,7 +230,7 @@ function plugin_cycle_version() {
  *
  * @return void
  */
-function cycle_page_head() {
+function cycle_page_head(): void {
 }
 
 /**
@@ -243,9 +244,9 @@ function cycle_page_head() {
  * auth_profile.php unless $force is set.
  *
  * @param bool $force Whether to register the settings regardless of the
- *                     current page (used when called directly from
- *                     validate_request_vars() rather than via the hook);
- *                     defaults to false.
+ *                    current page (used when called directly from
+ *                    validate_request_vars() rather than via the hook);
+ *                    defaults to false.
  *
  * @return void
  *
@@ -278,7 +279,7 @@ function cycle_page_head() {
  *                                       to populate the Number of Graphs
  *                                       per Page field.
  */
-function cycle_config_settings($force = false) {
+function cycle_config_settings($force = false): void {
 	global $tabs, $settings, $tabs_graphs, $settings_user, $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height, $cycle_cols, $cycle_graphs;
 
@@ -400,7 +401,7 @@ function cycle_config_settings($force = false) {
  * @global array $config Cacti global configuration array; used to build
  *                        the tab's image/link URLs.
  */
-function cycle_show_tab() {
+function cycle_show_tab(): void {
 	global $config;
 
 	if (api_user_realm_auth('cycle.php')) {
@@ -431,7 +432,7 @@ function cycle_show_tab() {
  * @global array $cycle_height Populated here with the graph-height pixel
  *                              options.
  */
-function cycle_config_arrays() {
+function cycle_config_arrays(): bool {
 	global $cycle_graphs, $cycle_cols, $cycle_width, $cycle_height;
 
 	$cycle_graphs = [
@@ -493,12 +494,12 @@ function cycle_config_arrays() {
  * breadcrumb trail.
  *
  * @param array $nav The existing breadcrumb map contributed by Cacti
- *                    core and other plugins.
+ *                   core and other plugins.
  *
  * @return array The $nav array with this plugin's breadcrumb entries
  *               added.
  */
-function cycle_draw_navigation_text($nav) {
+function cycle_draw_navigation_text($nav): array {
 	$nav['cycle.php:']       = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
 	$nav['cycle.php:view']   = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
 	$nav['cycle.php:graphs'] = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
@@ -517,6 +518,6 @@ function cycle_draw_navigation_text($nav) {
  *
  * @return void
  */
-function cycle_api_graph_save($save) {
+function cycle_api_graph_save($save): void {
 }
 ?>
