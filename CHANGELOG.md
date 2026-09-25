@@ -1,6 +1,7 @@
 # ChangeLog
 
 --- develop ---
+* issue: PHPStan level 8 typing pass and null-safety hardening for a malformed/missing plugin INFO file
 * issue: Prepared statements, PHP 7.4 idioms, and security fixes (PR #27)
 
 * issue: Save filter uses get method instead of post causing save failures

@@ -65,7 +65,7 @@ switch(get_request_var('action')) {
  * @return array The computed timespan details, including 'begin_now'
  *               (the timespan's start time).
  */
-function cycle_get_timespan() {
+function cycle_get_timespan(): array {
 	$timespan        = [];
 	$first_weekdayid = read_user_setting('first_weekdayid');
 
@@ -115,13 +115,14 @@ function cycle_get_timespan() {
  *                                       current page, iterated to build
  *                                       the HTML grid.
  */
-function cycle_graphs() {
+function cycle_graphs(): void {
 	global $graphs_ppage, $graph_cols, $graphs;
 	global $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height;
 	global $id, $graph_id, $next_graph_id, $prev_graph_id;
 
 	$tree_list = get_allowed_trees();
+	$tree_list = is_array($tree_list) ? $tree_list : [];
 	$legend    = get_request_var('legend');
 	$tree_id   = get_request_var('tree_id');
 	$leaf_id   = get_request_var('leaf_id');
@@ -232,7 +233,7 @@ function cycle_graphs() {
  *                                       get_md5_include_js() isn't
  *                                       available.
  */
-function cycle() {
+function cycle(): void {
 	global $graphs_ppage, $graph_cols;
 	global $page_refresh_interval, $graph_timespans;
 	global $cycle_width, $cycle_height;
@@ -248,6 +249,7 @@ function cycle() {
 	}
 
 	$tree_list = get_allowed_trees();
+	$tree_list = is_array($tree_list) ? $tree_list : [];
 	$legend    = get_request_var('legend');
 	$tree_id   = get_request_var('tree_id');
 	$leaf_id   = get_request_var('leaf_id');
@@ -276,7 +278,7 @@ function cycle() {
 	$html       = '';
 	$out        = '';
 
-	html_start_box(__('Cycle Graph Filter', 'cycle') . ' [ ' . __('Next Update In', 'cycle') . " <i id='countdown'></i> ]", '100%', '', 3, 'center', '');
+	html_start_box(__('Cycle Graph Filter', 'cycle') . ' [ ' . __('Next Update In', 'cycle') . " <i id='countdown'></i> ]", '100%', false, 3, 'center', '');
 	?>
 	<tr class='odd'><td>
 		<form id='form_cycle'>
@@ -451,7 +453,7 @@ function cycle() {
 		</form>
 	</td></tr>
 	<?php html_end_box(); ?>
-	<?php html_start_box(__('Cycle Graphs', 'cycle'), '100%', '', '3', 'center', ''); ?>
+	<?php html_start_box(__('Cycle Graphs', 'cycle'), '100%', false, 3, 'center', ''); ?>
 	<tr>
 		<td>
 			<span style='text-align:center;' id='image'></span>
