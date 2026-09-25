@@ -659,7 +659,7 @@ function get_tree_graphs($tree_id, $leaf_id): array {
 		}
 	}
 
-	if (sizeof($graphs)) {
+	if (cacti_sizeof($graphs)) {
 		foreach ($graphs as $i) {
 			$outArray[$i['local_graph_id']] = $i['title_cache'];
 		}

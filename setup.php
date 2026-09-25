@@ -115,6 +115,13 @@ function cycle_check_upgrade(): void {
 	}
 
 	$info    = plugin_cycle_version();
+
+	if (!isset($info['version'], $info['longname'], $info['author'], $info['homepage'])) {
+		cacti_log('ERROR: Cycle plugin INFO file is missing required fields, skipping upgrade check', false, 'CYCLE');
+
+		return;
+	}
+
 	$current = $info['version'];
 	$old     = db_fetch_row("SELECT * FROM plugin_config WHERE directory='cycle'");
 
@@ -135,7 +142,7 @@ function cycle_check_upgrade(): void {
 			$user  = db_fetch_cell("SELECT id FROM plugin_realms WHERE file='cycle.php'") + 100;
 			$users = db_fetch_assoc('SELECT user_id FROM user_auth_realm WHERE realm_id=42');
 
-			if (sizeof($users)) {
+			if (cacti_sizeof($users)) {
 				foreach ($users as $u) {
 					db_execute('INSERT INTO user_auth_realm
 						(realm_id, user_id) VALUES (' . $user . ', ' . $u['user_id'] . ')
@@ -499,7 +506,7 @@ function cycle_config_arrays(): bool {
  * @return array The $nav array with this plugin's breadcrumb entries
  *               added.
  */
-function cycle_draw_navigation_text($nav): array {
+function cycle_draw_navigation_text($nav) {
 	$nav['cycle.php:']       = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
 	$nav['cycle.php:view']   = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];
 	$nav['cycle.php:graphs'] = ['title' => __('Cycling', 'cycle'), 'mapping' => '', 'url' => 'cycle.php', 'level' => '1'];

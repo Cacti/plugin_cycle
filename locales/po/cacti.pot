@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 08:38-0400\n"
+"POT-Creation-Date: 2026-09-25 08:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Cycle Rotation Refresh Frequency"
 msgstr ""
 
-#: cycle.php:321 setup.php:326
+#: cycle.php:321 setup.php:333
 msgid "Number of Graphs per Page"
 msgstr ""
 
@@ -101,11 +101,11 @@ msgstr ""
 msgid "Number of Graph Columns"
 msgstr ""
 
-#: cycle.php:361 setup.php:333
+#: cycle.php:361 setup.php:340
 msgid "Graph Height"
 msgstr ""
 
-#: cycle.php:377 setup.php:340
+#: cycle.php:377 setup.php:347
 msgid "Graph Width"
 msgstr ""
 
@@ -137,11 +137,11 @@ msgstr ""
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr ""
 
-#: cycle.php:456 setup.php:300
+#: cycle.php:456 setup.php:307
 msgid "Cycle Graphs"
 msgstr ""
 
-#: functions.php:28 setup.php:439
+#: functions.php:28 setup.php:446
 #, php-format
 msgid "%d Graph"
 msgstr ""
@@ -152,20 +152,20 @@ msgstr ""
 #: functions.php:41 functions.php:42 functions.php:43 functions.php:44
 #: functions.php:45 functions.php:46 functions.php:47 functions.php:48
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:440
-#: setup.php:441 setup.php:442 setup.php:443 setup.php:444
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:447
+#: setup.php:448 setup.php:449 setup.php:450 setup.php:451
 #, php-format
 msgid "%d Graphs"
 msgstr ""
 
-#: functions.php:59 setup.php:448
+#: functions.php:59 setup.php:455
 #, php-format
 msgid "%d Column"
 msgstr ""
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:449
-#: setup.php:450 setup.php:451 setup.php:452
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:456
+#: setup.php:457 setup.php:458 setup.php:459
 #, php-format
 msgid "%d Columns"
 msgstr ""
@@ -174,103 +174,103 @@ msgstr ""
 msgid "Plugin -> Cycle Graphs"
 msgstr ""
 
-#: setup.php:295 setup.php:296 setup.php:409 setup.php:411
+#: setup.php:302 setup.php:303 setup.php:416 setup.php:418
 msgid "Cycle"
 msgstr ""
 
-#: setup.php:305
+#: setup.php:312
 msgid "Delay Interval"
 msgstr ""
 
-#: setup.php:306
+#: setup.php:313
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr ""
 
-#: setup.php:312
+#: setup.php:319
 msgid "Graph Timespan"
 msgstr ""
 
-#: setup.php:313
+#: setup.php:320
 msgid "This is the default timespan that will be displayed on the page."
 msgstr ""
 
-#: setup.php:319
+#: setup.php:326
 msgid "Column Count"
 msgstr ""
 
-#: setup.php:320
+#: setup.php:327
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr ""
 
-#: setup.php:327
+#: setup.php:334
 msgid "Select the number of graphs to display per page"
 msgstr ""
 
-#: setup.php:334
+#: setup.php:341
 msgid "This sets the graph height for the displayed graphs."
 msgstr ""
 
-#: setup.php:341
+#: setup.php:348
 msgid "This sets the graph width for the displayed graphs."
 msgstr ""
 
-#: setup.php:347
+#: setup.php:354
 msgid "Display Legend"
 msgstr ""
 
-#: setup.php:348
+#: setup.php:355
 msgid "Check this to display legend."
 msgstr ""
 
-#: setup.php:353
+#: setup.php:360
 msgid "Predefined Rotations"
 msgstr ""
 
-#: setup.php:357
+#: setup.php:364
 msgid "Rotation Type"
 msgstr ""
 
-#: setup.php:358
+#: setup.php:365
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr ""
 
-#: setup.php:361
+#: setup.php:368
 msgid "Legacy (All)"
 msgstr ""
 
-#: setup.php:361
+#: setup.php:368
 msgid "Specific List"
 msgstr ""
 
-#: setup.php:361
+#: setup.php:368
 msgid "Tree Mode"
 msgstr ""
 
-#: setup.php:364
+#: setup.php:371
 msgid "Custom Graph List"
 msgstr ""
 
-#: setup.php:365
+#: setup.php:372
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr ""
 
-#: setup.php:370
+#: setup.php:377
 msgid "Default Tree"
 msgstr ""
 
-#: setup.php:371
+#: setup.php:378
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr ""
 
-#: setup.php:456 setup.php:457 setup.php:458 setup.php:459 setup.php:460
-#: setup.php:461 setup.php:462 setup.php:463 setup.php:464 setup.php:465
-#: setup.php:466 setup.php:470 setup.php:471 setup.php:472 setup.php:473
-#: setup.php:474 setup.php:475 setup.php:476 setup.php:477 setup.php:478
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
+#: setup.php:463 setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: setup.php:468 setup.php:469 setup.php:470 setup.php:471 setup.php:472
+#: setup.php:473 setup.php:477 setup.php:478 setup.php:479 setup.php:480
+#: setup.php:481 setup.php:482 setup.php:483 setup.php:484 setup.php:485
+#: setup.php:486 setup.php:487 setup.php:488 setup.php:489 setup.php:490
 #, php-format
 msgid "%d Pixels"
 msgstr ""
 
-#: setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php:510 setup.php:511 setup.php:512 setup.php:513
 msgid "Cycling"
 msgstr ""

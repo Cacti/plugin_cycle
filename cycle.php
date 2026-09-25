@@ -453,7 +453,7 @@ function cycle(): void {
 		</form>
 	</td></tr>
 	<?php html_end_box(); ?>
-    <?php html_start_box(__('Cycle Graphs', 'cycle'), '100%', false, 3, 'center', ''); ?>
+	<?php html_start_box(__('Cycle Graphs', 'cycle'), '100%', false, 3, 'center', ''); ?>
 	<tr>
 		<td>
 			<span style='text-align:center;' id='image'></span>
