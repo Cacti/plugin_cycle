@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cycle on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-24 12:35-0400\n"
+"POT-Creation-Date: 2026-09-25 08:56-0400\n"
 "PO-Revision-Date: 2024-03-03 08:53+0000\n"
 "Last-Translator: Junhua Huang <junhuahuang1218@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/cycle/zh_Hans/>\n"
@@ -18,131 +18,131 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8.1\n"
 
-#: cycle.php:183
+#: cycle.php:184
 msgid "No Graphs Found Matching Criteria"
 msgstr "找不到匹配标准的图"
 
-#: cycle.php:279
+#: cycle.php:281
 msgid "Cycle Graph Filter"
 msgstr "循环图过滤器"
 
-#: cycle.php:279
+#: cycle.php:281
 msgid "Next Update In"
 msgstr "下一次更新中"
 
-#: cycle.php:289
+#: cycle.php:291
 msgid "Graph Display Timespan"
 msgstr "图表显示时间跨度"
 
-#: cycle.php:304
+#: cycle.php:306
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "周期轮流刷新频率"
 
-#: cycle.php:319 setup.php:325
+#: cycle.php:321 setup.php:333
 msgid "Number of Graphs per Page"
 msgstr "每页图形数"
 
-#: cycle.php:333
+#: cycle.php:335
 msgid "Cycle to Previous Graphs"
 msgstr "循环到以前的图"
 
-#: cycle.php:333
+#: cycle.php:335
 msgid "Prev"
 msgstr "上一页"
 
-#: cycle.php:334
+#: cycle.php:336
 msgid "Stop"
 msgstr "停止"
 
-#: cycle.php:334
+#: cycle.php:336
 msgid "Stop Cycling"
 msgstr "停止循环"
 
-#: cycle.php:335
+#: cycle.php:337
 msgid "Resume Cycling"
 msgstr "恢复循环"
 
-#: cycle.php:335
+#: cycle.php:337
 msgid "Start"
 msgstr "开始"
 
-#: cycle.php:336
+#: cycle.php:338
 msgid "Cycle to Next Graphs"
 msgstr "循环到下一个图形"
 
-#: cycle.php:336
+#: cycle.php:338
 msgid "Next"
 msgstr "下一个"
 
-#: cycle.php:337
+#: cycle.php:339
 msgid "Refresh"
 msgstr "刷新"
 
-#: cycle.php:337
+#: cycle.php:339
 msgid "Refresh Graphs Now"
 msgstr "立即刷新图形"
 
-#: cycle.php:338
+#: cycle.php:340
 msgid "Clear"
 msgstr "清除"
 
-#: cycle.php:338
+#: cycle.php:340
 msgid "Clear Filter"
 msgstr "清除过滤器"
 
-#: cycle.php:339
+#: cycle.php:341
 msgid "Save"
 msgstr "保存"
 
-#: cycle.php:339
+#: cycle.php:341
 msgid "Save Filter Settings"
 msgstr "保存过滤器设置"
 
-#: cycle.php:346
+#: cycle.php:348
 msgid "Number of Graph Columns"
 msgstr "图表列数"
 
-#: cycle.php:359 setup.php:332
+#: cycle.php:361 setup.php:340
 msgid "Graph Height"
 msgstr "图形高度"
 
-#: cycle.php:375 setup.php:339
+#: cycle.php:377 setup.php:347
 msgid "Graph Width"
 msgstr "图形宽度"
 
-#: cycle.php:388 cycle.php:391
+#: cycle.php:390 cycle.php:393
 msgid "Display Graph Legend"
 msgstr "显示图例"
 
-#: cycle.php:391
+#: cycle.php:393
 msgid "Legend"
 msgstr "图例"
 
-#: cycle.php:406
+#: cycle.php:408
 msgid "Select Tree to View"
 msgstr "选择要查看的树"
 
-#: cycle.php:422
+#: cycle.php:424
 msgid "Select Tree Leaf to Display"
 msgstr "选择要显示的树分支"
 
-#: cycle.php:424
+#: cycle.php:426
 msgid "All Levels"
 msgstr "所有级别"
 
-#: cycle.php:425
+#: cycle.php:427
 msgid "Top Level"
 msgstr "顶层"
 
-#: cycle.php:439
+#: cycle.php:441
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "输入正则表达式匹配（仅允许使用字母数字和特殊字符\\\"(^_|?)\\\" ）"
 
-#: cycle.php:454 setup.php:299
+#: cycle.php:456 setup.php:307
 msgid "Cycle Graphs"
 msgstr "循环图"
 
-#: functions.php:28 setup.php:438
+#: functions.php:28 setup.php:446
 #, php-format
 msgid "%d Graph"
 msgstr "%d 图"
@@ -153,20 +153,20 @@ msgstr "%d 图"
 #: functions.php:41 functions.php:42 functions.php:43 functions.php:44
 #: functions.php:45 functions.php:46 functions.php:47 functions.php:48
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:439
-#: setup.php:440 setup.php:441 setup.php:442 setup.php:443
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:447
+#: setup.php:448 setup.php:449 setup.php:450 setup.php:451
 #, php-format
 msgid "%d Graphs"
 msgstr "%d 图"
 
-#: functions.php:59 setup.php:447
+#: functions.php:59 setup.php:455
 #, php-format
 msgid "%d Column"
 msgstr "%d 列"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:448
-#: setup.php:449 setup.php:450 setup.php:451
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:456
+#: setup.php:457 setup.php:458 setup.php:459
 #, php-format
 msgid "%d Columns"
 msgstr "%d 列"
@@ -175,104 +175,104 @@ msgstr "%d 列"
 msgid "Plugin -> Cycle Graphs"
 msgstr "插件 - >循环图"
 
-#: setup.php:294 setup.php:295 setup.php:408 setup.php:410
+#: setup.php:302 setup.php:303 setup.php:416 setup.php:418
 msgid "Cycle"
 msgstr "循环"
 
-#: setup.php:304
+#: setup.php:312
 msgid "Delay Interval"
 msgstr "延迟间隔"
 
-#: setup.php:305
+#: setup.php:313
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "这是显示下一个图形之前的几秒钟时间。"
 
-#: setup.php:311
+#: setup.php:319
 msgid "Graph Timespan"
 msgstr "图形时间跨度"
 
-#: setup.php:312
+#: setup.php:320
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "这是将在页面上显示的默认时间跨度。"
 
-#: setup.php:318
+#: setup.php:326
 msgid "Column Count"
 msgstr "列数"
 
-#: setup.php:319
+#: setup.php:327
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "在树模式下，这是将要使用的列数。"
 
-#: setup.php:326
+#: setup.php:334
 msgid "Select the number of graphs to display per page"
 msgstr "选择每页显示的图形数量"
 
-#: setup.php:333
+#: setup.php:341
 msgid "This sets the graph height for the displayed graphs."
 msgstr "这将为显示的图形设置图形高度。"
 
-#: setup.php:340
+#: setup.php:348
 msgid "This sets the graph width for the displayed graphs."
 msgstr "这将为显示的图形设置图形宽度。"
 
-#: setup.php:346
+#: setup.php:354
 msgid "Display Legend"
 msgstr "显示图例"
 
-#: setup.php:347
+#: setup.php:355
 msgid "Check this to display legend."
 msgstr "选中此项以显示图例。"
 
-#: setup.php:352
+#: setup.php:360
 msgid "Predefined Rotations"
 msgstr "预定义的轮换"
 
-#: setup.php:356
+#: setup.php:364
 msgid "Rotation Type"
 msgstr "轮换类型"
 
-#: setup.php:357
+#: setup.php:365
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "选择用于自定义图形旋转的方法。 如果您选择“特定列表”，则必须定义图 ID的列表"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Legacy (All)"
 msgstr " 继承（全部）"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Specific List"
 msgstr "具体清单"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Tree Mode"
 msgstr "树模式"
 
-#: setup.php:363
+#: setup.php:371
 msgid "Custom Graph List"
 msgstr "自定义图表列表"
 
-#: setup.php:364
+#: setup.php:372
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "这必须是逗号分隔的图 ID的循环列表。 例如'1,2,3,4'"
 
-#: setup.php:369
+#: setup.php:377
 msgid "Default Tree"
 msgstr "默认树"
 
-#: setup.php:370
+#: setup.php:378
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "如果选择树形模式，选择图形树进行循环"
 
-#: setup.php:455 setup.php:456 setup.php:457 setup.php:458 setup.php:459
-#: setup.php:460 setup.php:461 setup.php:462 setup.php:463 setup.php:464
-#: setup.php:465 setup.php:469 setup.php:470 setup.php:471 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475 setup.php:476 setup.php:477
-#: setup.php:478 setup.php:479 setup.php:480 setup.php:481 setup.php:482
+#: setup.php:463 setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: setup.php:468 setup.php:469 setup.php:470 setup.php:471 setup.php:472
+#: setup.php:473 setup.php:477 setup.php:478 setup.php:479 setup.php:480
+#: setup.php:481 setup.php:482 setup.php:483 setup.php:484 setup.php:485
+#: setup.php:486 setup.php:487 setup.php:488 setup.php:489 setup.php:490
 #, php-format
 msgid "%d Pixels"
 msgstr "%d 像素"
 
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505
+#: setup.php:510 setup.php:511 setup.php:512 setup.php:513
 msgid "Cycling"
 msgstr "循环"
 
