@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-24 12:35-0400\n"
+"POT-Creation-Date: 2026-09-25 08:56-0400\n"
 "PO-Revision-Date: 2022-06-19 13:17+0000\n"
 "Last-Translator: Coool (github.com/Coool) <coool@mail.lv>\n"
 "Language-Team: Latvian <http://translate.cacti.net/projects/cacti/cycle/lv/>\n"
@@ -18,131 +18,131 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "X-Generator: Weblate 4.8.1\n"
 
-#: cycle.php:183
+#: cycle.php:184
 msgid "No Graphs Found Matching Criteria"
 msgstr "Neatrada nevienu grafiku, kas atbilstu kritērijiem"
 
-#: cycle.php:279
+#: cycle.php:281
 msgid "Cycle Graph Filter"
 msgstr "Cikla grafika filtrs"
 
-#: cycle.php:279
+#: cycle.php:281
 msgid "Next Update In"
 msgstr "Nākamā atsvaidzināšana pēc"
 
-#: cycle.php:289
+#: cycle.php:291
 msgid "Graph Display Timespan"
 msgstr "Grafika attēlošanas laiks"
 
-#: cycle.php:304
+#: cycle.php:306
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Cikla rotācijas atsvaidzināšanas biežums"
 
-#: cycle.php:319 setup.php:325
+#: cycle.php:321 setup.php:333
 msgid "Number of Graphs per Page"
 msgstr "Grafiku skaits lapā"
 
-#: cycle.php:333
+#: cycle.php:335
 msgid "Cycle to Previous Graphs"
 msgstr "Pārejiet uz iepriekšējiem grafikiem"
 
-#: cycle.php:333
+#: cycle.php:335
 msgid "Prev"
 msgstr "Iepriekšējie"
 
-#: cycle.php:334
+#: cycle.php:336
 msgid "Stop"
 msgstr "Apturēt"
 
-#: cycle.php:334
+#: cycle.php:336
 msgid "Stop Cycling"
 msgstr "Beigt atsvaidzināt"
 
-#: cycle.php:335
+#: cycle.php:337
 msgid "Resume Cycling"
 msgstr "Turpināt atsvaidzināt"
 
-#: cycle.php:335
+#: cycle.php:337
 msgid "Start"
 msgstr "Sākt"
 
-#: cycle.php:336
+#: cycle.php:338
 msgid "Cycle to Next Graphs"
 msgstr "Pārejiet uz nākamajiem grafikiem"
 
-#: cycle.php:336
+#: cycle.php:338
 msgid "Next"
 msgstr "Nākamie"
 
-#: cycle.php:337
+#: cycle.php:339
 msgid "Refresh"
 msgstr "Atsvaidzināt"
 
-#: cycle.php:337
+#: cycle.php:339
 msgid "Refresh Graphs Now"
 msgstr "Atsvaidzināt grafikus tūlīt"
 
-#: cycle.php:338
+#: cycle.php:340
 msgid "Clear"
 msgstr "Notīrīt"
 
-#: cycle.php:338
+#: cycle.php:340
 msgid "Clear Filter"
 msgstr "Notīrīt filtru"
 
-#: cycle.php:339
+#: cycle.php:341
 msgid "Save"
 msgstr "Saglabāt"
 
-#: cycle.php:339
+#: cycle.php:341
 msgid "Save Filter Settings"
 msgstr "Saglabāt filtra iestatījumus"
 
-#: cycle.php:346
+#: cycle.php:348
 msgid "Number of Graph Columns"
 msgstr "Grafika kolonnu skaits"
 
-#: cycle.php:359 setup.php:332
+#: cycle.php:361 setup.php:340
 msgid "Graph Height"
 msgstr "Grafika augstums"
 
-#: cycle.php:375 setup.php:339
+#: cycle.php:377 setup.php:347
 msgid "Graph Width"
 msgstr "Grafika platums"
 
-#: cycle.php:388 cycle.php:391
+#: cycle.php:390 cycle.php:393
 msgid "Display Graph Legend"
 msgstr "Rādīt grafika leģendu"
 
-#: cycle.php:391
+#: cycle.php:393
 msgid "Legend"
 msgstr "Leģenda"
 
-#: cycle.php:406
+#: cycle.php:408
 msgid "Select Tree to View"
 msgstr "Atlasiet koku, ko vēlaties skatīt"
 
-#: cycle.php:422
+#: cycle.php:424
 msgid "Select Tree Leaf to Display"
 msgstr "Atlasiet koka lapu, ko vēlaties redzēt"
 
-#: cycle.php:424
+#: cycle.php:426
 msgid "All Levels"
 msgstr "Visi līmeņi"
 
-#: cycle.php:425
+#: cycle.php:427
 msgid "Top Level"
 msgstr "Augstākais līmenis"
 
-#: cycle.php:439
+#: cycle.php:441
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Ievadiet Regulāro izteiksmju atbilstību (atļauti tikai burti, cipari un speciālās rakstzīmes \\\"(^_|?)\\\")"
 
-#: cycle.php:454 setup.php:299
+#: cycle.php:456 setup.php:307
 msgid "Cycle Graphs"
 msgstr "Ciklot grafikus"
 
-#: functions.php:28 setup.php:438
+#: functions.php:28 setup.php:446
 #, php-format
 msgid "%d Graph"
 msgstr "%d grafiks"
@@ -153,20 +153,20 @@ msgstr "%d grafiks"
 #: functions.php:41 functions.php:42 functions.php:43 functions.php:44
 #: functions.php:45 functions.php:46 functions.php:47 functions.php:48
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:439
-#: setup.php:440 setup.php:441 setup.php:442 setup.php:443
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:447
+#: setup.php:448 setup.php:449 setup.php:450 setup.php:451
 #, php-format
 msgid "%d Graphs"
 msgstr "%d grafiki"
 
-#: functions.php:59 setup.php:447
+#: functions.php:59 setup.php:455
 #, php-format
 msgid "%d Column"
 msgstr "%d kolonna"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:448
-#: setup.php:449 setup.php:450 setup.php:451
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:456
+#: setup.php:457 setup.php:458 setup.php:459
 #, php-format
 msgid "%d Columns"
 msgstr "%d kolonnas"
@@ -175,103 +175,103 @@ msgstr "%d kolonnas"
 msgid "Plugin -> Cycle Graphs"
 msgstr "Spraudnis -> Cikla grafiki"
 
-#: setup.php:294 setup.php:295 setup.php:408 setup.php:410
+#: setup.php:302 setup.php:303 setup.php:416 setup.php:418
 msgid "Cycle"
 msgstr "Cikls"
 
-#: setup.php:304
+#: setup.php:312
 msgid "Delay Interval"
 msgstr "Aizkaves intervāls"
 
-#: setup.php:305
+#: setup.php:313
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Laiks sekundēs, kad tiek parādīts nākamais grafiks."
 
-#: setup.php:311
+#: setup.php:319
 msgid "Graph Timespan"
 msgstr "Grafika laika periods"
 
-#: setup.php:312
+#: setup.php:320
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Noklusējuma laika periods, kas tiks rādīts lapā."
 
-#: setup.php:318
+#: setup.php:326
 msgid "Column Count"
 msgstr "Kolonnu skaits"
 
-#: setup.php:319
+#: setup.php:327
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "Kolonnu skaits Koka režīmā."
 
-#: setup.php:326
+#: setup.php:334
 msgid "Select the number of graphs to display per page"
 msgstr "Grafiku skaits, ko rādīt vienā lapā"
 
-#: setup.php:333
+#: setup.php:341
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Grafiku augstums rādāmajiem grafikiem."
 
-#: setup.php:340
+#: setup.php:348
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Grafiku platums rādāmajiem grafikiem."
 
-#: setup.php:346
+#: setup.php:354
 msgid "Display Legend"
 msgstr "Rādīt leģendu"
 
-#: setup.php:347
+#: setup.php:355
 msgid "Check this to display legend."
 msgstr "Atķeksējiet šo, lai rādītu leģendu."
 
-#: setup.php:352
+#: setup.php:360
 msgid "Predefined Rotations"
 msgstr "Iepriekš definētas rotācijas"
 
-#: setup.php:356
+#: setup.php:364
 msgid "Rotation Type"
 msgstr "Rotācijas tips"
 
-#: setup.php:357
+#: setup.php:365
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Izvēlieties, kuru metodi izmantot pielāgotai grafiku rotācijai. Ja izvēlaties 'Īpašais saraksts', jums ir jādefinē grafiku ID saraksts"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Legacy (All)"
 msgstr "Mantojums (Viss)"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Specific List"
 msgstr "Īpašais saraksts"
 
-#: setup.php:360
+#: setup.php:368
 msgid "Tree Mode"
 msgstr "Koka režīms"
 
-#: setup.php:363
+#: setup.php:371
 msgid "Custom Graph List"
 msgstr "Pielāgotu grafiku saraksts"
 
-#: setup.php:364
+#: setup.php:372
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Jābūt ar komatiem atdalītam grafiku ID sarakstam, ko cikliski rotēt. Piemēram, '1,2,3,4'"
 
-#: setup.php:369
+#: setup.php:377
 msgid "Default Tree"
 msgstr "Noklusējuma koks"
 
-#: setup.php:370
+#: setup.php:378
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Izvēlieties grafikas koku, kuru ciklēt, kad izvēlēts Koka režīms"
 
-#: setup.php:455 setup.php:456 setup.php:457 setup.php:458 setup.php:459
-#: setup.php:460 setup.php:461 setup.php:462 setup.php:463 setup.php:464
-#: setup.php:465 setup.php:469 setup.php:470 setup.php:471 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475 setup.php:476 setup.php:477
-#: setup.php:478 setup.php:479 setup.php:480 setup.php:481 setup.php:482
+#: setup.php:463 setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: setup.php:468 setup.php:469 setup.php:470 setup.php:471 setup.php:472
+#: setup.php:473 setup.php:477 setup.php:478 setup.php:479 setup.php:480
+#: setup.php:481 setup.php:482 setup.php:483 setup.php:484 setup.php:485
+#: setup.php:486 setup.php:487 setup.php:488 setup.php:489 setup.php:490
 #, php-format
 msgid "%d Pixels"
 msgstr "%d pikseļi"
 
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505
+#: setup.php:510 setup.php:511 setup.php:512 setup.php:513
 msgid "Cycling"
 msgstr "Ciklēšana"
