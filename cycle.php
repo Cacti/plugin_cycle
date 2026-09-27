@@ -245,7 +245,7 @@ function cycle(): void {
 	if (function_exists('get_md5_include_js')) {
 		print get_md5_include_js('plugins/cycle/js/cycle.js');
 	} else {
-		print "<script type='text/javascript' src='" . $config['url_path'] . "plugins/cycle/js/cycle.js'></script>";
+		print get_md5_include_js('plugins/cycle/js/cycle.js');
 	}
 
 	$tree_list = get_allowed_trees();
@@ -285,7 +285,7 @@ function cycle(): void {
 			<table class='filterTable'>
 				<tr>
 					<td>
-						<script type='text/javascript'>
+						<script type='text/javascript' <?php print plugin_cycle_csp_nonce(); ?>>
 							var rtime=<?php print get_request_var('delay') * 1000; ?>;
 						</script>
 						<select id='timespan' title='<?php print __esc('Graph Display Timespan', 'cycle'); ?>'>
@@ -461,7 +461,7 @@ function cycle(): void {
 	</tr>
 	<tr>
 		<td>
-		<script type='text/javascript'>
+		<script type='text/javascript' <?php print plugin_cycle_csp_nonce(); ?>>
 		$(function() {
 			$('#timespan').change(function(){
 				newTimespan()
