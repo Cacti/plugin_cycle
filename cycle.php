@@ -245,7 +245,7 @@ function cycle(): void {
 	if (function_exists('get_md5_include_js')) {
 		print get_md5_include_js('plugins/cycle/js/cycle.js');
 	} else {
-		print get_md5_include_js('plugins/cycle/js/cycle.js');
+		print '<script type="text/javascript"' . plugin_cycle_csp_nonce() . ' src="' . $config['url_path'] . 'plugins/cycle/js/cycle.js"></script>' . "\n";
 	}
 
 	$tree_list = get_allowed_trees();
