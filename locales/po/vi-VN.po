@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-25 08:56-0400\n"
+"POT-Creation-Date: 2026-09-27 11:34-0400\n"
 "PO-Revision-Date: 2024-06-08 09:38-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,7 +37,7 @@ msgstr "Hiển thị thời gian biểu đồ"
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Tần số làm mới chu kỳ quay"
 
-#: cycle.php:321 setup.php:333
+#: cycle.php:321 setup.php:349
 msgid "Number of Graphs per Page"
 msgstr "Số lượng đồ thị trên mỗi trang"
 
@@ -101,11 +101,11 @@ msgstr "Lưu cài đặt bộ lọc"
 msgid "Number of Graph Columns"
 msgstr "Số cột biểu đồ"
 
-#: cycle.php:361 setup.php:340
+#: cycle.php:361 setup.php:356
 msgid "Graph Height"
 msgstr "Chiều cao đồ thị"
 
-#: cycle.php:377 setup.php:347
+#: cycle.php:377 setup.php:363
 msgid "Graph Width"
 msgstr "Đồ thị chiều rộng"
 
@@ -137,11 +137,11 @@ msgstr "Cấp cao nhất"
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Nhập Kết hợp biểu thức chính quy (chỉ cho phép các ký tự alpha, số và ký tự đặc biệt \\ \"(^ _ |?) \\\")"
 
-#: cycle.php:456 setup.php:307
+#: cycle.php:456 setup.php:323
 msgid "Cycle Graphs"
 msgstr "Đồ thị chu kỳ"
 
-#: functions.php:28 setup.php:446
+#: functions.php:28 setup.php:462
 #, php-format
 msgid "%d Graph"
 msgstr "% d Đồ thị"
@@ -152,126 +152,126 @@ msgstr "% d Đồ thị"
 #: functions.php:41 functions.php:42 functions.php:43 functions.php:44
 #: functions.php:45 functions.php:46 functions.php:47 functions.php:48
 #: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:447
-#: setup.php:448 setup.php:449 setup.php:450 setup.php:451
+#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
+#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
 #, php-format
 msgid "%d Graphs"
 msgstr "% d Đồ thị"
 
-#: functions.php:59 setup.php:455
+#: functions.php:59 setup.php:471
 #, php-format
 msgid "%d Column"
 msgstr "% d Cột"
 
 #: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:456
-#: setup.php:457 setup.php:458 setup.php:459
+#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
+#: setup.php:473 setup.php:474 setup.php:475
 #, php-format
 msgid "%d Columns"
 msgstr "% d Cột"
 
-#: setup.php:46
+#: setup.php:62
 msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Đồ thị chu kỳ"
 
-#: setup.php:302 setup.php:303 setup.php:416 setup.php:418
+#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
 msgid "Cycle"
 msgstr "Vòng"
 
-#: setup.php:312
+#: setup.php:328
 msgid "Delay Interval"
 msgstr "Thơi gian bị tri hoan"
 
-#: setup.php:313
+#: setup.php:329
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Đây là thời gian tính bằng giây trước khi biểu đồ tiếp theo được hiển thị."
 
-#: setup.php:319
+#: setup.php:335
 msgid "Graph Timespan"
 msgstr "Biểu đồ thời gian"
 
-#: setup.php:320
+#: setup.php:336
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Đây là khoảng thời gian mặc định sẽ được hiển thị trên trang."
 
-#: setup.php:326
+#: setup.php:342
 msgid "Column Count"
 msgstr "Số cột"
 
-#: setup.php:327
+#: setup.php:343
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "Trong Chế độ cây, đây là số lượng cột sẽ được sử dụng."
 
-#: setup.php:334
+#: setup.php:350
 msgid "Select the number of graphs to display per page"
 msgstr "Chọn số lượng biểu đồ để hiển thị trên mỗi trang"
 
-#: setup.php:341
+#: setup.php:357
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Điều này đặt chiều cao biểu đồ cho các biểu đồ được hiển thị."
 
-#: setup.php:348
+#: setup.php:364
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Điều này đặt chiều rộng biểu đồ cho các biểu đồ được hiển thị."
 
-#: setup.php:354
+#: setup.php:370
 msgid "Display Legend"
 msgstr "Hiển thị huyền thoại"
 
-#: setup.php:355
+#: setup.php:371
 msgid "Check this to display legend."
 msgstr "Kiểm tra điều này để hiển thị huyền thoại."
 
-#: setup.php:360
+#: setup.php:376
 msgid "Predefined Rotations"
 msgstr "Xoay được xác định trước"
 
-#: setup.php:364
+#: setup.php:380
 msgid "Rotation Type"
 msgstr "Kiểu quay"
 
-#: setup.php:365
+#: setup.php:381
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Chọn phương pháp để sử dụng cho xoay đồ thị tùy chỉnh. Nếu bạn chọn 'Danh sách cụ thể', bạn phải xác định danh sách ID đồ thị"
 
-#: setup.php:368
+#: setup.php:384
 msgid "Legacy (All)"
 msgstr "Di sản (Tất cả)"
 
-#: setup.php:368
+#: setup.php:384
 msgid "Specific List"
 msgstr "Danh sách cụ thể"
 
-#: setup.php:368
+#: setup.php:384
 msgid "Tree Mode"
 msgstr "Chế độ cây"
 
-#: setup.php:371
+#: setup.php:387
 msgid "Custom Graph List"
 msgstr "Danh sách đồ thị tùy chỉnh"
 
-#: setup.php:372
+#: setup.php:388
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Đây phải là danh sách được phân tách bằng dấu phẩy của ID đồ thị để chuyển qua. Ví dụ: '1,2,3,4'"
 
-#: setup.php:377
+#: setup.php:393
 msgid "Default Tree"
 msgstr "Cây mặc định"
 
-#: setup.php:378
+#: setup.php:394
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Chọn cây biểu đồ để chu kỳ nếu Chế độ cây được chọn"
 
-#: setup.php:463 setup.php:464 setup.php:465 setup.php:466 setup.php:467
-#: setup.php:468 setup.php:469 setup.php:470 setup.php:471 setup.php:472
-#: setup.php:473 setup.php:477 setup.php:478 setup.php:479 setup.php:480
-#: setup.php:481 setup.php:482 setup.php:483 setup.php:484 setup.php:485
-#: setup.php:486 setup.php:487 setup.php:488 setup.php:489 setup.php:490
+#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
+#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
+#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
+#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
+#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
 #, php-format
 msgid "%d Pixels"
 msgstr "% d pixel"
 
-#: setup.php:510 setup.php:511 setup.php:512 setup.php:513
+#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
 msgid "Cycling"
 msgstr "Đạp xe "
 
