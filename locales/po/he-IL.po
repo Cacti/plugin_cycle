@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-08 09:33-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,261 +17,248 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "לא נמצאו גרפים קריטריונים תואמים"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "תרשימי מחזור"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "הבא ב"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "תצוגה גרפית"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "מחזור סיבוב רענון תדר"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "מספר הגרפים בכל דף"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "מחזור לגרפים קודמים"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "הקודם"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "עצור"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "עצור אופניים"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "המשך רכיבה"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "התחל"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "מחזור הבא גרפים"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "הבא"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "רענן"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "רענן גרפים עכשיו"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "נקה"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "איפוס סינון"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "שמור"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "שמור הגדרות מסנן"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "מספר עמודות התרשים"
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "גובה גרף"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "רוחב גרף"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "מקרא גרף לתצוגה"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "אגדה"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "בחר עץ לתצוגה"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "בחר עץ עלה לתצוגה"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "כל הרמות"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "הרמה העליונה"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "הזן התאמה לביטוי רגיל (רק תווים אלפא, מספריים ותווים מיוחדים \\ \"(^ _ |?) \\\" מותר \""
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "תרשימי מחזור"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "% d גרף"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "% d גרפים"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "עמודה% d"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "% d עמודות"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "- גרפים מחזור"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "מחזור"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "פרק זמן לעיכוב"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "זה הזמן בשניות לפני שהתרשים הבא מוצג."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "גרף Timespan"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "זהו לוח הזמנים המוגדר כברירת מחדל שיוצג בדף."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "ספירת עמודות"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "במצב עץ זה מספר העמודות שישמשו."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "בחר את מספר התרשימים להצגה בכל דף"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "פעולה זו קובעת את גובה התרשים עבור הגרפים המוצגים."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "פעולה זו קובעת את רוחב התרשים עבור התרשימים המוצגים."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "הצג מקרא"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "סמן את האפשרות כדי להציג את המקרא."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "סיבובים מוגדרים מראש"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "סוג סיבוב"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "בחר באיזו שיטה להשתמש עבור סיבוב גרפים מותאם אישית. אם בחרת באפשרות 'רשימה ספציפית', עליך להגדיר רשימה של מזהה גרף"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "מורשת (הכל)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "רשימה ספציפית"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "מצב עץ"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "רשימת גרפים מותאמים אישית"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "זה חייב להיות מופרד פסיק רשימה של גרף ID של מחזור דרך. לדוגמה '1,2,3,4'"
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "עץ ברירת מחדל"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "בחר בעץ התרשים כדי לבחור אם נבחר מצב עץ"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "% d פיקסלים"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "רכיבה"
 
