@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-08 09:30-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,261 +17,248 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "لا توجد رسوم بيانية مطابقة للمعايير"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "دورة الرسوم البيانية"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "التحديث القادم في"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "عرض الرسم البياني Timespan"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "دورة دوران تحديث التردد"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "عدد الرسوم البيانية لكل صفحة"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "الانتقال إلى الرسوم البيانية السابقة"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "السابق"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "توقف"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "وقف الدراجات"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "استئناف الدراجات"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "بدء"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "الانتقال إلى الرسوم البيانية التالية"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "التالي"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "تحديث"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "تحديث الرسوم البيانية الآن"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "واضح"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "مرشح واضح"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "حفظ"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "حفظ إعدادات التصفية"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "عدد أعمدة الرسم البياني."
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "ارتفاع الرسم البياني"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "عرض الرسم البياني"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "عرض الرسم البياني ليجند"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "وسيلة ايضاح"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "حدد شجرة للعرض"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "حدد شجرة ليف لعرضه"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "جميع المستويات"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "افضل باقة"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "أدخل مطابقة التعبير العادية (أحرف أبجدية وأرقامًا وحروف خاصة فقط \\ \"(^ _ |؟) \\\" مسموح بها)"
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "دورة الرسوم البيانية"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d الرسم البياني"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d الرسوم البيانية"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d عمود"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d أعمدة"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "البرنامج المساعد -> دورة الرسوم البيانية"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "دورة"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "فترة التأخير"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "هذا هو الوقت بالثواني قبل عرض الرسم البياني التالي."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "الرسم البياني Timespan"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "هذا هو الوقت الافتراضي الذي سيتم عرضه على الصفحة."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "عدد الأعمدة"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "في وضع الشجرة ، هذا هو عدد الأعمدة التي سيتم استخدامها."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "حدد عدد الرسوم البيانية لعرضها في كل صفحة"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "هذا يعين ارتفاع الرسم البياني للرسوم البيانية المعروضة."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "هذا يعين عرض الرسم البياني للرسوم البيانية المعروضة."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "عرض أسطورة"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "تحقق هذا لعرض وسيلة الإيضاح."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "دورات محددة مسبقا"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "نوع الدوران"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "حدد الطريقة التي يجب استخدامها لتدوير الرسم البياني المخصص. إذا قمت بتحديد \"قائمة محددة\" ، يجب عليك تحديد قائمة بمعرفات الرسم البياني"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "تراث (الكل)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "قائمة محددة"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "وضع شجرة"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "قائمة الرسم البياني المخصص"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "يجب أن تكون هذه قائمة محددة بفواصل لمعرف الرسم البياني للتنقل خلالها. على سبيل المثال \"1،2،3،4\""
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "شجرة افتراضية"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "حدد شجرة الرسم البياني للتنقل في حالة تحديد وضع الشجرة"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "%d بكسل"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "ركوب الدراجات"
 
