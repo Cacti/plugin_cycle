@@ -503,7 +503,15 @@ function cycle_config_arrays(): bool {
 		550 => __('%d Pixels', 550, 'cycle'),
 		600 => __('%d Pixels', 600, 'cycle'),
 		650 => __('%d Pixels', 650, 'cycle'),
-		700 => __('%d Pixels', 700, 'cycle')
+		700 => __('%d Pixels', 700, 'cycle'),
+		800 => __('%d Pixels', 800, 'cycle'),
+		900 => __('%d Pixels', 900, 'cycle'),
+		1000 => __('%d Pixels', 1000, 'cycle'),
+		1100 => __('%d Pixels', 1100, 'cycle'),
+		1200 => __('%d Pixels', 1200, 'cycle'),
+		1300 => __('%d Pixels', 1300, 'cycle'),
+		1400 => __('%d Pixels', 1400, 'cycle'),
+		1500 => __('%d Pixels', 1500, 'cycle')
 	];
 
 	return true;

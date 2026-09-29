@@ -1,6 +1,7 @@
 # ChangeLog
 
 --- develop ---
+* feature: Extend the Graph Width options up to 1500 pixels (adding 800-1500 in 100 pixel increments)
 * dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
 * security: Add a version-safe CSP nonce (`plugin_cycle_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 * issue: PHPStan level 8 typing pass and null-safety hardening for a malformed/missing plugin INFO file
