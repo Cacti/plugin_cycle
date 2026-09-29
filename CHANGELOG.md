@@ -1,6 +1,7 @@
 # ChangeLog
 
 --- develop ---
+* dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
 * security: Add a version-safe CSP nonce (`plugin_cycle_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 * issue: PHPStan level 8 typing pass and null-safety hardening for a malformed/missing plugin INFO file
 * issue: Prepared statements, PHP 7.4 idioms, and security fixes (PR #27)
