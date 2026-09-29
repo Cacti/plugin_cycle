@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-08 09:36-0400\n"
 "Last-Translator: Jaroslaw Kłopotek <jkl@interduo.pl>\n"
 "Language-Team: Polish <http://translate.cacti.net/projects/cacti/cycle/pl-PL/>\n"
@@ -18,261 +18,248 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "Brak znalezionych wykresów Kryteria dopasowania"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "Wykresy cyklu"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "Następna aktualizacja"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "Czas wyświetlania wykresu"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Częstotliwość odświeżania obrotu cyklu"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "Liczba wykresów na stronę"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "Cykl do poprzednich wykresów"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "Poprzedni"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "Zatrzymaj"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "Zatrzymaj jazdę na rowerze"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "Wznowić jazdę na rowerze"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "Start"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "Cykl do kolejnych wykresów"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "Następny"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "Odśwież"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "Odśwież wykresy teraz"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "Resetuj filtr"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "Zapisz"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "Zapisz ustawienia filtra"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "Liczba kolumn wykresów"
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "Wysokość wykresu"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "Szerokość wykresu"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "Wyświetlanie legendy wykresu"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "Legenda"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "Wybierz Drzewo do widoku"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "Wybierz opcję Liście drzewa, aby wyświetlić"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "Wszystkie pakiety"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "Główny"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Wprowadź dopasowanie wyrażeń regularnych (dozwolone tylko znaki alfanumeryczne, numeryczne i specjalne\"(^_|?) Instancji\")."
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "Wykresy cyklu"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d Wykres"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d Wykresy"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d Kolumna"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d Kolumny"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "Dodatek -> Wykresy cyklu"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "Cykl"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "Opóźnienie"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Jest to czas w sekundach przed wyświetleniem następnego wykresu."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "Czas trwania wykresu"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Jest to domyślny przedział czasowy, który będzie wyświetlany na stronie."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "Liczenie kolumn"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "W trybie drzewa jest to liczba kolumn, które będą używane."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "Wybierz liczbę wykresów do wyświetlenia na stronie"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Ustawia wysokość wykresu dla wyświetlanych wykresów."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Ustawia to szerokość wykresu dla wyświetlanych wykresów."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "Wyświetlacz Legenda"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "Zaznacz, aby wyświetlić legendę."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "Wstępnie zdefiniowane obroty"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "Typ obrotów"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Wybierz metodę, której należy użyć do obracania wykresu.  W przypadku wybrania opcji \"Lista specjalna\" należy zdefiniować listę identyfikatorów wykresów"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "Legalność (wszyscy)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "Wykaz szczegółowy"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "Tryb drzewa"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "Lista wykresów niestandardowych"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Musi to być lista ograniczonych przecinkami identyfikatorów wykresów do przełączania się między nimi. Na przykład \"1,2,3,4"
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "Drzewo domyślne"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Wybrać drzewo wykresu do cyklu, jeśli wybrany jest tryb drzewa"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "%d Piksele"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "Jazda na rowerze"
 
