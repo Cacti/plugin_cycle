@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2025-07-01 15:51+0000\n"
 "Last-Translator: Ekaterine papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <https://translate.cacti.net/projects/cacti/cycle/ka/>\n"
@@ -18,260 +18,247 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "პირობას ვერც ერთი გრაფიკი აკმაყოფილებს"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "გრაფიკის ფილტრის ციკლირება"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "შემდეგი განახლების დროა"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "გრაფიკის ჩვენების შუალედი"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "ციკლირების ბრუნვის განახლების სიხშირე"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "გრაფიკების რაოდენობა თითოეულ გვერდზე"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "წინა გრაფიკებამდე ციკლირება"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "წინა"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "გაჩერება"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "ციკლირების გაჩერება"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "ციკლირების გაგრძელება"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "დაწყება"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "ციკლირება შემდეგ გრაფიკებამდე"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "შემდეგი"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "განახლება"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "გრაფიკების ახლა განახლება"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "გასუფთავება"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "ფილტრის გასუფთავება"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "შენახვა"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "ფილტრის პარამეტრების შენახვა"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "გრაფიკის სვეტების რაოდენობა"
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "გრაფიკის სიმაღლე"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "გრაფიკის სიგანე"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "გრაფიკის ლეგენდის ჩვენება"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "ლეგენდა"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "მონიშნეთ ხე სანახავად"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "აირჩიეთ ხის ფოთოლი საჩვენებლად"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "ყველა დონე"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "უმაღლესი დონე"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "შეიყვანეთ რეგულარული გამოსახულება (დაშვებულია, მხოლოდ, ლათ. ანბანი და სპეციალური სიმბოლოები \\\"(^_|?)\\\" )"
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "გრაფიკების ციკლი"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d გრაფიკი"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d გრაფიკი"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d სვეტი"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d სვეტი"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "დამატება -> გრაფიკების ციკლირება"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "ციკლი"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "დაყოვნების ინტერვალი"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "ეს დროა წამებში, სანამ მეორე გრაფიკი გამოჩნდება."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "გრაფიკის ინტერვალი"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "ეს ნაგულისხმევი ხანგრძლივობაა, რომელიც გვერდზე იქნება ნაჩვენები."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "სვეტების რაოდენობა"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "ხის რეჟიმში, ეს გამოყენებული სვეტების რაოდენობაა."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "დააყენეთ თითოეულ გვერდზე ნაჩვენები გრაფიკების რაოდენობა"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "ეს აყენებს გრაფიკის სიმაღლეს ნაჩვენები გრაფიკებისთვის."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "ეს აყენებს ნაჩვენები გრაფიკების სიგანეს."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "ლეგენდის ჩვენება"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "დასვით ეს თოლია ლეგენდის საჩვენებლად."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "წინასწარ განსაზღვრული ტრიალი"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "ბრუნვის ტიპი"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "აირჩიეთ, რომელი მეთოდი იქნება გამოყენებული გრაფიკის სასურველად მოსაბრუნებლად.   თუ აირჩევთ 'მითითებულ სიას', გრაგიკის ID-ების მითითებაც მოგიწევთ"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "მოძველებული (ყველა)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "მითითებული სია"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "ხის რეჟიმი"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "მორგებული გრაფიკების სია"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "ეს უნდა იყოს მძიმეებით გამოყოფილი გრაფიკების ID-ების სია, რომლებზეც მოხდება გადართვა, მაგ: '1,2,3,4'"
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "ნაგულისხმევი ხე"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "აირჩიეთ გრაფიკების ხე ციკლირებისთვის, თუ არჩეულია ხის რეჟიმი"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "%d პიქსელი"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "ციკლირება"
