@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2024-06-08 09:36-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,261 +17,248 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "Nenhum gráfico encontrado Critérios de correspondência"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "Gráficos de ciclo"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "Próxima atualização em"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "Tempo de exibição do gráfico"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Frequência de Atualização da Rotação do Ciclo"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "Número de gráficos por página"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "Ciclo para gráficos anteriores"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "Anterior"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "Parar"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "Pare de pedalar"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "Currículo Ciclismo"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "Iniciar"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "Ciclo para gráficos seguintes"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "Próximo"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "Atualizar"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "Atualizar gráficos agora"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "Limpar"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "Limpar Filtro"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "Salvar"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "Salvar configurações de filtro"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "Número de colunas do gráfico"
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "Altura do gráfico"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "Largura do gráfico"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "Exibir legenda do gráfico"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "Legenda"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "Selecione Árvore para Ver"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "Selecione Folha de Árvore para exibir"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "﻿Todos os níveis"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "Nível Superior"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Digite Regular Expression Match (apenas caracteres alfa, numéricos e especiais permitidos)"
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "Gráficos de ciclo"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "Gráfico %d"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "Gráficos %d"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "% d coluna"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "% d colunas"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "Plugin -> Gráfico de ciclos"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "Ciclo"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "Atraso de Intervalo"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Este é o tempo em segundos antes do próximo gráfico ser exibido."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "Tempo de duração do gráfico"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Este é o período de tempo padrão que será exibido na página."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "Contagem de Colunas"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "No Modo Árvore este é o número de colunas que serão usadas."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "Selecione o número de gráficos a serem exibidos por página"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Define a altura do gráfico para os gráficos exibidos."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Define a largura do gráfico para os gráficos exibidos."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "Exibir legenda"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "Marque esta opção para exibir a legenda."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "Rotações predefinidas"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "Tipo de Rotação"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Seleccione o método a utilizar para a rotação de gráficos personalizados.  Se você selecionar 'Lista específica', você deve definir uma lista de IDs de gráfico"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "Legado (Todos)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "Lista Específica"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "Modo Árvore"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "Lista Personalizada de Gráficos"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Esta deve ser uma lista delimitada por vírgulas de Graph ID's para percorrer. Por exemplo, \"1,2,3,4\"."
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "Árvore padrão"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Selecione a árvore de gráficos para percorrer se o Modo Árvore estiver selecionado"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "%d Pixels"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "De bicicleta"
 
