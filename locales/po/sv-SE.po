@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-27 11:34-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: 2026-09-12 08:18+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\n"
@@ -18,261 +18,248 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11.4\n"
 
-#: cycle.php:184
+#: cycle.php
 msgid "No Graphs Found Matching Criteria"
 msgstr "Inga diagram hittades matchande kriterier"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Cycle Graph Filter"
 msgstr "Cykeldiagram"
 
-#: cycle.php:281
+#: cycle.php
 msgid "Next Update In"
 msgstr "Nästa uppdatering i"
 
-#: cycle.php:291
+#: cycle.php
 msgid "Graph Display Timespan"
 msgstr "Graph Display Timespan"
 
-#: cycle.php:306
+#: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
 msgstr "Cykelrotationsuppdateringsfrekvens"
 
-#: cycle.php:321 setup.php:349
+#: cycle.php setup.php
 msgid "Number of Graphs per Page"
 msgstr "Antal diagram per sida"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Cycle to Previous Graphs"
 msgstr "Cykla till tidigare grafer"
 
-#: cycle.php:335
+#: cycle.php
 msgid "Prev"
 msgstr "Föregående"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop"
 msgstr "Stopp"
 
-#: cycle.php:336
+#: cycle.php
 msgid "Stop Cycling"
 msgstr "Sluta cykla"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Resume Cycling"
 msgstr "Fortsätt cykla"
 
-#: cycle.php:337
+#: cycle.php
 msgid "Start"
 msgstr "Starta"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Cycle to Next Graphs"
 msgstr "Cykla till nästa grafer"
 
-#: cycle.php:338
+#: cycle.php
 msgid "Next"
 msgstr "Nästa"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh"
 msgstr "Uppdatera"
 
-#: cycle.php:339
+#: cycle.php
 msgid "Refresh Graphs Now"
 msgstr "Uppdatera grafer nu"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear"
 msgstr "Rensa"
 
-#: cycle.php:340
+#: cycle.php
 msgid "Clear Filter"
 msgstr "Rensa filter"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save"
 msgstr "Spara"
 
-#: cycle.php:341
+#: cycle.php
 msgid "Save Filter Settings"
 msgstr "Spara filterinställningar"
 
-#: cycle.php:348
+#: cycle.php
 msgid "Number of Graph Columns"
 msgstr "Antal grafkolumner"
 
-#: cycle.php:361 setup.php:356
+#: cycle.php setup.php
 msgid "Graph Height"
 msgstr "Grafhöjd"
 
-#: cycle.php:377 setup.php:363
+#: cycle.php setup.php
 msgid "Graph Width"
 msgstr "Grafbredd"
 
-#: cycle.php:390 cycle.php:393
+#: cycle.php
 msgid "Display Graph Legend"
 msgstr "Display Graph Legend"
 
-#: cycle.php:393
+#: cycle.php
 msgid "Legend"
 msgstr "Historia"
 
-#: cycle.php:408
+#: cycle.php
 msgid "Select Tree to View"
 msgstr "Välj träd för visning"
 
-#: cycle.php:424
+#: cycle.php
 msgid "Select Tree Leaf to Display"
 msgstr "Välj trädblad till bildskärm"
 
-#: cycle.php:426
+#: cycle.php
 msgid "All Levels"
 msgstr "Alla nivåer"
 
-#: cycle.php:427
+#: cycle.php
 msgid "Top Level"
 msgstr "Toppnivå"
 
-#: cycle.php:441
+#: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
 msgstr "Ange Regular Expression Match (endast alfanumeriska, numeriska och specialtecken \\ \"(^ _ |?) \\\" Tillåtna)"
 
-#: cycle.php:456 setup.php:323
+#: cycle.php setup.php
 msgid "Cycle Graphs"
 msgstr "Cykeldiagram"
 
-#: functions.php:28 setup.php:462
+#: functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d graf"
 
-#: functions.php:29 functions.php:30 functions.php:31 functions.php:32
-#: functions.php:33 functions.php:34 functions.php:35 functions.php:36
-#: functions.php:37 functions.php:38 functions.php:39 functions.php:40
-#: functions.php:41 functions.php:42 functions.php:43 functions.php:44
-#: functions.php:45 functions.php:46 functions.php:47 functions.php:48
-#: functions.php:49 functions.php:50 functions.php:51 functions.php:52
-#: functions.php:53 functions.php:54 functions.php:55 setup.php:463
-#: setup.php:464 setup.php:465 setup.php:466 setup.php:467
+#: functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d grafer"
 
-#: functions.php:59 setup.php:471
+#: functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d kolumn"
 
-#: functions.php:60 functions.php:61 functions.php:62 functions.php:63
-#: functions.php:64 functions.php:65 functions.php:66 setup.php:472
-#: setup.php:473 setup.php:474 setup.php:475
+#: functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d kolumner"
 
-#: setup.php:62
+#: setup.php
 msgid "Plugin -> Cycle Graphs"
 msgstr "Tillägg -> Cykelgrafer"
 
-#: setup.php:318 setup.php:319 setup.php:432 setup.php:434
+#: setup.php
 msgid "Cycle"
 msgstr "Cykel"
 
-#: setup.php:328
+#: setup.php
 msgid "Delay Interval"
 msgstr "Delay Interval"
 
-#: setup.php:329
+#: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
 msgstr "Detta är tiden i sekunder innan nästa graf visas."
 
-#: setup.php:335
+#: setup.php
 msgid "Graph Timespan"
 msgstr "Graf Timespan"
 
-#: setup.php:336
+#: setup.php
 msgid "This is the default timespan that will be displayed on the page."
 msgstr "Det här är standardtidpunkten som kommer att visas på sidan."
 
-#: setup.php:342
+#: setup.php
 msgid "Column Count"
 msgstr "Kolumnräkning"
 
-#: setup.php:343
+#: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
 msgstr "I Tree Mode är det antalet kolumner som ska användas."
 
-#: setup.php:350
+#: setup.php
 msgid "Select the number of graphs to display per page"
 msgstr "Välj antal diagram som ska visas per sida"
 
-#: setup.php:357
+#: setup.php
 msgid "This sets the graph height for the displayed graphs."
 msgstr "Detta ställer in grafhöjden för de visade graferna."
 
-#: setup.php:364
+#: setup.php
 msgid "This sets the graph width for the displayed graphs."
 msgstr "Detta anger grafbredd för de visade graferna."
 
-#: setup.php:370
+#: setup.php
 msgid "Display Legend"
 msgstr "Display Legend"
 
-#: setup.php:371
+#: setup.php
 msgid "Check this to display legend."
 msgstr "Kolla här för att visa legenden."
 
-#: setup.php:376
+#: setup.php
 msgid "Predefined Rotations"
 msgstr "Fördefinierade rotationer"
 
-#: setup.php:380
+#: setup.php
 msgid "Rotation Type"
 msgstr "Rotationstyp"
 
-#: setup.php:381
+#: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
 msgstr "Välj vilken metod som ska användas för anpassad grafrotation. Om du väljer \"Specifik lista\" måste du definiera en lista med graf ID"
 
-#: setup.php:384
+#: setup.php
 msgid "Legacy (All)"
 msgstr "Legacy (All)"
 
-#: setup.php:384
+#: setup.php
 msgid "Specific List"
 msgstr "Specifik lista"
 
-#: setup.php:384
+#: setup.php
 msgid "Tree Mode"
 msgstr "Trädläge"
 
-#: setup.php:387
+#: setup.php
 msgid "Custom Graph List"
 msgstr "Anpassad graflista"
 
-#: setup.php:388
+#: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
 msgstr "Det här måste vara en kommaavgränsad lista över graf ID-er för att gå igenom. Till exempel \"1,2,3,4\""
 
-#: setup.php:393
+#: setup.php
 msgid "Default Tree"
 msgstr "Standard Tree"
 
-#: setup.php:394
+#: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
 msgstr "Välj grafträdet för att cykla om trädläget är valt"
 
-#: setup.php:479 setup.php:480 setup.php:481 setup.php:482 setup.php:483
-#: setup.php:484 setup.php:485 setup.php:486 setup.php:487 setup.php:488
-#: setup.php:489 setup.php:493 setup.php:494 setup.php:495 setup.php:496
-#: setup.php:497 setup.php:498 setup.php:499 setup.php:500 setup.php:501
-#: setup.php:502 setup.php:503 setup.php:504 setup.php:505 setup.php:506
+#: setup.php
 #, php-format
 msgid "%d Pixels"
 msgstr "%d bildpunkter"
 
-#: setup.php:526 setup.php:527 setup.php:528 setup.php:529
+#: setup.php
 msgid "Cycling"
 msgstr "Cykling"
 
