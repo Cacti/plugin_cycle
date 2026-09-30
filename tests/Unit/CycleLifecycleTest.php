@@ -56,13 +56,25 @@ it('does nothing when the plugin has never been installed', function () {
 });
 
 it('re-registers hooks and updates plugin_config when an installed plugin version drifts', function () {
-	$info = plugin_cycle_version();
+	$realBase = $GLOBALS['config']['base_path'];
+	$info     = plugin_cycle_version();
 
 	cycle_test_mock_db('db_fetch_row', 'plugin_config', array('version' => '0.0.0', 'status' => '1'));
 	cycle_test_mock_db('db_fetch_cell', 'plugin_realms', '5');
 	cycle_test_mock_db('db_fetch_cell', 'plugin_config', '42');
 
-	cycle_check_upgrade();
+	// Sandbox base_path (a copy of the real INFO keeps the asserted params
+	// identical) so the upgrade-time prune runs against a throwaway tree.
+	$base = sys_get_temp_dir() . '/cycle-upg-' . uniqid();
+	mkdir($base . '/plugins/cycle', 0777, true);
+	copy($realBase . '/plugins/cycle/INFO', $base . '/plugins/cycle/INFO');
+	$GLOBALS['config']['base_path'] = $base;
+
+	try {
+		cycle_check_upgrade();
+	} finally {
+		$GLOBALS['config']['base_path'] = $realBase;
+	}
 
 	expect($GLOBALS['__test_registered_hooks'])->not->toBeEmpty();
 	expect($GLOBALS['__test_registered_realms'])->not->toBeEmpty();
