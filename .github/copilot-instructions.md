@@ -25,14 +25,15 @@ When generating code for this repository:
 
 ```
 cycle/                # Repository root (install to plugins/cycle/ in Cacti)
-├── images/              # UI icons
-├── locales/                # Internationalization files
-├── cycle.js                   # Client-side graph rotation logic
-├── cycle.php                    # Main cycle viewer/administration UI
-├── functions.php                   # Shared helper functions
-├── INFO                               # Plugin metadata (name, version, compat)
+├── includes/            # Library/helper files, require_once'd from the entry points
+│   └── functions.php      # Shared helper functions
+├── images/                  # UI icons
+├── locales/                   # Internationalization files
+├── cycle.js                     # Client-side graph rotation logic
+├── cycle.php                      # Main cycle viewer/administration UI
+├── INFO                             # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                            # Plugin install/uninstall/upgrade hooks
+└── setup.php                          # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions
@@ -168,6 +169,10 @@ existing code or adding new code, not just in dedicated cleanup passes:
 - **i18n text domain.** Every `__()`/`__esc()` call must include this plugin's text domain as the
   final argument, except when deliberately comparing against a literal, untranslated Cacti-core
   label.
+- **File inclusion uses `require`/`require_once`.** Always use `require`/`require_once` (never
+  `include`/`include_once`) so a missing dependency fails fast and loudly. Keep library/helper files
+  (e.g. `functions.php`) under `includes/` and reference them from that path; entry points
+  (`cycle.php`, `setup.php`) stay in the plugin root.
 - **Plugin table-creation API.** Use `api_plugin_db_table_create()`/`api_plugin_db_add_column()`
   (from Cacti core's `lib/plugins.php`) instead of raw `CREATE TABLE`/`ALTER TABLE ... ADD COLUMN`.
   Both are idempotent (safe no-ops when already applied), so the same call can run unconditionally
