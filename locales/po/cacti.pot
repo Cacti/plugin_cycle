@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -141,22 +141,22 @@ msgstr ""
 msgid "Cycle Graphs"
 msgstr ""
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr ""
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr ""
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr ""
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr ""

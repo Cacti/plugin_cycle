@@ -1,0 +1,18 @@
+{
+    "tombstones": [],
+    "expected": [
+        "CHANGELOG.md",
+        "INFO",
+        "LICENSE",
+        "README.md",
+        "cycle.php",
+        "images/",
+        "includes/",
+        "index.php",
+        "js/",
+        "locales/",
+        "manifest.json",
+        "setup.php"
+    ],
+    "whitelist": []
+}

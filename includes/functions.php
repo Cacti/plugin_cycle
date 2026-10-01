@@ -22,7 +22,7 @@
  +-------------------------------------------------------------------------+
 */
 
-include_once(__DIR__ . '/setup.php');
+require_once(__DIR__ . '/../setup.php');
 
 $graphs_ppage = [
 	1   => __('%d Graph', 1, 'cycle'),

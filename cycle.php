@@ -26,14 +26,14 @@ $guest_account = true;
 
 chdir('../../');
 
-include_once('./include/auth.php');
-include_once('./lib/time.php');
-include_once('./lib/html_tree.php');
-include_once('./lib/api_graph.php');
-include_once('./lib/api_tree.php');
-include_once('./lib/utility.php');
-include_once('./lib/api_data_source.php');
-include_once('./plugins/cycle/functions.php');
+require_once('./include/auth.php');
+require_once('./lib/time.php');
+require_once('./lib/html_tree.php');
+require_once('./lib/api_graph.php');
+require_once('./lib/api_tree.php');
+require_once('./lib/utility.php');
+require_once('./lib/api_data_source.php');
+require_once('./plugins/cycle/includes/functions.php');
 
 set_default_action();
 
