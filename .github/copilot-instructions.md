@@ -25,15 +25,15 @@ When generating code for this repository:
 
 ```
 cycle/                # Repository root (install to plugins/cycle/ in Cacti)
-├── includes/            # Library/helper files, require_once'd from the entry points
-│   └── functions.php      # Shared helper functions
-├── images/                  # UI icons
-├── locales/                   # Internationalization files
-├── cycle.js                     # Client-side graph rotation logic
-├── cycle.php                      # Main cycle viewer/administration UI
-├── INFO                             # Plugin metadata (name, version, compat)
+├── includes/         # Library/helper files, require_once'd from the entry points
+│   └── functions.php # Shared helper functions
+├── images/           # UI icons
+├── locales/          # Internationalization files
+├── cycle.js          # Client-side graph rotation logic
+├── cycle.php         # Main cycle viewer/administration UI
+├── INFO              # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                          # Plugin install/uninstall/upgrade hooks
+└── setup.php         # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions
