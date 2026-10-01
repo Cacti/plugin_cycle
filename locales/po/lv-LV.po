@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
 "PO-Revision-Date: 2022-06-19 13:17+0000\n"
 "Last-Translator: Coool (github.com/Coool) <coool@mail.lv>\n"
 "Language-Team: Latvian <http://translate.cacti.net/projects/cacti/cycle/lv/>\n"
@@ -142,22 +142,22 @@ msgstr "Ievadiet Regulāro izteiksmju atbilstību (atļauti tikai burti, cipari 
 msgid "Cycle Graphs"
 msgstr "Ciklot grafikus"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d grafiks"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d grafiki"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d kolonna"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d kolonnas"
