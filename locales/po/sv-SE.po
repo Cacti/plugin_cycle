@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
 "PO-Revision-Date: 2026-09-12 08:18+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\n"
@@ -142,22 +142,22 @@ msgstr "Ange Regular Expression Match (endast alfanumeriska, numeriska och speci
 msgid "Cycle Graphs"
 msgstr "Cykeldiagram"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d graf"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d grafer"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d kolumn"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d kolumner"
