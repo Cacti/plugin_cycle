@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cycle on cacti 1.1.34\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-28 16:05-0400\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
 "PO-Revision-Date: 2024-03-03 08:53+0000\n"
 "Last-Translator: Junhua Huang <junhuahuang1218@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.cacti.net/projects/cacti/cycle/zh_Hans/>\n"
@@ -142,22 +142,22 @@ msgstr "输入正则表达式匹配（仅允许使用字母数字和特殊字符
 msgid "Cycle Graphs"
 msgstr "循环图"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
 msgstr "%d 图"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
 msgstr "%d 图"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
 msgstr "%d 列"
 
-#: functions.php setup.php
+#: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
 msgstr "%d 列"
