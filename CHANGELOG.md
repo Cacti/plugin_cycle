@@ -1,6 +1,7 @@
 # ChangeLog
 
 --- develop ---
+* security: Pin CI fixtures and shared test dependencies, disable persisted checkout credentials, and limit workflow permissions and runtime
 * feature: Extend the Graph Width options up to 1500 pixels (adding 800-1500 in 100 pixel increments)
 * dev: Relocate `functions.php` to `includes/functions.php` and convert every `include`/`include_once` to `require`/`require_once` for fail-fast loading
 * dev: Measure CI coverage with xdebug instead of pcov so the plugin's own sources are instrumented (pcov auto-scopes to the Composer root and skipped cacti/plugins/, leaving the patch-coverage gate with nothing to measure)
