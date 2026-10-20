@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2026-09-12 08:18+0000\n"
-"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
-"Language-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\n"
-"Language: sv-SE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-10-20 09:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -32,7 +20,7 @@ msgstr "Nästa uppdatering i"
 
 #: cycle.php
 msgid "Graph Display Timespan"
-msgstr "Graph Display Timespan"
+msgstr "Diagramvisningens tidsintervall"
 
 #: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
@@ -48,11 +36,11 @@ msgstr "Cykla till tidigare grafer"
 
 #: cycle.php
 msgid "Prev"
-msgstr "Föregående"
+msgstr "Föreg"
 
 #: cycle.php
 msgid "Stop"
-msgstr "Stopp"
+msgstr "Stoppa"
 
 #: cycle.php
 msgid "Stop Cycling"
@@ -112,7 +100,7 @@ msgstr "Grafbredd"
 
 #: cycle.php
 msgid "Display Graph Legend"
-msgstr "Display Graph Legend"
+msgstr "Visa diagramförklaring"
 
 #: cycle.php
 msgid "Legend"
@@ -172,7 +160,7 @@ msgstr "Cykel"
 
 #: setup.php
 msgid "Delay Interval"
-msgstr "Delay Interval"
+msgstr "Fördröjningsintervall"
 
 #: setup.php
 msgid "This is the time in seconds before the next graph is displayed."
@@ -180,7 +168,7 @@ msgstr "Detta är tiden i sekunder innan nästa graf visas."
 
 #: setup.php
 msgid "Graph Timespan"
-msgstr "Graf Timespan"
+msgstr "Grafens tidsintervall"
 
 #: setup.php
 msgid "This is the default timespan that will be displayed on the page."
@@ -208,7 +196,7 @@ msgstr "Detta anger grafbredd för de visade graferna."
 
 #: setup.php
 msgid "Display Legend"
-msgstr "Display Legend"
+msgstr "Visa förklaring"
 
 #: setup.php
 msgid "Check this to display legend."
@@ -228,7 +216,7 @@ msgstr "Välj vilken metod som ska användas för anpassad grafrotation. Om du v
 
 #: setup.php
 msgid "Legacy (All)"
-msgstr "Legacy (All)"
+msgstr "Äldre (alla)"
 
 #: setup.php
 msgid "Specific List"
