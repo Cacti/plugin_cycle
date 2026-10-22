@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-10-20 09:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-10-22 06:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
-msgstr "Inga diagram hittades matchande kriterier"
+msgstr "Inga diagram hittades som matchar kriterierna"
 
 #: cycle.php
 msgid "Cycle Graph Filter"
@@ -32,7 +32,7 @@ msgstr "Antal diagram per sida"
 
 #: cycle.php
 msgid "Cycle to Previous Graphs"
-msgstr "Cykla till tidigare grafer"
+msgstr "Visa föregående diagram"
 
 #: cycle.php
 msgid "Prev"
@@ -56,7 +56,7 @@ msgstr "Starta"
 
 #: cycle.php
 msgid "Cycle to Next Graphs"
-msgstr "Cykla till nästa grafer"
+msgstr "Visa nästa diagram"
 
 #: cycle.php
 msgid "Next"
@@ -104,7 +104,7 @@ msgstr "Visa diagramförklaring"
 
 #: cycle.php
 msgid "Legend"
-msgstr "Historia"
+msgstr "Förklaring"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -112,7 +112,7 @@ msgstr "Välj träd för visning"
 
 #: cycle.php
 msgid "Select Tree Leaf to Display"
-msgstr "Välj trädblad till bildskärm"
+msgstr "Välj trädblad att visa"
 
 #: cycle.php
 msgid "All Levels"
@@ -172,15 +172,15 @@ msgstr "Grafens tidsintervall"
 
 #: setup.php
 msgid "This is the default timespan that will be displayed on the page."
-msgstr "Det här är standardtidpunkten som kommer att visas på sidan."
+msgstr "Det här är standardtidsintervallet som visas på sidan."
 
 #: setup.php
 msgid "Column Count"
-msgstr "Kolumnräkning"
+msgstr "Antal kolumner"
 
 #: setup.php
 msgid "In Tree Mode this is the number of columns that will be used."
-msgstr "I Tree Mode är det antalet kolumner som ska användas."
+msgstr "I trädläge är detta antalet kolumner som ska användas."
 
 #: setup.php
 msgid "Select the number of graphs to display per page"
@@ -200,7 +200,7 @@ msgstr "Visa förklaring"
 
 #: setup.php
 msgid "Check this to display legend."
-msgstr "Kolla här för att visa legenden."
+msgstr "Markera detta för att visa förklaringen."
 
 #: setup.php
 msgid "Predefined Rotations"
@@ -212,7 +212,7 @@ msgstr "Rotationstyp"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "Välj vilken metod som ska användas för anpassad grafrotation. Om du väljer \"Specifik lista\" måste du definiera en lista med graf ID"
+msgstr "Välj vilken metod som ska användas för anpassad diagramrotation. Om du väljer ”Specifik lista” måste du definiera en lista med diagram-ID:n"
 
 #: setup.php
 msgid "Legacy (All)"
@@ -232,15 +232,15 @@ msgstr "Anpassad graflista"
 
 #: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
-msgstr "Det här måste vara en kommaavgränsad lista över graf ID-er för att gå igenom. Till exempel \"1,2,3,4\""
+msgstr "Det här måste vara en kommaseparerad lista med diagram-ID:n att bläddra igenom. Till exempel ”1,2,3,4”"
 
 #: setup.php
 msgid "Default Tree"
-msgstr "Standard Tree"
+msgstr "Standardträd"
 
 #: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr "Välj grafträdet för att cykla om trädläget är valt"
+msgstr "Välj det diagramträd som ska visas om trädläge är valt"
 
 #: setup.php
 #, php-format
