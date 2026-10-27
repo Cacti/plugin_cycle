@@ -4,15 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-10-26 10:51+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-10-27 13:18+0000\nLast-Translator: Daniel Nylander <daniel@danielnylander.se>\nLanguage-Team: Swedish <https://translate.cacti.net/projects/cacti/cycle/sv/>\nLanguage: sv-SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
-msgstr "Inga diagram hittades som matchar kriterierna"
+msgstr "Inga grafer matchar kriterierna"
 
 #: cycle.php
 msgid "Cycle Graph Filter"
-msgstr "Cykeldiagram"
+msgstr "Filter för grafväxling"
 
 #: cycle.php
 msgid "Next Update In"
@@ -20,19 +20,19 @@ msgstr "Nästa uppdatering i"
 
 #: cycle.php
 msgid "Graph Display Timespan"
-msgstr "Diagramvisningens tidsintervall"
+msgstr "Tidsintervall för grafvisning"
 
 #: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
-msgstr "Cykelrotationsuppdateringsfrekvens"
+msgstr "Uppdateringsfrekvens för grafväxling"
 
 #: cycle.php setup.php
 msgid "Number of Graphs per Page"
-msgstr "Antal diagram per sida"
+msgstr "Antal grafer per sida"
 
 #: cycle.php
 msgid "Cycle to Previous Graphs"
-msgstr "Visa föregående diagram"
+msgstr "Visa föregående grafer"
 
 #: cycle.php
 msgid "Prev"
@@ -44,11 +44,11 @@ msgstr "Stoppa"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Sluta cykla"
+msgstr "Stoppa grafväxling"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Fortsätt cykla"
+msgstr "Återuppta grafväxling"
 
 #: cycle.php
 msgid "Start"
@@ -56,7 +56,7 @@ msgstr "Starta"
 
 #: cycle.php
 msgid "Cycle to Next Graphs"
-msgstr "Visa nästa diagram"
+msgstr "Visa nästa grafer"
 
 #: cycle.php
 msgid "Next"
@@ -100,7 +100,7 @@ msgstr "Grafbredd"
 
 #: cycle.php
 msgid "Display Graph Legend"
-msgstr "Visa diagramförklaring"
+msgstr "Visa grafförklaring"
 
 #: cycle.php
 msgid "Legend"
@@ -124,11 +124,11 @@ msgstr "Toppnivå"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Ange Regular Expression Match (endast alfanumeriska, numeriska och specialtecken \\ \"(^ _ |?) \\\" Tillåtna)"
+msgstr "Ange ett reguljärt uttryck (endast bokstäver, siffror och specialtecknen \\\"(^_|?)\\\" är tillåtna)"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
-msgstr "Cykeldiagram"
+msgstr "Växla mellan grafer"
 
 #: includes/functions.php setup.php
 #, php-format
@@ -152,11 +152,11 @@ msgstr "%d kolumner"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
-msgstr "Tillägg -> Cykelgrafer"
+msgstr "Insticksmodul -> Växla mellan grafer"
 
 #: setup.php
 msgid "Cycle"
-msgstr "Cykel"
+msgstr "Grafväxling"
 
 #: setup.php
 msgid "Delay Interval"
@@ -184,23 +184,23 @@ msgstr "I trädläge är detta antalet kolumner som ska användas."
 
 #: setup.php
 msgid "Select the number of graphs to display per page"
-msgstr "Välj antal diagram som ska visas per sida"
+msgstr "Välj hur många grafer som ska visas per sida"
 
 #: setup.php
 msgid "This sets the graph height for the displayed graphs."
-msgstr "Detta ställer in grafhöjden för de visade graferna."
+msgstr "Anger höjden på de grafer som visas."
 
 #: setup.php
 msgid "This sets the graph width for the displayed graphs."
-msgstr "Detta anger grafbredd för de visade graferna."
+msgstr "Anger bredden på de grafer som visas."
 
 #: setup.php
 msgid "Display Legend"
-msgstr "Visa förklaring"
+msgstr "Visa teckenförklaring"
 
 #: setup.php
 msgid "Check this to display legend."
-msgstr "Markera detta för att visa förklaringen."
+msgstr "Markera detta för att visa teckenförklaringen."
 
 #: setup.php
 msgid "Predefined Rotations"
@@ -212,7 +212,7 @@ msgstr "Rotationstyp"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "Välj vilken metod som ska användas för anpassad diagramrotation. Om du väljer ”Specifik lista” måste du definiera en lista med diagram-ID:n"
+msgstr "Välj metod för anpassad grafväxling. Om du väljer ”Specifik lista” måste du ange en lista med graf-ID:n"
 
 #: setup.php
 msgid "Legacy (All)"
@@ -232,7 +232,7 @@ msgstr "Anpassad graflista"
 
 #: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
-msgstr "Det här måste vara en kommaseparerad lista med diagram-ID:n att bläddra igenom. Till exempel ”1,2,3,4”"
+msgstr "Ange en kommaseparerad lista med ID:n för graferna som ska visas, till exempel ”1,2,3,4”"
 
 #: setup.php
 msgid "Default Tree"
@@ -240,7 +240,7 @@ msgstr "Standardträd"
 
 #: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr "Välj det diagramträd som ska visas om trädläge är valt"
+msgstr "Välj det grafträd som ska visas om trädläge är valt"
 
 #: setup.php
 #, php-format
@@ -249,7 +249,7 @@ msgstr "%d bildpunkter"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Cykling"
+msgstr "Grafväxling"
 
 #, fuzzy
 #~ msgid "Set"
