@@ -368,6 +368,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 			$title         = '';
 			$graphs        = [];
 			$i             = 0;
+			$curr_found    = false;
 
 			/* Build a graphs array of the number of graphs requested
 			 * this graph array will be used for rendering.  In addition
@@ -394,12 +395,6 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 				LIMIT $start, $graphpp";
 
 				$rows = db_fetch_assoc($sql);
-
-				if ($graph_id > 0) {
-					$curr_found    = true;
-				} else {
-					$curr_found    = false;
-				}
 
 				if (sizeof($rows)) {
 					foreach ($rows as $row) {

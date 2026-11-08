@@ -69,6 +69,34 @@ it('matches no graphs when the custom list contains no numeric ids', function ()
 	}
 });
 
+it('uses the first matching graph when the requested current graph is outside the selection', function () {
+	$GLOBALS['id'] = 5;
+	cycle_test_mock_db('db_fetch_assoc', function () {
+		return true;
+	}, function ($sql) {
+		if (strpos($sql, 'ORDER BY gl.id ASC') !== false && strpos($sql, 'LIMIT 0, 2') !== false) {
+			return [
+				['id' => 10, 'title_cache' => 'First'],
+				['id' => 20, 'title_cache' => 'Last'],
+			];
+		}
+
+		if (strpos($sql, 'ORDER BY id DESC') !== false) {
+			return [
+				['id' => 20, 'title_cache' => 'Last'],
+				['id' => 10, 'title_cache' => 'First'],
+			];
+		}
+
+		return [];
+	});
+
+	get_next_graphid(2, '', 0, 0);
+
+	expect($GLOBALS['graph_id'])->toBe(10);
+	expect(array_keys($GLOBALS['graphs']))->toBe([10, 20]);
+});
+
 it('keeps the graph tree filter when previous-page pagination wraps', function () {
 	test_set_config_option('cycle_custom_graphs_type', '2');
 	test_set_config_option('cycle_custom_graphs_list', '');
