@@ -268,6 +268,26 @@ if (!function_exists('cacti_sizeof')) {
 	}
 }
 
+if (!function_exists('is_graph_allowed')) {
+	function is_graph_allowed(int $local_graph_id, int $user_id = 0): bool {
+		return true;
+	}
+}
+
+if (!function_exists('is_tree_allowed')) {
+	function is_tree_allowed(int $tree_id, int $user_id = 0): bool {
+		return true;
+	}
+}
+
+if (!function_exists('get_allowed_graphs')) {
+	function get_allowed_graphs(string $sql_where = '', mixed $sql_order = 'gtg.title_cache', string $sql_limit = '', int &$total_rows = 0, int $user_id = 0, int $graph_id = 0): array {
+		$total_rows = 0;
+
+		return isset($GLOBALS['__test_allowed_graphs']) ? $GLOBALS['__test_allowed_graphs'] : array();
+	}
+}
+
 if (!function_exists('is_realm_allowed')) {
 	function is_realm_allowed($realm) {
 		return true;

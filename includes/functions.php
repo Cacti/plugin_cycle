@@ -325,9 +325,8 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 					$newcase .= (is_numeric($case) ? (strlen($newcase) ? ',' : '') . $case : '');
 				}
 
-				if (strlen($newcase)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($newcase)";
-				}
+				$custom_graph_ids = strlen($newcase) ? $newcase : '0';
+				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
 			} elseif ($type == 2) {
 				$newcase         = '';
 				$graph_data      = get_tree_graphs($graph_tree, $leaf_id);
@@ -436,6 +435,10 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
 				}
 
+				if (isset($custom_graph_ids)) {
+					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
+				}
+
 				$start      = 0;
 				$done       = false;
 				$next_found = false;
@@ -506,6 +509,10 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
 			}
 
+			if (isset($custom_graph_ids)) {
+				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
+			}
+
 			$done    = false;
 			$start   = 0;
 			$pgraphs = [];
@@ -554,6 +561,14 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 
 				if ($filter != '') {
 					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
+				}
+
+				if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
+					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
+				}
+
+				if (isset($custom_graph_ids)) {
+					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
 				}
 
 				$start = 0;
