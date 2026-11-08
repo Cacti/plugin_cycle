@@ -247,6 +247,33 @@ function cycle_set_defaults(): void {
 }
 
 /**
+ * Appends the active tree and custom graph constraints to a pagination
+ * query, so every pass of get_next_graphid() (forward, wraparound, and
+ * previous page) stays inside the configured graph selection.
+ *
+ * @param string      $sql_where        The WHERE clause built so far, or ''.
+ * @param array       $local_graph_ids  Graph ids from the selected tree or
+ *                                      leaf; empty when tree selection is
+ *                                      not active.
+ * @param string|null $custom_graph_ids Comma-separated numeric graph ids
+ *                                      from the custom graph list, or null
+ *                                      when no custom list applies.
+ *
+ * @return string The WHERE clause with the selection constraints appended.
+ */
+function cycle_append_graph_selection(string $sql_where, array $local_graph_ids, ?string $custom_graph_ids): string {
+	if (sizeof($local_graph_ids)) {
+		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
+	}
+
+	if ($custom_graph_ids !== null) {
+		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
+	}
+
+	return $sql_where;
+}
+
+/**
  * Builds the list of graphs to display on the current page of the Cycle
  * rotation (honoring the configured graph source - all graphs, a custom
  * list, or a tree/leaf selection - plus any regex title filter), and
@@ -289,21 +316,6 @@ function cycle_set_defaults(): void {
  * @global int   $prev_graph_id  Set to the graph id that should start the
  *                                previous page when the user clicks Prev.
  */
-/**
- * Appends the active tree and custom graph constraints to a pagination query.
- */
-function cycle_append_graph_selection(string $sql_where, array $local_graph_ids, ?string $custom_graph_ids): string {
-	if (sizeof($local_graph_ids)) {
-		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
-	}
-
-	if ($custom_graph_ids !== null) {
-		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
-	}
-
-	return $sql_where;
-}
-
 function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id;
 	$local_graph_ids  = [];
