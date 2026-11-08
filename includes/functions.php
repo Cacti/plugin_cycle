@@ -289,8 +289,25 @@ function cycle_set_defaults(): void {
  * @global int   $prev_graph_id  Set to the graph id that should start the
  *                                previous page when the user clicks Prev.
  */
+/**
+ * Appends the active tree and custom graph constraints to a pagination query.
+ */
+function cycle_append_graph_selection(string $sql_where, array $local_graph_ids, ?string $custom_graph_ids): string {
+	if (sizeof($local_graph_ids)) {
+		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
+	}
+
+	if ($custom_graph_ids !== null) {
+		$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
+	}
+
+	return $sql_where;
+}
+
 function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 	global $id, $graph_id, $graphs, $next_graph_id, $prev_graph_id;
+	$local_graph_ids  = [];
+	$custom_graph_ids = null;
 
 	// if no default graph list has been specified, default to 0
 	$type = read_config_option('cycle_custom_graphs_type');
@@ -326,7 +343,6 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 				}
 
 				$custom_graph_ids = strlen($newcase) ? $newcase : '0';
-				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
 			} elseif ($type == 2) {
 				$newcase         = '';
 				$graph_data      = get_tree_graphs($graph_tree, $leaf_id);
@@ -337,12 +353,12 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 					sort($local_graph_ids);
 				}
 
-				if (sizeof($local_graph_ids)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
-				} else {
+				if (!sizeof($local_graph_ids)) {
 					break;
 				}
 			}
+
+			$sql_where = cycle_append_graph_selection($sql_where, $local_graph_ids, $custom_graph_ids);
 
 			$done          = false;
 			$next_found    = false;
@@ -431,13 +447,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 				}
 
-				if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
-				}
-
-				if (isset($custom_graph_ids)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
-				}
+				$sql_where = cycle_append_graph_selection($sql_where, $local_graph_ids, $custom_graph_ids);
 
 				$start      = 0;
 				$done       = false;
@@ -505,13 +515,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 			}
 
-			if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
-				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
-			}
-
-			if (isset($custom_graph_ids)) {
-				$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
-			}
+			$sql_where = cycle_append_graph_selection($sql_where, $local_graph_ids, $custom_graph_ids);
 
 			$done    = false;
 			$start   = 0;
@@ -563,13 +567,7 @@ function get_next_graphid($graphpp, $filter, $graph_tree, $leaf_id): void {
 					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gtg.title_cache RLIKE ' . db_qstr($filter);
 				}
 
-				if (isset($local_graph_ids) && sizeof($local_graph_ids)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . ' gl.id IN(' . implode(',', $local_graph_ids) . ')';
-				}
-
-				if (isset($custom_graph_ids)) {
-					$sql_where .= (strlen($sql_where) ? ' AND' : 'WHERE') . " gl.id IN($custom_graph_ids)";
-				}
+				$sql_where = cycle_append_graph_selection($sql_where, $local_graph_ids, $custom_graph_ids);
 
 				$start = 0;
 				$done  = false;
