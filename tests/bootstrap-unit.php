@@ -268,6 +268,54 @@ if (!function_exists('cacti_sizeof')) {
 	}
 }
 
+if (!function_exists('is_graph_allowed')) {
+	/**
+	 * Allows every graph so pagination tests exercise only the SQL selection.
+	 *
+	 * @param int $local_graph_id Graph id being checked.
+	 * @param int $user_id        User id; ignored.
+	 *
+	 * @return bool Always true.
+	 */
+	function is_graph_allowed(int $local_graph_id, int $user_id = 0): bool {
+		return true;
+	}
+}
+
+if (!function_exists('is_tree_allowed')) {
+	/**
+	 * Allows every tree so pagination tests exercise only the SQL selection.
+	 *
+	 * @param int $tree_id Tree id being checked.
+	 * @param int $user_id User id; ignored.
+	 *
+	 * @return bool Always true.
+	 */
+	function is_tree_allowed(int $tree_id, int $user_id = 0): bool {
+		return true;
+	}
+}
+
+if (!function_exists('get_allowed_graphs')) {
+	/**
+	 * Returns the graphs a test places in $GLOBALS['__test_allowed_graphs'].
+	 *
+	 * @param string $sql_where  Ignored.
+	 * @param mixed  $sql_order  Ignored.
+	 * @param string $sql_limit  Ignored.
+	 * @param int    $total_rows Set to 0.
+	 * @param int    $user_id    Ignored.
+	 * @param int    $graph_id   Ignored.
+	 *
+	 * @return array Allowed graph rows.
+	 */
+	function get_allowed_graphs(string $sql_where = '', mixed $sql_order = 'gtg.title_cache', string $sql_limit = '', int &$total_rows = 0, int $user_id = 0, int $graph_id = 0): array {
+		$total_rows = 0;
+
+		return isset($GLOBALS['__test_allowed_graphs']) ? $GLOBALS['__test_allowed_graphs'] : array();
+	}
+}
+
 if (!function_exists('is_realm_allowed')) {
 	function is_realm_allowed($realm) {
 		return true;

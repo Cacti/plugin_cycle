@@ -10,6 +10,7 @@
 * security: Add a version-safe CSP nonce (`plugin_cycle_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 * issue: PHPStan level 8 typing pass and null-safety hardening for a malformed/missing plugin INFO file
 * issue: Prepared statements, PHP 7.4 idioms, and security fixes (PR #27)
+* issue#61: Preserve graph selection and current graph during pagination wraparound
 
 * issue: Save filter uses get method instead of post causing save failures
 * issue: The use of strlen() for null strings causes an error in PHP8+
