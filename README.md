@@ -4,6 +4,24 @@ The Cacti Cycle plugin allows you to automatically view the Cacti graphs one by
 one after a specified time delay.  It allows you to select a tree, or branch, as
 well as specifically selected graphs.
 
+## Versions and compatibility
+
+This README describes the `develop` source branch.
+
+| Code | Plugin version | Minimum Cacti declared in `INFO` |
+| --- | --- | --- |
+| [Source branch](INFO) | 4.3 | 1.2.29 |
+| [Published v4.1](https://github.com/Cacti/plugin_cycle/releases/tag/v4.1) | 4.1 | 1.1.22 |
+
+Use the published release’s assets and tagged documentation when installing that
+package. Branch code can include later changes, even when its version number
+matches the release. Cacti’s own PHP and database requirements also apply.
+
+Install this plugin in **`<cacti-root>/plugins/cycle`**, using the directory
+name `cycle` rather than `plugin_cycle`.
+
+See [CHANGELOG.md](CHANGELOG.md) for the version history.
+
 ## Features
 
 * You can set cycle time delay.
@@ -24,15 +42,18 @@ well as specifically selected graphs.
 
 ## Installation
 
-To install put the cycle directory and all files into the plugins directory.
+Copy the plugin to `plugins/cycle` inside the Cacti installation, then install
+and enable **Cycle** in Plugin Management. Grant the Cycle realm to the users
+who need the rotation view. No `$plugins` entry in a configuration file is needed.
 
-Edit your includes/config.php and add cycle to your $plugins list.
-
-You can find the plugin settings under the Misc tab.
+Configure defaults under **Settings > Cycle**. The Cycle view provides graph
+selection, dimensions, columns, rotation delay, and Start/Stop/Prev/Next controls.
 
 ## Possible Bugs
 
-The custom graph rotation is very simple and does not check for permissions.
+Graph selection is checked against the current user’s graph permissions,
+including a custom graph list. If an expected graph is missing, check the user’s
+Cacti permissions and the selected tree or list.
 
 ## Future Changes
 
