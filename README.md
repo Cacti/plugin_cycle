@@ -10,7 +10,7 @@ This README describes the `develop` source branch.
 
 | Code | Plugin version | Minimum Cacti declared in `INFO` |
 | --- | --- | --- |
-| [Source branch](INFO) | 4.3 | 1.2.29 |
+| [Source branch](https://github.com/Cacti/plugin_cycle/blob/develop/INFO) | 4.3 | 1.2.29 |
 | [Published v4.1](https://github.com/Cacti/plugin_cycle/releases/tag/v4.1) | 4.1 | 1.1.22 |
 
 Use the published release’s assets and tagged documentation when installing that
@@ -20,7 +20,7 @@ matches the release. Cacti’s own PHP and database requirements also apply.
 Install this plugin in **`<cacti-root>/plugins/cycle`**, using the directory
 name `cycle` rather than `plugin_cycle`.
 
-See [CHANGELOG.md](CHANGELOG.md) for the version history.
+See [CHANGELOG.md](https://github.com/Cacti/plugin_cycle/blob/develop/CHANGELOG.md) for the version history.
 
 ## Features
 
