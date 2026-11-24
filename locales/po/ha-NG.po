@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Hausa\n"
+"Language: ha-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Ba a Samu Jadawalai da Suka Dace da Sharuɗɗa ba"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Tacewar Zagayawar Jadawali"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Sabuntawa ta Gaba Cikin"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Tsawon Lokacin Nuna Jadawali"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Yawan Sabunta Zagayawar Juyawa"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Adadin Jadawalai a Kowane Shafi"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Zagaya zuwa Jadawalai na Baya"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Baya"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Dakatar"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Dakatar da Zagayawa"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Ci gaba da Juyawa"
+
+#: cycle.php
+msgid "Start"
+msgstr "Fara"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Zagaya zuwa Jadawalai na Gaba"
+
+#: cycle.php
+msgid "Next"
+msgstr "Na gaba"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Sabunta"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Sabunta Jadawalai Yanzu"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Share"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Share Tacewa"
+
+#: cycle.php
+msgid "Save"
+msgstr "Ajiye"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Ajiye Saitunan Tacewa"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Adadin Ginshiƙan Jadawali"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Tsayin Jadawali"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Faɗin Jadawali"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Nuna Ma'anar Jadawali"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Bayanin Alamu"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Zaɓi Bishiya da Za a Kalla"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Zaɓi Ganyen Bishiya da Za a Nuna"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Dukkan Matakai"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Matakin Sama"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Shigar da Daidaituwar Regular Expression (haruffa, lambobi, da alamomi na musamman \\\"(^_|?)\\\" kaɗai aka yarda)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Zagayawar Jadawalai"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d Jadawali"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d Jadawalai"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Ginshiƙi %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Ginshiƙai %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Manhajar ƙari -> Zagayen Jadawalai"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Zagayawa"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Tazarar Jinkiri"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Wannan shi ne lokaci a cikin daƙiƙa kafin a nuna jadawali na gaba."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Tsawon Lokacin Zane"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Wannan shine tsohon tsawon lokacin da za a nuna a shafin."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Adadin Ginshiƙai"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "A Yanayin Bishiya wannan shi ne adadin ginshiƙai da za a yi amfani da su."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Zaɓi adadin jadawalai da za a nuna a kowane shafi"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Wannan yana saita tsayin jadawali don jadawalai da aka nuna."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Wannan yana saita faɗin jadawali don jadawalai da aka nuna."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Nuna Ma'ana"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Yi alama a nan don nuna maɓallin bayani."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Juye-juye da Aka Riga Aka Tsara"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Nau'in Juyawa"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Zaɓi hanyar da za a yi amfani da ita don juya jadawali na musamman.  Idan ka zaɓi 'Takamaiman Jeri', dole ne ka ayyana jerin ID na Jadawalai"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Tsohon Tsari (Duka)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Takamaiman Jeri"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Yanayin Bishiya"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Jerin Jadawalai na Musamman"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Wannan dole ne ya zama jerin Lambobin Jadawali da aka raba da waƙafi don zagayawa ta cikinsu. Misali '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Bishiya ta Asali"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Zaɓi bishiyar jadawali da za a zagaya idan an zaɓi Yanayin Bishiya"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d Fiksel"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Ana zagayawa"
+

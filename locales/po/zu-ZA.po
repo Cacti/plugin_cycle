@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Zulu\n"
+"Language: zu-ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Awekho Amagrafu Atholakele Ahambisana Nemibandela"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Isihlungi Samagrafu Omjikelezo"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Isibuyekezo Esilandelayo Ku-"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Isikhathi Sokubonisa Igrafu"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Imvamisa Yokuvuselela Ukujikeleza"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Inani lamagrafu ngekhasi ngalinye"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Jikelezela Kumagrafu Angaphambilini"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Okwedlule"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Misa"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Misa Ukujikeleza"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Qalisa Kabusha Ukujikeleza"
+
+#: cycle.php
+msgid "Start"
+msgstr "Qala"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Jikelezela Kumagrafu Alandelayo"
+
+#: cycle.php
+msgid "Next"
+msgstr "Okulandelayo"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Vuselela"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Vuselela Amagrafu Manje"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Sula"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Sula Isihlungi"
+
+#: cycle.php
+msgid "Save"
+msgstr "Londoloza"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Londoloza Izilungiselelo Zesihlungi"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Inani lamakholomu egrafu"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Ubude begrafu"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Ububanzi begrafu"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Bonisa Incazelo Yegrafu"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Ilejendi"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Khetha Isihlahla Ozosibuka"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Khetha Iqabunga Lesihlahla Elizoboniswa"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Wonke Amazinga"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Izinga Eliphezulu"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Faka Ukufana Kwenkulumo Evamile (izinhlamvu, izinombolo, nezinhlamvu ezikhethekile \\\"(^_|?)\\\" kuphela ezivunyelwe)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Jikelezisa Amagrafu"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "Igrafu eli-%d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "Amagrafu angu-%d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Ikholomu engu-%d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Amakholomu angu-%d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "I-Plugin -> Zungezisa Amagrafu"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Umjikelezo"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Isikhawu Sokubambezeleka"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Lesi isikhathi ngamasekhondi ngaphambi kokuba igrafu elandelayo iboniswe."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Ububanzi Besikhathi Segrafu"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Lesi yisikhathi esizenzakalelayo esizoboniswa ekhasini."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Isibalo Samakholomu"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Kumodi Yesihlahla leli inani lamakholomu azosetshenziswa."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Khetha inani lamagrafu azoboniswa ngekhasi ngalinye"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Lokhu kusetha ubude begrafu bamagrafu aboniswayo."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Lokhu kusetha ububanzi begrafu bamagrafu aboniswayo."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Bonisa Incazelo"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Maka lokhu ukuze ubonise incazelo yezimpawu."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Ukujikeleza Okuchazwe Ngaphambilini"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Uhlobo Lokujikeleza"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Khetha indlela ezosetshenziselwa ukuzungeziswa kwegrafu ngokwezifiso.  Uma ukhetha i-'Specific List', kufanele uchaze uhlu lwama-ID Egrafu"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Okwakudala (Konke)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Uhlu Oluthile"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Indlela Yesihlahla"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Uhlu Lwamagrafu Olwenziwe Ngokwezifiso"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Lokhu kufanele kube uhlu oluhlukaniswe ngokhefana lwama-ID Egrafu ozoshintshashintsha kuwo. Isibonelo '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Isihlahla Esimisiwe"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Khetha isihlahla segrafu esizozungezwa uma kukhethwe Imodi Yesihlahla"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "Amaphikseli angu-%d"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Iyajikeleza"
+

@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Yoruba\n"
+"Language: yo-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Kò sí Àwọn Gíráàfù kankan tí a rí tó bá Àwọn Ìlànà mu"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Àlẹ̀mọ́ Gíráfù Yíyípo"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Ìmúdójúìwọ̀n Tókàn Nínú"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Àkókò Ìfihàn Gíráfù"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Ìgba Ìsọdọ̀tun Yíyípo"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Iye Àwọn Gíráàfù lójú Ewé Kọ̀ọ̀kan"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Yípo sí Àwọn Gíráàfù Tẹ́lẹ̀"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Tẹ́lẹ̀"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Dúró"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Dá Ìyípo Dúró"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Bẹ̀rẹ̀ Ìyípo Padà"
+
+#: cycle.php
+msgid "Start"
+msgstr "Bẹ̀rẹ̀"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Yípo sí Àwọn Gíráàfù Tókàn"
+
+#: cycle.php
+msgid "Next"
+msgstr "Tókàn"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Sọdọ̀tun"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Sọ Àwọn Gíráàfù Di Ọ̀tun Báyìí"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Nu Kúrò"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Nu Àlẹ̀mọ́"
+
+#: cycle.php
+msgid "Save"
+msgstr "Fipamọ́"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Fipamọ́ Àwọn Ètò Àlẹ̀mọ́"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Iye Àwọn Òpó Gíráfù"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Gíga Àwòrán"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Ìbú Àwòrán"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Ṣàfihàn Àlàyé Gíráfù"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Àlàyé Àmì"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Yan Igi Láti Wò"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Yan Ewé Igi Láti Fi Hàn"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Gbogbo Àwọn Ìpele"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Ìpele Òkè"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Tẹ Ìbámu Àpèjúwe Déédé (àwọn lẹ́tà, nọ́mbà, àti àwọn àmì pàtàkì \\\"(^_|?)\\\" nìkan ni a gbà láàyè)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Yí Àwọn Gíráàfù Po"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "Gíráfù %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "Àwọn Gíráàfù %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "%d Ọ̀wọ́n"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Àwọn Òpó %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Àfikún -> Àwọn Gíráàfù Àyípo"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Yíyípo"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Àkókò Ìdádúró"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Èyí ni àkókò ní ìṣẹ́jú-àáyá kí Gíráfù tí ó tẹ̀lé tó hàn."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Àkókò Gírífù"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Èyí ni àkókò àtọwọ́dọ́wọ́ tí yóò hàn lórí ojú-ewé náà."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Ìka Ọ̀wọ̀n"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Nínú Ipò Igi èyí ni iye àwọn ọ̀wọ́n tí a óò lò."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Yan iye Àwọn Gíráàfù láti ṣàfihàn lórí ojú-ìwé kọ̀ọ̀kan"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Èyí ṣètò gíga Gíráfù fún Àwọn Gíráàfù tí a fi hàn."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Èyí ṣètò fífẹ̀ Gíráfù fún Àwọn Gíráàfù tí a fi hàn."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Ṣàfihàn Àlàyé"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Fi àmì sí èyí láti fi àlàyé àmì hàn."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Àwọn Ìyípo Tí A Ti Ṣètò Tẹ́lẹ̀"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Irú Yíyípo"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Yan ọ̀nà tí o fẹ́ lò fún yíyí Gíráfù àdáni.  Bí o bá yan 'Àkójọ Pàtó', o gbọ́dọ̀ sọ àkójọ àwọn ID Gíráfù"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Àtijọ́ (Gbogbo rẹ̀)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Àtòjọ Pàtó"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Ipò Igi"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Àtòjọ Gíráfù Àdáni"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Èyí gbọ́dọ̀ jẹ́ àtòjọ àwọn ID Gíráfù tí a fi kọ́mà pín láti yípo láàárín wọn. Fún àpẹẹrẹ '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Igi Àìyípadà"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Yan igi gíráfù láti yípo bí a bá yan Ipò Igi"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "Píkísẹ́lì %d"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Ń yípo"
+

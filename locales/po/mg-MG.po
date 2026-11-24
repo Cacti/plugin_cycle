@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Malagasy\n"
+"Language: mg-MG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Tsy misy Kisary mifanaraka amin'ny fepetra hita"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Sivana Kisary amin'ny tsingerina"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Fanavaozana manaraka ao anatin'ny"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Elanelam-potoana fampisehoana ny Kisary"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Hatetik'ny fanavaozana ny fihodinan'ny tsingerina"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Isan'ny Kisary isaky ny pejy"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Miverena amin'ny Kisary teo aloha"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Teo aloha"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Ajanony"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Atsaharo ny fihodinana"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Tohizo indray ny fihodinana"
+
+#: cycle.php
+msgid "Start"
+msgstr "Atombohy"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Mirosoa amin'ny Kisary manaraka"
+
+#: cycle.php
+msgid "Next"
+msgstr "Manaraka"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Havaozy"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Havaozy izao ny Kisary"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Fafao"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Esory ny Sivana"
+
+#: cycle.php
+msgid "Save"
+msgstr "Tehirizo"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Tehirizo ny Fandrindrana Sivana"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Isan'ny tsanganana Kisary"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Haavon'ny grafika"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Sakan'ny grafika"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Asehoy ny fanazavana ny Kisary"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Fanazavana kisary"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Safidio ny Hazo Hojerena"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Safidio ny Ravin'ny Hazo Haseho"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Ambaratonga rehetra"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Ambaratonga ambony indrindra"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Ampidiro ny Fifanandrifiana Regex (litera, isa, ary ny marika manokana \\\"(^_|?)\\\" ihany no nahazoana alalana)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Kisary mihodina"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d Kisary"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d Kisary"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Tsanganana %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Tsanganana %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Plugin -> Kisary mifandimby"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Tsingerina"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Elanelam-potoana fahatarana"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Ity no fotoana amin'ny segondra alohan'ny hanehoana ny kisary manaraka."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Elanelam-potoanan'ny kisary"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Ity ny elanelam-potoana mahazatra izay haseho eo amin'ny pejy."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Isan'ny tsanganana"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Amin'ny Fomba Hazo dia io no isan'ny tsanganana hampiasaina."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Misafidiana ny isan'ny Kisary aseho isaky ny pejy"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Mametraka ny haavon'ny kisary ho an'ireo kisary aseho ity."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Mametraka ny sakan'ny kisary ho an'ireo kisary aseho ity."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Asehoy ny fanazavana"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Mariho ity mba hampisehoana ny fanazavana marika."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Fihodinana efa voafaritra mialoha"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Karazana fihodinana"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Misafidiana izay fomba hampiasaina amin'ny fihodinan'ny Kisary manokana.  Raha misafidy 'Lisitra Manokana' ianao dia tsy maintsy mamaritra lisitry ny ID-n'ny Kisary"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Taloha (Rehetra)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Lisitra manokana"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Fomba hazo"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Lisitry ny Kisary namboarina"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Tokony ho lisitry ny ID-n'ny Kisary elanelanin'ny faingo hovakivakiana ity. Ohatra '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Hazo mahazatra"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Misafidiana ny Hazo Kisary hifandimbiasana raha voafidy ny fomba Hazo"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d Piksela"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Mihodina"
+

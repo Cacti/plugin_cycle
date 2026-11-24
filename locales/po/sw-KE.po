@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Swahili\n"
+"Language: sw-KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Hakuna Grafu Zilizopatikana Zinazolingana na Vigezo"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Kichujio cha Mzunguko wa Grafu"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Sasisho Linalofuata Baada ya"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Muda wa Kuonyesha Grafu"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Masafa ya Kusasisha Mzunguko"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Idadi ya Grafu kwa Kila Ukurasa"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Zungusha kwenda Grafu Zilizopita"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Iliyotangulia"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Simamisha"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Simamisha Mzunguko"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Endelea na Mzunguko"
+
+#: cycle.php
+msgid "Start"
+msgstr "Anza"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Zungusha kwenda Grafu Zinazofuata"
+
+#: cycle.php
+msgid "Next"
+msgstr "Inayofuata"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Onyesha Upya"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Onyesha Upya Grafu Sasa"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Futa"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Safisha Kichujio"
+
+#: cycle.php
+msgid "Save"
+msgstr "Hifadhi"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Hifadhi Mipangilio ya Kichujio"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Idadi ya Safuwima za Grafu"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Kimo cha Grafu"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Upana wa Grafu"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Onyesha Ufunguo wa Grafu"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Ufunguo"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Chagua Mti wa Kutazama"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Chagua Jani la Mti la Kuonyesha"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Viwango Vyote"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Kiwango cha Juu"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Ingiza Ulinganifu wa Usemi wa Kawaida (herufi, nambari, na alama maalum \\\"(^_|?)\\\" pekee ndizo zinaruhusiwa)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Zungusha Grafu"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "Grafu %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "Grafu %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Safuwima %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Safuwima %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Programu-jalizi -> Mzunguko wa Grafu"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Mzunguko"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Muda wa Kuchelewesha"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Huu ni muda katika sekunde kabla ya Grafu inayofuata kuonyeshwa."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Kipindi cha Muda wa Grafu"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Hiki ni kipindi chaguomsingi cha muda kitakachoonyeshwa kwenye ukurasa."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Idadi ya Safuwima"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Katika Hali ya Mti hii ndiyo idadi ya safuwima zitakazotumika."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Chagua idadi ya grafu za kuonyesha kwa kila ukurasa"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Hii huweka urefu wa Grafu kwa Grafu zinazoonyeshwa."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Hii huweka upana wa Grafu kwa Grafu zinazoonyeshwa."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Onyesha Ufunguo"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Tiki hii ili kuonyesha ufunguo wa alama."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Mizunguko Iliyowekwa Awali"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Aina ya Mzunguko"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Chagua mbinu ya kutumia kwa mzunguko maalum wa grafu. Ukichagua 'Orodha Maalum', lazima ufafanue orodha ya Vitambulisho vya Grafu"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Ya Zamani (Zote)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Orodha Maalum"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Hali ya Mti"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Orodha Maalum ya Grafu"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Hii lazima iwe orodha ya ID za Grafu iliyotenganishwa kwa koma za kuzungusha. Kwa mfano '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Mti Chaguomsingi"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Chagua mti wa grafu wa kuzungusha ikiwa Hali ya Mti imechaguliwa"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "Pikseli %d"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Inazungusha"
+
