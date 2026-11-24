@@ -144,22 +144,22 @@ msgstr "תרשימי מחזור"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d גרף"
+msgstr "גרף %d"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d גרפים"
+msgstr "%d גרפים"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "עמודה% d"
+msgstr "%d עמודה"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d עמודות"
+msgstr "%d עמודות"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +256,7 @@ msgstr "בחר בעץ התרשים כדי לבחור אם נבחר מצב עץ"
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d פיקסלים"
+msgstr "%d פיקסלים"
 
 #: setup.php
 msgid "Cycling"

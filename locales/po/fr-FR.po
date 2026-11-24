@@ -55,7 +55,7 @@ msgstr "Arrêter"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Arrêter de faire du vélo"
+msgstr "Arrêter le défilement cyclique"
 
 #: cycle.php
 msgid "Resume Cycling"

@@ -63,7 +63,7 @@ msgstr "Hervatten Fietsen"
 
 #: cycle.php
 msgid "Start"
-msgstr "Laatste starttijd:"
+msgstr "Start"
 
 #: cycle.php
 msgid "Cycle to Next Graphs"
@@ -83,7 +83,7 @@ msgstr "Vernieuw nu grafieken"
 
 #: cycle.php
 msgid "Clear"
-msgstr "Herstel"
+msgstr "Wissen"
 
 #: cycle.php
 msgid "Clear Filter"
@@ -115,7 +115,7 @@ msgstr "Weergavegrafiek Legende"
 
 #: cycle.php
 msgid "Legend"
-msgstr "Legenda positie (--legend-position=&lt;position&gt;)"
+msgstr "Legenda"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -135,7 +135,7 @@ msgstr "Hoogste niveau"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Voer Regular Expression Match in (alleen alfabetische, numerieke en speciale tekens ☺\"(^_|?)♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥\" toegestaan)"
+msgstr "Voer een reguliere-expressieovereenkomst in (alleen letters, cijfers en speciale tekens \\\"(^_|?)\\\" toegestaan)"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -260,7 +260,7 @@ msgstr "%d Pixels"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Fietsen"
+msgstr "Rouleren"
 
 #, fuzzy
 #~ msgid "Set"

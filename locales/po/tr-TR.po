@@ -55,11 +55,11 @@ msgstr "Dur"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Bisiklete binmeyi durdur"
+msgstr "Döngüyü Durdur"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Bisiklete binme"
+msgstr "Döngüyü Sürdür"
 
 #: cycle.php
 msgid "Start"
@@ -144,22 +144,22 @@ msgstr "Döngü Grafikleri"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d Grafik"
+msgstr "%d Grafik"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d Grafik"
+msgstr "%d Grafik"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "% d Sütun"
+msgstr "%d Sütun"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d Sütunlar"
+msgstr "%d Sütun"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +256,7 @@ msgstr "Ağaç Modu seçiliyse, çevrilecek grafik ağacını seçin"
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d Piksel"
+msgstr "%d Piksel"
 
 #: setup.php
 msgid "Cycling"

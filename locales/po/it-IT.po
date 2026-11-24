@@ -55,7 +55,7 @@ msgstr "Stop"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Smettere di andare in bicicletta"
+msgstr "Interrompi rotazione"
 
 #: cycle.php
 msgid "Resume Cycling"
@@ -135,7 +135,7 @@ msgstr "Livello Superiore"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Inserisci Regular Expression Match (sono ammessi solo caratteri alfa, numerici e speciali \\\"(^_||?)\\\")."
+msgstr "Inserisci espressione regolare di corrispondenza (sono ammessi solo caratteri alfabetici, numerici e speciali \\\"(^_|?)\\\")"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -260,7 +260,7 @@ msgstr "%d Pixel"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Bicicletta"
+msgstr "Scorrimento ciclico"
 
 #, fuzzy
 #~ msgid "Set"

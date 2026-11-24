@@ -59,7 +59,7 @@ msgstr "Спиране на колоезденето"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Възобновяване на колоезденето"
+msgstr "Възобновяване на цикличното превключване"
 
 #: cycle.php
 msgid "Start"
@@ -135,7 +135,7 @@ msgstr "Най-високо ниво"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Въведете съвпадение на регулярния израз (само буквени, цифрови и специални символи \\ t"
+msgstr "Въведете съвпадение с регулярен израз (разрешени са само букви, цифри и специалните символи \"(^_|?)\")"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -144,22 +144,22 @@ msgstr "Графики на цикъла"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d Графика"
+msgstr "%d графика"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d Графики"
+msgstr "%d графики"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "% d Графа"
+msgstr "%d колона"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d колони"
+msgstr "%d колони"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +256,7 @@ msgstr "Изберете дървото на графиката, за да ци�
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d Пиксела"
+msgstr "%d пиксела"
 
 #: setup.php
 msgid "Cycling"

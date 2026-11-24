@@ -56,11 +56,11 @@ msgstr "Zatrzymaj"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Zatrzymaj jazdę na rowerze"
+msgstr "Zatrzymaj cykliczne przełączanie"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Wznowić jazdę na rowerze"
+msgstr "Wznów cykliczne przełączanie"
 
 #: cycle.php
 msgid "Start"

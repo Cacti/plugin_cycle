@@ -260,7 +260,7 @@ msgstr "%dピクセル"
 
 #: setup.php
 msgid "Cycling"
-msgstr "自転車競技"
+msgstr "巡回表示"
 
 #, fuzzy
 #~ msgid "Set"

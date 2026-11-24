@@ -261,7 +261,7 @@ msgstr "%d Píxeles"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Montar en bicicleta"
+msgstr "Rotación"
 
 #, fuzzy
 #~ msgid "Set"

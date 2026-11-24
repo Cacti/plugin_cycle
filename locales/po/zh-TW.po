@@ -24,7 +24,7 @@ msgstr "圖形顯示Timespan"
 
 #: cycle.php
 msgid "Cycle Rotation Refresh Frequency"
-msgstr "循環旋轉刷新頻率"
+msgstr "循環輪播重新整理頻率"
 
 #: cycle.php setup.php
 msgid "Number of Graphs per Page"
@@ -39,13 +39,12 @@ msgid "Prev"
 msgstr "上一頁"
 
 #: cycle.php
-#, fuzzy
 msgid "Stop"
 msgstr "停止"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "停止騎自行車"
+msgstr "停止輪播"
 
 #: cycle.php
 msgid "Resume Cycling"
@@ -60,18 +59,16 @@ msgid "Cycle to Next Graphs"
 msgstr "循環到下一個圖表"
 
 #: cycle.php
-#, fuzzy
 msgid "Next"
 msgstr "下一頁"
 
 #: cycle.php
-#, fuzzy
 msgid "Refresh"
 msgstr "重新整理"
 
 #: cycle.php
 msgid "Refresh Graphs Now"
-msgstr "立即刷新圖表"
+msgstr "立即重新整理圖表"
 
 #: cycle.php
 msgid "Clear"
@@ -82,27 +79,24 @@ msgid "Clear Filter"
 msgstr "清除篩選"
 
 #: cycle.php
-#, fuzzy
 msgid "Save"
 msgstr "儲存"
 
 #: cycle.php
 msgid "Save Filter Settings"
-msgstr "保存過濾器設置"
+msgstr "儲存篩選器設定"
 
 #: cycle.php
 msgid "Number of Graph Columns"
 msgstr "圖表列數"
 
 #: cycle.php setup.php
-#, fuzzy
 msgid "Graph Height"
-msgstr "圖形高度"
+msgstr "圖表高度"
 
 #: cycle.php setup.php
-#, fuzzy
 msgid "Graph Width"
-msgstr "圖寬度"
+msgstr "圖表寬度"
 
 #: cycle.php
 msgid "Display Graph Legend"
@@ -147,14 +141,14 @@ msgid "%d Graphs"
 msgstr "%d圖表"
 
 #: includes/functions.php setup.php
-#, fuzzy, php-format
+#, php-format
 msgid "%d Column"
-msgstr "％d列"
+msgstr "%d 欄"
 
 #: includes/functions.php setup.php
-#, fuzzy, php-format
+#, php-format
 msgid "%d Columns"
-msgstr "%d 行"
+msgstr "%d 欄"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -173,13 +167,12 @@ msgid "This is the time in seconds before the next graph is displayed."
 msgstr "這是顯示下一個圖形之前的秒數。"
 
 #: setup.php
-#, fuzzy
 msgid "Graph Timespan"
-msgstr "圖Timespan"
+msgstr "圖表時間範圍"
 
 #: setup.php
 msgid "This is the default timespan that will be displayed on the page."
-msgstr "這是將在頁面上顯示的默認時間跨度。"
+msgstr "這是頁面上將顯示的預設時間範圍。"
 
 #: setup.php
 msgid "Column Count"
@@ -195,11 +188,11 @@ msgstr "選擇每頁顯示的圖表數量"
 
 #: setup.php
 msgid "This sets the graph height for the displayed graphs."
-msgstr "這將為顯示的圖形設置圖形高度。"
+msgstr "這會設定顯示圖表的圖表高度。"
 
 #: setup.php
 msgid "This sets the graph width for the displayed graphs."
-msgstr "這將為顯示的圖形設置圖形寬度。"
+msgstr "這會設定顯示圖表的圖表寬度。"
 
 #: setup.php
 msgid "Display Legend"
@@ -230,9 +223,8 @@ msgid "Specific List"
 msgstr "具體清單"
 
 #: setup.php
-#, fuzzy
 msgid "Tree Mode"
-msgstr "樹模式"
+msgstr "樹狀目錄模式"
 
 #: setup.php
 msgid "Custom Graph List"
@@ -243,9 +235,8 @@ msgid "This must be a comma delimited list of Graph ID's to cycle through. For e
 msgstr "這必須是一個逗號分隔的圖表ID列表，以便循環顯示。例如'1,2,3,4'"
 
 #: setup.php
-#, fuzzy
 msgid "Default Tree"
-msgstr "默認樹"
+msgstr "預設樹狀圖"
 
 #: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
@@ -258,7 +249,7 @@ msgstr "%d圖元"
 
 #: setup.php
 msgid "Cycling"
-msgstr "自行车"
+msgstr "循環切換"
 
 #, fuzzy
 #~ msgid "Set"

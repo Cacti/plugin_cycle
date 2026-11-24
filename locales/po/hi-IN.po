@@ -27,7 +27,7 @@ msgstr "साइकिल रेखांकन"
 
 #: cycle.php
 msgid "Next Update In"
-msgstr "अगला अपडेट इन"
+msgstr "अगला अपडेट होने में"
 
 #: cycle.php
 msgid "Graph Display Timespan"
@@ -83,7 +83,7 @@ msgstr "ग्राफ़ को अब ताज़ा करें"
 
 #: cycle.php
 msgid "Clear"
-msgstr "明确"
+msgstr "साफ़ करें"
 
 #: cycle.php
 msgid "Clear Filter"
@@ -144,22 +144,22 @@ msgstr "साइकिल रेखांकन"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d ग्राफ"
+msgstr "%d ग्राफ़"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d रेखांकन"
+msgstr "%d ग्राफ़"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "% d स्तम्भ"
+msgstr "%d कॉलम"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d कॉलम"
+msgstr "%d कॉलम"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +256,7 @@ msgstr "यदि ट्री मोड का चयन किया गया
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d पिक्सेल"
+msgstr "%d पिक्सल"
 
 #: setup.php
 msgid "Cycling"

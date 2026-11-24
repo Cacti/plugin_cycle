@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 23:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Ukrainian\n"
+"Language: uk-UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Не знайдено графіків, що відповідають критеріям"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Фільтр циклічного перегляду графіків"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Наступне оновлення через"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Часовий інтервал відображення графіка"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Частота оновлення циклічного перегляду"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Кількість графіків на сторінці"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Перейти до попередніх графіків"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Попередній"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Зупинити"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Зупинити циклічне перемикання"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Відновити перемикання"
+
+#: cycle.php
+msgid "Start"
+msgstr "Старт"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Перейти до наступних графіків"
+
+#: cycle.php
+msgid "Next"
+msgstr "Далі"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Оновити"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Оновити графіки зараз"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Очистити"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Очистити фільтр"
+
+#: cycle.php
+msgid "Save"
+msgstr "Зберегти"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Зберегти налаштування фільтра"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Кількість стовпців графіків"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Висота графіка"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Ширина графіка"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Відображати легенду графіка"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Допомога"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Виберіть дерево для перегляду"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Виберіть вузол дерева для відображення"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Усі рівні"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Верхній рівень"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Введіть шаблон регулярного виразу (дозволені лише літери, цифри та спеціальні символи \"(^_|?)\")"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Циклічний перегляд графіків"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d графік"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d графіків"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Стовпець %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Стовпців: %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Плагін -> Циклічний перегляд графіків"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Цикл"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Інтервал затримки"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Це час у секундах до показу наступного графіка."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Часовий проміжок графіка"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Це часовий проміжок за замовчуванням, який відображатиметься на сторінці."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Кількість стовпців"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "У режимі дерева це кількість стовпців, яка буде використовуватися."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Виберіть кількість графіків для відображення на сторінці"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Цей параметр задає висоту відображуваних графіків."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Цей параметр задає ширину відображуваних графіків."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Відображати легенду"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Позначте цей прапорець, щоб відображати легенду."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Попередньо визначені ротації"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Тип ротації"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Виберіть метод для користувацької ротації графіків. Якщо вибрано «Конкретний список», потрібно визначити список ID графіків"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Застарілий (Усі)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Конкретний список"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Режим дерева"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Власний список графіків"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Це має бути список ідентифікаторів графіків через кому для циклічного перемикання. Наприклад: '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Дерево за замовчуванням"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Виберіть дерево графіків для циклічного перегляду, якщо вибрано режим дерева"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d пікселів"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Циклічний перегляд"
+

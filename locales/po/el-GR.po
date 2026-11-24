@@ -115,7 +115,7 @@ msgstr "Εμφάνιση του λεκτικού γραφήματος"
 
 #: cycle.php
 msgid "Legend"
-msgstr "Κατάσταση"
+msgstr "Υπόμνημα"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -123,7 +123,7 @@ msgstr "Επιλέξτε Δέντρο για προβολή"
 
 #: cycle.php
 msgid "Select Tree Leaf to Display"
-msgstr "Επιλέξτε Tree Tree για εμφάνιση"
+msgstr "Επιλέξτε φύλλο δέντρου για εμφάνιση"
 
 #: cycle.php
 msgid "All Levels"
@@ -144,12 +144,12 @@ msgstr "Γράφημα κύκλου"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d Γράφημα"
+msgstr "%d γράφημα"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d Γραφήματα"
+msgstr "%d γραφήματα"
 
 #: includes/functions.php setup.php
 #, php-format
@@ -256,7 +256,7 @@ msgstr "Επιλέξτε τη δέντρο γραφημάτων για να πρ
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d Pixels"
+msgstr "%d pixel"
 
 #: setup.php
 msgid "Cycling"

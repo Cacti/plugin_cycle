@@ -59,7 +59,7 @@ msgstr "Pare de pedalar"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Currículo Ciclismo"
+msgstr "Retomar ciclo"
 
 #: cycle.php
 msgid "Start"
@@ -127,7 +127,7 @@ msgstr "Selecione Folha de Árvore para exibir"
 
 #: cycle.php
 msgid "All Levels"
-msgstr "﻿Todos os níveis"
+msgstr "Todos os níveis"
 
 #: cycle.php
 msgid "Top Level"
@@ -154,12 +154,12 @@ msgstr "Gráficos %d"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "% d coluna"
+msgstr "%d Coluna"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d colunas"
+msgstr "%d Colunas"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -260,7 +260,7 @@ msgstr "%d Pixels"
 
 #: setup.php
 msgid "Cycling"
-msgstr "De bicicleta"
+msgstr "Alternando"
 
 #, fuzzy
 #~ msgid "Set"

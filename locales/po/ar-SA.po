@@ -83,7 +83,7 @@ msgstr "تحديث الرسوم البيانية الآن"
 
 #: cycle.php
 msgid "Clear"
-msgstr "واضح"
+msgstr "مسح"
 
 #: cycle.php
 msgid "Clear Filter"
@@ -131,7 +131,7 @@ msgstr "جميع المستويات"
 
 #: cycle.php
 msgid "Top Level"
-msgstr "افضل باقة"
+msgstr "المستوى الأعلى"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
@@ -260,7 +260,7 @@ msgstr "%d بكسل"
 
 #: setup.php
 msgid "Cycling"
-msgstr "ركوب الدراجات"
+msgstr "التبديل الدوري"
 
 #, fuzzy
 #~ msgid "Set"

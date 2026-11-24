@@ -59,7 +59,7 @@ msgstr "Pare de pedalar"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Currículo Ciclismo"
+msgstr "Retomar ciclo"
 
 #: cycle.php
 msgid "Start"
@@ -95,7 +95,7 @@ msgstr "Guardar"
 
 #: cycle.php
 msgid "Save Filter Settings"
-msgstr "Salvar configurações de filtro"
+msgstr "Guardar definições do filtro"
 
 #: cycle.php
 msgid "Number of Graph Columns"
@@ -223,7 +223,7 @@ msgstr "Tipo de Rotação"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "Seleccione o método a utilizar para a rotação de gráficos personalizados.  Se você selecionar 'Lista específica', você deve definir uma lista de IDs de gráfico"
+msgstr "Selecione o método a utilizar para a rotação personalizada de gráficos.  Se selecionar 'Lista específica', tem de definir uma lista de IDs de gráficos"
 
 #: setup.php
 msgid "Legacy (All)"

@@ -115,7 +115,7 @@ msgstr "그래프 범례 표시"
 
 #: cycle.php
 msgid "Legend"
-msgstr "리뷰 대상"
+msgstr "범례"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -144,12 +144,12 @@ msgstr "사이클 그래프"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "그래프 % d 개"
+msgstr "그래프 %d개"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "그래프 % d 개"
+msgstr "그래프 %d개"
 
 #: includes/functions.php setup.php
 #, php-format
@@ -256,7 +256,7 @@ msgstr "트리 모드가 선택되면 순환 할 그래프 트리를 선택하�
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d 픽셀"
+msgstr "%d픽셀"
 
 #: setup.php
 msgid "Cycling"
