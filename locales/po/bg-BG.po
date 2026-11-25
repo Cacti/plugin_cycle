@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Bulgarian <https://translate.cacti.net/projects/cacti/cycle/bg/>\nLanguage: bg-BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 22:35+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Bulgarian <https://translate.cacti.net/projects/cacti/cycle/bg/>\nLanguage: bg-BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -48,7 +48,7 @@ msgstr "Спиране на колоезденето"
 
 #: cycle.php
 msgid "Resume Cycling"
-msgstr "Възобновяване на колоезденето"
+msgstr "Възобновяване на цикличното превключване"
 
 #: cycle.php
 msgid "Start"
@@ -104,7 +104,7 @@ msgstr "Показване на легендата за графиката"
 
 #: cycle.php
 msgid "Legend"
-msgstr "Легенда"
+msgstr "Опции на легендата"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -124,7 +124,7 @@ msgstr "Най-високо ниво"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Въведете съвпадение на регулярния израз (само буквени, цифрови и специални символи \\ t"
+msgstr "Въведете съвпадение с регулярен израз (разрешени са само букви, цифри и специалните символи \"(^_|?)\")"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -168,7 +168,7 @@ msgstr "Това е времето в секунди преди да се пок
 
 #: setup.php
 msgid "Graph Timespan"
-msgstr "График на графика"
+msgstr "Времеви обхват на графиката"
 
 #: setup.php
 msgid "This is the default timespan that will be displayed on the page."
