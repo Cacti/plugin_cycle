@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:34-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: it_IT\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Italian <https://translate.cacti.net/projects/cacti/cycle/it/>\nLanguage: it-IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -55,7 +44,7 @@ msgstr "Stop"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "Smettere di andare in bicicletta"
+msgstr "Interrompi rotazione"
 
 #: cycle.php
 msgid "Resume Cycling"
@@ -95,7 +84,7 @@ msgstr "Salva"
 
 #: cycle.php
 msgid "Save Filter Settings"
-msgstr "Salvare le impostazioni del filtro"
+msgstr "Salva impostazioni filtro"
 
 #: cycle.php
 msgid "Number of Graph Columns"
@@ -135,7 +124,7 @@ msgstr "Livello Superiore"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "Inserisci Regular Expression Match (sono ammessi solo caratteri alfa, numerici e speciali \\\"(^_||?)\\\")."
+msgstr "Inserisci espressione regolare di corrispondenza (sono ammessi solo caratteri alfabetici, numerici e speciali \\\"(^_|?)\\\")"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -223,7 +212,7 @@ msgstr "Tipo di rotazione"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "Selezionare il metodo da utilizzare per la rotazione del grafico personalizzato.  Se si seleziona \"Lista specifica\", è necessario definire un elenco di ID grafico."
+msgstr "Selezionare il metodo da utilizzare per la rotazione del grafico personalizzato.  Se si seleziona \"Lista specifica\", è necessario definire un elenco di ID grafico"
 
 #: setup.php
 msgid "Legacy (All)"
@@ -243,7 +232,7 @@ msgstr "Elenco grafico personalizzato"
 
 #: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
-msgstr "Questo deve essere un elenco delimitato da virgole degli ID del grafico da far scorrere. Ad esempio \"1,2,3,4\"."
+msgstr "Questo deve essere un elenco delimitato da virgole degli ID del grafico da far scorrere. Ad esempio \"1,2,3,4\""
 
 #: setup.php
 msgid "Default Tree"
@@ -260,7 +249,7 @@ msgstr "%d Pixel"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Bicicletta"
+msgstr "Scorrimento ciclico"
 
 #, fuzzy
 #~ msgid "Set"
