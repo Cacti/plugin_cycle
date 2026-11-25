@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:35-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ja_JP\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Japanese <https://translate.cacti.net/projects/cacti/cycle/ja/>\nLanguage: ja-JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -95,7 +84,7 @@ msgstr "保存"
 
 #: cycle.php
 msgid "Save Filter Settings"
-msgstr "フィルタ設定を保存"
+msgstr "フィルター設定を保存"
 
 #: cycle.php
 msgid "Number of Graph Columns"
@@ -135,7 +124,7 @@ msgstr "最多メンバーレベル"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
-msgstr "正規表現の一致を入力します（英字、数字、および特殊文字のみを使用できます）。"
+msgstr "正規表現の一致を入力します（英字、数字、および特殊文字のみを使用できます）"
 
 #: cycle.php setup.php
 msgid "Cycle Graphs"
@@ -223,7 +212,7 @@ msgstr "回転タイプ"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "カスタムグラフ回転に使用する方法を選択します。 「特定のリスト」を選択した場合は、グラフIDのリストを定義する必要があります。"
+msgstr "カスタムグラフ回転に使用する方法を選択します。 「特定のリスト」を選択した場合は、グラフIDのリストを定義する必要があります"
 
 #: setup.php
 msgid "Legacy (All)"
@@ -251,7 +240,7 @@ msgstr "デフォルトのツリー"
 
 #: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
-msgstr "ツリーモードが選択されている場合は、循環するグラフツリーを選択します。"
+msgstr "ツリーモードが選択されている場合は、循環するグラフツリーを選択します"
 
 #: setup.php
 #, php-format
@@ -260,7 +249,7 @@ msgstr "%dピクセル"
 
 #: setup.php
 msgid "Cycling"
-msgstr "自転車競技"
+msgstr "巡回表示"
 
 #, fuzzy
 #~ msgid "Set"
