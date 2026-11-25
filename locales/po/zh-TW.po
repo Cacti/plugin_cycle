@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/cycle/zh_Hant/>\nLanguage: zh-TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 22:35+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/cycle/zh_Hant/>\nLanguage: zh-TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -44,7 +44,7 @@ msgstr "停止"
 
 #: cycle.php
 msgid "Stop Cycling"
-msgstr "停止騎自行車"
+msgstr "停止輪播"
 
 #: cycle.php
 msgid "Resume Cycling"
@@ -92,11 +92,11 @@ msgstr "圖表列數"
 
 #: cycle.php setup.php
 msgid "Graph Height"
-msgstr "圖表高度"
+msgstr "圖形高度"
 
 #: cycle.php setup.php
 msgid "Graph Width"
-msgstr "圖表寬度"
+msgstr "圖寬度"
 
 #: cycle.php
 msgid "Display Graph Legend"
@@ -104,7 +104,7 @@ msgstr "顯示圖表圖例"
 
 #: cycle.php
 msgid "Legend"
-msgstr "說明"
+msgstr "圖例選項"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -143,7 +143,7 @@ msgstr "%d圖表"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "%d 欄"
+msgstr "%d列"
 
 #: includes/functions.php setup.php
 #, php-format
@@ -224,7 +224,7 @@ msgstr "具體清單"
 
 #: setup.php
 msgid "Tree Mode"
-msgstr "樹狀目錄模式"
+msgstr "樹模式"
 
 #: setup.php
 msgid "Custom Graph List"
@@ -236,7 +236,7 @@ msgstr "這必須是一個逗號分隔的圖表ID列表，以便循環顯示。�
 
 #: setup.php
 msgid "Default Tree"
-msgstr "預設樹狀圖"
+msgstr "默認樹"
 
 #: setup.php
 msgid "Select the graph tree to cycle if Tree Mode is selected"
@@ -249,7 +249,7 @@ msgstr "%d圖元"
 
 #: setup.php
 msgid "Cycling"
-msgstr "自行车"
+msgstr "循環切換"
 
 #, fuzzy
 #~ msgid "Set"
