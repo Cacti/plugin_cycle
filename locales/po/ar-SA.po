@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/cacti/cycle/ar_SA/>\nLanguage: ar-SA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.11.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 22:35+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/cacti/cycle/ar_SA/>\nLanguage: ar-SA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -104,7 +104,7 @@ msgstr "عرض الرسم البياني ليجند"
 
 #: cycle.php
 msgid "Legend"
-msgstr "وسيلة ايضاح"
+msgstr "وسيلة الإيضاح"
 
 #: cycle.php
 msgid "Select Tree to View"
@@ -120,7 +120,7 @@ msgstr "جميع المستويات"
 
 #: cycle.php
 msgid "Top Level"
-msgstr "افضل باقة"
+msgstr "المستوى الأعلى"
 
 #: cycle.php
 msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
@@ -168,7 +168,7 @@ msgstr "هذا هو الوقت بالثواني قبل عرض الرسم الب�
 
 #: setup.php
 msgid "Graph Timespan"
-msgstr "الرسم البياني Timespan"
+msgstr "النطاق الزمني للرسم البياني"
 
 #: setup.php
 msgid "This is the default timespan that will be displayed on the page."
@@ -249,7 +249,7 @@ msgstr "%d بكسل"
 
 #: setup.php
 msgid "Cycling"
-msgstr "ركوب الدراجات"
+msgstr "التبديل الدوري"
 
 #, fuzzy
 #~ msgid "Set"
