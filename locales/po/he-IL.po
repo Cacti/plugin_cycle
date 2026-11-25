@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:33-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: he_IL\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Hebrew (Israel) <https://translate.cacti.net/projects/cacti/cycle/he_IL/>\nLanguage: he-IL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -144,22 +133,22 @@ msgstr "תרשימי מחזור"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d גרף"
+msgstr "גרף %d"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d גרפים"
+msgstr "%d גרפים"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "עמודה% d"
+msgstr "%d עמודה"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d עמודות"
+msgstr "%d עמודות"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +245,7 @@ msgstr "בחר בעץ התרשים כדי לבחור אם נבחר מצב עץ"
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d פיקסלים"
+msgstr "%d פיקסלים"
 
 #: setup.php
 msgid "Cycling"
