@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:37-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Portuguese (Portugal) <https://translate.cacti.net/projects/cacti/cycle/pt_PT/>\nLanguage: pt-PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -95,7 +84,7 @@ msgstr "Guardar"
 
 #: cycle.php
 msgid "Save Filter Settings"
-msgstr "Salvar configurações de filtro"
+msgstr "Guardar definições do filtro"
 
 #: cycle.php
 msgid "Number of Graph Columns"
@@ -223,7 +212,7 @@ msgstr "Tipo de Rotação"
 
 #: setup.php
 msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
-msgstr "Seleccione o método a utilizar para a rotação de gráficos personalizados.  Se você selecionar 'Lista específica', você deve definir uma lista de IDs de gráfico"
+msgstr "Selecione o método a utilizar para a rotação personalizada de gráficos.  Se selecionar 'Lista específica', tem de definir uma lista de IDs de gráficos"
 
 #: setup.php
 msgid "Legacy (All)"
@@ -243,7 +232,7 @@ msgstr "Lista Personalizada de Gráficos"
 
 #: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
-msgstr "Esta deve ser uma lista delimitada por vírgulas de Graph ID's para percorrer. Por exemplo, \"1,2,3,4\"."
+msgstr "Esta deve ser uma lista delimitada por vírgulas de Graph ID's para percorrer. Por exemplo, \"1,2,3,4\""
 
 #: setup.php
 msgid "Default Tree"
