@@ -4,18 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:34-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: hi_IN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Hindi <https://translate.cacti.net/projects/cacti/cycle/hi/>\nLanguage: hi-IN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -83,7 +72,7 @@ msgstr "ग्राफ़ को अब ताज़ा करें"
 
 #: cycle.php
 msgid "Clear"
-msgstr "明确"
+msgstr "साफ़ करें"
 
 #: cycle.php
 msgid "Clear Filter"
@@ -144,22 +133,22 @@ msgstr "साइकिल रेखांकन"
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graph"
-msgstr "% d ग्राफ"
+msgstr "%d ग्राफ़"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Graphs"
-msgstr "% d रेखांकन"
+msgstr "%d ग्राफ़"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Column"
-msgstr "% d स्तम्भ"
+msgstr "%d कॉलम"
 
 #: includes/functions.php setup.php
 #, php-format
 msgid "%d Columns"
-msgstr "% d कॉलम"
+msgstr "%d कॉलम"
 
 #: setup.php
 msgid "Plugin -> Cycle Graphs"
@@ -256,7 +245,7 @@ msgstr "यदि ट्री मोड का चयन किया गया
 #: setup.php
 #, php-format
 msgid "%d Pixels"
-msgstr "% d पिक्सेल"
+msgstr "%d पिक्सेल"
 
 #: setup.php
 msgid "Cycling"
