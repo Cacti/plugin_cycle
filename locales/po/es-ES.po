@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 22:28-0400\n"
-"PO-Revision-Date: 2024-06-08 09:32-0400\n"
-"Last-Translator: Tadeo Briceño <tadeobriceno@vencable.com>\n"
-"Language-Team: Spanish <http://translate.cacti.net/projects/cacti/cycle/es/>\n"
-"Language: es_ES\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+msgstr "Project-Id-Version: \nReport-Msgid-Bugs-To: developers@cacti.net\nPOT-Creation-Date: 2026-09-29 22:28-0400\nPO-Revision-Date: 2026-11-25 00:18+0000\nLast-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\nLanguage-Team: Spanish <https://translate.cacti.net/projects/cacti/cycle/es/>\nLanguage: es-ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.11.4\n"
 
 #: cycle.php
 msgid "No Graphs Found Matching Criteria"
@@ -100,7 +88,7 @@ msgstr "Guardar opciones de filtro"
 
 #: cycle.php
 msgid "Number of Graph Columns"
-msgstr "El número de columnas de gráfico."
+msgstr "El número de columnas de gráfico"
 
 #: cycle.php setup.php
 msgid "Graph Height"
@@ -244,7 +232,7 @@ msgstr "[ Lista personalizada de gráficos aplicada - Filtrando de la lista ]"
 
 #: setup.php
 msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
-msgstr "Esta debe ser una lista delimitada por comas de IDs de Gráficos para recorrerla. Por ejemplo '1,2,3,4'."
+msgstr "Esta debe ser una lista delimitada por comas de IDs de Gráficos para recorrerla. Por ejemplo '1,2,3,4'"
 
 #: setup.php
 msgid "Default Tree"
@@ -261,7 +249,7 @@ msgstr "%d Píxeles"
 
 #: setup.php
 msgid "Cycling"
-msgstr "Montar en bicicleta"
+msgstr "Rotación"
 
 #, fuzzy
 #~ msgid "Set"
