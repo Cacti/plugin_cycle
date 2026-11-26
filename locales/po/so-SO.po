@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Somali\n"
+"Language: so-SO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Lama Helin Jaantusyada u Dhigma Shuruudaha"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Shaandheeyaha Wareegga Garaafka"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Cusboonaysiinta Xigta Gudaha"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Mudada Muujinta Garaafka"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Inta jeer ee Cusboonaysiinta Wareegga"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Tirada Jaantusyada Boggiiba"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "U wareeg Jaantusyada Hore"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Hore"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Jooji"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Jooji Wareegga"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Dib u bilow Wareegga"
+
+#: cycle.php
+msgid "Start"
+msgstr "Bilow"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "U wareeg Jaantusyada Xiga"
+
+#: cycle.php
+msgid "Next"
+msgstr "Xiga"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Cusboonaysii"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Cusbooneysii Jaantusyada Hadda"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Nadiifi"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Nadiifi Shaandheeyaha"
+
+#: cycle.php
+msgid "Save"
+msgstr "Keydi"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Keydi Dejinta Shaandheeyaha"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Tirada Tiirarka Garaafka"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Dhererka Garaafka"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Ballaca Garaafka"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Muuji Tilmaamaha Garaafka"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Furaha Garaafka"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Dooro Geedka si loo Eego"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Dooro Caleenta Geedka si loo Muujiyo"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Dhammaan Heerarka"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Heerka Sare"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Geli Iswaafajinta Muujinta Caadiga ah (xarfaha, tirooyinka, iyo calaamadaha gaarka ah \\\"(^_|?)\\\" oo keliya ayaa la oggol yahay)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Wareeji Jaantusyada"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d Garaafka"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d Jaantusyada"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "%d Tiir"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "%d Tiir"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Kordhin -> Wareegga Jaantusyada"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Wareeg"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Muddada Dib-u-dhigista"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Kani waa wakhtiga ilbiriqsiyada ah ka hor inta aan la soo bandhigin garaafka xiga."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Muddada Garaafka"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Tani waa muddada waqtiga caadiga ah ee lagu soo bandhigi doono bogga."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Tirada Tiirarka"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Habka Geedka, kani waa tirada tiirarka la isticmaali doono."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Dooro tirada jaantusyada boggiiba la soo bandhigayo"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Tani waxay dejisaa dhererka garaafka ee jaantusyada la soo bandhigay."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Tani waxay dejisaa ballaca garaafka ee jaantusyada la soo bandhigay."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Muuji Tilmaamaha"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Calaamadee tan si aad u muujiso furaha sharraxaadda."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Wareegyo Hore Loo Qeexay"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Nooca Wareegga"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Dooro habka loo isticmaalayo wareejinta garaafka gaarka ah. Haddii aad doorato 'Liis Gaar ah', waa inaad qeexdaa liiska Aqoonsiyada Garaafka"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Hore (Dhammaan)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Liis Gaar ah"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Qaabka Geedka"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Liiska Garaafka Gaarka ah"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Tani waa inay noqotaa liis ku kala soocan hakad oo ka kooban aqoonsiyada Garaafka ee la wareejinayo. Tusaale ahaan '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Geedka Caadiga ah"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Dooro geedka garaafka ee la wareejinayo haddii la doorto Habka Geedka"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d Piksel"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Wareegaya"
+

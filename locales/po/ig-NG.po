@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Igbo\n"
+"Language: ig-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Ahụghị Eserese Gasị Dabara na Ntụziaka"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Nzacha Eserese Okirikiri"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Mmelite Na-esote N'ime"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Oge Ngosipụta Eserese"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Ugboro Mmelite Ntụgharị Okirikiri"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Ọnụọgụ Eserese Gasị kwa Ibe"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Gaa n'Eserese Gasị Gara Aga"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Nke gara aga"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Kwụsị"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Kwụsị Ntụgharị"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Maliteghachi Ntugharị"
+
+#: cycle.php
+msgid "Start"
+msgstr "Malite"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Gaa n'Eserese Gasị Na-esote"
+
+#: cycle.php
+msgid "Next"
+msgstr "Ọzọ"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Megharịa"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Mee Ka Eserese Gasị Dị Ọhụrụ Ugbu A"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Kpochapụ"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Kpochapụ Nzacha"
+
+#: cycle.php
+msgid "Save"
+msgstr "Chekwaa"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Chekwaa Ntọala Nzacha"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Ọnụọgụ Kọlụm Eserese"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Ogo Eserese"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Obosara Eserese"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Gosi Nkọwa Eserese"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Nkọwa Akara"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Họrọ Osisi Iji Lee"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Họrọ Akwụkwọ Osisi Iji Gosipụta"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Ọkwa Niile"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Ọkwa kacha elu"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Tinye Nkwekọrịta Regular Expression (naanị mkpụrụedemede, ọnụọgụgụ, na mkpụrụedemede pụrụ iche \\\"(^_|?)\\\" ka e kwere)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Eserese Gasị Okirikiri"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "Eserese %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "Eserese Gasị %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Ogidi %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Kọlụm %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Nkwụnye -> Mgbagharị Eserese Gasị"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Okirikiri"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Oge Nkwụsịtụ"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Nke a bụ oge n'ime sekọnd tupu e gosipụta Eserese na-esote."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Ogologo Oge Eserese"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Nke a bụ ogologo oge ndabara a ga-egosipụta na ibe ahụ."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Ọnụọgụgụ Kọlụm"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "N'Ọnọdụ Osisi, nke a bụ ọnụọgụgụ kọlụm a ga-eji."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Họrọ ọnụọgụ eserese gasị a ga-egosi na ibe ọ bụla"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Nke a na-edozi ịdị elu Eserese maka Eserese Gasị egosipụtara."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Nke a na-edozi obosara Eserese maka Eserese Gasị egosipụtara."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Gosi Nkọwa"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Kaa akara a iji gosi nkọwa akara."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Ntụgharị E Kpebiri Mbụ"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Ụdị Ntụgharị"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Họrọ ụzọ ị ga-eji maka ntụgharị eserese ahaziri. Ọ bụrụ na ị họrọ 'Ndepụta Kpọmkwem', ị ga-akọwa ndepụta ID Eserese"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Ochie (Niile)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Ndepụta Pụrụ Iche"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Ọnọdụ Osisi"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Ndepụta Eserese Haziri Ahazi"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Nke a ga-abụ ndepụta ID Eserese e ji rikọm kewaa iji gaa n'usoro. Dịka ọmụmaatụ '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Osisi Ndabara"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Họrọ osisi eserese a ga-agbagharị ma ọ bụrụ na ahọrọ Ọnọdụ Osisi"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "Piksụl %d"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Na-atụgharị okirikiri"
+

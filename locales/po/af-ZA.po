@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Afrikaans\n"
+"Language: af-ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Geen grafieke gevind wat aan kriteria voldoen nie"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Siklus-grafiekfilter"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Volgende bywerking oor"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Grafiekvertoon-tydspan"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Verversingsfrekwensie van Siklusrotasie"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Aantal grafieke per bladsy"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Sirkuleer na Vorige Grafieke"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Vorige"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Stop"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Stop siklus"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Hervat siklering"
+
+#: cycle.php
+msgid "Start"
+msgstr "Begin"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Sirkuleer na Volgende Grafieke"
+
+#: cycle.php
+msgid "Next"
+msgstr "Volgende"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Verfris"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Verfris grafieke nou"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Maak skoon"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Maak filter skoon"
+
+#: cycle.php
+msgid "Save"
+msgstr "Stoor"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Stoor filterinstellings"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Aantal grafiekkolomme"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Grafiekhoogte"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Grafiekwydte"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Vertoon grafieklegende"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Legende"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Kies boom om te besigtig"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Kies boomblaar om te vertoon"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Alle vlakke"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Boonste vlak"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Voer gereelde uitdrukking-passing in (slegs alfabetiese, numeriese en spesiale karakters \\\"(^_|?)\\\" toegelaat)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Sirkuleer Grafieke"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d Grafiek"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d Grafieke"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "%d Kolom"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "%d kolomme"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Inprop -> Siklusgrafieke"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Siklus"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Vertragingsinterval"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Dit is die tyd in sekondes voordat die volgende grafiek vertoon word."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Grafiektydperk"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Dit is die verstek-tydspan wat op die bladsy vertoon sal word."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Kolomtelling"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "In Boommodus is dit die aantal kolomme wat gebruik sal word."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Kies die aantal grafieke om per bladsy te vertoon"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Dit stel die grafiekhoogte vir die vertoonde grafieke in."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Dit stel die grafiekbreedte vir die vertoonde grafieke in."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Vertoon legende"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Merk dit om die legende te vertoon."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Voorafgedefinieerde rotasies"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Rotasietipe"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Kies watter metode om te gebruik vir pasgemaakte grafiekrotasie.  As u 'Spesifieke Lys' kies, moet u 'n lys van Grafiek-ID's definieer"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Verouderd (Alles)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Spesifieke Lys"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Boommodus"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Pasgemaakte Grafieklys"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Dit moet 'n kommageskeide lys Grafiek-ID's wees om deur te blaai. Byvoorbeeld '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Verstekboom"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Kies die grafiekboom om deur te siklus as Boommodus gekies is"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d piksels"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Sirkuleer tans"
+

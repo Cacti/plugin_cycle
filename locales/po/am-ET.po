@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Amharic\n"
+"Language: am-ET\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "ከመስፈርቱ ጋር የሚዛመዱ ምንም ግራፎች አልተገኙም"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "የዙር ግራፍ ማጣሪያ"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "ቀጣይ ዝማኔ በ"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "የግራፍ ማሳያ የጊዜ ገደብ"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "የዙር መዞር ማደሻ ድግግሞሽ"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "በአንድ ገጽ ያሉ ግራፎች ብዛት"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "ወደ ቀዳሚ ግራፎች ዙር"
+
+#: cycle.php
+msgid "Prev"
+msgstr "ቀዳሚ"
+
+#: cycle.php
+msgid "Stop"
+msgstr "አቁም"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "ዑደቱን አቁም"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "ዑደትን አስቀጥል"
+
+#: cycle.php
+msgid "Start"
+msgstr "ጀምር"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "ወደ ቀጣይ ግራፎች ዙር"
+
+#: cycle.php
+msgid "Next"
+msgstr "ቀጣይ"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "አድስ"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "ግራፎችን አሁን አድስ"
+
+#: cycle.php
+msgid "Clear"
+msgstr "አጽዳ"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "ማጣሪያውን አጽዳ"
+
+#: cycle.php
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "የማጣሪያ ቅንብሮችን አስቀምጥ"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "የግራፍ አምዶች ብዛት"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "የግራፍ ቁመት"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "የግራፍ ስፋት"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "የግራፍ መግለጫ አሳይ"
+
+#: cycle.php
+msgid "Legend"
+msgstr "መግለጫ"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "ለማየት ዛፍ ምረጥ"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "ለማሳየት የዛፍ ቅጠል ምረጥ"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "ሁሉም ደረጃዎች"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "ከፍተኛ ደረጃ"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "መደበኛ አገላለጽ ማዛመጃ ያስገቡ (ፊደላት፣ ቁጥሮች እና ልዩ ቁምፊዎች \\\"(^_|?)\\\" ብቻ ይፈቀዳሉ)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "ግራፎችን አዙር"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d ግራፍ"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d ግራፎች"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "%d ዓምድ"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "%d አምዶች"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "ተሰኪ -> የዑደት ግራፎች"
+
+#: setup.php
+msgid "Cycle"
+msgstr "ዙር"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "የመዘግየት ክፍተት"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "ይህ ቀጣዩ ግራፍ ከመታየቱ በፊት ያለው ጊዜ በሰከንዶች ነው።"
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "የግራፍ የጊዜ ገደብ"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "ይህ በገጹ ላይ የሚታየው ነባሪ የጊዜ ቆይታ ነው።"
+
+#: setup.php
+msgid "Column Count"
+msgstr "የአምድ ብዛት"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "በዛፍ ሁነታ ውስጥ ይህ ጥቅም ላይ የሚውለው የአምዶች ብዛት ነው።"
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "በአንድ ገጽ የሚታዩ ግራፎችን ብዛት ይምረጡ"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "ይህ ለሚታዩት ግራፎች የግራፍ ቁመቱን ያዘጋጃል።"
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "ይህ ለሚታዩት ግራፎች የግራፍ ስፋቱን ያዘጋጃል።"
+
+#: setup.php
+msgid "Display Legend"
+msgstr "መግለጫ አሳይ"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "መግለጫ (legend) ለማሳየት ይህን ይምረጡ።"
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "አስቀድመው የተገለጹ ዙሮች"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "የማሽከርከር አይነት"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "ለብጁ የግራፍ ሽክርክሪት የትኛውን ዘዴ መጠቀም እንደሚፈልጉ ይምረጡ። 'የተወሰነ ዝርዝር' ከመረጡ የግራፍ መታወቂያዎችን ዝርዝር መግለጽ አለብዎት"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "ቀደምት (ሁሉም)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "የተወሰነ ዝርዝር"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "የዛፍ ሁነታ"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "ብጁ የግራፍ ዝርዝር"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "ይህ ለመዞር በነጠላ ሰረዝ የተለየ የግራፍ መታወቂያዎች ዝርዝር መሆን አለበት። ለምሳሌ '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "ነባሪ ዛፍ"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "የዛፍ ሁነታ ከተመረጠ የሚሽከረከረውን የግራፍ ዛፍ ይምረጡ"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d ፒክስሎች"
+
+#: setup.php
+msgid "Cycling"
+msgstr "በመዞር ላይ"
+

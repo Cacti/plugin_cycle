@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Kinyarwanda\n"
+"Language: rw-RW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Nta bishushanyo bihura n'ibisabwa byabonetse"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Akayunguruzo k'Ibishushanyo by'umuzunguruko"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Ivugurura Rikurikira Mu"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Igihe cyo kwerekana Igishushanyo"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Inshuro yo kuvugurura izenguruka ry'umuzunguruko"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Umubare w'Ibishushanyo kuri buri paji"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Subira ku Bishushanyo bibanza"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Ibanza"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Hagarika"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Hagarika guhinduranya"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Subukura izenguruka"
+
+#: cycle.php
+msgid "Start"
+msgstr "Tangira"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Simbukira ku Bishushanyo bikurikira"
+
+#: cycle.php
+msgid "Next"
+msgstr "Ibikurikira"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Vugurura"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Vugurura Ibishushanyo Ubu"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Siba"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Kuraho Akayunguruzo"
+
+#: cycle.php
+msgid "Save"
+msgstr "Bika"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Bika Amagenamiterere y'Akayunguruzo"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Umubare w'inkingi z'Igishushanyo"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Ubuhagarike bw'igishushanyo"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Ubugari bw'igishushanyo"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Erekana ibisobanuro by'Igishushanyo"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Ubusobanuro"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Hitamo Igiti cyo Kureba"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Hitamo Ikibabi cy'Igiti cyo Kwerekana"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Inzego Zose"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Urwego rwo hejuru"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Andika ihura ry'imvugo isanzwe (inyuguti, imibare, n'ibimenyetso byihariye \\\"(^_|?)\\\" gusa ni byo byemewe)"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Ibishushanyo by'umuzunguruko"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "Igishushanyo %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "Ibishushanyo %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "Inkingi %d"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "Inkingi %d"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Umugereka -> Zunguruka Ibishushanyo"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Umuzunguruko"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Intera y'ikererwa"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Iki ni igihe mu masegonda mbere y'uko igishushanyo gikurikira kigaragara."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Igihe cya Grafu"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Iki ni igihe gisanzwe kizagaragara ku rupapuro."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Umubare w'inkingi"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "Mu Buryo bw'Igiti uyu ni umubare w'inkingi zizakoreshwa."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Hitamo umubare w'ibishushanyo byerekanwa kuri buri paji"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Ibi bigena ubuhagarike bw'igishushanyo ku bishushanyo bigaragara."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Ibi bigena ubugari bw'igishushanyo ku bishushanyo bigaragara."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Erekana ibisobanuro"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Hitamo ibi kugira ngo werekane ibisobanuro by'amabara."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Izenguruka ryagenwe mbere"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Ubwoko bw'ihinduranya"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Hitamo uburyo bukoreshwa mu guhinduranya ibishushanyo bihariwe.  Niba uhisemo 'Urutonde Rwihariye', ugomba gusobanura urutonde rwa ID z'Ibishushanyo"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Uburyo bwa kera (Byose)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Urutonde Rwihariye"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Uburyo bw'igiti"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Urutonde rwihariye rw'Ibishushanyo"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Ibi bigomba kuba urutonde rutandukanyijwe n'akitso rwa ID z'Ibishushanyo byo kunyuramo. Urugero '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Igiti gisanzwe"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Hitamo igiti cy'ibishushanyo kizajya gisimburana niba Uburyo bw'Igiti bwahiswemo"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "Pigiseli %d"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Izenguruka"
+
