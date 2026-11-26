@@ -1,0 +1,262 @@
+# Bosnian translation for Cacti.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-09-29 22:28-0400\n"
+"PO-Revision-Date: 2026-11-26 18:57+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Bosnian <developers@cacti.net>\n"
+"Language: bs-BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: cycle.php
+msgid "No Graphs Found Matching Criteria"
+msgstr "Nije pronađen nijedan grafikon koji odgovara kriterijima"
+
+#: cycle.php
+msgid "Cycle Graph Filter"
+msgstr "Filter za kruženje grafikona"
+
+#: cycle.php
+msgid "Next Update In"
+msgstr "Sljedeće ažuriranje za"
+
+#: cycle.php
+msgid "Graph Display Timespan"
+msgstr "Vremenski raspon prikaza grafikona"
+
+#: cycle.php
+msgid "Cycle Rotation Refresh Frequency"
+msgstr "Učestalost osvježavanja rotacije ciklusa"
+
+#: cycle.php setup.php
+msgid "Number of Graphs per Page"
+msgstr "Broj grafikona po stranici"
+
+#: cycle.php
+msgid "Cycle to Previous Graphs"
+msgstr "Prebaci na prethodne grafikone"
+
+#: cycle.php
+msgid "Prev"
+msgstr "Prethodni"
+
+#: cycle.php
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: cycle.php
+msgid "Stop Cycling"
+msgstr "Zaustavi kruženje"
+
+#: cycle.php
+msgid "Resume Cycling"
+msgstr "Nastavi kruženje"
+
+#: cycle.php
+msgid "Start"
+msgstr "Pokreni"
+
+#: cycle.php
+msgid "Cycle to Next Graphs"
+msgstr "Prebaci na sljedeće grafikone"
+
+#: cycle.php
+msgid "Next"
+msgstr "Sljedeće"
+
+#: cycle.php
+msgid "Refresh"
+msgstr "Osvježi"
+
+#: cycle.php
+msgid "Refresh Graphs Now"
+msgstr "Osvježi grafikone sada"
+
+#: cycle.php
+msgid "Clear"
+msgstr "Očisti"
+
+#: cycle.php
+msgid "Clear Filter"
+msgstr "Očisti filter"
+
+#: cycle.php
+msgid "Save"
+msgstr "Sačuvaj"
+
+#: cycle.php
+msgid "Save Filter Settings"
+msgstr "Sačuvaj postavke filtera"
+
+#: cycle.php
+msgid "Number of Graph Columns"
+msgstr "Broj kolona grafikona"
+
+#: cycle.php setup.php
+msgid "Graph Height"
+msgstr "Visina grafikona"
+
+#: cycle.php setup.php
+msgid "Graph Width"
+msgstr "Širina grafikona"
+
+#: cycle.php
+msgid "Display Graph Legend"
+msgstr "Prikaži legendu grafikona"
+
+#: cycle.php
+msgid "Legend"
+msgstr "Legenda"
+
+#: cycle.php
+msgid "Select Tree to View"
+msgstr "Odaberite stablo za prikaz"
+
+#: cycle.php
+msgid "Select Tree Leaf to Display"
+msgstr "Odaberite list stabla za prikaz"
+
+#: cycle.php
+msgid "All Levels"
+msgstr "Svi nivoi"
+
+#: cycle.php
+msgid "Top Level"
+msgstr "Najviši nivo"
+
+#: cycle.php
+msgid "Enter Regular Expression Match (only alpha, numeric, and special characters \\\"(^_|?)\\\" permitted)"
+msgstr "Unesite podudaranje regularnog izraza (dozvoljeni su samo alfabetski, numerički i specijalni znakovi \"(^_|?)\")"
+
+#: cycle.php setup.php
+msgid "Cycle Graphs"
+msgstr "Kruženje grafikona"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graph"
+msgstr "%d grafikon"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Graphs"
+msgstr "%d grafikona"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Column"
+msgstr "%d kolona"
+
+#: includes/functions.php setup.php
+#, php-format
+msgid "%d Columns"
+msgstr "%d kolona"
+
+#: setup.php
+msgid "Plugin -> Cycle Graphs"
+msgstr "Dodatak -> Kruženje grafikona"
+
+#: setup.php
+msgid "Cycle"
+msgstr "Ciklus"
+
+#: setup.php
+msgid "Delay Interval"
+msgstr "Interval čekanja"
+
+#: setup.php
+msgid "This is the time in seconds before the next graph is displayed."
+msgstr "Ovo je vrijeme u sekundama prije prikaza sljedećeg grafikona."
+
+#: setup.php
+msgid "Graph Timespan"
+msgstr "Vremenski raspon grafikona"
+
+#: setup.php
+msgid "This is the default timespan that will be displayed on the page."
+msgstr "Ovo je podrazumijevani vremenski raspon koji će biti prikazan na stranici."
+
+#: setup.php
+msgid "Column Count"
+msgstr "Broj kolona"
+
+#: setup.php
+msgid "In Tree Mode this is the number of columns that will be used."
+msgstr "U režimu stabla ovo je broj kolona koji će se koristiti."
+
+#: setup.php
+msgid "Select the number of graphs to display per page"
+msgstr "Odaberite broj grafikona za prikaz po stranici"
+
+#: setup.php
+msgid "This sets the graph height for the displayed graphs."
+msgstr "Ovo postavlja visinu grafikona za prikazane grafikone."
+
+#: setup.php
+msgid "This sets the graph width for the displayed graphs."
+msgstr "Ovo postavlja širinu grafikona za prikazane grafikone."
+
+#: setup.php
+msgid "Display Legend"
+msgstr "Prikaži legendu"
+
+#: setup.php
+msgid "Check this to display legend."
+msgstr "Označite ovo za prikaz legende."
+
+#: setup.php
+msgid "Predefined Rotations"
+msgstr "Unaprijed definisane rotacije"
+
+#: setup.php
+msgid "Rotation Type"
+msgstr "Vrsta rotacije"
+
+#: setup.php
+msgid "Select which method to use for custom graph rotation.  If you select 'Specific List', you must define a list of Graph ID's"
+msgstr "Odaberite koju metodu želite koristiti za prilagođenu rotaciju grafikona. Ako odaberete 'Određena lista', morate definisati listu ID-jeva grafikona"
+
+#: setup.php
+msgid "Legacy (All)"
+msgstr "Naslijeđeno (Sve)"
+
+#: setup.php
+msgid "Specific List"
+msgstr "Određena lista"
+
+#: setup.php
+msgid "Tree Mode"
+msgstr "Režim stabla"
+
+#: setup.php
+msgid "Custom Graph List"
+msgstr "Prilagođena lista grafikona"
+
+#: setup.php
+msgid "This must be a comma delimited list of Graph ID's to cycle through. For example '1,2,3,4'"
+msgstr "Ovo mora biti zarezom odvojena lista ID-jeva grafikona kroz koje se kruži. Na primjer '1,2,3,4'"
+
+#: setup.php
+msgid "Default Tree"
+msgstr "Podrazumijevano stablo"
+
+#: setup.php
+msgid "Select the graph tree to cycle if Tree Mode is selected"
+msgstr "Odaberite stablo grafikona za kruženje ako je odabran režim stabla"
+
+#: setup.php
+#, php-format
+msgid "%d Pixels"
+msgstr "%d piksela"
+
+#: setup.php
+msgid "Cycling"
+msgstr "Kruženje"
