@@ -26,3 +26,28 @@ it('adds the cycle breadcrumb entries without disturbing existing ones', functio
 		expect($nav[$key]['level'])->toBe('1');
 	}
 });
+
+it('renders active and inactive cycle header tabs with alt text', function () {
+	$orig = $_SERVER['REQUEST_URI'] ?? null;
+
+	try {
+		$_SERVER['REQUEST_URI'] = '/cacti/plugins/cycle/cycle.php';
+		ob_start();
+		cycle_show_tab();
+		$active = ob_get_clean();
+
+		$_SERVER['REQUEST_URI'] = '/cacti/index.php';
+		ob_start();
+		cycle_show_tab();
+		$inactive = ob_get_clean();
+	} finally {
+		if ($orig === null) {
+			unset($_SERVER['REQUEST_URI']);
+		} else {
+			$_SERVER['REQUEST_URI'] = $orig;
+		}
+	}
+
+	expect($active)->toContain('tab_cycle_down.gif')->toContain('alt="Cycle"');
+	expect($inactive)->toContain('tab_cycle.gif')->toContain('alt="Cycle"');
+});
